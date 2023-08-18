@@ -18,7 +18,7 @@ class App {
         Timer timer = new Timer(5000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                app.remove(loadingLayout.getLoadingPanel());
+                app.remove(new LoadingLayout().getLoadingPanel());
                 app.revalidate();
                 app.repaint();
                 app.add(new HomeLayout().getHomePanel(), BorderLayout.CENTER);
