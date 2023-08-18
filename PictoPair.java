@@ -12,6 +12,7 @@ class App {
 
         JLayeredPane layeredPane = new JLayeredPane();
         layeredPane.setSize(500, 500);
+        layeredPane.setBackground(Color.red);
 
         app.add(layeredPane);
         app.setVisible(true);
