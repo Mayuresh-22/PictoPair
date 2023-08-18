@@ -10,10 +10,11 @@ public class LoadingLayout {
     
     public LoadingLayout(){
         LoadingLayoutPane = new JLayeredPane();
+        // create a background pane
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
-        logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
         LoadingBgPanel.add(bg, BorderLayout.CENTER);
-        LoadingBgPanel.add(LoadingLogoPanel)
+        logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
+        LoadingLogoPanel.add(logo, BorderLayout.CENTER);
         LoadingBgPanel.setVisible(true);
     }
 
