@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 import Layout.*;
 
@@ -14,8 +16,16 @@ class App {
         LoadingLayout loadingLayout = new LoadingLayout();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
 
-        Thread.sleep(5000);
-        app.remove(loadingLayout.getLoadingPanel());
+        new ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                app.remove(loadingLayout.getLoadingPanel());
+                app.add(new HomeLayout().getHomePanel(), BorderLayout.CENTER);
+                app.revalidate();
+                app.repaint();
+            }
+        }.actionPerformed(null);
+        };
         app.setVisible(true);
     }
 }
