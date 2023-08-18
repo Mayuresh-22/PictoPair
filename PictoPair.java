@@ -19,7 +19,7 @@ class App {
             @Override
             public void actionPerformed(ActionEvent e) {
                 app.remove(new LoadingLayout().getLoadingPanel());
-                app.add(new HomeLayout().getHomePanel(), BorderLayout.CENTER);
+                // app.add(new HomeLayout().getHomePanel(), BorderLayout.CENTER);
                 app.revalidate();
                 app.repaint();
             }
