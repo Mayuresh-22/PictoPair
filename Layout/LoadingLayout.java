@@ -14,7 +14,7 @@ public class LoadingLayout {
         // logo panel
         logoPanel.setPreferredSize(new Dimension(300, 300));
         logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
-        logoPanel.add(logo, BorderLayout.CENTER)
+        logoPanel.add(logo, BorderLayout.CENTER);
     }
 
     public JPanel getLoadingPanel() {
