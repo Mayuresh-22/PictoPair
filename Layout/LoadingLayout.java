@@ -21,6 +21,7 @@ public class LoadingLayout {
         layeredPane = new JLayeredPane();
         layeredPane.add(bgPanel, 1);
         LoadingPanel.add(layeredPane, BorderLayout.CENTER);
+        LoadingPanel.setVisible(true);
     }
 
     public JPanel getLoadingPanel() {
