@@ -13,7 +13,7 @@ public class LoadingLayout {
 
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
         bg.setOpaque(true);
-        // bgPanel.setBounds(0, 0, 1920, 1080);
+        bgPanel.setBounds(100, 100, 1920, 1080);
         bgPanel.setOpaque(true);
         bgPanel.add(bg, BorderLayout.CENTER);
 
