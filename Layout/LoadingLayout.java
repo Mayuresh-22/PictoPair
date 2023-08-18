@@ -8,7 +8,7 @@ public class LoadingLayout {
     JLabel bg;
     
     LoadingLayout(){
-        bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"))
+        bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
         LoadingPanel.setIcon
     }
 }
