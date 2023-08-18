@@ -15,7 +15,7 @@ public class LoadingLayout {
         bgPanel.setBounds(0, 0, 1920, 1080);
         bgPanel.add(bg, BorderLayout.CENTER);
 
-        layeredPane.add(bgPanel, new Integer(0));
+        layeredPane.add(bgPanel, 1);
         LoadingPanel.add(layeredPane);
     }
 
