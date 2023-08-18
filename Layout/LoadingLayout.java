@@ -8,9 +8,11 @@ public class LoadingLayout {
     JLabel bg, logo;
     
     public LoadingLayout(){
+        // backgroun panel
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
         bgPanel.add(bg, BorderLayout.CENTER);
         logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
+        logo
     }
 
     public JPanel getLoadingPanel() {
