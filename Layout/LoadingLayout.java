@@ -15,7 +15,7 @@ public class LoadingLayout {
         int height = (int) screenSize.getHeight();
         layeredPane.setSize(width, height);
         layeredPane.setBackground(Color.gray);
-        layeredPane.setOpaque(true);
+        // layeredPane.setOpaque(true);
 
         // bgPanel
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
