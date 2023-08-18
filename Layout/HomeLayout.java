@@ -16,5 +16,6 @@ public class HomeLayout {
         layeredPane.setOpaque(true);
 
         HomePanel.add(layeredPane);
+        HomePanel.setOpaque(true);
     }
 }
