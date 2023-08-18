@@ -26,7 +26,7 @@ public class LoadingLayout {
         LoadingLayoutPane.setVisible(true);
     }
 
-    public JPanel getLoadingPanel() {
+    public JLayeredPane getLoadingPanel() {
         return LoadingLayoutPane;
     }
 
