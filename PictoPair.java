@@ -11,8 +11,11 @@ class App {
         app.setResizable(false);
         app.setLayout(null);
 
+        JLayeredPane layeredPane = new JLayeredPane();
+        layeredPane.setSize(500, 500);
+        layeredPane.setBackground(Color.gray);
 
-        app.add(new LoadingLayout().getLoadingPanel(), BorderLayout.CENTER);
+        app.add(layeredPane);
         app.setVisible(true);
     }
 }
