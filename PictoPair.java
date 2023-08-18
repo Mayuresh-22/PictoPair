@@ -1,6 +1,5 @@
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
 import Layout.*;
 
@@ -13,8 +12,7 @@ class App {
         app.setResizable(false);
         app.setLayout(new BorderLayout(100, 100));
 
-        LoadingLayout loadingLayout = new LoadingLayout();
-        app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
+        app.add(new LoadingLayout().getLoadingPanel(), BorderLayout.CENTER);
 
         // Remove LoadingPanel after 5 seconds
         Timer timer = new Timer(5000, new ActionListener() {
@@ -23,6 +21,7 @@ class App {
                 app.remove(loadingLayout.getLoadingPanel());
                 app.revalidate();
                 app.repaint();
+                app.add(new HomeLayout().getHomePanel(), BorderLayout.CENTER);
             }
         });
         timer.setRepeats(false);
