@@ -28,7 +28,7 @@ public class LoadingLayout {
         logoPanel.add(logo);
 
         // Add to LoadingPanel
-        layeredPane.add(logoPanel);
+        layeredPane.add(logoPanel, BorderLayout.CENTER);
         layeredPane.add(bgPanel);
 
         // Add to LoadingPanel
