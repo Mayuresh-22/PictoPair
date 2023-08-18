@@ -27,6 +27,9 @@ public class LoadingLayout {
         logoPanel.setBounds(0, 0, 200, 200);
         logoPanel.add(logo);
 
+        // Add to LoadingPanel
+        layeredPane.add(bgPanel);
+        layeredPane.add(logoPanel);
         LoadingPanel.add(layeredPane);
         LoadingPanel.setOpaque(true);
     }
