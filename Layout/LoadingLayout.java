@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class LoadingLayout {
-    JPanel LoadingPanel = new JPanel(new BorderLayout()), LoadingLogo = new JPanel(new BorderLayout());
+    JPanel LoadingPanel, LoadingLogo = new JPanel(new BorderLayout());
     JLabel bg;
     
     public LoadingLayout(){
