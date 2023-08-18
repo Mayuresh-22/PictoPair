@@ -14,6 +14,7 @@ public class LoadingLayout {
         layeredPane.setOpaque(true);
 
         LoadingPanel.add(layeredPane);
+        LoadingPanel.setOpaque(true);
     }
 
     public JPanel getLoadingPanel() {
