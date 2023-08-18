@@ -30,6 +30,8 @@ public class LoadingLayout {
         // Add to LoadingPanel
         layeredPane.add(bgPanel);
         layeredPane.add(logoPanel);
+
+        // Add to LoadingPanel
         LoadingPanel.add(layeredPane);
         LoadingPanel.setOpaque(true);
     }
