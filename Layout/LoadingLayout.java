@@ -12,6 +12,7 @@ public class LoadingLayout {
         layeredPane.setSize(JFrame.MAXIMIZED_HORIZ, JFrame.MAXIMIZED_VERT);
 
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
+        bg.setOpaque(true);
         bgPanel.setBounds(0, 0, 1920, 1080);
         bgPanel.add(bg, BorderLayout.CENTER);
 
