@@ -25,9 +25,9 @@ public class LoadingLayout {
 
         // logoPanel
         logo = new JLabel(new ImageIcon("assets/logogif.gif"));
-        logoPanel.setBounds((width/2)-200, (height/2)-200, 400, 400);
+        // logoPanel.setBounds((width/2)-200, (height/2)-200, 400, 400);
         logoPanel.setOpaque(true);
-        logoPanel.add(logo);
+        logoPanel.add(logo, BorderLayout.CENTER);
 
         // Add to LoadingPanel
         layeredPane.add(logoPanel, BorderLayout.CENTER);
