@@ -9,7 +9,11 @@ public class LoadingLayout {
     
     public LoadingLayout(){
         JLayeredPane layeredPane = new JLayeredPane();
-        layeredPane.setSize(JFrame.MAXIMIZED_HORIZ, JFrame.MAXIMIZED_VERT);
+        // full screen
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int width = (int) screenSize.getWidth();
+        int height = (int) screenSize.getHeight();
+        layeredPane.setPreferredSize(new Dimension(width, height));
         layeredPane.setBackground(Color.gray);
         layeredPane.setOpaque(true);
 
