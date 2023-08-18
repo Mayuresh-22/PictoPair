@@ -1,6 +1,8 @@
 import java.awt.*;
 import javax.swing.*;
 
+import Layout.LoadingLayout;
+
 class App {
     JFrame app = new JFrame("PictoPair - Memory Game");
 
