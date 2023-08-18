@@ -10,7 +10,7 @@ class App {
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         app.setResizable(false);
         app.setLayout(new BorderLayout());
-        app.add(new LoadingLayout().getLoadingPanel(), BorderLayout.CENTER);
+        // app.add(new LoadingLayout().getLoadingPanel(), BorderLayout.CENTER);
         app.setVisible(true);
     }
 }
