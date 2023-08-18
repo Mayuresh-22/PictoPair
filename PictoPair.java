@@ -17,16 +17,9 @@ class App {
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
 
         Timer timer = new Timer(5000, new ActionListener() {
-            int i = 0;
             @Override
             public void actionPerformed(ActionEvent e) {
-                i++;
-                if(i == 3){
-                    app.remove(loadingLayout.getLoadingPanel());
-                    app.add(new HomeLayout().getHomePanel(), BorderLayout.CENTER);
-                    app.revalidate();
-                    app.repaint();
-                }
+                app.remove(loadingLayout.getLoadingPanel());
             }
         });
         timer.setRepeats(false);
