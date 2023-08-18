@@ -24,7 +24,8 @@ public class LoadingLayout {
 
         // logoPanel
         logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
-        // logoPanel.setBounds(0, 0, 200, 200);
+        // center logo
+        logoPanel.setBounds((width/2)-200, (height/2)-200, 400, 400);
         logoPanel.add(logo);
 
         // Add to LoadingPanel
