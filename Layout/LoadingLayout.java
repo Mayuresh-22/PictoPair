@@ -12,7 +12,7 @@ public class LoadingLayout {
         layeredPane.setSize(500, 500);
         layeredPane.setBackground(Color.gray);
 
-        layeredPane.add(bgPanel, 1);
+
         LoadingPanel.add(layeredPane);
     }
 
