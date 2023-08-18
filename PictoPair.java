@@ -4,6 +4,7 @@ import Layout.*;
 
 class App {
     JFrame app = new JFrame("PictoPair - Memory Game");
+    JPanel appPane = new 
     LoadingLayout loadingPanel = new LoadingLayout();
 
     App(){
