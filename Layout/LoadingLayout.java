@@ -6,6 +6,7 @@ import java.awt.*;
 public class LoadingLayout {
     JPanel LoadingPanel = new JPanel(new BorderLayout()), bgPanel = new JPanel(new BorderLayout()), logoPanel= new JPanel(new BorderLayout());
     JLabel bg, logo;
+    JLayeredPane layeredPane;
     
     public LoadingLayout(){
         // backgroun panel
@@ -15,6 +16,9 @@ public class LoadingLayout {
         logoPanel.setPreferredSize(new Dimension(300, 300));
         logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
         logoPanel.add(logo, BorderLayout.CENTER);
+
+        // create layered pane
+        
     }
 
     public JPanel getLoadingPanel() {
