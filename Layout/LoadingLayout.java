@@ -27,7 +27,7 @@ public class LoadingLayout {
     }
 
     public JPanel getLoadingPanel() {
-        return LoadingBgPanel;
+        return LoadingLayoutPane;
     }
 
     public JLabel getBg() {
