@@ -12,7 +12,7 @@ class App {
         app.setResizable(false);
         app.setLayout(new BorderLayout());
 
-        app.add(loadingPanel.getLoadingPanel(), BorderLayout.CENTER);
+        app.add(loadingPanel.getLoadingPanel());
 
         app.setVisible(true);
     }
