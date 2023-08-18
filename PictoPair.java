@@ -18,6 +18,6 @@ class App {
 
 class PictoPair {
     public static void main(String[] args) {
-        new App()l
+        new App();
     }
 }
