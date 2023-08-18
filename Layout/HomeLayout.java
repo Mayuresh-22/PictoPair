@@ -4,7 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class HomeLayout {
-    JPanel HomePanel = new JPanel(null);
+    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout());
+    JLabel bg;
 
     public HomeLayout(){
         JLayeredPane layeredPane = new JLayeredPane();
@@ -15,6 +16,16 @@ public class HomeLayout {
         layeredPane.setBackground(Color.gray);
         layeredPane.setOpaque(true);
 
+        // bgPanel
+        bg = new JLabel(new ImageIcon("assets/HomeScreen-bg.png"));
+        bgPanel.setBounds(0, 0, width, height);
+        bgPanel.setOpaque(true);
+        bgPanel.add(bg);
+
+        // Adding to layeredPane
+        layeredPane.add(bgPanel);
+
+        // Adding to HomePanel
         HomePanel.add(layeredPane);
         HomePanel.setOpaque(true);
     }
