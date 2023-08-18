@@ -4,23 +4,16 @@ import javax.swing.*;
 import java.awt.*;
 
 public class LoadingLayout {
-    JPanel LoadingBgPanel = new JPanel(new BorderLayout()), LoadingLogoPanel = new JPanel(new BorderLayout());
-    JLayeredPane LoadingLayoutPane;
-    JLabel bg, logo;
+    JPanel LoadingPanel = new JPanel(new BorderLayout());
+    JLabel bg;
     
-    public LoadingLayout(){
-        LoadingLayoutPane = new JLayeredPane();
-        // create a background panel
+    LoadingLayout(){
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
-        LoadingBgPanel.add(bg, BorderLayout.CENTER);
-
-        LoadingLayoutPane.add(LoadingBgPanel, 1);
-
-        LoadingBgPanel.setVisible(true);
+        LoadingPanel.add(bg, BorderLayout.CENTER);
     }
 
-    public JLayeredPane getLoadingPanel() {
-        return LoadingLayoutPane;
+    public JPanel getLoadingPanel() {
+        return LoadingPanel;
     }
 
     public JLabel getBg() {
