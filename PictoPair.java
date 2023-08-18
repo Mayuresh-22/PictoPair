@@ -15,6 +15,11 @@ class App {
         layeredPane.setOpaque(true);
         layeredPane.setBackground(Color.red);
 
+        JLabel bg = new JLabel();
+        bg.setBounds(100, 100, 100, 100);
+        bg.setBackground(Color.black);
+        layeredPane.add(bg);
+
         app.add(layeredPane);
         app.setVisible(true);
     }
