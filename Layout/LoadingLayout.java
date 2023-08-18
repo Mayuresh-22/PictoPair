@@ -9,6 +9,6 @@ public class LoadingLayout {
     
     LoadingLayout(){
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
-        LoadingPanel.setIcon
+        LoadingPanel.add(bg, BorderLayout.CENTER);
     }
 }
