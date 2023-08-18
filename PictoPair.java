@@ -13,7 +13,8 @@ class App {
         app.setLayout(new BorderLayout());
         // creating panel
         appPane.add(loadingPanel.getLoadingPanel(), BorderLayout.CENTER);
-        app.add(loadingPanel.getLoadingPanel(), BorderLayout.CENTER);
+        // create Frame
+        app.add(appPane, BorderLayout.CENTER);
         app.setVisible(true);
     }
 }
