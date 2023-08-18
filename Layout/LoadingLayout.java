@@ -10,6 +10,7 @@ public class LoadingLayout {
     public LoadingLayout(){
         JLayeredPane layeredPane = new JLayeredPane();
         layeredPane.setSize(500, 500);
+        layeredPane.setBackground(Color.gray);
 
         layeredPane.add(bgPanel, 1);
         LoadingPanel.add(layeredPane);
