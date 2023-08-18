@@ -20,6 +20,10 @@ public class LoadingLayout {
 
         LoadingLayoutPane.add(LoadingBgPanel, 1);
         // LoadingLayoutPane.add(LoadingLogoPanel, BorderLayout.CENTER);
+
+        LoadingBgPanel.setVisible(true);
+        // LoadingLogoPanel.setVisible(true);
+        // LoadingLayoutPane.setVisible(true);
     }
 
     public JLayeredPane getLoadingPanel() {
