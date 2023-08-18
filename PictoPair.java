@@ -16,14 +16,14 @@ class App {
         LoadingLayout loadingLayout = new LoadingLayout();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
 
-        Timer timer = new Timer(5000, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                app.remove(loadingLayout.getLoadingPanel());
-            }
-        });
-        timer.setRepeats(false);
-        timer.start();
+        // Timer timer = new Timer(5000, new ActionListener() {
+        //     @Override
+        //     public void actionPerformed(ActionEvent e) {
+        //         app.remove(loadingLayout.getLoadingPanel());
+        //     }
+        // });
+        // timer.setRepeats(false);
+        // timer.start();
     }
 }
 
