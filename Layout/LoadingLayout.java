@@ -17,7 +17,7 @@ public class LoadingLayout {
         bgPanel.setOpaque(true);
         bgPanel.add(bg, BorderLayout.CENTER);
 
-        layeredPane.add(bgPanel, 1);
+        layeredPane.add(bgPanel);
         LoadingPanel.add(layeredPane);
     }
 
