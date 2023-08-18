@@ -25,7 +25,6 @@ class App {
                 app.repaint();
             }
         }.actionPerformed(null);
-        };
         app.setVisible(true);
     }
 }
