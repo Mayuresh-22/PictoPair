@@ -12,7 +12,7 @@ public class LoadingLayout {
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
         bgPanel.add(bg, BorderLayout.CENTER);
         // logo panel
-        logoPanel.setSize(300, 300);
+        logoPanel.setPreferredSize(new Dimension(300, 300));
         logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
         logoPanel.add(logo, BorderLayout.CENTER)
     }
