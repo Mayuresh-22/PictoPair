@@ -14,7 +14,7 @@ class App {
         JLayeredPane layeredPane = new JLayeredPane();
         layeredPane.setSize(500, 500);
         layeredPane.setBackground(Color.gray);
-        layeredPane.setOpaque(false);
+        layeredPane.setOpaque(true);
 
         app.add(layeredPane);
         app.setVisible(true);
