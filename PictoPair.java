@@ -11,7 +11,9 @@ class App {
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         app.setResizable(false);
         app.setLayout(new BorderLayout());
+
         app.add(loadingPanel.getLoadingPanel(), BorderLayout.CENTER);
+
         app.setVisible(true);
     }
 }
