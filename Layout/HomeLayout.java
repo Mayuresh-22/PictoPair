@@ -22,6 +22,9 @@ public class HomeLayout {
         bgPanel.setOpaque(true);
         bgPanel.add(bg);
 
+        // Adding to layeredPane
+        layeredPane.add(bgPanel)
+
 
         HomePanel.add(layeredPane);
         HomePanel.setOpaque(true);
