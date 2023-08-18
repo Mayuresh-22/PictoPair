@@ -24,7 +24,8 @@ public class LoadingLayout {
 
         // logoPanel
         logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
-
+        logoPanel.setBounds(0, 0, 200, 200);
+        logoPanel.add(logo);
 
         LoadingPanel.add(layeredPane);
         LoadingPanel.setOpaque(true);
