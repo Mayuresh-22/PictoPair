@@ -16,14 +16,15 @@ class App {
         LoadingLayout loadingLayout = new LoadingLayout();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
 
+        // Remove LoadingPanel after 5 seconds
         Timer timer = new Timer(5000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 app.remove(loadingLayout.getLoadingPanel());
+                app.revalidate();
+                app.repaint();
             }
         });
-        timer.setRepeats(false);
-        timer.start();
 
         app.setVisible(true);
     }
