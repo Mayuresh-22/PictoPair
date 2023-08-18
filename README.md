@@ -21,7 +21,7 @@ Play the game online: [PictoPair Game](https://your-game-url.com)
 
 1. Clone the repository.
    ```sh
-   git clone https://github.com/your-username/pictopair-memory-game.git
+   git clone https://github.com/Mayuresh-22/PictoPair-Memory-Game.git
    ```
 2. Open `index.html` in your preferred web browser.
 
