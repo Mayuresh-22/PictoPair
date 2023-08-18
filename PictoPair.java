@@ -3,7 +3,7 @@ import javax.swing.*;
 import Layout.*;
 
 class PictoPair {
-    JFrame app = new JFrame("PictoPair - Memory Game");
+    private JFrame app;
     public static void main(String[] args) {
         
     }
