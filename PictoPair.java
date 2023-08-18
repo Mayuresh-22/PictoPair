@@ -29,6 +29,8 @@ class App {
                 }
             }
         });
+        timer.setRepeats(false);
+        timer.start();
     }
 }
 
