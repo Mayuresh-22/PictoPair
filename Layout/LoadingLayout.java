@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class LoadingLayout {
-    JPanel LoadingPanel = new JPanel(new BorderLayout()), bgPanel = new JPanel(new BorderLayout()), logoPanel= new JPanel(new BorderLayout());
+    JPanel LoadingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), logoPanel= new JPanel(new BorderLayout());
     JLabel bg, logo;
     JLayeredPane layeredPane;
     
@@ -20,7 +20,7 @@ public class LoadingLayout {
         // create layered pane
         layeredPane = new JLayeredPane();
         layeredPane.add(bgPanel, 1);
-        LoadingPanel.add(layeredPane, BorderLayout.CENTER);
+        LoadingPanel.add(layeredPane);
         LoadingPanel.setVisible(true);
     }
 
