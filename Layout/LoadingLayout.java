@@ -4,12 +4,12 @@ import javax.swing.*;
 import java.awt.*;
 
 public class LoadingLayout {
-    JPanel LoadingPanel = new JPanel(new BorderLayout());
+    JPanel LoadingPanel = new JPanel(new BorderLayout()), bgPanel = new JPanel(new BorderLayout()), logoPanel= new JPanel(new BorderLayout());
     JLabel bg;
     
     public LoadingLayout(){
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
-        LoadingPanel.add(bg, BorderLayout.CENTER);
+        bgPanel.add(bg, BorderLayout.CENTER);
     }
 
     public JPanel getLoadingPanel() {
