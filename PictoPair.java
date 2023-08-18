@@ -16,29 +16,19 @@ class App {
         LoadingLayout loadingLayout = new LoadingLayout();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
 
-        new ActionListener() {
-            Timer timer = new Timer(1000, new ActionListener() {
-                int i = 0;
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    if(i == 3){
-                        timer.stop();
-                    }
-                    i++;
-                }
-            });
-            {
-                timer.start();
-            }
+        Timer timer = new Timer(1000, new ActionListener() {
+            int i = 0;
             @Override
             public void actionPerformed(ActionEvent e) {
-                app.remove(loadingLayout.getLoadingPanel());
-                app.add(new HomeLayout().getHomePanel(), BorderLayout.CENTER);
-                app.revalidate();
-                app.repaint();
+                i++;
+                if(i == 3){
+                    app.remove(loadingLayout.getLoadingPanel());
+                    app.add(new HomeLayout().getHomePanel(), BorderLayout.CENTER);
+                    app.revalidate();
+                    app.repaint();
+                }
             }
-        }.actionPerformed(null);
-        app.setVisible(true);
+        });
     }
 }
 
