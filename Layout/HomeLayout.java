@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class HomeLayout {
     JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout());
-    JLabel bg
+    JLabel bg;
 
     public HomeLayout(){
         JLayeredPane layeredPane = new JLayeredPane();
