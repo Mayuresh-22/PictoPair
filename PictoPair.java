@@ -7,7 +7,7 @@ import Layout.*;
 class App {
     JFrame app = new JFrame("PictoPair - Memory Game");
 
-    App() throws InterruptedException{
+    App(){
         app.setExtendedState(JFrame.MAXIMIZED_BOTH);
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         app.setResizable(false);
@@ -29,7 +29,7 @@ class App {
 
 
 class PictoPair {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         new App();
     }
 }
