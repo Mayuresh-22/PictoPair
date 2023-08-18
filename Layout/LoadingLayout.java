@@ -19,7 +19,7 @@ public class LoadingLayout {
         LoadingLogoPanel.add(logo, BorderLayout.CENTER);
 
         LoadingLayoutPane.add(LoadingBgPanel, BorderLayout.CENTER);
-
+        LoadingLayoutPane.add(LoadingLogoPanel, BorderLayout.CENTER);
         LoadingBgPanel.setVisible(true);
     }
 
