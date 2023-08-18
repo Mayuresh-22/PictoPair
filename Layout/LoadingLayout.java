@@ -11,6 +11,7 @@ public class LoadingLayout {
         // backgroun panel
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
         bgPanel.add(bg, BorderLayout.CENTER);
+        // logo panel
         logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
         logo
     }
