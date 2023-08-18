@@ -11,8 +11,9 @@ class App {
         app.setResizable(false);
         app.setLayout(null);
 
-        // LoadingLayout loadingLayout = new LoadingLayout();
+        LoadingLayout loadingLayout = new LoadingLayout();
         app.add(loadingLayout.getLoadingPanel());
+
         app.setVisible(true);
     }
 }
