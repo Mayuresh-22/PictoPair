@@ -17,7 +17,7 @@ public class HomeLayout {
         layeredPane.setOpaque(true);
 
         // bgPanel
-        bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
+        bg = new JLabel(new ImageIcon("assets/HomeScreen-bg.png"));
         bgPanel.setBounds(0, 0, width, height);
         bgPanel.setOpaque(true);
         bgPanel.add(bg);
