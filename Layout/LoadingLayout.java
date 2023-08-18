@@ -10,6 +10,7 @@ public class LoadingLayout {
     public LoadingLayout(){
         bg = new JLabel();
         bg.setBounds(100, 100, 100, 100);
+        bg.setOpaque(true);
         bg.setBackground(Color.red);
         LoadingPanel.add(bg);
     }
