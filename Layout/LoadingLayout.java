@@ -13,7 +13,8 @@ public class LoadingLayout {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
         int height = (int) screenSize.getHeight();
-        layeredPane.setPreferredSize(new Dimension(width, height));
+
+        layeredPane.setSize(width, height);
         layeredPane.setBackground(Color.gray);
         layeredPane.setOpaque(true);
 
