@@ -6,6 +6,8 @@ import Layout.*;
 
 class App {
     JFrame app = new JFrame("PictoPair - Memory Game");
+    LoadingLayout loadingLayout = new LoadingLayout();
+    HomeLayout homeLayout = new HomeLayout();
 
     App(){
         app.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -13,7 +15,6 @@ class App {
         app.setResizable(false);
         app.setLayout(new BorderLayout(100, 100));
 
-        LoadingLayout loadingLayout = new LoadingLayout();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
 
         // Remove LoadingPanel after 5 seconds
