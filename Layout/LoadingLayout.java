@@ -8,8 +8,8 @@ public class LoadingLayout {
     JLabel bg;
     
     public LoadingLayout(){
-        bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
-        LoadingPanel.add(bg, BorderLayout.CENTER);
+        bg = new JLabel();
+        bg.setBounds(0, 0, 100, 100);
     }
 
     public JPanel getLoadingPanel() {
