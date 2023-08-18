@@ -18,4 +18,8 @@ public class HomeLayout {
         HomePanel.add(layeredPane);
         HomePanel.setOpaque(true);
     }
+
+    public JPanel getHomePanel() {
+        return HomePanel;
+    }
 }
