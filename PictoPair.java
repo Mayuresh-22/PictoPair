@@ -12,7 +12,7 @@ class App {
         app.setLayout(new BorderLayout(100, 100));
 
         LoadingLayout loadingLayout = new LoadingLayout();
-        app.add(loadingLayout.getLoadingPanel());
+        app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
 
         app.setVisible(true);
     }
