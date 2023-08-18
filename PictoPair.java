@@ -14,7 +14,8 @@ class App {
         // creating panel
         appPane.add(loadingPanel.getLoadingPanel(), BorderLayout.CENTER);
         // create Frame
-        app.add(appPane, BorderLayout.CENTER);
+        // app.add(appPane, BorderLayout.CENTER);
+        appPane.setVisible(true);
         app.setVisible(true);
     }
 }
