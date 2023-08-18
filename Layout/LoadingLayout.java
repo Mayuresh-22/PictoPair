@@ -17,6 +17,7 @@ public class LoadingLayout {
         logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
         LoadingLogoPanel.add(logo, BorderLayout.CENTER);
 
+        LoadingLayoutPane.add(LoadingBgPanel);
         LoadingBgPanel.setVisible(true);
     }
 
