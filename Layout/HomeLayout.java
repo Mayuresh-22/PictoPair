@@ -6,7 +6,7 @@ import java.awt.*;
 public class HomeLayout {
     JPanel HomePanel = new JPanel(null);
 
-    HomeLayout(){
+    public HomeLayout(){
         JLayeredPane layeredPane = new JLayeredPane();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
