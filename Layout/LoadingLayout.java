@@ -20,6 +20,7 @@ public class LoadingLayout {
         // create layered pane
         layeredPane = new JLayeredPane();
         layeredPane.add(bgPanel, 1);
+        LoadingPanel.add(layeredPane, BorderLayout.CENTER);
     }
 
     public JPanel getLoadingPanel() {
