@@ -2,7 +2,7 @@
 
 Exercise your memory and concentration with PictoPair, an engaging memory game designed to challenge your cognitive skills.
 
-![PictoPair Preview](/images/preview.png)
+![PictoPair Preview](/assets/logogif.gif)
 
 ## Features
 
@@ -13,9 +13,6 @@ Exercise your memory and concentration with PictoPair, an engaging memory game d
 - 🌐 Global Leaderboard: Compete with players worldwide and climb to the top.
 - 📱 Responsive Design: Play on desktop and mobile for gaming on the go.
 
-## Demo
-
-Play the game online: [PictoPair Game](https://your-game-url.com)
 
 ## Installation
 
@@ -43,8 +40,9 @@ Contributions are welcome! To contribute:
 
 ## Credits
 
-- Card designs by [Artist Name](https://link-to-artist-portfolio.com)
-- Background music by [Musician Name](https://link-to-musician-profile.com)
+- Mayuresh Choudhary
+- Om Gaikwad
+- Devang Gentyal
 
 ## License
 
