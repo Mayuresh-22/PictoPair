@@ -5,12 +5,14 @@ import java.awt.*;
 
 public class LoadingLayout {
     JPanel LoadingPanel, LoadingLogo = new JPanel(new BorderLayout());
+    JLayeredPane LoadingLayout;
     JLabel bg, logo;
     
     public LoadingLayout(){
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
         logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
         LoadingPanel.add(bg, BorderLayout.CENTER);
+        LoadingPanel.add(LoadingLogo)
         LoadingPanel.setVisible(true);
     }
 
