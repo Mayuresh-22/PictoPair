@@ -10,7 +10,9 @@ class App {
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         app.setResizable(false);
 
-        app.add(new LoadingLayout().getLoadingPanel());
+        JLayeredPane layeredPane = new JLayeredPane();
+        layeredPane.setSize(500, 500);
+
 
         app.setVisible(true);
     }
