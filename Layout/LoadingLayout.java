@@ -23,7 +23,7 @@ public class LoadingLayout {
 
         LoadingBgPanel.setVisible(true);
         // LoadingLogoPanel.setVisible(true);
-        // LoadingLayoutPane.setVisible(true);
+        LoadingLayoutPane.setVisible(true);
     }
 
     public JLayeredPane getLoadingPanel() {
