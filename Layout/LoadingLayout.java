@@ -19,9 +19,9 @@ public class LoadingLayout {
 
         // bgPanel
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
-        bgPanel.setBounds(0, 0, width, height);
+        // bgPanel.setBounds(0, 0, width, height);
         bgPanel.setOpaque(true);
-        bgPanel.add(bg);
+        bgPanel.add(bg, BorderLayout.CENTER);
 
         // logoPanel
         logo = new JLabel(new ImageIcon("assets/logogif.gif"));
