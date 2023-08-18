@@ -14,6 +14,8 @@ class App {
         LoadingLayout loadingLayout = new LoadingLayout();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
 
+        Thread.sleep(5000);
+        app.remove(loadingLayout.getLoadingPanel());
         app.setVisible(true);
     }
 }
