@@ -8,6 +8,7 @@ public class LoadingLayout {
     JLabel bg;
     
     public LoadingLayout(){
+        // LoadingPanel
         JLayeredPane layeredPane = new JLayeredPane();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
@@ -15,6 +16,11 @@ public class LoadingLayout {
         layeredPane.setSize(width, height);
         layeredPane.setBackground(Color.gray);
         layeredPane.setOpaque(true);
+
+        // bgPanel
+        bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
+        bgPanel.setBounds(0, 0, width, height);
+        bgPanel.add(bg);
 
         LoadingPanel.add(layeredPane);
         LoadingPanel.setOpaque(true);
