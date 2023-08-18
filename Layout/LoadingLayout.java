@@ -23,7 +23,7 @@ public class LoadingLayout {
         layeredPane.setBackground(Color.gray);
 
         LoadingPanel.add(layeredPane);
-        LoadingPanel.setVisible(true);
+        // LoadingPanel.setVisible(true);
     }
 
     public JPanel getLoadingPanel() {
