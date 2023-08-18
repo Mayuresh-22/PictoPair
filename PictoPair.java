@@ -18,7 +18,7 @@ class App {
 
         new ActionListener() {
             @Override
-            public void actionPerformed(java.awt.event.ActionEvent e) {
+            public void actionPerformed(ActionEvent e) {
                 app.remove(loadingLayout.getLoadingPanel());
                 app.add(new HomeLayout().getHomePanel(), BorderLayout.CENTER);
                 app.revalidate();
