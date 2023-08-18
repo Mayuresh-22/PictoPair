@@ -15,16 +15,18 @@ public class LoadingLayout {
         int height = (int) screenSize.getHeight();
         layeredPane.setSize(width, height);
         layeredPane.setBackground(Color.gray);
-        // layeredPane.setOpaque(true);
+        layeredPane.setOpaque(true);
 
         // bgPanel
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
         bgPanel.setBounds(0, 0, width, height);
+        bgPanel.setOpaque(true);
         bgPanel.add(bg);
 
         // logoPanel
         logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
         logoPanel.setBounds((width/2)-200, (height/2)-200, 400, 400);
+        logoPanel.setOpaque(true);
         logoPanel.add(logo);
 
         // Add to LoadingPanel
