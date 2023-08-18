@@ -28,8 +28,8 @@ public class LoadingLayout {
         logoPanel.add(logo);
 
         // Add to LoadingPanel
-        layeredPane.add(bgPanel);
         layeredPane.add(logoPanel);
+        layeredPane.add(bgPanel);
 
         // Add to LoadingPanel
         LoadingPanel.add(layeredPane);
