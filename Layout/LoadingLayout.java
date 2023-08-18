@@ -18,7 +18,7 @@ public class LoadingLayout {
         logoPanel.add(logo, BorderLayout.CENTER);
 
         // create layered pane
-        
+        layeredPane = new JLayeredPane();
     }
 
     public JPanel getLoadingPanel() {
