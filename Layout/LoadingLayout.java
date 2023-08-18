@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class LoadingLayout {
     JPanel LoadingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), logoPanel = new JPanel(new BorderLayout());
-    JLabel bg;
+    JLabel bg, logo;
     
     public LoadingLayout(){
         // LoadingPanel
@@ -21,6 +21,10 @@ public class LoadingLayout {
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
         bgPanel.setBounds(0, 0, width, height);
         bgPanel.add(bg);
+
+        // logoPanel
+        logo = new JLabel(new ImageIcon("assets/logo.jpeg"));
+
 
         LoadingPanel.add(layeredPane);
         LoadingPanel.setOpaque(true);
