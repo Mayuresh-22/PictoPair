@@ -25,7 +25,9 @@ class App {
                 app.repaint();
             }
         });
-
+        timer.setRepeats(false);
+        timer.start();
+        
         app.setVisible(true);
     }
 }
