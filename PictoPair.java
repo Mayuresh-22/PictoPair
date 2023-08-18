@@ -11,12 +11,8 @@ class App {
         app.setResizable(false);
         app.setLayout(null);
 
-        JLayeredPane layeredPane = new JLayeredPane();
-        layeredPane.setSize(500, 500);
-        layeredPane.setBackground(Color.gray);
-        layeredPane.setOpaque(true);
-
-        app.add(layeredPane);
+        // LoadingLayout loadingLayout = new LoadingLayout();
+        app.add(loadingLayout.getLoadingPanel());
         app.setVisible(true);
     }
 }
