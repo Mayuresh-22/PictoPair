@@ -35,7 +35,7 @@ public class LoadingLayout {
 
         // Add to LoadingPanel
         LoadingPanel.add(layeredPane);
-        // LoadingPanel.setOpaque(true);
+        LoadingPanel.setOpaque(true);
     }
 
     public JPanel getLoadingPanel() {
