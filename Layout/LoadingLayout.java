@@ -7,6 +7,7 @@ import java.awt.*;
 public class LoadingLayout implements ScreenStructure{
     JPanel LoadingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), logoPanel = new JPanel(new BorderLayout());
     JLabel bg, logo;
+    JLayeredPane layeredPane = new JLayeredPane();
     
     public LoadingLayout(){
         // LoadingPanel
@@ -45,5 +46,13 @@ public class LoadingLayout implements ScreenStructure{
 
     public JLabel getBg() {
         return bg;
+    }
+
+    @Override
+    public void createLayeredPane(){
+        // layered pane
+        layeredPane.setSize(ScreenStructure.WIDTH, ScreenStructure.HEIGHT);
+        layeredPane.setBackground(Color.gray);
+        layeredPane.setOpaque(true);
     }
 }
