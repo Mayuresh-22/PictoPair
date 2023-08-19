@@ -28,6 +28,7 @@ public class HomeLayout {
 
         // Adding to layeredPane
         layeredPane.add(bgPanel);
+        layeredPane.add(menuPanel, BorderLayout.CENTER);
 
         // Adding to HomePanel
         HomePanel.add(layeredPane);
