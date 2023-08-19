@@ -18,7 +18,7 @@ public class LoadingLayout implements ScreenStructure{
 
         // logoPanel
         logo = new JLabel(new ImageIcon("assets/logogifclear.gif"));
-        logoPanel.setBounds((width/2)-200, (height/2)-200, 400, 400);
+        logoPanel.setBounds((ScreenStructure.WIDTH/2)-200, (ScreenStructure.WIDTH/2)-200, 400, 400);
         logoPanel.setOpaque(true);
         logoPanel.add(logo);
 
