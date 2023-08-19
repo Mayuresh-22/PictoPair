@@ -16,7 +16,7 @@ class App {
     App(){
         appConfig();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
-        soundEffect.filePath = "sounds/intro.wav";
+        soundEffect.filePath = "assetssounds/intro.wav";
         soundEffect.loop = false;
         soundEffect.start();
 
