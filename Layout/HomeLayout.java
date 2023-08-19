@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class HomeLayout {
-    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout());
+    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(0));
     JLabel bg;
 
     public HomeLayout(){
@@ -21,6 +21,10 @@ public class HomeLayout {
         bgPanel.setBounds(0, 0, width, height);
         bgPanel.setOpaque(true);
         bgPanel.add(bg);
+
+        // menu panel
+        menuPanel.setSize(500, 500);
+        menuPanel.setOpaque(true);
 
         // Adding to layeredPane
         layeredPane.add(bgPanel);
