@@ -33,7 +33,7 @@ public class HomeLayout implements ScreenStructure {
     @Override
     public void createLayeredPane(){
 
-        layeredPane.setSize(width, height);
+        layeredPane.setSize(ScreenStructure.WIDTH, ScreenStructure.HEIGHT);
         layeredPane.setBackground(Color.gray);
         layeredPane.setOpaque(true);
     }
