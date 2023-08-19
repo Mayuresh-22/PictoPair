@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import interfaces.*;
 
-public class HomeLayout implement ScreenStructure {
+public class HomeLayout implements ScreenStructure {
     JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(0));
     JLabel bg;
 
