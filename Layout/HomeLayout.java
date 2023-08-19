@@ -32,9 +32,7 @@ public class HomeLayout implements ScreenStructure {
 
     @Override
     public void createLayeredPane(){
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int width = (int) screenSize.getWidth();
-        int height = (int) screenSize.getHeight();
+
         layeredPane.setSize(width, height);
         layeredPane.setBackground(Color.gray);
         layeredPane.setOpaque(true);
