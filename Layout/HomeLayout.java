@@ -7,6 +7,7 @@ import interfaces.*;
 public class HomeLayout implements ScreenStructure {
     JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(0));
     JLabel bg;
+    JLayeredPane layeredPane = new JLayeredPane();
 
     public HomeLayout(){
 
@@ -37,7 +38,6 @@ public class HomeLayout implements ScreenStructure {
 
     @Override
     public void createLayeredPane(){
-        JLayeredPane layeredPane = new JLayeredPane();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
         int height = (int) screenSize.getHeight();
