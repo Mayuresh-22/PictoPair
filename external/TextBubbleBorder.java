@@ -16,11 +16,11 @@ public class TextBubbleBorder extends AbstractBorder {
     private int pointerPad = 4;
     RenderingHints hints;
 
-    TextBubbleBorder(Color color) {
+    public TextBubbleBorder(Color color) {
         new TextBubbleBorder(color, 4, 8, 7);
     }
 
-    TextBubbleBorder(Color color, int thickness, int radii, int pointerSize) {
+    public TextBubbleBorder(Color color, int thickness, int radii, int pointerSize) {
         this.thickness = thickness;
         this.radii = radii;
         this.pointerSize = pointerSize;
