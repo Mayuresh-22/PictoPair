@@ -10,7 +10,7 @@ public class GameLayout implements ScreenStructure {
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
 
-    public HomeLayout(){
+    public GameLayout(){
         createLayeredPane();
 
         createBgPanel("assets/images/Homescreen-bg.png");
