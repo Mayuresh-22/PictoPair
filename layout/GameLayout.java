@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import interfaces.*;
 
-public class HomeLayout implements ScreenStructure {
+public class GameLayout implements ScreenStructure {
     JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(0));
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
