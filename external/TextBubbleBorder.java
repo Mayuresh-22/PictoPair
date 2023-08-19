@@ -49,52 +49,48 @@ public class TextBubbleBorder extends AbstractBorder {
     }
 
     @Override
-    public void paintBorder(
-            Component c,
-            Graphics g,
-            int x, int y,
-            int width, int height) {
+    @Override
+public void paintBorder(
+        Component c,
+        Graphics g,
+        int x, int y,
+        int width, int height) {
 
-        Graphics2D g2 = (Graphics2D) g;
+    Graphics2D g2 = (Graphics2D) g;
 
-        int bottomLineY = height - thickness - pointerSize;
+    int bottomLineY = height - thickness - pointerSize;
 
-        RoundRectangle2D.Double bubble = new RoundRectangle2D.Double(
-                0 + strokePad,
-                0 + strokePad,
-                width - thickness,
-                bottomLineY,
-                radii,
-                radii);
+    RoundRectangle2D.Double bubble = new RoundRectangle2D.Double(
+            0 + strokePad,
+            0 + strokePad,
+            width - thickness,
+            bottomLineY,
+            radii,
+            radii);
 
-        Polygon pointer = new Polygon();
+    Polygon pointer = new Polygon();
 
-        // left point
-        pointer.addPoint(
-                strokePad + radii + pointerPad,
-                bottomLineY);
-        // right point
-        pointer.addPoint(
-                strokePad + radii + pointerPad + pointerSize,
-                bottomLineY);
-        // bottom point
-        pointer.addPoint(
-                strokePad + radii + pointerPad + (pointerSize / 2),
-                height - strokePad);
+    // left point
+    pointer.addPoint(
+            strokePad + radii + pointerPad,
+            bottomLineY);
+    // right point
+    pointer.addPoint(
+            strokePad + radii + pointerPad + pointerSize,
+            bottomLineY);
+    // bottom point
+    pointer.addPoint(
+            strokePad + radii + pointerPad + (pointerSize / 2),
+            height - strokePad);
 
-        Area area = new Area(bubble);
-        area.add(new Area(pointer));
+    Area area = new Area(bubble);
+    area.add(new Area(pointer));
 
-        g2.setRenderingHints(hints);
+    g2.setRenderingHints(hints);
 
-        Area spareSpace = new Area(new Rectangle(0, 0, width, height));
-        spareSpace.subtract(area);
-        g2.setClip(spareSpace);
-        g2.clearRect(0, 0, width, height);
-        g2.setClip(null);
+    g2.setColor(color);
+    g2.setStroke(stroke);
+    g2.draw(area);
+}
 
-        g2.setColor(color);
-        g2.setStroke(stroke);
-        g2.draw(area);
-    }
 }
