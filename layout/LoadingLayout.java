@@ -14,10 +14,10 @@ public class LoadingLayout implements ScreenStructure{
         createLayeredPane();
 
         // bgPanel
-        createBgPanel("assets/LoadingScreen-bg.png");
+        createBgPanel("assets/images/LoadingScreen-bg.png");
 
         // logoPanel
-        logo = new JLabel(new ImageIcon("assets/logogifclear.gif"));
+        logo = new JLabel(new ImageIcon("assets/images/logogifclear.gif"));
         logoPanel.setBounds((ScreenStructure.WIDTH/2)-200, (ScreenStructure.HEIGHT/2)-200, 400, 400);
         logoPanel.setOpaque(true);
         logoPanel.add(logo);
