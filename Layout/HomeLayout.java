@@ -16,7 +16,7 @@ public class HomeLayout implements ScreenStructure {
         createBgPanel("assets/Homescreen-bg.png");
 
         // menu panel
-        create
+        createMenuPanel
 
         // Adding to layeredPane
         layeredPane.add(menuPanel, BorderLayout.CENTER);
