@@ -24,7 +24,6 @@ public class HomeLayout {
 
         // menu panel
         menuPanel.setSize(500, 500);
-        menuPanel.setBounds((width/2)-200, (height/2)-200, 400, 400);
         menuPanel.setBackground(Color.gray);
         menuPanel.setOpaque(true);
 
