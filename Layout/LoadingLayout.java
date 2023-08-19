@@ -1,31 +1,24 @@
-package Layout;
+package layout;
 
 import javax.swing.*;
+import interfaces.*;
 import java.awt.*;
 
-public class LoadingLayout {
+public class LoadingLayout implements ScreenStructure{
     JPanel LoadingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), logoPanel = new JPanel(new BorderLayout());
     JLabel bg, logo;
+    JLayeredPane layeredPane = new JLayeredPane();
     
     public LoadingLayout(){
         // LoadingPanel
-        JLayeredPane layeredPane = new JLayeredPane();
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int width = (int) screenSize.getWidth();
-        int height = (int) screenSize.getHeight();
-        layeredPane.setSize(width, height);
-        layeredPane.setBackground(Color.gray);
-        layeredPane.setOpaque(true);
+        createLayeredPane();
 
         // bgPanel
-        bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
-        bgPanel.setBounds(0, 0, width, height);
-        bgPanel.setOpaque(true);
-        bgPanel.add(bg);
+        createBgPanel("assets/LoadingScreen-bg.png");
 
         // logoPanel
         logo = new JLabel(new ImageIcon("assets/logogifclear.gif"));
-        logoPanel.setBounds((width/2)-200, (height/2)-200, 400, 400);
+        logoPanel.setBounds((ScreenStructure.WIDTH/2)-200, (ScreenStructure.HEIGHT/2)-200, 400, 400);
         logoPanel.setOpaque(true);
         logoPanel.add(logo);
 
@@ -44,5 +37,22 @@ public class LoadingLayout {
 
     public JLabel getBg() {
         return bg;
+    }
+
+    @Override
+    public void createLayeredPane(){
+        // layered pane
+        layeredPane.setSize(ScreenStructure.WIDTH, ScreenStructure.HEIGHT);
+        layeredPane.setBackground(Color.gray);
+        layeredPane.setOpaque(true);
+    }
+
+    @Override
+    public void createBgPanel(String imagePath){
+        // bgPanel
+        bg = new JLabel(new ImageIcon(new ImageIcon(imagePath).getImage().getScaledInstance(ScreenStructure.WIDTH, ScreenStructure.HEIGHT, Image.SCALE_SMOOTH)));
+        bgPanel.setBounds(0, 0, ScreenStructure.WIDTH, ScreenStructure.HEIGHT);
+        bgPanel.setOpaque(true);
+        bgPanel.add(bg);
     }
 }

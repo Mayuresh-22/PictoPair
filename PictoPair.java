@@ -1,8 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
-import Layout.*;
+import layout.*;
 
 class App {
     JFrame app = new JFrame("PictoPair - Memory Game");
@@ -10,11 +9,7 @@ class App {
     HomeLayout homeLayout = new HomeLayout();
 
     App(){
-        app.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        app.setResizable(false);
-        app.setLayout(new BorderLayout(100, 100));
-
+        appConfig();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
 
         // Remove LoadingPanel after 5 seconds
@@ -32,6 +27,18 @@ class App {
         
         app.setVisible(true);
     }
+
+    // app configuration
+    public void appConfig(){
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        app.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        app.setMinimumSize(screenSize);
+        app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        app.setResizable(false);
+        app.setLayout(new BorderLayout(100, 100));
+        app.setIconImage(new ImageIcon("assets/card-back.png").getImage());
+    }
+
 }
 
 
