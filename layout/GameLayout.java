@@ -5,7 +5,8 @@ import javax.swing.*;
 import java.awt.*;
 import interfaces.*;
 import javax.swing.border.AbstractBorder;
-public class RoundedBorder extends AbstractBorder {
+
+ class RoundedBorder extends AbstractBorder {
     private int radius;
 
     public RoundedBorder(int radius) {
