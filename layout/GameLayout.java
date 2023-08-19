@@ -40,7 +40,7 @@ public class GameLayout implements ScreenStructure {
     }
 
     @Override
-    public void createBgPanel(String imagePath){
+    public void createCardsPanel(String imagePath){
         // bgPanel
         bg = new JLabel(new ImageIcon(new ImageIcon(imagePath).getImage().getScaledInstance(ScreenStructure.WIDTH, ScreenStructure.HEIGHT, Image.SCALE_SMOOTH)));
 
