@@ -41,9 +41,12 @@ public class HomeLayout implements ScreenStructure {
 
     @Override
     public void createBgPanel(String imagePath){
+        // SCALLED bg
+        
         // bgPanel
-        bg = new JLabel(new ImageIcon(imagePath));
-        bgPanel.setBounds(0, 0, ScreenStructure.WIDTH+100, ScreenStructure.HEIGHT+100);
+        bg = new JLabel(new ImageIcon(imagePath).getImage().getScaledInstance(ScreenStructure.WIDTH, ScreenStructure.HEIGHT, HEIGHT));
+
+        bgPanel.setBounds(0, 0, ScreenStructure.WIDTH, ScreenStructure.HEIGHT);
         bgPanel.setOpaque(true);
         bgPanel.add(bg);
     }
