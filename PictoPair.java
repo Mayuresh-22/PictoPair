@@ -16,7 +16,10 @@ class App {
     App(){
         appConfig();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
-
+        soundEffect.filePath = "sounds/intro.wav";
+        soundEffect.loop = false;
+        soundEffect.start();
+        
         // Remove LoadingPanel after 5 seconds
         Timer timer = new Timer(5000, new ActionListener() {
             @Override
