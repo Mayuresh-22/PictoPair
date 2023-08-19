@@ -16,7 +16,7 @@ public class HomeLayout implements ScreenStructure {
         createBgPanel("assets/Homescreen-bg.png");
 
         // menu panel
-
+        create
 
         // Adding to layeredPane
         layeredPane.add(menuPanel, BorderLayout.CENTER);
@@ -48,7 +48,7 @@ public class HomeLayout implements ScreenStructure {
         bgPanel.add(bg);
     }
 
-    public void menuPanel(){
+    public void createMenuPanel(){
         menuPanel.setBounds((ScreenStructure.WIDTH/2)-200, (ScreenStructure.HEIGHT/2)-200, 400, 400);
         menuPanel.setBackground(Color.gray);
         menuPanel.setOpaque(true);
