@@ -49,4 +49,13 @@ public class LoadingLayout implements ScreenStructure{
         layeredPane.setBackground(Color.gray);
         layeredPane.setOpaque(true);
     }
+
+    @Override
+    public void createBgPanel(String imagePath){
+        // bgPanel
+        bg = new JLabel(new ImageIcon(imagePath));
+        bgPanel.setBounds(0, 0, ScreenStructure.WIDTH, ScreenStructure.HEIGHT);
+        bgPanel.setOpaque(true);
+        bgPanel.add(bg);
+    }
 }
