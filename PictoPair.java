@@ -10,10 +10,6 @@ class App {
     HomeLayout homeLayout = new HomeLayout();
 
     App(){
-        app.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        app.setResizable(false);
-        app.setLayout(new BorderLayout(100, 100));
 
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
 
@@ -32,6 +28,15 @@ class App {
         
         app.setVisible(true);
     }
+
+    // app configuration
+    public void appConfig(){
+        app.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        app.setResizable(false);
+        app.setLayout(new BorderLayout(100, 100));
+    }
+
 }
 
 
