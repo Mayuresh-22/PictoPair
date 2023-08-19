@@ -13,7 +13,7 @@ public class HomeLayout implements ScreenStructure {
     public HomeLayout(){
         createLayeredPane();
 
-        createBgPanel("assets/Homescreen-bg.png");
+        createBgPanel("assets/images/Homescreen-bg.png");
 
         // menu panel
         createMenuPanel();

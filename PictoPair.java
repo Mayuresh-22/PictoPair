@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import layout.*;
+import external.*;
 
 // Devang App Changed
 
@@ -9,19 +10,27 @@ class App {
     JFrame app = new JFrame("PictoPair - Memory Game");
     LoadingLayout loadingLayout = new LoadingLayout();
     HomeLayout homeLayout = new HomeLayout();
+    MusicPlayerThread soundEffect = new MusicPlayerThread();
+    MusicPlayerThread musicPlayer = new MusicPlayerThread();
 
     App(){
         appConfig();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
+        soundEffect.filePath = "assets/sounds/intro.wav";
+        soundEffect.loop = false;
+        soundEffect.start();
 
         // Remove LoadingPanel after 5 seconds
-        Timer timer = new Timer(5000, new ActionListener() {
+        Timer timer = new Timer(4900, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 app.remove(loadingLayout.getLoadingPanel());
                 app.add(homeLayout.getHomePanel(), BorderLayout.CENTER);
                 app.revalidate();
                 app.repaint();
+                musicPlayer.filePath = "assets/sounds/bgm.wav";
+                musicPlayer.loop = true;
+                musicPlayer.start();
             }
         });
         timer.setRepeats(false);
