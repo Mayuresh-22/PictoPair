@@ -2,7 +2,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
-import Layout.*;
+
+import layout.*;
 
 class App {
     JFrame app = new JFrame("PictoPair - Memory Game");
