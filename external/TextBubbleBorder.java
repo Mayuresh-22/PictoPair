@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.border.*;
 
-public class TextBubbleBorder extends AbstractBorder {
+class TextBubbleBorder extends AbstractBorder {
 
     private Color color;
     private int thickness = 4;
