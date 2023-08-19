@@ -20,7 +20,7 @@ public class TextBubbleBorder extends AbstractBorder {
         new TextBubbleBorder(color, 4, 8, 7);
     }
 
-    TextBubbleBorder(Color color, int thickness, int radii, int pointerSize) {
+    public TextBubbleBorder(Color color, int thickness, int radii, int pointerSize) {
         this.thickness = thickness;
         this.radii = radii;
         this.pointerSize = pointerSize;
