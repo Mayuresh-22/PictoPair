@@ -10,7 +10,7 @@ class App {
     HomeLayout homeLayout = new HomeLayout();
 
     App(){
-
+        appConfig();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
 
         // Remove LoadingPanel after 5 seconds
