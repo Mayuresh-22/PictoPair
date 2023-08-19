@@ -16,7 +16,7 @@ public class TextBubbleBorder extends AbstractBorder {
     private int pointerPad = 4;
     RenderingHints hints;
 
-    TextBubbleBorder( Color color) {
+    TextBubbleBorder(Color color) {
         new TextBubbleBorder(color, 4, 8, 7);
     }
 
