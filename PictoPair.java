@@ -33,7 +33,7 @@ class App {
     public void appConfig(){
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         app.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        app.setMaximumSize(screenSize);
+        app.setMinimumSize(screenSize);
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         app.setResizable(false);
         app.setLayout(new BorderLayout(100, 100));
