@@ -21,7 +21,7 @@ class App {
         soundEffect.start();
 
         // Remove LoadingPanel after 5 seconds
-        Timer timer = new Timer(5000, new ActionListener() {
+        Timer timer = new Timer(4900, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 app.remove(loadingLayout.getLoadingPanel());
