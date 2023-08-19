@@ -55,6 +55,9 @@ public class GameLayout implements ScreenStructure {
         cardsPanel.setOpaque(true);
         cardsPanel.setBorder(new TextBubbleBorder(new Color(200, 200, 200), 10, 70, 0));
         cardsPanel.setLayout(new GridLayout(4,6,20,20));
+
+    }
+    public void createCard(){
         
     }
 }
