@@ -28,7 +28,7 @@ class App {
                 app.add(homeLayout.getHomePanel(), BorderLayout.CENTER);
                 app.revalidate();
                 app.repaint();
-                musicPlayer.filePath = "sounds/bgm.wav";
+                musicPlayer.filePath = "assets/sounds/bgm.wav";
                 musicPlayer.loop = true;
                 musicPlayer.start();
             }
