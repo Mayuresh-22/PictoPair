@@ -2,6 +2,7 @@ package layout;
 
 import javax.swing.*;
 import java.awt.*;
+import interfaces.*;
 
 public class HomeLayout {
     JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(0));
