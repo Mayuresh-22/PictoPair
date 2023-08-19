@@ -14,7 +14,7 @@ public class LoadingLayout implements ScreenStructure{
         createLayeredPane();
 
         // bgPanel
-        createBgPanel("assets/assets/LoadingScreen-bg.png");
+        createBgPanel("assets/LoadingScreen-bg.png");
 
         // logoPanel
         logo = new JLabel(new ImageIcon("assets/logogifclear.gif"));
