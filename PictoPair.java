@@ -2,7 +2,9 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import layout.*;
-// App classes
+
+// Devang App
+
 class App {
     JFrame app = new JFrame("PictoPair - Memory Game");
     LoadingLayout loadingLayout = new LoadingLayout();
