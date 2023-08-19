@@ -12,6 +12,8 @@ public class HomeLayout implements ScreenStructure {
     public HomeLayout(){
         createLayeredPane();
 
+        createBgPanel(null);
+
         // menu panel
         menuPanel.setBounds((ScreenStructure.WIDTH/2)-200, (ScreenStructure.HEIGHT/2)-200, 400, 400);
         menuPanel.setBackground(Color.gray);
