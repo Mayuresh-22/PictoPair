@@ -9,13 +9,7 @@ public class HomeLayout {
     JLabel bg;
 
     public HomeLayout(){
-        JLayeredPane layeredPane = new JLayeredPane();
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int width = (int) screenSize.getWidth();
-        int height = (int) screenSize.getHeight();
-        layeredPane.setSize(width, height);
-        layeredPane.setBackground(Color.gray);
-        layeredPane.setOpaque(true);
+
 
         // bgPanel
         bg = new JLabel(new ImageIcon("assets/HomeScreen-bg.png"));
@@ -39,5 +33,21 @@ public class HomeLayout {
 
     public JPanel getHomePanel() {
         return HomePanel;
+    }
+
+    @Override
+    public void createLayeredPane(){
+        JLayeredPane layeredPane = new JLayeredPane();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int width = (int) screenSize.getWidth();
+        int height = (int) screenSize.getHeight();
+        layeredPane.setSize(width, height);
+        layeredPane.setBackground(Color.gray);
+        layeredPane.setOpaque(true);
+    }
+
+    @Override
+    public void createBgPanel(String imagePath){
+
     }
 }
