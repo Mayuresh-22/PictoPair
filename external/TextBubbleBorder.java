@@ -49,7 +49,6 @@ public class TextBubbleBorder extends AbstractBorder {
     }
 
     @Override
-    @Override
 public void paintBorder(
         Component c,
         Graphics g,
