@@ -15,9 +15,7 @@ public class HomeLayout implements ScreenStructure {
         createBgPanel("assets/Homescreen-bg.png");
 
         // menu panel
-        menuPanel.setBounds((ScreenStructure.WIDTH/2)-200, (ScreenStructure.HEIGHT/2)-200, 400, 400);
-        menuPanel.setBackground(Color.gray);
-        menuPanel.setOpaque(true);
+
 
         // Adding to layeredPane
         layeredPane.add(menuPanel, BorderLayout.CENTER);
@@ -47,5 +45,11 @@ public class HomeLayout implements ScreenStructure {
         bgPanel.setBounds(0, 0, ScreenStructure.WIDTH, ScreenStructure.HEIGHT);
         bgPanel.setOpaque(true);
         bgPanel.add(bg);
+    }
+
+    public void menuPanel(){
+        menuPanel.setBounds((ScreenStructure.WIDTH/2)-200, (ScreenStructure.HEIGHT/2)-200, 400, 400);
+        menuPanel.setBackground(Color.gray);
+        menuPanel.setOpaque(true);
     }
 }
