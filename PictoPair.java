@@ -3,7 +3,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import layout.*;
 
-// Devang App
+// Devang App Changed
 
 class App {
     JFrame app = new JFrame("PictoPair - Memory Game");
