@@ -57,7 +57,4 @@ public class GameLayout implements ScreenStructure {
         cardsPanel.setLayout(new GridLayout(4,6,20,20));
 
     }
-    public void createCard(){
-        
-    }
 }
