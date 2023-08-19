@@ -12,12 +12,6 @@ public class HomeLayout implements ScreenStructure {
     public HomeLayout(){
 
 
-        // bgPanel
-        bg = new JLabel(new ImageIcon("assets/HomeScreen-bg.png"));
-        bgPanel.setBounds(0, 0, width, height);
-        bgPanel.setOpaque(true);
-        bgPanel.add(bg);
-
         // menu panel
         menuPanel.setBounds((width/2)-200, (height/2)-200, 400, 400);
         menuPanel.setBackground(Color.gray);
@@ -48,6 +42,10 @@ public class HomeLayout implements ScreenStructure {
 
     @Override
     public void createBgPanel(String imagePath){
-
+        // bgPanel
+        bg = new JLabel(new ImageIcon(imagePath));
+        bgPanel.setBounds(0, 0, width, height);
+        bgPanel.setOpaque(true);
+        bgPanel.add(bg);
     }
 }
