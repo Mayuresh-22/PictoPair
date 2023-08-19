@@ -87,7 +87,7 @@ public class GameLayout implements ScreenStructure {
     public void createCardsPanel(){
         cardsPanel.setBounds((int)(ScreenStructure.WIDTH*0.03),(int)(ScreenStructure.HEIGHT*0.03), (int)(ScreenStructure.WIDTH*0.7), (int)(ScreenStructure.HEIGHT*0.9));
         cardsPanel.setOpaque(true);
-        Border roundedBorder = new RoundedBorder(borderRadius);
+        Border roundedBorder = new RoundedBorder(20);
         cardsPanel.setBorder(roundedBorder);
     }
 }
