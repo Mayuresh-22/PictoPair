@@ -23,12 +23,12 @@ public class GameLayout implements ScreenStructure {
         layeredPane.add(bgPanel);
 
         // Adding to HomePanel
-        HomePanel.add(layeredPane);
-        HomePanel.setOpaque(true);
+        GamePanel.add(layeredPane);
+        GamePanel.setOpaque(true);
     }
 
     public JPanel getHomePanel() {
-        return HomePanel;
+        return GamePanel;
     }
 
     @Override
