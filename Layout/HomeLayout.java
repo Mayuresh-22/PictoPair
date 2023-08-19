@@ -1,6 +1,8 @@
 package layout;
 
+import external.*;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import interfaces.*;
 
@@ -51,5 +53,6 @@ public class HomeLayout implements ScreenStructure {
         menuPanel.setBounds((ScreenStructure.WIDTH/2)-200, (ScreenStructure.HEIGHT/2)-200, 400, 400);
         menuPanel.setBackground(Color.gray);
         menuPanel.setOpaque(true);
+        menuPanel.setBorder(new Border);
     }
 }
