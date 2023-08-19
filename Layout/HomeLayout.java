@@ -1,4 +1,4 @@
-package Layout;
+package layout;
 
 import javax.swing.*;
 import java.awt.*;
