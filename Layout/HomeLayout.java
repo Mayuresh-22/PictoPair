@@ -10,7 +10,7 @@ public class HomeLayout implements ScreenStructure {
     JLayeredPane layeredPane = new JLayeredPane();
 
     public HomeLayout(){
-
+        createLayeredPane();
 
         // menu panel
         menuPanel.setBounds((ScreenStructure.WIDTH/2)-200, (ScreenStructure.HEIGHT/2)-200, 400, 400);
