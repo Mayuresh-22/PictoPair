@@ -50,7 +50,7 @@ public class GameLayout implements ScreenStructure {
     }
 
     public void createCardsPanel(){
-        menuPanel.setBounds((ScreenStructure.WIDTH/2)-250, (ScreenStructure.HEIGHT/2)-250, (ScreenStructure.WIDTH/2), (ScreenStructure.HEIGHT/2));
+        menuPanel.setBounds(100, 100, (ScreenStructure.WIDTH/2), (ScreenStructure.HEIGHT/2));
         menuPanel.setBackground(new Color(131,0,255,255));
         menuPanel.setOpaque(true);
         menuPanel.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
