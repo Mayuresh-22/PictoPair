@@ -23,7 +23,6 @@ public class HomeLayout {
         bgPanel.add(bg);
 
         // menu panel
-        menuPanel.setSize(500, 500);
         menuPanel.setBounds((width/2)-500, (height/2)-500, 400, 400);
         menuPanel.setBackground(Color.gray);
         menuPanel.setOpaque(true);
