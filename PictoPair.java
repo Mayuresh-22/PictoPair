@@ -19,7 +19,7 @@ class App {
         soundEffect.filePath = "sounds/intro.wav";
         soundEffect.loop = false;
         soundEffect.start();
-        
+
         // Remove LoadingPanel after 5 seconds
         Timer timer = new Timer(5000, new ActionListener() {
             @Override
@@ -28,6 +28,9 @@ class App {
                 app.add(homeLayout.getHomePanel(), BorderLayout.CENTER);
                 app.revalidate();
                 app.repaint();
+                musicPlayer.filePath = "sounds/bgm.wav";
+                musicPlayer.loop = true;
+                musicPlayer.start();
             }
         });
         timer.setRepeats(false);
