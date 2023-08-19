@@ -41,8 +41,6 @@ public class HomeLayout implements ScreenStructure {
 
     @Override
     public void createBgPanel(String imagePath){
-        // SCALLED bg
-        
         // bgPanel
         bg = new JLabel(new ImageIcon(new ImageIcon(imagePath).getImage().getScaledInstance(ScreenStructure.WIDTH, ScreenStructure.HEIGHT, Image.SCALE_SMOOTH)));
 
