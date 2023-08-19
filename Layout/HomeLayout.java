@@ -29,8 +29,8 @@ public class HomeLayout {
         menuPanel.setOpaque(true);
 
         // Adding to layeredPane
-        layeredPane.add(bgPanel);
         layeredPane.add(menuPanel, BorderLayout.CENTER);
+        layeredPane.add(bgPanel);
 
         // Adding to HomePanel
         HomePanel.add(layeredPane);
