@@ -11,13 +11,7 @@ public class LoadingLayout implements ScreenStructure{
     
     public LoadingLayout(){
         // LoadingPanel
-        JLayeredPane layeredPane = new JLayeredPane();
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int width = (int) screenSize.getWidth();
-        int height = (int) screenSize.getHeight();
-        layeredPane.setSize(width, height);
-        layeredPane.setBackground(Color.gray);
-        layeredPane.setOpaque(true);
+        createLayeredPane();
 
         // bgPanel
         bg = new JLabel(new ImageIcon("assets/LoadingScreen-bg.png"));
