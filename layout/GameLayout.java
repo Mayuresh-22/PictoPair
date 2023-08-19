@@ -27,7 +27,7 @@ public class GameLayout implements ScreenStructure {
         GamePanel.setOpaque(true);
     }
 
-    public JPanel getHomePanel() {
+    public JPanel getGamePanel() {
         return GamePanel;
     }
 
