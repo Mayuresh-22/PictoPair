@@ -1,9 +1,7 @@
 package layout;
 
 import javax.swing.*;
-
 import interfaces.ScreenStructure;
-
 import java.awt.*;
 
 public class LoadingLayout implements ScreenStructure{
