@@ -2,7 +2,6 @@ package layout;
 
 import external.*;
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import interfaces.*;
 
