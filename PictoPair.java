@@ -47,7 +47,7 @@ class App {
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         app.setResizable(false);
         app.setLayout(new BorderLayout(100, 100));
-        app.setIconImage(new ImageIcon("assets/card-back.png").getImage());
+        app.setIconImage(new ImageIcon("assets/images/card-back.png").getImage());
     }
 
 }
