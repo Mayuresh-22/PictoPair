@@ -13,7 +13,7 @@ public class GameLayout implements ScreenStructure {
     public GameLayout(){
         createLayeredPane();
 
-        createBgPanel("assets/images/Homescreen-bg.png");
+        createBgPanel("assets/images/GameLayout-bg.png");
 
         // menu panel
         createMenuPanel();
