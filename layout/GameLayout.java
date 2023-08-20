@@ -5,6 +5,7 @@ import external.*;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import interfaces.*;
 
@@ -80,6 +81,12 @@ public class GameLayout implements ScreenStructure {
 
          ArrayList<Integer> rand_arr = new ArrayList<>();
          ArrayList<Cards> rand_cards = new ArrayList<>();
+        // Creating an array with 16 numbers
+        for (int i = 0; i < 16; i++) {
+            rand_arr.add(i);
+        }
+        // Shuffling the numbers
+        Collections.shuffle(rand_arr);
 
         int j = 1;
         // Initializing Cards
