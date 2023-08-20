@@ -128,6 +128,6 @@ public class GameLayout implements ScreenStructure {
         scorePanel.setBackground(Color.WHITE);
         scorePanel.setOpaque(true);
         scorePanel.setBorder(new TextBubbleBorder(new Color(200, 200, 200), 10, 70, 0));
-        scorePanel.setLayout(new GridLayout(4, 6, 20, 20));
+        scorePanel.setLayout(new GridLayout(2, 1, 20, 20));
     }
 }
