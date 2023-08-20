@@ -1,12 +1,13 @@
 package layout;
 
+import external.RoundedPanel;
 import external.TextBubbleBorder;
 import javax.swing.*;
 import java.awt.*;
 import interfaces.*;
 
 public class HomeLayout implements ScreenStructure {
-    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(0));
+    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new RoundedPanel();
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
 
@@ -53,7 +54,5 @@ public class HomeLayout implements ScreenStructure {
         menuPanel.setBounds((ScreenStructure.WIDTH/2)-250, (ScreenStructure.HEIGHT/2)-250, 500, 500);
         menuPanel.setBackground(new Color(131,0,255,255));
         menuPanel.setOpaque(true);
-        // set round border
-        menuPanel.setBorder(new TextBubbleBorder(Color.BLACK));
     }
 }
