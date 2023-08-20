@@ -193,6 +193,6 @@ public class GameLayout implements ScreenStructure {
         }
 
         // Setting Sound Effects for cards
-        new Cards().setSoundEffects();
+        Cards.setSoundEffects();
     }
 }
