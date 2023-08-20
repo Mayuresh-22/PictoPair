@@ -36,6 +36,9 @@ public class Cards implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
+        if(selected.size()+1 > 2){
+            return;
+        }
         if (selected.size() < 2 && this.status.equals("hidden")) {
             button.setIcon(mainImg);
             selected.add(this);
