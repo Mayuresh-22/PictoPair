@@ -130,7 +130,7 @@ public class GameLayout implements ScreenStructure {
         scorePanel.setLayout(new GridLayout(2, 1, 0, 20));
 
         // Creating Fonts for Labels
-        Font labelFont = new Font();
+        
 
         // Creating Score Labels
         JLabel matches = new JLabel("Matches : 0");
