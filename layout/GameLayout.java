@@ -9,7 +9,7 @@ import java.awt.event.*;
 import java.util.Vector;
 
 // Card Class
-class Cards implements ActionListener {
+public class Cards implements ActionListener {
 
     // Global selected cards vector
     public static Vector<Cards> selected = new Vector<>();
