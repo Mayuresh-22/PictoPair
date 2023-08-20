@@ -18,8 +18,8 @@ public class GameLayout implements ScreenStructure {
             scorePanel = new JPanel();
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
-    
-    public static int matches = 0,turns = 0;
+
+    public static int matches = 0,turns = 20;
 
     public GameLayout() {
         createLayeredPane();
