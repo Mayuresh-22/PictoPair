@@ -19,7 +19,8 @@ public class Cards implements ActionListener {
 
 
     public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path ,int id) {
-
+        matches = 0;
+        turns = 0;
         button = new JButton(defaultImg);
         button.setBorderPainted(false);
         button.setFocusPainted(false);
