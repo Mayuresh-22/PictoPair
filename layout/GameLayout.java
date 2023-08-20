@@ -70,9 +70,10 @@ class Cards implements ActionListener {
                         selected.clear();
                         
                     
-                        selected.get(1).button.setIcon(defaultImg);
-                        selected.get(0).status = "hidden";
-                        selected.get(1).status = "hidden";
+                        c1.button.setIcon(defaultImg);
+                        c1.button.setIcon(defaultImg);
+                        c1.status = "hidden";
+                        c1.status = "hidden";
                     }
                 });
 
