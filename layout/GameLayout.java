@@ -24,11 +24,7 @@ public class GameLayout implements ScreenStructure {
 
         createBgPanel("assets/images/GameLayout-bg.png");
 
-<<<<<<< HEAD
-        // cards panel
-=======
-        // Card panel
->>>>>>> 70d6fbd4b2a2058f2d9f54a2cc0c9607a79e9d50
+        // Cards Panel
         createCardsPanel();
 
         // score panel
