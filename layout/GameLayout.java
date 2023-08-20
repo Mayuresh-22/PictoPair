@@ -61,15 +61,15 @@ class Cards implements ActionListener {
                         Cards c2 = selected.get(1);
                         selected.clear();
 
-                        // Playing Correct Sound Effect
-                        try {
-                            soundEffect.join(); // Wait for the thread to finish
-                        } catch (InterruptedException s) {
-                            s.printStackTrace();
-                        }
-                        soundEffect.filePath = "assets/sounds/correct.wav";
-                        soundEffect.loop = false;
-                        soundEffect.start();
+                        // // Playing Correct Sound Effect
+                        // try {
+                        //     soundEffect.join(); // Wait for the thread to finish
+                        // } catch (InterruptedException s) {
+                        //     s.printStackTrace();
+                        // }
+                        // soundEffect.filePath = "assets/sounds/correct.wav";
+                        // soundEffect.loop = false;
+                        // soundEffect.start();
 
                         // Setting Cards disabled
                         c1.button.setEnabled(false);
