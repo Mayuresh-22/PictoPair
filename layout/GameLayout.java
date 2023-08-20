@@ -67,12 +67,12 @@ class Cards implements ActionListener {
                     public void actionPerformed(ActionEvent e) {
                         Cards c1 = selected.get(0);
                         Cards c2 = selected.get(1);
+                        selected.clear();
                         
-                        b1.setIcon(defaultImg);
+                    
                         selected.get(1).button.setIcon(defaultImg);
                         selected.get(0).status = "hidden";
                         selected.get(1).status = "hidden";
-                        selected.clear();
                     }
                 });
 
