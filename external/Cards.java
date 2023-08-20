@@ -103,7 +103,8 @@ public class Cards implements ActionListener {
                         turns+=1;
                     }
                 });
-
+                
+                timer.setRepeats(false);
                 timer.start();
             }
         }
