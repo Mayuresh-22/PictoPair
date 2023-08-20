@@ -129,7 +129,7 @@ public class GameLayout implements ScreenStructure {
         scorePanel.setLayout(new GridLayout(2, 1, 0, 20));
 
         // Creating Fonts for Labels
-        Font labelFont = new Font("SansSerif",Font.BOLD,30);
+        Font labelFont = new Font("SansSerif",Font.BOLD,10);
 
         
         // Creating Score Labels
