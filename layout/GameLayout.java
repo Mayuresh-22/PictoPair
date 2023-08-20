@@ -63,7 +63,7 @@ class Cards implements ActionListener {
 
                         // Playing Correct Sound Effect
                         try {
-                            thread.join(); // Wait for the thread to finish
+                            soundEffect.join(); // Wait for the thread to finish
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
