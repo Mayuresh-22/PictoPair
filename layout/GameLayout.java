@@ -141,6 +141,7 @@ public class GameLayout implements ScreenStructure {
         // Styling Labels
         matches.setSize(200, 100);
         matches.setBackground(Color.gray);
+        matches.setHorizontalAlignment(SwingConstants.CENTER)
         turns.setSize(200, 100);
         turns.setBackground(Color.gray);
 
