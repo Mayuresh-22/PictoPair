@@ -28,7 +28,7 @@ public class GameLayout implements ScreenStructure {
         createCardsPanel();
 
         // score panel
-        createCardsPanel();
+        createScorePanel();
 
         // Adding to layeredPane
         layeredPane.add(cardsPanel, BorderLayout.CENTER);
