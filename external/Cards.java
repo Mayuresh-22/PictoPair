@@ -102,7 +102,7 @@ public class Cards implements ActionListener {
                         c3.status = "hidden";
                         c4.status = "hidden";
 
-                        GameLayout.turns+=1;
+                        GameLayout.turns-=1;
                     }
                 });
                 
