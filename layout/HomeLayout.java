@@ -6,7 +6,7 @@ import java.awt.*;
 import interfaces.*;
 
 public class HomeLayout implements ScreenStructure {
-    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new RoundedPanel(70, Color.black);
+    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new RoundedPanel(10, Color.black);
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
 
