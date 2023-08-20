@@ -158,7 +158,7 @@ public class GameLayout implements ScreenStructure {
         cardsPanel.setLayout(new GridLayout(4,6,20,20));
     }
 }
-class GradientLabel extends JLabel {
+static class GradientLabel extends JLabel {
         private Color startColor;
         private Color endColor;
         
