@@ -134,7 +134,7 @@ public class GameLayout implements ScreenStructure {
         JLabel turns = new JLabel("Turns : 0");
 
         // Styling Labels
-        
+        matches.setSize(200, 100);;
         scorePanel.add(matches);
         scorePanel.add(turns);
     }
