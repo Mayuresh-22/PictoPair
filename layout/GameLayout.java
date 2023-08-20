@@ -100,6 +100,8 @@ class Cards implements ActionListener {
     public void setSoundEffects(){
         soundEffect1.filePath = "assets/sounds/correct.wav";
         soundEffect1.loop = false;
+        soundEffect2.filePath = "assets/sounds/correct.wav";
+        soundEffect2.loop = false;
     }
 }
 
