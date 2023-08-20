@@ -74,6 +74,7 @@ public class Cards implements ActionListener {
                         GameLayout.turns-=1;
 
                         GameLayout.matchesLabel.setText("Matches : "+GameLayout.matches);
+                        GameLayout.turnsLabel.setText("Matches : "+GameLayout.turns);
                         if(GameLayout.matches == 12){
                             // Call Score Screen Method
                         }
