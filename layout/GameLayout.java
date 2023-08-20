@@ -60,7 +60,9 @@ public class GameLayout implements ScreenStructure, ActionListener {
         GamePanel.setOpaque(true);
     }
     public void actionPerformed(ActionEvent e){
-        if(e.getSource()==quitButton)
+        if(e.getSource()==quitButton){
+            
+        }
     }
     public JPanel getGamePanel() {
         return GamePanel;
