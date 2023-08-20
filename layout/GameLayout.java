@@ -86,6 +86,7 @@ class Cards implements ActionListener {
 }
 
 public class GameLayout implements ScreenStructure {
+    
     JPanel GamePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), cardsPanel = new JPanel(), scorePanel = new JPanel();
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
