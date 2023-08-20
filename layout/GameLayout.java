@@ -150,7 +150,7 @@ public class GameLayout implements ScreenStructure {
 
         // Initializing Cards
         for (int i = 0; i < 24; i++) {
-            card[i] = new Cards("hidden", ("E:\\\\DarshanStudies\\\\Programing\\\\Java\\\\PictoPair-Memory-Game\\\\assets\\\\images\\\\card-back.png"), defaultImgIcon);
+            card[i] = new Cards("hidden", ("E:\\DarshanStudies\\Programing\\Java\\PictoPair-Memory-Game\\assets\\images\\card-back.png"), defaultImgIcon);
             cardsPanel.add(card[i].button);
         }
     }
