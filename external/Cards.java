@@ -17,8 +17,8 @@ public class Cards implements ActionListener {
     public String status, path;
     public ImageIcon defaultImg, mainImg;
 
-    ArrayList<Integer> rand_arr = new ArrayList<>();
-    ArrayList<Cards> rand_cards = new ArrayList<>();
+    static ArrayList<Integer> rand_arr = new ArrayList<>();
+    static ArrayList<Cards> rand_cards = new ArrayList<>();
 
 
     public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path) {
