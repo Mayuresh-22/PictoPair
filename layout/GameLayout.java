@@ -59,11 +59,12 @@ class Cards implements ActionListener {
                         Cards c2 = selected.get(1);
                         selected.clear();
                     
-                        
+                        // Playing Correct Sound Effect
                         soundEffect.filePath = "assets/sounds/correct.wav";
                         soundEffect.loop = false;
                         soundEffect.start();
-                        
+
+                        // Setting Cards disabled
                         c1.button.setEnabled(false);
                         c2.button.setEnabled(false);
 
