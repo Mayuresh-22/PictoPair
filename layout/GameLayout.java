@@ -85,6 +85,8 @@ class Cards implements ActionListener {
                         selected.clear();
 
                         // Playing Wrong Sound Effect
+                        soundEffect2.filePath = "assets/sounds/wrong.wav";
+                        soundEffect2.loop = false;
                         soundEffect2.start();
 
                         // Setting Cards to hidden
@@ -103,8 +105,6 @@ class Cards implements ActionListener {
 
     public static void setSoundEffects() {
 
-        soundEffect2.filePath = "assets/sounds/wrong.wav";
-        soundEffect2.loop = false;
     }
 }
 
