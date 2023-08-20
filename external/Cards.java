@@ -70,6 +70,10 @@ public class Cards implements ActionListener {
 
                         matches+=1;
                         turns+=1;
+
+                        if(matches == 12){
+                            
+                        }
                     }
                 });
 
