@@ -102,7 +102,7 @@ public class Cards implements ActionListener {
     }
     public static void shuffle(){
                 // Creating an array with 16 numbers
-        for (int i = 0; i < 16; i++) {
+        for (int i = 0; i < 24; i++) {
             rand_arr.add(i);
         }
         // Shuffling the numbers
