@@ -63,6 +63,7 @@ class Cards implements ActionListener {
                         c2.button.setEnabled(false);
 
                         soundEffect.filePath("assets/sounds/correct.wav");
+                        soundEffect.loop(false);
                     }
                 });
 
