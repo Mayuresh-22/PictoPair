@@ -135,7 +135,7 @@ public class GameLayout implements ScreenStructure {
 
         
         
-        // Styling Labels
+        // Styling Score Labels
         matchesLabel.setFont(labelFont);
         turnsLabel.setFont(labelFont);
 
