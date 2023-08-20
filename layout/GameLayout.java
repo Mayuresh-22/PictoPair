@@ -40,7 +40,7 @@ public class GameLayout implements ScreenStructure {
         // quit button
         JButton quitButton = new JButton("QUIT");
         quitButton.setBounds((int) (ScreenStructure.WIDTH * 0.97), (int) (ScreenStructure.HEIGHT * 0.01),
-                (int) (ScreenStructure.WIDTH * 0.03), (int) (ScreenStructure.HEIGHT * 0.1));
+                (int) (ScreenStructure.WIDTH * 0.05), (int) (ScreenStructure.HEIGHT * 0.03));
         quitButton.setBackground(Color.red);
         quitButton.setOpaque(true);
 
