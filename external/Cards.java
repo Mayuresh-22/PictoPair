@@ -69,7 +69,7 @@ public class Cards implements ActionListener {
                         c2.button.setEnabled(false);
 
                         matches++;
-                        turns++;
+                        turns+=1;
                     }
                 });
 
