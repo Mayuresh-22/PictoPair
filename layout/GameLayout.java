@@ -159,18 +159,19 @@ public class GameLayout implements ScreenStructure {
     static class GradientLabel extends JLabel {
         private Color startColor;
         private Color endColor;
-
+    
         public GradientLabel(String text, Color startColor, Color endColor) {
             super(text);
             this.startColor = startColor;
             this.endColor = endColor;
             setOpaque(false); // Make sure the label is transparent
+            setForeground(Color.WHITE); // Set text color to white
         }
-
+    
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g); // Call the original paintComponent method first
-
+    
             // Create a gradient background
             Graphics2D g2d = (Graphics2D) g.create();
             g2d.setPaint(new GradientPaint(
