@@ -1,9 +1,4 @@
-package external;
-
-import java.awt.*;
-import javax.swing.*;
-
-public class RoundedPanel extends JPanel
+class RoundedPanel extends JPanel
 {
     private Color backgroundColor;
     private int cornerRadius = 15;
