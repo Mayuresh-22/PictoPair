@@ -89,6 +89,8 @@ class Cards implements ActionListener {
                         c4.button.setIcon(defaultImg);
                         c3.status = "hidden";
                         c4.status = "hidden";
+
+                        soundEffect2.stop();
                     }
                 });
 
