@@ -122,7 +122,7 @@ public class TextBubbleBorder extends AbstractBorder {
             g2.setClip(borderRegion);
             g2.setColor(bg);
             g2.fillRect(0, 0, width, height);
-            g2.setClip(null);
+            // g2.setClip(null);
         }
 
         g2.setColor(color);
