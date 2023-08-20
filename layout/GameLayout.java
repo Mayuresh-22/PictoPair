@@ -107,6 +107,15 @@ public class GameLayout implements ScreenStructure {
 
             j++;
         }
-        
+        // Storing objects into array
+        for (int i = 0; i < 24; i++) {
+            rand_cards.add(card[i]);
+        }
+        // Sorting based on ID
+        Collections.sort(rand_cards, (o1, o2) -> Integer.compare(o1.id, o2.id));
+        // Adding to panels
+        for (int i = 0; i < 16; i++) {
+            p.add(rand_cards.get(i).button);
+        }
     }
 }
