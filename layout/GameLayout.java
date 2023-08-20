@@ -103,7 +103,6 @@ public class GameLayout implements ScreenStructure {
 
             card[i] = new Cards("hidden", mainImgIcon, defaultImgIcon,
                     "E:\\DarshanStudies\\Programing\\Java\\PictoPair-Memory-Game\\assets\\images\\card" + j + ".jpg" ,rand_arr.get(i));
-
             j++;
         }
         // Storing objects into array
