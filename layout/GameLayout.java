@@ -68,7 +68,6 @@ class Cards implements ActionListener {
                         Cards c1 = selected.get(0);
                         Cards c2 = selected.get(1);
                         selected.clear();
-                        
                     
                         c1.button.setIcon(defaultImg);
                         c2.button.setIcon(defaultImg);
