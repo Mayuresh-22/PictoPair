@@ -24,7 +24,11 @@ public class GameLayout implements ScreenStructure {
 
         createBgPanel("assets/images/GameLayout-bg.png");
 
+<<<<<<< HEAD
         // cards panel
+=======
+        // Card panel
+>>>>>>> 70d6fbd4b2a2058f2d9f54a2cc0c9607a79e9d50
         createCardsPanel();
 
         // score panel
@@ -71,6 +75,7 @@ public class GameLayout implements ScreenStructure {
         cardsPanel.setBackground(Color.WHITE);
         cardsPanel.setOpaque(true);
         cardsPanel.setBorder(new TextBubbleBorder(new Color(200, 200, 200), 10, 70, 0));
+<<<<<<< HEAD
         cardsPanel.setLayout(new GridLayout(4, 6, 20, 20));
 
         // Creating Cards
@@ -141,5 +146,7 @@ public class GameLayout implements ScreenStructure {
 
         scorePanel.add(matches);
         scorePanel.add(turns);
+
+        cardsPanel.setLayout(new GridLayout(4,6,20,20));
     }
 }
