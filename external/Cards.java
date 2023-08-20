@@ -1,9 +1,12 @@
-package external;
+package layout;
+
+import external.*;
+
 import javax.swing.*;
 import java.awt.*;
+import interfaces.*;
 import java.awt.event.*;
-import java.util.*;
-import external.*;
+import java.util.Vector;
 
 // Card Class
 public class Cards implements ActionListener {
