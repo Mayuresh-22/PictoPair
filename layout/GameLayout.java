@@ -7,10 +7,76 @@ import interfaces.*;
 import java.awt.event.*;
 import java.util.Vector;
 
-//Cards Class
-class Cards{
-    
-} 
+// Card Class
+class Card implements ActionListener {
+
+    // Global selected cards vector
+    public static Vector<Card> selected = new Vector<>();
+
+    JButton button;
+    String status, path;
+    ImageIcon defaultImg;
+
+    Card(String status, String path, ImageIcon defaultImg) {
+        button = new JButton(defaultImg);
+        button.addActionListener(this);
+
+        this.status = status;
+        this.path = path;
+        this.defaultImg = defaultImg;
+    }
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    public String getPath() {
+        return this.path;
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (selected.size() < 2 && this.status.equals("hidden")) {
+            // Creating imgIcon Variable
+            ImageIcon img = new ImageIcon(getClass().getResource(path));
+            Image scaledImg = img.getImage().getScaledInstance(250, 350, Image.SCALE_SMOOTH);
+            ImageIcon imgIcon = new ImageIcon(scaledImg);
+            button.setIcon(imgIcon);
+            this.status = "revealed";
+            selected.add(this);
+
+            checkMatch();
+        }
+    }
+
+    public void checkMatch() {
+        if (selected.size() == 2) {
+            if (selected.get(0).path.equals(selected.get(1).path)) {
+
+                Timer timer = new Timer(500, new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        selected.get(0).button.setEnabled(false);
+                        selected.get(1).button.setEnabled(false);
+                        selected.clear();
+                    }
+                });
+
+                timer.start();
+            } else {
+                Timer timer = new Timer(1000, new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        selected.get(0).button.setIcon(defaultImg);
+                        selected.get(1).button.setIcon(defaultImg);
+                        selected.get(0).status = "hidden";
+                        selected.get(1).status = "hidden";
+                        selected.clear();
+                    }
+                });
+
+                timer.start();
+            }
+        }
+    }
+}
 
 public class GameLayout implements ScreenStructure {
     JPanel GamePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), cardsPanel = new JPanel(), scorePanel = new JPanel();
