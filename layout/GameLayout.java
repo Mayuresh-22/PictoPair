@@ -22,7 +22,6 @@ class Cards implements ActionListener {
     Cards(String status, String path, ImageIcon defaultImg) {
 
         button = new JButton(defaultImg);
-        button.setSize((int)(ScreenStructure.WIDTH*1),(int)(ScreenStructure.HEIGHT*0.5));
         button.addActionListener(this);
 
         this.status = status;
