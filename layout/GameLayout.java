@@ -135,6 +135,8 @@ public class GameLayout implements ScreenStructure {
 
         // Styling Labels
         matches.setSize(200, 100);
+        turns.setSize(200, 100);
+
         scorePanel.add(matches);
         scorePanel.add(turns);
     }
