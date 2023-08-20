@@ -85,6 +85,7 @@ class Cards implements ActionListener {
                         soundEffect.loop = false;
                         soundEffect.start();
 
+                        // Setting Cards to hidden
                         c1.button.setIcon(defaultImg);
                         c2.button.setIcon(defaultImg);
                         c1.status = "hidden";
