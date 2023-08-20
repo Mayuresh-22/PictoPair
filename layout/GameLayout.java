@@ -39,7 +39,7 @@ public class GameLayout implements ScreenStructure {
 
         // quit button
         JButton quitButton = new JButton("QUIT");
-        quitButton.setBounds((int) (ScreenStructure.WIDTH * 0.03), (int) (ScreenStructure.HEIGHT * 0.03),
+        quitButton.setBounds((int) (ScreenStructure.WIDTH * 0.97), (int) (ScreenStructure.HEIGHT * 0.0),
                 (int) (ScreenStructure.WIDTH * 0.03), (int) (ScreenStructure.HEIGHT * 0.01));
 
         // Adding to layeredPane
