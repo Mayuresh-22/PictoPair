@@ -132,6 +132,9 @@ public class GameLayout implements ScreenStructure {
         // Creating Fonts for Labels
         Font labelFont = new Font("SansSerif",Font.BOLD,30);
 
+        // Creating Colors for Labels
+        
+        
         // Creating Score Labels
         JLabel matches = new JLabel("Matches : 0");
         JLabel turns = new JLabel("Turns : 0");
