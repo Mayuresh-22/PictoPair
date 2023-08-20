@@ -19,6 +19,10 @@ public class GameLayout implements ScreenStructure {
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
 
+    // Creating Score Labels
+    JLabel matchesLabel = new JLabel("Matches : "+matches);
+    JLabel turnsLabel = new JLabel("Turns : "+turns);
+    
     public static int matches = 0,turns = 20;
 
     public GameLayout() {
@@ -132,8 +136,6 @@ public class GameLayout implements ScreenStructure {
 
         // Creating Fonts for Labels
         Font labelFont = new Font("SansSerif",Font.BOLD,25);
-
-        
         
         // Styling Score Labels
         matchesLabel.setFont(labelFont);
