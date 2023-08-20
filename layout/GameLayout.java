@@ -21,6 +21,7 @@ class Cards implements ActionListener {
     ImageIcon defaultImg, mainImg;
     static MusicPlayerThread soundEffect1 = new MusicPlayerThread();
     static MusicPlayerThread soundEffect2 = new MusicPlayerThread();
+    
 
     Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path) {
 
