@@ -164,7 +164,6 @@ public class GameLayout implements ScreenStructure {
             super(text);
             this.startColor = startColor;
             this.endColor = endColor;
-            setOpaque(false); // Make sure the label is transparent
             setForeground(Color.WHITE); // Set text color to white
         }
     
