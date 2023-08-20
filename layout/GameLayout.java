@@ -8,17 +8,17 @@ import java.awt.event.*;
 import java.util.Vector;
 
 // Card Class
-class Card implements ActionListener {
+class Cards implements ActionListener {
 
     // Global selected cards vector
-    public static Vector<Card> selected = new Vector<>();
+    public static Vector<Cards> selected = new Vector<>();
 
     int id;
     JButton button;
     String status, path;
     ImageIcon defaultImg;
 
-    Card(String status, String path, ImageIcon defaultImg) {
+    Cards(String status, String path, ImageIcon defaultImg) {
         button = new JButton(defaultImg);
         button.addActionListener(this);
 
@@ -65,7 +65,7 @@ class Card implements ActionListener {
             } else {
                 Timer timer = new Timer(1000, new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
-                        JButton b1 = selected.get(0).button;
+                        Cards b1 = selected.get(0);
                         JButton b2 = selected.get(1).button;
                         b1.setIcon(defaultImg);
                         selected.get(1).button.setIcon(defaultImg);
