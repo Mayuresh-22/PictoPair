@@ -100,13 +100,13 @@ public class GameLayout implements ScreenStructure {
             }
             // Creating mainImgIcon Variable
             ImageIcon mainImg = new ImageIcon(
-                    "assets\\images\\card" + j + ".jpg");
+                    "assets/images/card" + j + ".jpg");
             Image mainscaledImg = mainImg.getImage().getScaledInstance((int) (ScreenStructure.WIDTH * 0.1),
                     (int) (ScreenStructure.HEIGHT * 0.25), Image.SCALE_SMOOTH);
             ImageIcon mainImgIcon = new ImageIcon(mainscaledImg);
 
             card[i] = new Cards("hidden", mainImgIcon, defaultImgIcon,
-                    "assets\\images\\card" + j + ".jpg" ,rand_arr.get(i));
+                    "assets/images/card" + j + ".jpg" ,rand_arr.get(i));
             j++;
         }
         // Storing objects into array
