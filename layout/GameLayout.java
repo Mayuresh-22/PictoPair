@@ -60,7 +60,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
     }
     public void actionPerformed(ActionEvent e){
         if(e.getSource()== quitButton){
-
+            
         }
     }
     public JPanel getGamePanel() {
