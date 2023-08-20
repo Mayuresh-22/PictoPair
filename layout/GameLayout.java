@@ -19,7 +19,7 @@ class Cards implements ActionListener {
     String status, path;
     ImageIcon defaultImg, mainImg;
 
-    static MusicPlayerThread soundEffect2 = new MusicPlayerThread();
+
 
     Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path) {
 
@@ -85,6 +85,7 @@ class Cards implements ActionListener {
                         selected.clear();
 
                         // Playing Wrong Sound Effect
+                        MusicPlayerThread soundEffect2 = new MusicPlayerThread();
                         soundEffect2.filePath = "assets/sounds/wrong.wav";
                         soundEffect2.loop = false;
                         soundEffect2.start();
