@@ -20,14 +20,12 @@ public class GameLayout implements ScreenStructure, ActionListener {
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton quitButton = new JButton("QUIT");
-    
+
     public static int matches = 0,turns = 30;
 
     // Creating Score Labels
     public static JLabel matchesLabel = new JLabel("Matches : "+matches);
     public static JLabel turnsLabel = new JLabel("Turns left : "+turns);
-
-
 
     public GameLayout() {
         createLayeredPane();
