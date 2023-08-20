@@ -1,3 +1,7 @@
+package external;
+
+import javax.swing.JPanel;
+
 class RoundedPanel extends JPanel
 {
     private Color backgroundColor;
