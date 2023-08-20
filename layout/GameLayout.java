@@ -90,7 +90,7 @@ class Cards implements ActionListener {
                         c3.status = "hidden";
                         c4.status = "hidden";
 
-                        soundEffect2.stop();
+                        soundEffect2.stopThread();
                     }
                 });
 
