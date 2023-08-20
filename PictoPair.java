@@ -11,8 +11,8 @@ class App {
     LoadingLayout loadingLayout = new LoadingLayout();
     HomeLayout homeLayout = new HomeLayout();
     GameLayout gameLayout = new GameLayout();
-    MusicPlayerThread soundEffect = new MusicPlayerThread();
-    MusicPlayerThread musicPlayer = new MusicPlayerThread();
+    // MusicPlayerThread soundEffect = new MusicPlayerThread();
+    // MusicPlayerThread musicPlayer = new MusicPlayerThread();
 
     App(){
         appConfig();
