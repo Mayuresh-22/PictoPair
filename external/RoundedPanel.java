@@ -1,6 +1,7 @@
 package external;
 
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 class RoundedPanel extends JPanel
 {
