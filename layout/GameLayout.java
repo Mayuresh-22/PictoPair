@@ -59,7 +59,9 @@ public class GameLayout implements ScreenStructure, ActionListener {
         GamePanel.add(layeredPane);
         GamePanel.setOpaque(true);
     }
-
+    public void actionPerformed(ActionEvent e){
+        
+    }
     public JPanel getGamePanel() {
         return GamePanel;
     }
