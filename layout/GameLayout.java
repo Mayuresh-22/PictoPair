@@ -76,7 +76,7 @@ class Cards implements ActionListener {
 
                 timer.start();
             } else {
-                Timer timer = new Timer(1000, new ActionListener() {
+                Timer timer = new Timer(500, new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
                         // Storing selected cards into temporary card objects and clearing the selected
                         // Vector
