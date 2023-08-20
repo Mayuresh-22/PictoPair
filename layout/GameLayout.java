@@ -127,7 +127,7 @@ public class GameLayout implements ScreenStructure {
                 (int) (ScreenStructure.WIDTH * 0.15), (int) (ScreenStructure.HEIGHT * 0.2));
         scorePanel.setBackground(Color.cyan);
         scorePanel.setOpaque(true);
-        scorePanel.setLayout(new GridLayout(2, 1, 20, 20));
+        scorePanel.setLayout(new GridLayout(2, 1, 0, 20));
 
         // Creating Score Labels
         JLabel matches = new JLabel("Matches : 0");
