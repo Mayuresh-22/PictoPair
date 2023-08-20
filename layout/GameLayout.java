@@ -11,6 +11,10 @@ import java.util.Vector;
 // Card Class
 class Cards implements ActionListener {
 
+     // Set UIManager defaults to disable button hover effects
+            UIManager.put("Button.select", UIManager.get("Button.background"));
+            UIManager.put("Button.border", BorderFactory.createEmptyBorder());
+
     // Global selected cards vector
     public static Vector<Cards> selected = new Vector<>();
 
