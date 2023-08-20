@@ -2,6 +2,7 @@ package external;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.Collections;
 import java.util.Vector;
 
 // Card Class
@@ -100,6 +101,12 @@ public class Cards implements ActionListener {
         }
     }
     public static void shuffle(){
-        
+                // Creating an array with 16 numbers
+        for (int i = 0; i < 16; i++) {
+            rand_arr.add(i);
+        }
+        // Shuffling the numbers
+        Collections.shuffle(rand_arr);
+
     }
 }
