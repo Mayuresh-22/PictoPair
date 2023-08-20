@@ -120,4 +120,14 @@ public class GameLayout implements ScreenStructure {
             cardsPanel.add(rand_cards.get(i).button);
         }
     }
+    public void createCardsPanel() {
+
+        // Creating Cards Panel
+        cardsPanel.setBounds((int) (ScreenStructure.WIDTH * 0.03), (int) (ScreenStructure.HEIGHT * 0.03),
+                (int) (ScreenStructure.WIDTH * 0.7), (int) (ScreenStructure.HEIGHT * 0.9));
+        cardsPanel.setBackground(Color.WHITE);
+        cardsPanel.setOpaque(true);
+        cardsPanel.setBorder(new TextBubbleBorder(new Color(200, 200, 200), 10, 70, 0));
+        cardsPanel.setLayout(new GridLayout(4, 6, 20, 20));
+    }
 }
