@@ -20,7 +20,7 @@ class Cards implements ActionListener {
     ImageIcon defaultImg;
 
     Cards(String status, String path, ImageIcon defaultImg) {
-        
+
         button = new JButton(defaultImg);
         button.addActionListener(this);
 
@@ -144,7 +144,7 @@ public class GameLayout implements ScreenStructure {
          Cards[] card = new Cards[24];
 
         // Creating defaultImgIcon Variable
-        ImageIcon defaultImg = new ImageIcon(getClass().getResource("images/default.jpg"));
+        ImageIcon defaultImg = new ImageIcon(getClass().getResource("images/card-back.png"));
         Image scaledImg = defaultImg.getImage().getScaledInstance(250, 350, Image.SCALE_SMOOTH);
         ImageIcon defaultImgIcon = new ImageIcon(scaledImg);
 
