@@ -115,7 +115,7 @@ public class TextBubbleBorder extends AbstractBorder {
         // of the text bubble.
         Component parent  = c.getParent();
         if (parent!=null) {
-            Color bg = parent.getBackground();
+            Color bg = Color.WHITE;
             Rectangle rect = new Rectangle(0,0,width, height);
             Area borderRegion = new Area(rect);
             borderRegion.subtract(area);
