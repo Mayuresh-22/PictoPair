@@ -6,7 +6,7 @@ import java.awt.*;
 import interfaces.*;
 
 public class HomeLayout implements ScreenStructure {
-    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new RoundedPanel(70);
+    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(0));
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
 
@@ -19,7 +19,7 @@ public class HomeLayout implements ScreenStructure {
         createMenuPanel();
 
         // Adding to layeredPane
-        layeredPane.add(menuPanel);
+        layeredPane.add(menuPanel, BorderLayout.CENTER);
         layeredPane.add(bgPanel);
 
         // Adding to HomePanel
@@ -52,6 +52,7 @@ public class HomeLayout implements ScreenStructure {
     public void createMenuPanel(){
         menuPanel.setBounds((ScreenStructure.WIDTH/2)-250, (ScreenStructure.HEIGHT/2)-250, 500, 500);
         menuPanel.setBackground(new Color(131,0,255,255));
-        // menuPanel.setOpaque(true);
+        menuPanel.setOpaque(true);
+        menuPanel.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
     }
 }
