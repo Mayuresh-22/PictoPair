@@ -149,7 +149,7 @@ public class GameLayout implements ScreenStructure {
         ImageIcon defaultImgIcon = new ImageIcon(scaledImg);
 
         // Creating mainImgIcon Variable
-        ImageIcon mImageIconImg = new ImageIcon("E:\\DarshanStudies\\Programing\\Java\\PictoPair-Memory-Game\\assets\\images\\card-back.png");
+        ImageIcon mainImg = new ImageIcon("E:\\DarshanStudies\\Programing\\Java\\PictoPair-Memory-Game\\assets\\images\\card-back.png");
         Image scaledImg = defaultImg.getImage().getScaledInstance((int)(ScreenStructure.WIDTH*0.1),(int)(ScreenStructure.HEIGHT*0.25), Image.SCALE_SMOOTH);
         ImageIcon defaultImgIcon = new ImageIcon(scaledImg);
 
