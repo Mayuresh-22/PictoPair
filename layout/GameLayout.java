@@ -143,7 +143,7 @@ public class GameLayout implements ScreenStructure {
         matches.setHorizontalAlignment(SwingConstants.CENTER);
         matches.setBorder(new TextBubbleBorder(new Color(71, 88, 250), 5, 40, 0));
         matches.setOpaque(true);
-        turns.setBackground(Color.blue);
+        turns.setBackground(new Color(71, 88, 250));
         turns.setHorizontalAlignment(SwingConstants.CENTER);
         turns.setBorder(new TextBubbleBorder(new Color(71, 88, 250), 5,40, 0));
         turns.setOpaque(true);
