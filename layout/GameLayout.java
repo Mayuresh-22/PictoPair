@@ -66,6 +66,7 @@ class Cards implements ActionListener {
                 Timer timer = new Timer(1000, new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
                         Cards b1 = selected.get(0);
+                        Cards b1 = selected.get(0);
                         
                         b1.setIcon(defaultImg);
                         selected.get(1).button.setIcon(defaultImg);
