@@ -14,6 +14,7 @@ class Card implements ActionListener {
     public static Vector<Card> selected = new Vector<>();
 
     JButton button;
+    int id;
     String status, path;
     ImageIcon defaultImg;
 
