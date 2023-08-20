@@ -144,13 +144,13 @@ public class GameLayout implements ScreenStructure {
          Cards[] card = new Cards[24];
 
         // Creating defaultImgIcon Variable
-        ImageIcon defaultImg = new ImageIcon(getClass().getResource("E:\\DarshanStudies\\Programing\\Java\\PictoPair-Memory-Game\\assets\\images\\card-back.png"));
+        ImageIcon defaultImg = new ImageIcon(getClass().getResource("assets/images/card-back.png"));
         Image scaledImg = defaultImg.getImage().getScaledInstance(250, 350, Image.SCALE_SMOOTH);
         ImageIcon defaultImgIcon = new ImageIcon(scaledImg);
 
         // Initializing Cards
         for (int i = 0; i < 24; i++) {
-            card[i] = new Cards("hidden", ("E:\\DarshanStudies\\Programing\\Java\\PictoPair-Memory-Game\\assets\\images\\card-back.png"), defaultImgIcon);
+            card[i] = new Cards("hidden", ("assets/images/card-back.png"), defaultImgIcon);
             cardsPanel.add(card[i].button);
         }
     }
