@@ -164,11 +164,14 @@ public class GameLayout implements ScreenStructure {
             super(text);
             this.startColor = startColor;
             this.endColor = endColor;
-            setOpaque(false); // Make the label transparent
+            setForeground(Color.WHITE); // Set text color to white
         }
         
         @Override
         protected void paintComponent(Graphics g) {
+            super.paintComponent(g); // Call the original paintComponent method first
+    
+            // Create a gradient background
             Graphics2D g2d = (Graphics2D) g.create();
             g2d.setPaint(new GradientPaint(
                     new Point2D.Float(0, 0), startColor,
@@ -176,8 +179,6 @@ public class GameLayout implements ScreenStructure {
             ));
             g2d.fillRect(0, 0, getWidth(), getHeight());
             g2d.dispose(); // Dispose of the graphics context
-            
-            super.paintComponent(g); // Paint the label's text on top
         }
     }
     
