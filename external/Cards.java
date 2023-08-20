@@ -99,5 +99,7 @@ public class Cards implements ActionListener {
             }
         }
     }
-
+    public static void shuffle(){
+        
+    }
 }
