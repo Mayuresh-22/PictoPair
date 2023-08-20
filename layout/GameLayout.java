@@ -141,6 +141,6 @@ public class GameLayout implements ScreenStructure {
         cardsPanel.setLayout(new GridLayout(4,6,20,20));
 
         // Creating Cards
-         Card[] card = new Card[24];
+         Cards[] card = new Cards[24];
     }
 }
