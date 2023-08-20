@@ -77,6 +77,7 @@ public class Cards implements ActionListener {
                     }
                 });
 
+                timer.setRepeats(false);
                 timer.start();
             } else {
                 Timer timer = new Timer(500, new ActionListener() {
