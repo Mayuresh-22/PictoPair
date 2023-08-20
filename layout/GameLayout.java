@@ -143,7 +143,7 @@ public class GameLayout implements ScreenStructure {
 
         int j = 1;
         // Initializing Cards
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 24; i++) {
             if(j==13){
                 j=1;
             }
