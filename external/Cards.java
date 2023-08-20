@@ -2,6 +2,7 @@ package external;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Vector;
 
@@ -16,6 +17,8 @@ public class Cards implements ActionListener {
     public String status, path;
     public ImageIcon defaultImg, mainImg;
 
+    ArrayList<Integer> rand_arr = new ArrayList<>();
+    ArrayList<Cards> rand_cards = new ArrayList<>();
 
 
     public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path) {
