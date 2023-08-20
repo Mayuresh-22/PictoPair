@@ -110,6 +110,6 @@ public class Cards implements ActionListener {
         }
         // Shuffling the numbers
         Collections.shuffle(rand_arr);
-
+        // Assigning the shuffled numbers to the ID attribute of Cards object sequentially
     }
 }
