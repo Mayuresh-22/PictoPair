@@ -3,7 +3,7 @@ package external;
 import java.awt.*;
 import javax.swing.*;
 
-class RoundedPanel extends JPanel
+public class RoundedPanel extends JPanel
 {
     private Color backgroundColor;
     private int cornerRadius = 15;
