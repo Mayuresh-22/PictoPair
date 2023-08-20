@@ -59,8 +59,8 @@ class Cards implements ActionListener {
                         Cards c2 = selected.get(1);
                         selected.clear();
                     
-                        selected.get(0).button.setEnabled(false);
-                        selected.get(1).button.setEnabled(false);
+                        c1.button.setEnabled(false);
+                        c2.button.setEnabled(false);
                         selected.clear();
                     }
                 });
