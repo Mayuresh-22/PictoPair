@@ -28,6 +28,7 @@ public class Cards implements ActionListener {
         this.path = path;
         this.mainImg = mainImg;
         this.defaultImg = defaultImg;
+        this.id = id;
     }
 
     public String getStatus() {
