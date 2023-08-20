@@ -17,7 +17,7 @@ public class Cards implements ActionListener {
 
 
 
-    Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path) {
+    public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path) {
 
         button = new JButton(defaultImg);
         button.setBorderPainted(false);
