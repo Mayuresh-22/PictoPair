@@ -38,6 +38,7 @@ class Cards implements ActionListener {
             button.setIcon(mainImg);
             selected.add(this);
             checkMatch();
+            
             this.status = "revealed";
 
         }
