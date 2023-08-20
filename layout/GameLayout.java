@@ -2,7 +2,7 @@ package layout;
 
 import external.*;
 
-import javax.smartcardio.Card;
+
 import javax.swing.*;
 import java.awt.*;
 import interfaces.*;
