@@ -138,10 +138,8 @@ public class GameLayout implements ScreenStructure {
         turns.setFont(labelFont);
 
         // Styling Labels
-        matches.setSize(200, 100);
         matches.setBackground(Color.gray);
         matches.setHorizontalAlignment(SwingConstants.CENTER);
-        turns.setSize(200, 100);
         turns.setBackground(Color.gray);
         turns.setHorizontalAlignment(SwingConstants.CENTER);
 
