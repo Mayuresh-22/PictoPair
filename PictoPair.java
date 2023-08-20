@@ -10,6 +10,7 @@ class App {
     JFrame app = new JFrame("PictoPair - Memory Game");
     LoadingLayout loadingLayout = new LoadingLayout();
     HomeLayout homeLayout = new HomeLayout();
+    GameLayout gameLayout = new GameLayout();
     MusicPlayerThread soundEffect = new MusicPlayerThread();
     MusicPlayerThread musicPlayer = new MusicPlayerThread();
 
@@ -25,7 +26,7 @@ class App {
             @Override
             public void actionPerformed(ActionEvent e) {
                 app.remove(loadingLayout.getLoadingPanel());
-                app.add(homeLayout.getHomePanel(), BorderLayout.CENTER);
+                app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
                 app.revalidate();
                 app.repaint();
                 musicPlayer.filePath = "assets/sounds/bgm.wav";
