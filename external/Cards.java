@@ -71,9 +71,9 @@ public class Cards implements ActionListener {
                         c2.button.setEnabled(false);
 
                         GameLayout.matches+=1;
-                        turns+=1;
+                        GameLayout.turns+=1;
 
-                        if(matches == 12){
+                        if(GameLayout.matches == 12){
                             // Call Score Screen Method
                         }
                     }
