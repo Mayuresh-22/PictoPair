@@ -126,7 +126,7 @@ public class GameLayout implements ScreenStructure {
         scorePanel.setBounds((int) (ScreenStructure.WIDTH * 0.8), (int) (ScreenStructure.HEIGHT * 0.35),
                 (int) (ScreenStructure.WIDTH * 0.15), (int) (ScreenStructure.HEIGHT * 0.2));
         scorePanel.setOpaque(true);
-        scorePanel.setLayout(new GridLayout(2, 1, 0, 200));
+        scorePanel.setLayout(new GridLayout(2, 1, 0, 20));
 
         // Creating Fonts for Labels
         Font labelFont = new Font("SansSerif",Font.BOLD,30);
