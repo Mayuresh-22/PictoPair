@@ -54,6 +54,6 @@ public class HomeLayout implements ScreenStructure {
         menuPanel.setBackground(new Color(131,0,255,255));
         menuPanel.setOpaque(true);
         // set round border
-        menuPanel.setBorder(new TextBubbleBorder(Color.BLACK, 2, 16, 0));
+        menuPanel.setBorder(new TextBubbleBorder(Color.BLACK, 20, 16, 0));
     }
 }
