@@ -33,10 +33,6 @@ class Cards implements ActionListener {
         return this.status;
     }
 
-    public String getPath() {
-        return this.path;
-    }
-
     public void actionPerformed(ActionEvent e) {
         if (selected.size() < 2 && this.status.equals("hidden")) {
             // Creating imgIcon Variable
