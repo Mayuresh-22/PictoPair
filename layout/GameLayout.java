@@ -46,6 +46,7 @@ public class GameLayout implements ScreenStructure {
         quitButton.setBorderPainted(false);
         quitButton.setFocusPainted(false);
         quitButton.setForeground(Color.WHITE);
+        quitButton.addActionListener(this);
 
         // Adding to layeredPane
         layeredPane.add(cardsPanel, BorderLayout.CENTER);
