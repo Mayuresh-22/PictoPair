@@ -47,7 +47,7 @@ class Cards implements ActionListener {
 
     public void checkMatch() {
         if (selected.size() == 2) {
-            if (selected.get(0).mainImg.getImage().equals(selected.get(1).mainImg.getImage())) {
+            if (selected.get(0).path.equals(selected.get(1).path)) {
 
                 Timer timer = new Timer(500, new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
