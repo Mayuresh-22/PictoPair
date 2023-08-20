@@ -41,9 +41,9 @@ public class GameLayout implements ScreenStructure {
         JButton quitButton = new JButton("QUIT");
         quitButton.setBounds((int) (ScreenStructure.WIDTH * 0.97), (int) (ScreenStructure.HEIGHT * 0.01),
                 (int) (ScreenStructure.WIDTH * 0.03), (int) (ScreenStructure.HEIGHT * 0.01));
-        cardsPanel.setBackground(Color.WHITE);
-        cardsPanel.setOpaque(true);
-        
+        quitButton.setBackground(Color.WHITE);
+        quitButton.setOpaque(true);
+
         // Adding to layeredPane
         layeredPane.add(cardsPanel, BorderLayout.CENTER);
         layeredPane.add(scorePanel, BorderLayout.CENTER);
