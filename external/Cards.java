@@ -95,6 +95,7 @@ public class Cards implements ActionListener {
                         c3.status = "hidden";
                         c4.status = "hidden";
 
+                        turns+=1;
                     }
                 });
 
