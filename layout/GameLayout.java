@@ -144,6 +144,7 @@ public class GameLayout implements ScreenStructure {
         matches.setHorizontalAlignment(SwingConstants.CENTER);
         turns.setSize(200, 100);
         turns.setBackground(Color.gray);
+        turns.setHorizontalAlignment(SwingConstants.CENTER);
 
         scorePanel.add(matches);
         scorePanel.add(turns);
