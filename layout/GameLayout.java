@@ -77,8 +77,8 @@ class Cards implements ActionListener {
                 Timer timer = new Timer(1000, new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
                         // Storing selected cards into temporary card objects and clearing the selected Vector
-                        Cards c1 = selected.get(0);
-                        Cards c2 = selected.get(1);
+                        Cards c3 = selected.get(0);
+                        Cards c4 = selected.get(1);
                         selected.clear();
                     
                         // Playing Wrong Sound Effect
@@ -87,10 +87,10 @@ class Cards implements ActionListener {
                         soundEffect.start();
 
                         // Setting Cards to hidden
-                        c1.button.setIcon(defaultImg);
-                        c2.button.setIcon(defaultImg);
-                        c1.status = "hidden";
-                        c2.status = "hidden";
+                        c3.button.setIcon(defaultImg);
+                        c4.button.setIcon(defaultImg);
+                        c3.status = "hidden";
+                        c4.status = "hidden";
                     }
                 });
 
