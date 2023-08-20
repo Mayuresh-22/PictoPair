@@ -149,8 +149,10 @@ public class GameLayout implements ScreenStructure {
          Image mainscaledImg = mainImg.getImage().getScaledInstance((int)(ScreenStructure.WIDTH*0.1),(int)(ScreenStructure.HEIGHT*0.25), Image.SCALE_SMOOTH);
          ImageIcon mainImgIcon = new ImageIcon(mainscaledImg);
 
-            card[i] = new Cards("hidden", mainImgIcon, defaultImgIcon);
-            cardsPanel.add(card[i].button);
+         card[i] = new Cards("hidden", mainImgIcon, defaultImgIcon);
+         cardsPanel.add(card[i].button);
+
+         j++;
         }
     }
 }
