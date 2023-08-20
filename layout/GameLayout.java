@@ -125,7 +125,7 @@ public class GameLayout implements ScreenStructure {
         // Creating Score Panel
         scorePanel.setBounds((int) (ScreenStructure.WIDTH * 0.8), (int) (ScreenStructure.HEIGHT * 0.35),
                 (int) (ScreenStructure.WIDTH * 0.15), (int) (ScreenStructure.HEIGHT * 0.2));
-        scorePanel.setBackground(Color.blue);
+        scorePanel.setBackground(Color.cyan);
         scorePanel.setOpaque(true);
         scorePanel.setLayout(new GridLayout(2, 1, 20, 20));
 
