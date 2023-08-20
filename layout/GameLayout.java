@@ -66,7 +66,7 @@ class Cards implements ActionListener {
                 Timer timer = new Timer(1000, new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
                         Cards b1 = selected.get(0);
-                        JButton b2 = selected.get(1).button;
+                        
                         b1.setIcon(defaultImg);
                         selected.get(1).button.setIcon(defaultImg);
                         selected.get(0).status = "hidden";
