@@ -142,5 +142,6 @@ public class GameLayout implements ScreenStructure {
 
         // Creating Cards
          Cards[] card = new Cards[24];
+         
     }
 }
