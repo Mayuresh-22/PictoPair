@@ -1,6 +1,9 @@
 package external;
 
 import javax.swing.*;
+
+import layout.GameLayout;
+
 import java.awt.event.*;
 import java.util.Vector;
 
@@ -67,7 +70,7 @@ public class Cards implements ActionListener {
                         c1.button.setEnabled(false);
                         c2.button.setEnabled(false);
 
-                        matches+=1;
+                        GameLayout.matches+=1;
                         turns+=1;
 
                         if(matches == 12){
