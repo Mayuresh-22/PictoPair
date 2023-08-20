@@ -11,7 +11,7 @@ class Cards{
 } 
 
 public class GameLayout implements ScreenStructure {
-    JPanel GamePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), cardsPanel = new RoundedPanel(10, Color.black), scorePanel = new JPanel();
+    JPanel GamePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), cardsPanel = new RoundedPanel(100, Color.black), scorePanel = new JPanel();
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
 
