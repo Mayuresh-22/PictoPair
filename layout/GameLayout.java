@@ -19,7 +19,7 @@ public class GameLayout implements ScreenStructure {
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
 
-    public static int matches = 0,turns = 35;
+    public static int matches = 0,turns = 30;
 
     // Creating Score Labels
     public static JLabel matchesLabel = new JLabel("Matches : "+matches);
