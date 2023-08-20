@@ -150,11 +150,7 @@ public class GameLayout implements ScreenStructure {
 
         // Initializing Cards
         for (int i = 0; i < 24; i++) {
-            if (i <= 2) {
-                card[i] = new Cards("hidden", ("images/" + (i + 5) + ".jpg"), defaultImgIcon);
-            } else {
-                card[i] = new Cards("hidden", ("images/" + (5) + ".jpg"), defaultImgIcon);
-            }
+            
             p.add(card[i].button);
         }
     }
