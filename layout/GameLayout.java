@@ -8,7 +8,6 @@ import interfaces.*;
 import java.awt.event.*;
 import java.util.Vector;
 
-
 // Card Class
 class Cards implements ActionListener {
 
