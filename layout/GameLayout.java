@@ -103,7 +103,6 @@ public class GameLayout implements ScreenStructure {
 
             card[i] = new Cards("hidden", mainImgIcon, defaultImgIcon,
                     "E:\\DarshanStudies\\Programing\\Java\\PictoPair-Memory-Game\\assets\\images\\card" + j + ".jpg" ,rand_arr.get(i));
-            cardsPanel.add(card[i].button);
 
             j++;
         }
@@ -115,7 +114,7 @@ public class GameLayout implements ScreenStructure {
         Collections.sort(rand_cards, (o1, o2) -> Integer.compare(o1.id, o2.id));
         // Adding to panels
         for (int i = 0; i < 24; i++) {
-            p.add(rand_cards.get(i).button);
+            cardsPanel.add(rand_cards.get(i).button);
         }
     }
 }
