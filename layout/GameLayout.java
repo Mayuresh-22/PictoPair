@@ -155,7 +155,7 @@ public class GameLayout implements ScreenStructure {
 
         // Initializing Cards
         for (int i = 0; i < 24; i++) {
-            card[i] = new Cards("hidden", ("assets/images/card-back.png"), defaultImgIcon);
+            card[i] = new Cards("hidden", mainImgIcon, defaultImgIcon);
             cardsPanel.add(card[i].button);
         }
     }
