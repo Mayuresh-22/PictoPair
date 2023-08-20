@@ -80,6 +80,11 @@ class Cards implements ActionListener {
                         Cards c2 = selected.get(1);
                         selected.clear();
                     
+                        // Playing Correct Sound Effect
+                        soundEffect.filePath = "assets/sounds/correct.wav";
+                        soundEffect.loop = false;
+                        soundEffect.start();
+
                         c1.button.setIcon(defaultImg);
                         c2.button.setIcon(defaultImg);
                         c1.status = "hidden";
