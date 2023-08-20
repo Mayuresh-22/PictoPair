@@ -71,9 +71,9 @@ class Cards implements ActionListener {
                         
                     
                         c1.button.setIcon(defaultImg);
-                        c1.button.setIcon(defaultImg);
+                        c2.button.setIcon(defaultImg);
                         c1.status = "hidden";
-                        c1.status = "hidden";
+                        c2.status = "hidden";
                     }
                 });
 
