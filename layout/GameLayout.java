@@ -2,7 +2,6 @@ package layout;
 
 import external.*;
 
-
 import javax.swing.*;
 import java.awt.*;
 import interfaces.*;
