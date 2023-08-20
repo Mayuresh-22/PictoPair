@@ -79,7 +79,7 @@ public class Cards implements ActionListener {
                         }
                     }
                 });
-
+                timer.setRepeats(false);
                 timer.start();
             } else {
                 Timer timer = new Timer(500, new ActionListener() {
@@ -105,7 +105,7 @@ public class Cards implements ActionListener {
                         turns+=1;
                     }
                 });
-
+                timer.setRepeats(false);
                 timer.start();
             }
         }
