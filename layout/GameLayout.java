@@ -160,25 +160,29 @@ public class GameLayout implements ScreenStructure {
         private Color startColor;
         private Color endColor;
     
-        public GradientLabel(String text, Color startColor, Color endColor) {
-            super(text);
-            this.startColor = startColor;
-            this.endColor = endColor;
-            setForeground(Color.WHITE); // Set text color to white
-        }
-    
-        @Override
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g); // Call the original paintComponent method first
-    
-            // Create a gradient background
-            Graphics2D g2d = (Graphics2D) g.create();
-            g2d.setPaint(new GradientPaint(
-                    new Point2D.Float(0, 0), startColor,
-                    new Point2D.Float(0, getHeight()), endColor
-            ));
-            g2d.fillRect(0, 0, getWidth(), getHeight());
-            g2d.dispose(); // Dispose of the graphics context
+        public class GradientLabel extends JLabel {
+            private Color startColor;
+            private Color endColor;
+            
+            public GradientLabel(String text, Color startColor, Color endColor) {
+                super(text);
+                this.startColor = startColor;
+                this.endColor = endColor;
+                setOpaque(false); // Make the label transparent
+            }
+            
+            @Override
+            protected void paintComponent(Graphics g) {
+                Graphics2D g2d = (Graphics2D) g.create();
+                g2d.setPaint(new GradientPaint(
+                        new Point2D.Float(0, 0), startColor,
+                        new Point2D.Float(0, getHeight()), endColor
+                ));
+                g2d.fillRect(0, 0, getWidth(), getHeight());
+                g2d.dispose(); // Dispose of the graphics context
+                
+                super.paintComponent(g); // Paint the label's text on top
+            }
         }
     }
 }
