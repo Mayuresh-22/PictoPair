@@ -97,6 +97,9 @@ class Cards implements ActionListener {
             }
         }
     }
+    public void setSoundEffects(){
+        
+    }
 }
 
 // Main Class
