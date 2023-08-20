@@ -153,6 +153,7 @@ public class GameLayout implements ScreenStructure {
     }
 
     public void createCardsPanel() {
+
         // Creating Cards Panel
         cardsPanel.setBounds((int) (ScreenStructure.WIDTH * 0.03), (int) (ScreenStructure.HEIGHT * 0.03),
                 (int) (ScreenStructure.WIDTH * 0.7), (int) (ScreenStructure.HEIGHT * 0.9));
@@ -190,5 +191,7 @@ public class GameLayout implements ScreenStructure {
 
             j++;
         }
+
+        // Setting Sound Effects for cards
     }
 }
