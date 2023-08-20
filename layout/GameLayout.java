@@ -16,7 +16,7 @@ class Cards implements ActionListener {
 
     int id;
     JButton button;
-    String status, path;
+    String status;
     ImageIcon defaultImg;
 
     Cards(String status, String path, ImageIcon defaultImg) {
