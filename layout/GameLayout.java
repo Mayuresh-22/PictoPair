@@ -76,6 +76,8 @@ public class GameLayout implements ScreenStructure {
                 (int) (ScreenStructure.HEIGHT * 0.25), Image.SCALE_SMOOTH);
         ImageIcon defaultImgIcon = new ImageIcon(scaledImg);
 
+        
+
         int j = 1;
         // Initializing Cards
         for (int i = 0; i < 24; i++) {
