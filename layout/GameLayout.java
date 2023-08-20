@@ -1,6 +1,8 @@
 package layout;
 
 import external.*;
+
+import javax.smartcardio.Card;
 import javax.swing.*;
 import java.awt.*;
 import interfaces.*;
@@ -139,5 +141,6 @@ public class GameLayout implements ScreenStructure {
         cardsPanel.setLayout(new GridLayout(4,6,20,20));
 
         // Creating Cards
+         Card[] card = new Card[24];
     }
 }
