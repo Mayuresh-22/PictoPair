@@ -18,7 +18,7 @@ class Cards implements ActionListener {
     JButton button;
     String status, path;
     ImageIcon defaultImg, mainImg;
-    static MusicPlayerThread soundEffect1 = new MusicPlayerThread();
+
     static MusicPlayerThread soundEffect2 = new MusicPlayerThread();
 
     Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path) {
@@ -62,6 +62,9 @@ class Cards implements ActionListener {
                         selected.clear();
 
                         // // Playing Correct Sound Effect
+                        MusicPlayerThread soundEffect1 = new MusicPlayerThread();
+                        soundEffect1.filePath = "assets/sounds/correct.wav";
+                        soundEffect1.loop = false;
                         soundEffect1.start();
 
                         // Setting Cards disabled
@@ -97,9 +100,9 @@ class Cards implements ActionListener {
             }
         }
     }
-    public static void setSoundEffects(){
-        soundEffect1.filePath = "assets/sounds/correct.wav";
-        soundEffect1.loop = false;
+
+    public static void setSoundEffects() {
+
         soundEffect2.filePath = "assets/sounds/wrong.wav";
         soundEffect2.loop = false;
     }
