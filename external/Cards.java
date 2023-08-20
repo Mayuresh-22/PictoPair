@@ -1,6 +1,5 @@
 package external;
 
-import external.*;
 
 import javax.swing.*;
 import java.awt.event.*;
