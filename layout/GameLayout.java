@@ -64,8 +64,8 @@ class Cards implements ActionListener {
                         // Playing Correct Sound Effect
                         try {
                             soundEffect.join(); // Wait for the thread to finish
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
+                        } catch (InterruptedException s) {
+                            s.printStackTrace();
                         }
                         soundEffect.filePath = "assets/sounds/correct.wav";
                         soundEffect.loop = false;
