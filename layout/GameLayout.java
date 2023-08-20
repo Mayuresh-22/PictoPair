@@ -95,6 +95,6 @@ public class GameLayout implements ScreenStructure {
 
             j++;
         }
-        Cards.shuffle();
+        
     }
 }
