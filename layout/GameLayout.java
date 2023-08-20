@@ -19,12 +19,14 @@ public class GameLayout implements ScreenStructure, ActionListener {
             scorePanel = new JPanel();
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
-
+    JButton quitButton = new JButton("QUIT");
+    
     public static int matches = 0,turns = 30;
 
     // Creating Score Labels
     public static JLabel matchesLabel = new JLabel("Matches : "+matches);
     public static JLabel turnsLabel = new JLabel("Turns left : "+turns);
+
 
 
     public GameLayout() {
@@ -39,7 +41,6 @@ public class GameLayout implements ScreenStructure, ActionListener {
         createScorePanel();
 
         // quit button
-        JButton quitButton = new JButton("QUIT");
         quitButton.setBounds((int) (ScreenStructure.WIDTH * 0.95), (int) (ScreenStructure.HEIGHT * 0.0),
                 (int) (ScreenStructure.WIDTH * 0.05), (int) (ScreenStructure.HEIGHT * 0.03));
         quitButton.setBackground(Color.red);
