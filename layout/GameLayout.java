@@ -47,7 +47,7 @@ class Cards implements ActionListener {
 
     public void checkMatch() {
         if (selected.size() == 2) {
-            if (selected.get(0).path.equals(selected.get(1).path)) {
+            if (selected.get(0).mainImg.getImage().equals(selected.get(1).mainImg.getImage())) {
 
                 Timer timer = new Timer(500, new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
@@ -150,10 +150,10 @@ public class GameLayout implements ScreenStructure {
             }
         // Creating mainImgIcon Variable
          ImageIcon mainImg = new ImageIcon("E:\\DarshanStudies\\Programing\\Java\\PictoPair-Memory-Game\\assets\\images\\card"+j+".jpg");
-         Image mainscaledImg = path.getScaledInstance((int)(ScreenStructure.WIDTH*0.1),(int)(ScreenStructure.HEIGHT*0.25), Image.SCALE_SMOOTH);
+         Image mainscaledImg = mainImg.getImage().getScaledInstance((int)(ScreenStructure.WIDTH*0.1),(int)(ScreenStructure.HEIGHT*0.25), Image.SCALE_SMOOTH);
          ImageIcon mainImgIcon = new ImageIcon(mainscaledImg);
 
-         card[i] = new Cards("hidden", mainImgIcon, defaultImgIcon);
+         card[i] = new Cards("hidden", mainImgIcon, defaultImgIcon,"E:\\DarshanStudies\\Programing\\Java\\PictoPair-Memory-Game\\assets\\images\\card"+j+".jpg");
          cardsPanel.add(card[i].button);
 
          j++;
