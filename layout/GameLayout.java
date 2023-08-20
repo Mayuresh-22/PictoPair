@@ -26,8 +26,8 @@ public class GameLayout implements ScreenStructure {
 
         // cards panel
         createCardsPanel();
-        
-        // cards panel
+
+        // score panel
         createCardsPanel();
 
         // Adding to layeredPane
