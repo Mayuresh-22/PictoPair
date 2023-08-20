@@ -90,7 +90,7 @@ public class GameLayout implements ScreenStructure {
             ImageIcon mainImgIcon = new ImageIcon(mainscaledImg);
 
             card[i] = new Cards("hidden", mainImgIcon, defaultImgIcon,
-                    "E:\\DarshanStudies\\Programing\\Java\\PictoPair-Memory-Game\\assets\\images\\card" + j + ".jpg");
+                    "E:\\DarshanStudies\\Programing\\Java\\PictoPair-Memory-Game\\assets\\images\\card" + j + ".jpg" ,1);
             cardsPanel.add(card[i].button);
 
             j++;
