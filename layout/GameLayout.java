@@ -35,11 +35,7 @@ class Cards implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (selected.size() < 2 && this.status.equals("hidden")) {
-            // Creating imgIcon Variable
-            ImageIcon img = new ImageIcon(getClass().getResource(path));
-            Image scaledImg = img.getImage().getScaledInstance(250, 350, Image.SCALE_SMOOTH);
-            ImageIcon imgIcon = new ImageIcon(scaledImg);
-            button.setIcon(imgIcon);
+            button.setIcon(mainImg);
             this.status = "revealed";
             selected.add(this);
 
