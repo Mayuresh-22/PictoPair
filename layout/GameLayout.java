@@ -22,6 +22,8 @@ class Cards implements ActionListener {
     Cards(String status, ImageIcon mainImg, ImageIcon defaultImg,String path) {
 
         button = new JButton(defaultImg);
+        button.setBorderPainted(false);
+        button.setFocusPainted(false);
         button.addActionListener(this);
 
         this.status = status;
