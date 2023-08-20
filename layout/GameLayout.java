@@ -137,24 +137,24 @@ public class GameLayout implements ScreenStructure {
         // Creating Score Labels
         JLabel matchesLabel = new JLabel("Matches : 0");
         JLabel turnsLabel = new JLabel("Turns : "+turns);
-        matches.setFont(labelFont);
-        turns.setFont(labelFont);
+        matchesLabel.setFont(labelFont);
+        turnsLabel.setFont(labelFont);
 
         // Styling Labels
-        matches.setForeground(Color.WHITE); // Set text color
-        matches.setBackground(new Color(71, 125, 250));
-        matches.setHorizontalAlignment(SwingConstants.CENTER);
-        matches.setBorder(new TextBubbleBorder(new Color(71, 125, 250), 5, 40, 0));
-        matches.setOpaque(true);
+        matchesLabel.setForeground(Color.WHITE); // Set text color
+        matchesLabel.setBackground(new Color(71, 125, 250));
+        matchesLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        matchesLabel.setBorder(new TextBubbleBorder(new Color(71, 125, 250), 5, 40, 0));
+        matchesLabel.setOpaque(true);
 
-        turns.setForeground(Color.WHITE); // Set text color
-        turns.setBackground(new Color(71, 125, 250));
-        turns.setHorizontalAlignment(SwingConstants.CENTER);
-        turns.setBorder(new TextBubbleBorder(new Color(71, 125, 250), 5,40, 0));
-        turns.setOpaque(true);
+        turnsLabel.setForeground(Color.WHITE); // Set text color
+        turnsLabel.setBackground(new Color(71, 125, 250));
+        turnsLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        turnsLabel.setBorder(new TextBubbleBorder(new Color(71, 125, 250), 5,40, 0));
+        turnsLabel.setOpaque(true);
 
-        scorePanel.add(matches);
-        scorePanel.add(turns);
+        scorePanel.add(matchesLabel);
+        scorePanel.add(turnsLabel);
 
         cardsPanel.setLayout(new GridLayout(4,6,20,20));
     }
