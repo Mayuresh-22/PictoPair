@@ -25,6 +25,7 @@ class Cards implements ActionListener {
         button.addActionListener(this);
 
         this.status = status;
+        this.path = path;
         this.mainImg = mainImg;
         this.defaultImg = defaultImg;
     }
