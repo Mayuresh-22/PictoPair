@@ -145,7 +145,7 @@ public class GameLayout implements ScreenStructure {
 
         // Creating defaultImgIcon Variable
         ImageIcon defaultImg = new ImageIcon("E:\\DarshanStudies\\Programing\\Java\\PictoPair-Memory-Game\\assets\\images\\card-back.png");
-        Image scaledImg = defaultImg.getImage().getScaledInstance((int)(ScreenStructure.WIDTH*0.03),(int)(ScreenStructure.HEIGHT*0.03), Image.SCALE_SMOOTH);
+        Image scaledImg = defaultImg.getImage().getScaledInstance((int)(ScreenStructure.WIDTH*0.07),(int)(ScreenStructure.HEIGHT*0.1), Image.SCALE_SMOOTH);
         ImageIcon defaultImgIcon = new ImageIcon(scaledImg);
 
         // Initializing Cards
