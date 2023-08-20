@@ -134,8 +134,8 @@ public class GameLayout implements ScreenStructure {
 
         
         // Creating Score Labels
-        JLabel matches = new GradientLabel("Matches : 0",new Color(71, 88, 250),new Color(85, 240, 255));
-        JLabel turns = new GradientLabel("Turns : 0",new Color(71, 88, 250),new Color(85, 240, 255));
+        GradientLabel matches = new GradientLabel("Matches : 0", new Color(71, 88, 250), new Color(85, 240, 255));
+        GradientLabel turns = new GradientLabel("Turns : 0", new Color(71, 88, 250), new Color(85, 240, 255));
         matches.setFont(labelFont);
         turns.setFont(labelFont);
 
