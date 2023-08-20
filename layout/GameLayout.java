@@ -135,7 +135,7 @@ public class GameLayout implements ScreenStructure {
 
         
         // Creating Score Labels
-        JLabel matchesLabel = new JLabel("Matches : 0");
+        JLabel matchesLabel = new JLabel("Matches : "+matches);
         JLabel turnsLabel = new JLabel("Turns : "+turns);
         matchesLabel.setFont(labelFont);
         turnsLabel.setFont(labelFont);
