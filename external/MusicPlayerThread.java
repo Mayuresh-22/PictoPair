@@ -4,7 +4,7 @@ import javax.sound.sampled.*;
 import java.io.*;
 
 // MusicPlayer Class for sound effects
-public class MusicPlayerThread extends StoppableThread {
+public class MusicPlayerThread extends Thread {
 
     public String filePath;
     public Boolean loop;
