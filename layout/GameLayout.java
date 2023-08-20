@@ -129,6 +129,8 @@ public class GameLayout implements ScreenStructure {
         scorePanel.setOpaque(true);
         scorePanel.setLayout(new GridLayout(2, 1, 0, 20));
 
+        // Creating Fonts for Labels
+
         // Creating Score Labels
         JLabel matches = new JLabel("Matches : 0");
         JLabel turns = new JLabel("Turns : 0");
