@@ -40,7 +40,7 @@ public class GameLayout implements ScreenStructure {
     public void createLayeredPane(){
         // layered pane
         layeredPane.setSize(ScreenStructure.WIDTH, ScreenStructure.HEIGHT);
-        layeredPane.setBackground(Color.gray);
+        // layeredPane.setBackground(Color.gray);
         layeredPane.setOpaque(true);
     }
 
