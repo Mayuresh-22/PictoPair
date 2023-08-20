@@ -81,7 +81,7 @@ class Cards implements ActionListener {
                         Cards c4 = selected.get(1);
                         selected.clear();
 
-                        // // Playing Wrong Sound Effect
+                        // Playing Wrong Sound Effect
                         soundEffect2.start();
 
                         // Setting Cards to hidden
