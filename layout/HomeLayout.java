@@ -1,7 +1,6 @@
 package layout;
 
 import external.RoundedPanel;
-import external.TextBubbleBorder;
 import javax.swing.*;
 import java.awt.*;
 import interfaces.*;
