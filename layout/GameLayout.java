@@ -64,6 +64,7 @@ class Cards implements ActionListener {
 
                         soundEffect.filePath("assets/sounds/correct.wav");
                         soundEffect.loop(false);
+                        soundEffect.start();
                     }
                 });
 
