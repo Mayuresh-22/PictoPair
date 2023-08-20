@@ -17,9 +17,9 @@ class App {
     App(){
         appConfig();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
-        soundEffect.filePath = "assets/sounds/intro.wav";
-        soundEffect.loop = false;
-        soundEffect.start();
+        // soundEffect.filePath = "assets/sounds/intro.wav";
+        // soundEffect.loop = false;
+        // soundEffect.start();
 
         // Remove LoadingPanel after 5 seconds
         Timer timer = new Timer(4900, new ActionListener() {
@@ -29,9 +29,9 @@ class App {
                 app.add(homeLayout.getHomePanel(), BorderLayout.CENTER);
                 app.revalidate();
                 app.repaint();
-                musicPlayer.filePath = "assets/sounds/bgm.wav";
-                musicPlayer.loop = true;
-                musicPlayer.start();
+                // musicPlayer.filePath = "assets/sounds/bgm.wav";
+                // musicPlayer.loop = true;
+                // musicPlayer.start();
             }
         });
         timer.setRepeats(false);
