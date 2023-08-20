@@ -11,27 +11,27 @@ class App {
     LoadingLayout loadingLayout = new LoadingLayout();
     HomeLayout homeLayout = new HomeLayout();
     GameLayout gameLayout = new GameLayout();
-    // MusicPlayerThread soundEffect = new MusicPlayerThread();
-    // MusicPlayerThread musicPlayer = new MusicPlayerThread();
+    MusicPlayerThread soundEffect = new MusicPlayerThread();
+    MusicPlayerThread musicPlayer = new MusicPlayerThread();
 
     App(){
         appConfig();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
-        // soundEffect.filePath = "assets/sounds/intro.wav";
-        // soundEffect.loop = false;
-        // soundEffect.start();
+        soundEffect.filePath = "assets/sounds/intro.wav";
+        soundEffect.loop = false;
+        soundEffect.start();
 
         // Remove LoadingPanel after 5 seconds
         Timer timer = new Timer(4900, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 app.remove(loadingLayout.getLoadingPanel());
-                app.add(homeLayout.getHomePanel(), BorderLayout.CENTER);
+                app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
                 app.revalidate();
                 app.repaint();
-                // musicPlayer.filePath = "assets/sounds/bgm.wav";
-                // musicPlayer.loop = true;
-                // musicPlayer.start();
+                musicPlayer.filePath = "assets/sounds/bgm.wav";
+                musicPlayer.loop = true;
+                musicPlayer.start();
             }
         });
         timer.setRepeats(false);
