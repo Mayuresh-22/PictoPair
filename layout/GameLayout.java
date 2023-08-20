@@ -4,6 +4,8 @@ import external.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+
 import interfaces.*;
 
 
@@ -76,7 +78,8 @@ public class GameLayout implements ScreenStructure {
                 (int) (ScreenStructure.HEIGHT * 0.25), Image.SCALE_SMOOTH);
         ImageIcon defaultImgIcon = new ImageIcon(scaledImg);
 
-        
+         ArrayList<Integer> rand_arr = new ArrayList<>();
+         ArrayList<Cards> rand_cards = new ArrayList<>();
 
         int j = 1;
         // Initializing Cards
