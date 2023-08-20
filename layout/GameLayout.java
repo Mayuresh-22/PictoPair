@@ -4,6 +4,7 @@ import external.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -12,7 +13,7 @@ import interfaces.*;
 
 
 // Main Class
-public class GameLayout implements ScreenStructure {
+public class GameLayout implements ScreenStructure, ActionListener {
 
     JPanel GamePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), cardsPanel = new JPanel(),
             scorePanel = new JPanel();
