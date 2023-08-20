@@ -15,7 +15,7 @@ public class Cards implements ActionListener {
     public String status, path;
     public ImageIcon defaultImg, mainImg;
 
-    public static int matches=0,turns=0;
+    public static int matches = 0,turns = 0;
 
     public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path ,int id) {
         
