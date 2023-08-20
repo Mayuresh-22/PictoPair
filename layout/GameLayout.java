@@ -9,7 +9,6 @@ import java.util.Collections;
 
 import interfaces.*;
 
-import java.awt.geom.Point2D;
 
 
 // Main Class
@@ -134,18 +133,20 @@ public class GameLayout implements ScreenStructure {
 
         
         // Creating Score Labels
-        GradientLabel matches = new GradientLabel("Matches : 0", new Color(71, 88, 250), new Color(85, 240, 255));
-        GradientLabel turns = new GradientLabel("Turns : 0", new Color(71, 88, 250), new Color(85, 240, 255));
+        JLabel matches = new JLabel("Matches : 0");
+        JLabel turns = new JLabel("Turns : 0");
         matches.setFont(labelFont);
         turns.setFont(labelFont);
 
         // Styling Labels
         matches.setForeground(Color.WHITE); // Set text color
+        matches.setBackground(new Color(71, 88, 250));
         matches.setHorizontalAlignment(SwingConstants.CENTER);
         matches.setBorder(new TextBubbleBorder(new Color(71, 88, 250), 5, 40, 0));
         matches.setOpaque(true);
 
         turns.setForeground(Color.WHITE); // Set text color
+        turns.setBackground(new Color(71, 88, 250));
         turns.setHorizontalAlignment(SwingConstants.CENTER);
         turns.setBorder(new TextBubbleBorder(new Color(71, 88, 250), 5,40, 0));
         turns.setOpaque(true);
@@ -155,31 +156,4 @@ public class GameLayout implements ScreenStructure {
 
         cardsPanel.setLayout(new GridLayout(4,6,20,20));
     }
-
-    static class GradientLabel extends JLabel {
-        private Color startColor;
-        private Color endColor;
-        
-        public GradientLabel(String text, Color startColor, Color endColor) {
-            super(text);
-            this.startColor = startColor;
-            this.endColor = endColor;
-            setForeground(Color.WHITE); // Set text color to white
-        }
-        
-        @Override
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g); // Call the original paintComponent method first
-    
-            // Create a gradient background
-            Graphics2D g2d = (Graphics2D) g.create();
-            g2d.setPaint(new GradientPaint(
-                    new Point2D.Float(0, 0), startColor,
-                    new Point2D.Float(0, getHeight()), endColor
-            ));
-            g2d.fillRect(0, 0, getWidth(), getHeight());
-            g2d.dispose(); // Dispose of the graphics context
-        }
-    }
-    
 }
