@@ -1,52 +1,132 @@
 package external;
 
-import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.*;
+import javax.swing.border.*;
 
-public class RoundedPanel extends JPanel
-{
-    private Color backgroundColor;
-    private int cornerRadius = 15;
+class TextBubbleBorder extends AbstractBorder {
 
-    public RoundedPanel(LayoutManager layout, int radius) {
-        super(layout);
-        cornerRadius = radius;
+    private Color color;
+    private int thickness = 4;
+    private int radii = 8;
+    private int pointerSize = 7;
+    private Insets insets = null;
+    private BasicStroke stroke = null;
+    private int strokePad;
+    private int pointerPad = 4;
+    private boolean left = true;
+    RenderingHints hints;
+
+    TextBubbleBorder(
+            Color color) {
+        this(color, 4, 8, 7);
     }
 
-    public RoundedPanel(LayoutManager layout, int radius, Color bgColor) {
-        super(layout);
-        cornerRadius = radius;
-        backgroundColor = bgColor;
+    TextBubbleBorder(
+            Color color, int thickness, int radii, int pointerSize) {
+        this.thickness = thickness;
+        this.radii = radii;
+        this.pointerSize = pointerSize;
+        this.color = color;
+
+        stroke = new BasicStroke(thickness);
+        strokePad = thickness / 2;
+
+        hints = new RenderingHints(
+                RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+
+        int pad = radii + strokePad;
+        int bottomPad = pad + pointerSize + strokePad;
+        insets = new Insets(pad, pad, bottomPad, pad);
     }
 
-    public RoundedPanel(int radius) {
-        super();
-        cornerRadius = radius;
-    }
-
-    public RoundedPanel(int radius, Color bgColor) {
-        super();
-        cornerRadius = radius;
-        backgroundColor = bgColor;
+    TextBubbleBorder(
+            Color color, int thickness, int radii, int pointerSize, boolean left) {
+        this(color, thickness, radii, pointerSize);
+        this.left = left;
     }
 
     @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        Dimension arcs = new Dimension(cornerRadius, cornerRadius);
-        int width = getWidth();
-        int height = getHeight();
-        Graphics2D graphics = (Graphics2D) g;
-        graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+    public Insets getBorderInsets(Component c) {
+        return insets;
+    }
 
-        //Draws the rounded panel with borders.
-        if (backgroundColor != null) {
-            graphics.setColor(backgroundColor);
+    @Override
+    public Insets getBorderInsets(Component c, Insets insets) {
+        return getBorderInsets(c);
+    }
+
+    @Override
+    public void paintBorder(
+            Component c,
+            Graphics g,
+            int x, int y,
+            int width, int height) {
+
+        Graphics2D g2 = (Graphics2D) g;
+
+        int bottomLineY = height - thickness - pointerSize;
+
+        RoundRectangle2D.Double bubble = new RoundRectangle2D.Double(
+                0 + strokePad,
+                0 + strokePad,
+                width - thickness,
+                bottomLineY,
+                radii,
+                radii);
+
+        Polygon pointer = new Polygon();
+
+        if (left) {
+            // left point
+            pointer.addPoint(
+                    strokePad + radii + pointerPad,
+                    bottomLineY);
+            // right point
+            pointer.addPoint(
+                    strokePad + radii + pointerPad + pointerSize,
+                    bottomLineY);
+            // bottom point
+            pointer.addPoint(
+                    strokePad + radii + pointerPad + (pointerSize / 2),
+                    height - strokePad);
         } else {
-            graphics.setColor(getBackground());
+            // left point
+            pointer.addPoint(
+                    width - (strokePad + radii + pointerPad),
+                    bottomLineY);
+            // right point
+            pointer.addPoint(
+                    width - (strokePad + radii + pointerPad + pointerSize),
+                    bottomLineY);
+            // bottom point
+            pointer.addPoint(
+                    width - (strokePad + radii + pointerPad + (pointerSize / 2)),
+                    height - strokePad);
         }
-        graphics.fillRoundRect(0, 0, width-1, height-1, arcs.width, arcs.height); //paint background
-        graphics.setColor(getForeground());
-        graphics.drawRoundRect(0, 0, width-1, height-1, arcs.width, arcs.height); //paint border
+
+        Area area = new Area(bubble);
+        area.add(new Area(pointer));
+
+        g2.setRenderingHints(hints);
+
+        // Paint the BG color of the parent, everywhere outside the clip
+        // of the text bubble.
+        Component parent  = c.getParent();
+        if (parent!=null) {
+            Color bg = parent.getBackground();
+            Rectangle rect = new Rectangle(0,0,width, height);
+            Area borderRegion = new Area(rect);
+            borderRegion.subtract(area);
+            g2.setClip(borderRegion);
+            g2.setColor(bg);
+            g2.fillRect(0, 0, width, height);
+            g2.setClip(null);
+        }
+
+        g2.setColor(color);
+        g2.setStroke(stroke);
+        g2.draw(area);
     }
 }
