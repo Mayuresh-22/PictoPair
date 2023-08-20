@@ -10,10 +10,10 @@ public class Cards implements ActionListener {
     // Global selected cards vector
     public static Vector<Cards> selected = new Vector<>();
 
-    int id;
-    JButton button;
-    String status, path;
-    ImageIcon defaultImg, mainImg;
+    public int id;
+    public JButton button;
+    public String status, path;
+    public ImageIcon defaultImg, mainImg;
 
 
 
