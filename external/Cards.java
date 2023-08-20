@@ -15,12 +15,10 @@ public class Cards implements ActionListener {
     public String status, path;
     public ImageIcon defaultImg, mainImg;
 
-    public static int matches,turns;
-
+    public static int matches=0,turns=0;
 
     public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path ,int id) {
-        matches = 0;
-        turns = 0;
+        
         button = new JButton(defaultImg);
         button.setBorderPainted(false);
         button.setFocusPainted(false);
