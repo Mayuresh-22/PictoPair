@@ -140,15 +140,15 @@ public class GameLayout implements ScreenStructure {
 
         // Styling Labels
         matches.setForeground(Color.WHITE); // Set text color
-        matches.setBackground(new Color(71, 88, 250));
+        matches.setBackground(new Color(71, 125, 250));
         matches.setHorizontalAlignment(SwingConstants.CENTER);
-        matches.setBorder(new TextBubbleBorder(new Color(71, 88, 250), 5, 40, 0));
+        matches.setBorder(new TextBubbleBorder(new Color(71, 125, 250), 5, 40, 0));
         matches.setOpaque(true);
 
         turns.setForeground(Color.WHITE); // Set text color
-        turns.setBackground(new Color(71, 88, 250));
+        turns.setBackground(new Color(71, 125, 250));
         turns.setHorizontalAlignment(SwingConstants.CENTER);
-        turns.setBorder(new TextBubbleBorder(new Color(71, 88, 250), 5,40, 0));
+        turns.setBorder(new TextBubbleBorder(new Color(71, 125, 250), 5,40, 0));
         turns.setOpaque(true);
 
         scorePanel.add(matches);
