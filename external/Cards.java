@@ -1,4 +1,7 @@
 package external;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 // Card Class
 public class Cards implements ActionListener {
 
