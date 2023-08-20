@@ -110,6 +110,21 @@ public class TextBubbleBorder extends AbstractBorder {
         area.add(new Area(pointer));
 
         g2.setRenderingHints(hints);
+
+        // Paint the BG color of the parent, everywhere outside the clip
+        // of the text bubble.
+        Component parent  = c.getParent();
+        if (parent!=null) {
+            Color bg = parent.getBackground();
+            Rectangle rect = new Rectangle(0,0,width, height);
+            Area borderRegion = new Area(rect);
+            borderRegion.subtract(area);
+            g2.setClip(borderRegion);
+            g2.setColor(bg);
+            g2.fillRect(0, 0, width, height);
+            g2.setClip(null);
+        }
+
         g2.setColor(color);
         g2.setStroke(stroke);
         g2.draw(area);
