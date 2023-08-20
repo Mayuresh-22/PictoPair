@@ -120,7 +120,7 @@ public class GameLayout implements ScreenStructure {
             cardsPanel.add(rand_cards.get(i).button);
         }
     }
-    public void createCardsPanel() {
+    public void createScorePanel() {
 
         // Creating Cards Panel
         cardsPanel.setBounds((int) (ScreenStructure.WIDTH * 0.03), (int) (ScreenStructure.HEIGHT * 0.03),
