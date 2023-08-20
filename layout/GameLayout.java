@@ -19,7 +19,8 @@ class Cards implements ActionListener {
     JButton button;
     String status, path;
     ImageIcon defaultImg, mainImg;
-    static MusicPlayerThread soundEffect = new MusicPlayerThread();
+    static MusicPlayerThread soundEffect1 = new MusicPlayerThread();
+    static MusicPlayerThread soundEffect2 = new MusicPlayerThread();
 
     Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path) {
 
