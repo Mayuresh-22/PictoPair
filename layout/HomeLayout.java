@@ -52,7 +52,7 @@ public class HomeLayout implements ScreenStructure {
 
     public void createMenuPanel(){
         // create buttons one below other with background color 77,0,206,255 and text color white
-        // with internal padding 10px and external padding 70px
+        // with internal padding 10px and external padding 70px, bigger buttons
 
         // play button
         play = new JButton("Play");
@@ -62,7 +62,27 @@ public class HomeLayout implements ScreenStructure {
         play.setBorderPainted(false);
         play.setFocusPainted(false);
         play.setForeground(Color.WHITE);
+        play.setFont(new Font("Arial", Font.BOLD, 40));
+        
+        // settings button
+        settings = new JButton("Settings");
+        settings.setBounds(0, 0, 500, 100);
+        settings.setBackground(new Color(77,0,206,255));
+        settings.setOpaque(true);
+        settings.setBorderPainted(false);
+        settings.setFocusPainted(false);
+        settings.setForeground(Color.WHITE);
+        settings.setFont(new Font("Arial", Font.BOLD, 40));
 
+        // quit button
+        quite = new JButton("Quit");
+        quite.setBounds(0, 0, 500, 100);
+        quite.setBackground(new Color(77,0,206,255));
+        quite.setOpaque(true);
+        quite.setBorderPainted(false);
+        quite.setFocusPainted(false);
+        quite.setForeground(Color.WHITE);
+        quite.setFont(new Font("Arial", Font.BOLD, 40));
 
         menuPanel.add(play);
 
