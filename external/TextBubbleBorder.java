@@ -10,6 +10,7 @@ public class TextBubbleBorder extends AbstractBorder {
     private int thickness = 4;
     private int radii = 8;
     private int pointerSize = 7;
+    private boolean parent;
     private Insets insets = null;
     private BasicStroke stroke = null;
     private int strokePad;
@@ -45,7 +46,6 @@ public class TextBubbleBorder extends AbstractBorder {
             Color color, int thickness, int radii, boolean parent) {
         this.thickness = thickness;
         this.radii = radii;
-        this.pointerSize = pointerSize;
         this.color = color;
 
         stroke = new BasicStroke(thickness);
