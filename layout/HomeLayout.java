@@ -100,7 +100,7 @@ public class HomeLayout implements ScreenStructure{
     }
 
     public void createDialogBox(){
-        menuPanel.setVisible(false);
+        menuPanel.setOpaque(false);
 
         // dialog box to ask confirmation to quite
         JDialog dialog = new JDialog();
