@@ -122,7 +122,13 @@ public class HomeLayout implements ScreenStructure{
         yes.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 message.setText("Thank you for playing!");
-                System.exit(0);
+                Timer t = new Timer(2000, new ActionListener(){
+                    public void actionPerformed(ActionEvent e){
+                        System.exit(0);
+                    }
+                });
+                t.setRepeats(false);
+                t.start();
             }
         });
 
