@@ -54,10 +54,6 @@ public class HomeLayout implements ScreenStructure{
     }
 
     public void createMenuPanel(){
-        // create buttons one below other with background color 77,0,206,255 and text color white
-        // with internal padding 10px and external padding 70px, bigger buttons
-
-        // play button
         play = createButton(play, "Play", 0, 0, 500, 100, 40);
         play.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -65,29 +61,17 @@ public class HomeLayout implements ScreenStructure{
             }
         });
 
-        
-        // settings button
-        settings = new JButton("Settings");
-        settings.setBounds(0, 50, 500, 100);
-        settings.setBackground(new Color(77,0,206,255));
-        settings.setOpaque(true);
-        settings.setBorderPainted(false);
-        settings.setFocusPainted(false);
-        settings.setForeground(Color.WHITE);
-        settings.setFont(new Font("Arial", Font.BOLD, 40));
+        settings = createButton(settings, "Settings", 0, 0, 500, 100, 40);
+        settings.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
 
-        // quit button
-        quite = new JButton("Quit");
-        quite.setBounds(0, 100, 500, 100);
-        quite.setBackground(new Color(77,0,206,255));
-        quite.setOpaque(true);
-        quite.setBorderPainted(false);
-        quite.setFocusPainted(false);
-        quite.setForeground(Color.WHITE);
-        quite.setFont(new Font("Arial", Font.BOLD, 40));
+            }
+        });
+
+        quite = createButton(quite, "Quite", 0, 0, 500, 100, 40);
         quite.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.exit(0); // Close the application
+                System.exit(0);
             }
         });
 
