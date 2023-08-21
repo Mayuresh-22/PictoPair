@@ -3,9 +3,11 @@ package layout;
 import external.*;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
+
 import interfaces.*;
 
-public class HomeLayout implements ScreenStructure {
+public class HomeLayout implements ScreenStructure, ActionListener {
     JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER,50, 40));
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
@@ -82,8 +84,12 @@ public class HomeLayout implements ScreenStructure {
         quite.setBorderPainted(false);
         quite.setFocusPainted(false);
         quite.setForeground(Color.WHITE);
-
         quite.setFont(new Font("Arial", Font.BOLD, 40));
+        quite.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                System.exit(0); // Close the application
+            }
+        });
 
         // Adding to menuPanel with flow layout
         menuPanel.add(play);
