@@ -1,6 +1,9 @@
 package external;
 
 import javax.swing.*;
+
+import layout.GameLayout;
+
 import java.awt.event.*;
 import java.util.Vector;
 
@@ -15,7 +18,6 @@ public class Cards implements ActionListener {
     public String status, path;
     public ImageIcon defaultImg, mainImg;
 
-    public static int matches = 0,turns = 0;
 
     public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path ,int id) {
         
@@ -71,10 +73,12 @@ public class Cards implements ActionListener {
                         c1.button.setEnabled(false);
                         c2.button.setEnabled(false);
 
-                        matches+=1;
-                        turns+=1;
+                        GameLayout.matches+=1;
+                        GameLayout.turns-=1;
 
-                        if(matches == 12){
+                        GameLayout.matchesLabel.setText("Matches : "+GameLayout.matches);
+                        GameLayout.turnsLabel.setText("Turns left : "+GameLayout.turns);
+                        if(GameLayout.matches == 12){
                             // Call Score Screen Method
                         }
                     }
@@ -102,7 +106,8 @@ public class Cards implements ActionListener {
                         c3.status = "hidden";
                         c4.status = "hidden";
 
-                        turns+=1;
+                        GameLayout.turns-=1;
+                        GameLayout.turnsLabel.setText("Turns left : "+GameLayout.turns);
                     }
                 });
                 timer.setRepeats(false);
