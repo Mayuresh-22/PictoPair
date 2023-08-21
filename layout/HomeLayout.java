@@ -61,14 +61,14 @@ public class HomeLayout implements ScreenStructure{
             }
         });
 
-        settings = createButton(settings, "Settings", 0, 0, 500, 100, 40);
+        settings = createButton(settings, "SETTINGS", 0, 0, 500, 100, 40);
         settings.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
 
             }
         });
 
-        quite = createButton(quite, "Quite", 0, 0, 500, 100, 40);
+        quite = createButton(quite, "QUITE", 0, 0, 500, 100, 40);
         quite.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.exit(0);
