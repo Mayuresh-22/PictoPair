@@ -110,7 +110,7 @@ public class HomeLayout implements ScreenStructure{
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
-        dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
+        dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, true));
         
         JLabel message = new JLabel("Are you sure you want to quite?");
         message.setFont(new Font("Arial", Font.BOLD, 30));
