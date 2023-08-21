@@ -100,8 +100,6 @@ public class HomeLayout implements ScreenStructure{
     }
 
     public void createDialogBox(){
-        menuPanel.setOpaque(false);
-        menuPanel.setVisible(false);
         layeredPane.remove(menuPanel);
         layeredPane.repaint();
 
@@ -143,8 +141,8 @@ public class HomeLayout implements ScreenStructure{
             public void actionPerformed(ActionEvent e){
                 dialog.dispose();
                 menuPanel.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
-                menuPanel.setOpaque(true);
-                menuPanel.setVisible(true);
+                layeredPane.addd(menuPanel);
+                layeredPane.repaint();
             }
         });
 
