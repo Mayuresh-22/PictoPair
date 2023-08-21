@@ -69,6 +69,28 @@ public class HomeLayout implements ScreenStructure {
         //     }
         // });
 
+        // settings button
+        settings.setBounds((ScreenStructure.WIDTH/2)-100, (ScreenStructure.HEIGHT/2)-25, 200, 50);
+        settings.setBackground(new Color(131,0,255,255));
+        settings.setOpaque(true);
+        settings.setBorderPainted(false);
+        settings.setFocusPainted(false);
+        settings.setForeground(Color.WHITE);
+
+
+        // quite button
+        quite.setBounds((ScreenStructure.WIDTH/2)-100, (ScreenStructure.HEIGHT/2)+50, 200, 50);
+        quite.setBackground(new Color(131,0,255,255));
+        quite.setOpaque(true);
+        quite.setBorderPainted(false);
+        quite.setFocusPainted(false);
+        quite.setForeground(Color.WHITE);
+        quite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                System.exit(0);
+            }
+        });
+
 
 
         menuPanel.setBounds((ScreenStructure.WIDTH/2)-250, (ScreenStructure.HEIGHT/2)-250, 500, 500);
