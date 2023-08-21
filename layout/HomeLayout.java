@@ -84,7 +84,7 @@ public class HomeLayout implements ScreenStructure {
         quite.setForeground(Color.WHITE);
         quite.setFont(new Font("Arial", Font.BOLD, 40));
 
-        // Adding to menuPanel
+        // Adding to menuPanel with flow layout
         menuPanel.add(play);
         menuPanel.add(settings);
         menuPanel.add(quite);
