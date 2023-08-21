@@ -54,7 +54,11 @@ public class HomeLayout implements ScreenStructure {
         // initialize buttons
         play = new JButton("PLAY");
         play.setBackground(new Color(77,0,206,255));
+        play.setFocusable(false);
+        play.setBorder(null);
+        play.setFont(new Font("sans", Font.BOLD, 17));
         menuPanel.add(play);
+
 
         menuPanel.setBounds((ScreenStructure.WIDTH/2)-250, (ScreenStructure.HEIGHT/2)-250, 500, 500);
         menuPanel.setBackground(new Color(131,0,255,255));
