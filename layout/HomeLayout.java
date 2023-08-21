@@ -66,7 +66,7 @@ public class HomeLayout implements ScreenStructure {
         
         // settings button
         settings = new JButton("Settings");
-        settings.setBounds(0, 0, 500, 100);
+        settings.setBounds(0, 50, 500, 100);
         settings.setBackground(new Color(77,0,206,255));
         settings.setOpaque(true);
         settings.setBorderPainted(false);
@@ -76,7 +76,7 @@ public class HomeLayout implements ScreenStructure {
 
         // quit button
         quite = new JButton("Quit");
-        quite.setBounds(0, 0, 500, 100);
+        quite.setBounds(0, 100, 500, 100);
         quite.setBackground(new Color(77,0,206,255));
         quite.setOpaque(true);
         quite.setBorderPainted(false);
