@@ -62,7 +62,7 @@ public class HomeLayout implements ScreenStructure {
         play.setBorderPainted(false);
         play.setFocusPainted(false);
         play.setForeground(Color.WHITE);
-        play.setBorder(new TextBubbleBorder(new Color(77,0,206,255), 10, 50, true));
+        play.setBorder(new TextBubbleBorder(new Color(77,0,206,255), 1, 50, true));
         play.setFont(new Font("Arial", Font.BOLD, 40));
         
         // settings button
@@ -84,7 +84,7 @@ public class HomeLayout implements ScreenStructure {
         quite.setBorderPainted(false);
         quite.setFocusPainted(false);
         quite.setForeground(Color.WHITE);
-        quite.setBorder(new TextBubbleBorder(new Color(77,0,206,255), 10, 50, true));
+        quite.setBorder(new TextBubbleBorder(new Color(77,0,206,255), 1, 50, true));
         quite.setFont(new Font("Arial", Font.BOLD, 40));
 
         // Adding to menuPanel with flow layout
