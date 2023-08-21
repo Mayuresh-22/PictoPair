@@ -118,14 +118,15 @@ public class HomeLayout implements ScreenStructure{
         message.setVerticalAlignment(JLabel.CENTER);
 
         JButton yes = new JButton();
-        createButton(yes, "YES", 0, 0, 200, 100, 30);
+        yes = createButton(yes, "YES", 0, 0, 200, 100, 30);
         yes.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.exit(0);
             }
         });
 
-        JButton no = createButton(no, "NO", 0, 0, 200, 100, 30);
+        JButton no = new JButton();
+        no = createButton(no, "NO", 0, 0, 200, 100, 30);
         no.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 dialog.dispose();
