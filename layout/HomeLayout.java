@@ -62,7 +62,6 @@ public class HomeLayout implements ScreenStructure {
         play.setBorderPainted(false);
         play.setFocusPainted(false);
         play.setForeground(Color.WHITE);
-        play.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
         play.setFont(new Font("Arial", Font.BOLD, 40));
         
         // settings button
@@ -73,7 +72,6 @@ public class HomeLayout implements ScreenStructure {
         settings.setBorderPainted(false);
         settings.setFocusPainted(false);
         settings.setForeground(Color.WHITE);
-        settings.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
         settings.setFont(new Font("Arial", Font.BOLD, 40));
 
         // quit button
@@ -84,7 +82,7 @@ public class HomeLayout implements ScreenStructure {
         quite.setBorderPainted(false);
         quite.setFocusPainted(false);
         quite.setForeground(Color.WHITE);
-        quite.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
+
         quite.setFont(new Font("Arial", Font.BOLD, 40));
 
         // Adding to menuPanel with flow layout
