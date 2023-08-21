@@ -129,7 +129,6 @@ public class HomeLayout implements ScreenStructure{
                 });
                 t.setRepeats(false);
                 t.start();
-                musicPlayer.stop();
             }
         });
 
