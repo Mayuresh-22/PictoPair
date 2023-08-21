@@ -100,7 +100,6 @@ public class HomeLayout implements ScreenStructure{
     }
 
     public void createDialogBox(){
-        layeredPane.remove(menuPanel);
         // dialog box to ask confirmation to quite
         JDialog dialog = new JDialog();
         dialog.setAlwaysOnTop(true);
@@ -110,7 +109,7 @@ public class HomeLayout implements ScreenStructure{
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
-        dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, true));
+        dialog.getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, new Color(131,0,255,255)));
         
         JLabel message = new JLabel("Are you sure you want to quite?");
         message.setFont(new Font("Arial", Font.BOLD, 30));
