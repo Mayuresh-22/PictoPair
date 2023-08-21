@@ -141,7 +141,7 @@ public class HomeLayout implements ScreenStructure{
                 dialog.dispose();
                 menuPanel.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
                 menuPanel.setOpaque(true);
-                menuPanel.setVisible(false);
+                menuPanel.setVisible(true);
             }
         });
 
