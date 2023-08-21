@@ -100,4 +100,35 @@ public class HomeLayout implements ScreenStructure{
     }
 
     public void createDialogBox(){
+        // dialog box to ask confirmation to quite
+        JDialog dialog = new JDialog();
+        dialog.setAlwaysOnTop(true);
+        dialog.setModal(true);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialog.setSize(500, 200);
+        dialog.setLocationRelativeTo(null);
+        dialog.setLayout(new BorderLayout());
+        dialog.setUndecorated(true);
+        dialog.getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, new Color(131,0,255,255)));
+        
+        JLabel message = new JLabel("Are you sure you want to quite?");
+        message.setFont(new Font("Arial", Font.BOLD, 30));
+        message.setForeground(new Color(131,0,255,255));
+        message.setHorizontalAlignment(JLabel.CENTER);
+        message.setVerticalAlignment(JLabel.CENTER);
+
+        JButton yes = createButton(yes, "YES", 0, 0, 200, 100, 30);
+        yes.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                System.exit(0);
+            }
+        });
+
+        JButton no = createButton(no, "NO", 0, 0, 200, 100, 30);
+        no.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                dialog.dispose();
+            }
+        });
+    }
 }
