@@ -100,6 +100,7 @@ public class HomeLayout implements ScreenStructure{
     }
 
     public void createDialogBox(){
+                layeredPane.remove(menuPanel);
         // dialog box to ask confirmation to quite
         JDialog dialog = new JDialog();
         dialog.setAlwaysOnTop(true);
@@ -149,7 +150,6 @@ public class HomeLayout implements ScreenStructure{
 
         dialog.add(message, BorderLayout.CENTER);
         dialog.add(buttonPanel, BorderLayout.SOUTH);
-        layeredPane.remove(menuPanel);
         dialog.setVisible(true);
     }
 }
