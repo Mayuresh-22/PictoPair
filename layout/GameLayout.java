@@ -4,6 +4,7 @@ import external.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -12,12 +13,19 @@ import interfaces.*;
 
 
 // Main Class
-public class GameLayout implements ScreenStructure {
+public class GameLayout implements ScreenStructure, ActionListener {
 
     JPanel GamePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), cardsPanel = new JPanel(),
             scorePanel = new JPanel();
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
+    JButton quitButton = new JButton("QUIT");
+
+    public static int matches = 0,turns = 30;
+
+    // Creating Score Labels
+    public static JLabel matchesLabel = new JLabel("Matches : "+matches);
+    public static JLabel turnsLabel = new JLabel("Turns left : "+turns);
 
     public GameLayout() {
         createLayeredPane();
@@ -30,16 +38,31 @@ public class GameLayout implements ScreenStructure {
         // score panel
         createScorePanel();
 
+        // quit button
+        quitButton.setBounds((int) (ScreenStructure.WIDTH * 0.95), (int) (ScreenStructure.HEIGHT * 0.0),
+                (int) (ScreenStructure.WIDTH * 0.05), (int) (ScreenStructure.HEIGHT * 0.03));
+        quitButton.setBackground(Color.red);
+        quitButton.setOpaque(true);
+        quitButton.setBorderPainted(false);
+        quitButton.setFocusPainted(false);
+        quitButton.setForeground(Color.WHITE);
+        quitButton.addActionListener(this);
+
         // Adding to layeredPane
         layeredPane.add(cardsPanel, BorderLayout.CENTER);
         layeredPane.add(scorePanel, BorderLayout.CENTER);
+        // layeredPane.add(quitButton, BorderLayout.CENTER);
         layeredPane.add(bgPanel);
 
         // Adding to HomePanel
         GamePanel.add(layeredPane);
         GamePanel.setOpaque(true);
     }
-
+    public void actionPerformed(ActionEvent e){
+        if(e.getSource()== quitButton){
+            System.exit(0); // Close the application
+        }
+    }
     public JPanel getGamePanel() {
         return GamePanel;
     }
@@ -125,22 +148,30 @@ public class GameLayout implements ScreenStructure {
         // Creating Score Panel
         scorePanel.setBounds((int) (ScreenStructure.WIDTH * 0.8), (int) (ScreenStructure.HEIGHT * 0.35),
                 (int) (ScreenStructure.WIDTH * 0.15), (int) (ScreenStructure.HEIGHT * 0.2));
-        scorePanel.setBackground(Color.cyan);
-        scorePanel.setOpaque(true);
+        scorePanel.setOpaque(false);
         scorePanel.setLayout(new GridLayout(2, 1, 0, 20));
 
-        // Creating Score Labels
-        JLabel matches = new JLabel("Matches : 0");
-        JLabel turns = new JLabel("Turns : 0");
+        // Creating Fonts for Labels
+        Font labelFont = new Font("SansSerif",Font.BOLD,25);
+        
+        // Styling Score Labels
+        matchesLabel.setFont(labelFont);
+        turnsLabel.setFont(labelFont);
 
-        // Styling Labels
-        matches.setSize(200, 100);
-        matches.setBackground(Color.gray);
-        turns.setSize(200, 100);
-        turns.setBackground(Color.gray);
+        matchesLabel.setForeground(Color.WHITE); // Set text color
+        matchesLabel.setBackground(new Color(71, 125, 250));
+        matchesLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        matchesLabel.setBorder(new TextBubbleBorder(new Color(71, 125, 250), 5, 40, 0));
+        matchesLabel.setOpaque(true);
 
-        scorePanel.add(matches);
-        scorePanel.add(turns);
+        turnsLabel.setForeground(Color.WHITE); // Set text color
+        turnsLabel.setBackground(new Color(71, 125, 250));
+        turnsLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        turnsLabel.setBorder(new TextBubbleBorder(new Color(71, 125, 250), 5,40, 0));
+        turnsLabel.setOpaque(true);
+
+        scorePanel.add(matchesLabel);
+        scorePanel.add(turnsLabel);
 
         cardsPanel.setLayout(new GridLayout(4,6,20,20));
     }
