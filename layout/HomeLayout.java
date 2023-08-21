@@ -51,50 +51,20 @@ public class HomeLayout implements ScreenStructure {
     }
 
     public void createMenuPanel(){
-        // create buttons
-        play = new JButton("Play");
-        settings = new JButton("Settings");
-        quite = new JButton("Quite");
+        // create buttons one below other with background color 77,0,206,255 and text color white
+        // with internal padding 10px and external padding 70px
 
         // play button
-        play.setBounds((ScreenStructure.WIDTH/2)-100, (ScreenStructure.HEIGHT/2)-100, 200, 50);
-        play.setBackground(new Color(131,0,255,255));
+        play = new JButton("Play");
+        play.setBounds(0, 0, 500, 100);
+        play.setBackground(new Color(77,0,206,255));
         play.setOpaque(true);
         play.setBorderPainted(false);
         play.setFocusPainted(false);
         play.setForeground(Color.WHITE);
-        // play.addActionListener(new java.awt.event.ActionListener() {
-        //     public void actionPerformed(java.awt.event.ActionEvent evt) {
-        //         playActionPerformed(evt);
-        //     }
-        // });
-
-        // settings button
-        settings.setBounds((ScreenStructure.WIDTH/2)-100, (ScreenStructure.HEIGHT/2)-25, 200, 50);
-        settings.setBackground(new Color(131,0,255,255));
-        settings.setOpaque(true);
-        settings.setBorderPainted(false);
-        settings.setFocusPainted(false);
-        settings.setForeground(Color.WHITE);
 
 
-        // quite button
-        quite.setBounds((ScreenStructure.WIDTH/2)-100, (ScreenStructure.HEIGHT/2)+50, 200, 50);
-        quite.setBackground(new Color(131,0,255,255));
-        quite.setOpaque(true);
-        quite.setBorderPainted(false);
-        quite.setFocusPainted(false);
-        quite.setForeground(Color.WHITE);
-        quite.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                System.exit(0);
-            }
-        });
-
-        // Adding to menuPanel
         menuPanel.add(play);
-        menuPanel.add(settings);
-        menuPanel.add(quite);
 
         menuPanel.setBounds((ScreenStructure.WIDTH/2)-250, (ScreenStructure.HEIGHT/2)-250, 500, 500);
         menuPanel.setBackground(new Color(131,0,255,255));
