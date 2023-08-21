@@ -121,6 +121,7 @@ public class HomeLayout implements ScreenStructure{
         yes = createButton(yes, "YES", 0, 0, 200, 100, 30);
         yes.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
+                message.setText("Thank you for playing!");
                 System.exit(0);
             }
         });
