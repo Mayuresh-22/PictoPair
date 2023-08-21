@@ -58,7 +58,13 @@ public class HomeLayout implements ScreenStructure{
         // with internal padding 10px and external padding 70px, bigger buttons
 
         // play button
-        play = createButton(play, null, HEIGHT, HEIGHT, WIDTH, HEIGHT, HEIGHT)
+        play = createButton(play, "Play", 0, 0, 500, 100, 40);
+        play.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+
+            }
+        });
+
         
         // settings button
         settings = new JButton("Settings");
