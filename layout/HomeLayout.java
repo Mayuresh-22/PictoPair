@@ -98,4 +98,6 @@ public class HomeLayout implements ScreenStructure{
 
         return button;
     }
+
+    public void createDialogBox(){
 }
