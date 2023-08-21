@@ -112,7 +112,7 @@ public class HomeLayout implements ScreenStructure{
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
-        dialog.getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, new Color(131,0,255,255)));
+        dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131,0,255,255), 4, 70, 0));
         
         JLabel message = new JLabel("Are you sure you want to quit?");
         message.setFont(new Font("Arial", Font.BOLD, 30));
