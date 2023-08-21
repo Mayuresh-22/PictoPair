@@ -57,6 +57,7 @@ public class HomeLayout implements ScreenStructure {
         play.setFocusable(false);
         play.setBorder(null);
         play.setFont(new Font("sans", Font.BOLD, 17));
+        play.setSize(30, 20);
         menuPanel.add(play);
 
 
