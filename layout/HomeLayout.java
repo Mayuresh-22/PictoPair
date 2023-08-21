@@ -62,6 +62,7 @@ public class HomeLayout implements ScreenStructure {
         play.setBorderPainted(false);
         play.setFocusPainted(false);
         play.setForeground(Color.WHITE);
+        play.setBorder(new TextBubbleBorder(new Color(77,0,206,255), 10, 50, 0, true));
         play.setFont(new Font("Arial", Font.BOLD, 40));
         
         // settings button
