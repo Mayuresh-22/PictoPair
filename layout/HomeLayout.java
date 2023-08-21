@@ -132,5 +132,15 @@ public class HomeLayout implements ScreenStructure{
                 dialog.dispose();
             }
         });
+
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 0));
+        buttonPanel.add(yes);
+        buttonPanel.add(no);
+        buttonPanel.setBackground(Color.WHITE);
+        buttonPanel.setOpaque(true);
+
+        dialog.add(message, BorderLayout.CENTER);
+        dialog.add(buttonPanel, BorderLayout.SOUTH);
+        dialog.setVisible(true);
     }
 }
