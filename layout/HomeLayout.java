@@ -149,7 +149,7 @@ public class HomeLayout implements ScreenStructure{
 
         dialog.add(message, BorderLayout.CENTER);
         dialog.add(buttonPanel, BorderLayout.SOUTH);
-        layeredPane.remove(buttonPanel);
+        layeredPane.remove(menuPanel);
         dialog.setVisible(true);
     }
 }
