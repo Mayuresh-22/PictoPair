@@ -71,7 +71,7 @@ public class HomeLayout implements ScreenStructure{
         quite = createButton(quite, "QUITE", 0, 0, 500, 100, 40);
         quite.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                System.exit(0);
+                createDialogBox();
             }
         });
 
