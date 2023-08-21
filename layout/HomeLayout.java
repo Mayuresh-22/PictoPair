@@ -73,7 +73,7 @@ public class HomeLayout implements ScreenStructure {
         settings.setBorderPainted(false);
         settings.setFocusPainted(false);
         settings.setForeground(Color.WHITE);
-        settings.setBorder(new TextBubbleBorder(new Color(77,0,206,255), 10, 50, 0, true));
+        settings.setBorder(new TextBubbleBorder(new Color(77,0,206,255), 1, 50, 0, true));
         settings.setFont(new Font("Arial", Font.BOLD, 40));
 
         // quit button
