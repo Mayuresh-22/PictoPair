@@ -42,6 +42,25 @@ public class TextBubbleBorder extends AbstractBorder {
     }
 
     public TextBubbleBorder(
+            Color color, int thickness, int radii, boolean parent) {
+        this.thickness = thickness;
+        this.radii = radii;
+        this.pointerSize = pointerSize;
+        this.color = color;
+
+        stroke = new BasicStroke(thickness);
+        strokePad = thickness / 2;
+
+        hints = new RenderingHints(
+                RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+
+        int pad = radii + strokePad;
+        int bottomPad = pad + pointerSize + strokePad;
+        insets = new Insets(pad, pad, bottomPad, pad);
+    }
+
+    public TextBubbleBorder(
             Color color, int thickness, int radii, int pointerSize, boolean left) {
         this(color, thickness, radii, pointerSize);
         this.left = left;
