@@ -10,7 +10,7 @@ public class TextBubbleBorder extends AbstractBorder {
     private int thickness = 4;
     private int radii = 8;
     private int pointerSize = 7;
-    private boolean parent;
+    private boolean parent = false;
     private Insets insets = null;
     private BasicStroke stroke = null;
     private int strokePad;
