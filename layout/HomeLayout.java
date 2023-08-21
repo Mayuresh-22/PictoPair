@@ -137,7 +137,7 @@ public class HomeLayout implements ScreenStructure{
         no.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 dialog.dispose();
-                layeredPane.add(buttonPanel);
+                layeredPane.add(menuPanel);
             }
         });
 
