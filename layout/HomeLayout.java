@@ -100,7 +100,7 @@ public class HomeLayout implements ScreenStructure{
     }
 
     public void createDialogBox(){
-        menuPanel.setBorder(null);
+        menuPanel.setBackground(Color.WHITE);
         menuPanel.setVisible(false);
 
         // dialog box to ask confirmation to quite
