@@ -137,8 +137,8 @@ public class HomeLayout implements ScreenStructure{
         no = createButton(no, "NO", 0, 0, 200, 100, 30);
         no.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                menuPanel.setVisible(true);
                 dialog.dispose();
+                menuPanel.setVisible(true);
             }
         });
 
