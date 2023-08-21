@@ -102,4 +102,15 @@ public class HomeLayout implements ScreenStructure{
         menuPanel.setOpaque(true);
         menuPanel.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
     }
+
+    public void createButton(JButton button, String text, int x, int y, int width, int height, int fontSize){
+        button = new JButton(text);
+        button.setBounds(x, y, width, height);
+        button.setBackground(new Color(77,0,206,255));
+        button.setOpaque(true);
+        button.setBorderPainted(false);
+        button.setFocusPainted(false);
+        button.setForeground(Color.WHITE);
+        button.setFont(new Font("Arial", Font.BOLD, fontSize));
+    }
 }
