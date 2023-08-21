@@ -68,7 +68,7 @@ public class HomeLayout implements ScreenStructure{
             }
         });
 
-        quite = createButton(quite, "QUITE", 0, 0, 500, 100, 40);
+        quite = createButton(quite, "QUIT", 0, 0, 500, 100, 40);
         quite.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 createDialogBox();
@@ -103,7 +103,7 @@ public class HomeLayout implements ScreenStructure{
         menuPanel.setOpaque(false);
         menuPanel.setVisible(false);
 
-        // dialog box to ask confirmation to quite
+        // dialog box to ask confirmation to quit
         JDialog dialog = new JDialog();
         dialog.setAlwaysOnTop(true);
         dialog.setModal(true);
@@ -114,7 +114,7 @@ public class HomeLayout implements ScreenStructure{
         dialog.setUndecorated(true);
         dialog.getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, new Color(131,0,255,255)));
         
-        JLabel message = new JLabel("Are you sure you want to quite?");
+        JLabel message = new JLabel("Are you sure you want to quit?");
         message.setFont(new Font("Arial", Font.BOLD, 30));
         message.setForeground(new Color(131,0,255,255));
         message.setHorizontalAlignment(JLabel.CENTER);
