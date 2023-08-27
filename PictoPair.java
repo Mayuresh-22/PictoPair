@@ -1,4 +1,4 @@
-// Main File
+// Main File to import all the classes and control flow
 import layout.*;
 
 public class PictoPair {
