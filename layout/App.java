@@ -15,7 +15,7 @@ public class App {
     MusicPlayerThread soundEffect = new MusicPlayerThread();
     MusicPlayerThread musicPlayer = new MusicPlayerThread();
 
-    App(){
+    public App(){
         appConfig();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
         soundEffect.filePath = "assets/sounds/intro.wav";
