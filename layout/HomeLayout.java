@@ -119,7 +119,7 @@ public class HomeLayout implements ScreenStructure{
         dialog.setAlwaysOnTop(true);
         dialog.setModal(true);
         dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-        dialog.setSize(500, 800);
+        dialog.setSize(800, 600);
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
@@ -131,7 +131,7 @@ public class HomeLayout implements ScreenStructure{
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
 
-        
+
         JButton yes = new JButton();
         yes = createButton(yes, "YES", 0, 0, 200, 100, 30);
         yes.addActionListener(new ActionListener(){
