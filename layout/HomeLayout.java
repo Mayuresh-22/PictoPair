@@ -1,12 +1,12 @@
 package layout;
 
-import PictoPair;
 import external.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import interfaces.*;
+import PictoPair;
 
 public class HomeLayout implements ScreenStructure{
     JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER,50, 40));
