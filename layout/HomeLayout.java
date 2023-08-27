@@ -152,7 +152,10 @@ public class HomeLayout implements ScreenStructure{
         JButton musicOptionButton = new JButton("OFF");
 
         gridOptionPanel.add(gridOptionLabel);
-        gridOptionPanel.add(gridOptionPanel);
+        gridOptionPanel.add(gridOptionLabel);
+
+        musicOptionPanel.add(musicOptionPanel);
+        musicOptionPanel.add(musicOptionPanel);
 
         JButton yes = new JButton();
         yes = createButton(yes, "YES", 0, 0, 200, 100, 30);
