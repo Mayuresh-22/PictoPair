@@ -64,7 +64,7 @@ public class HomeLayout implements ScreenStructure{
         settings = createButton(settings, "SETTINGS", 0, 0, 500, 100, 40);
         settings.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-
+                // Settings DialogBox
             }
         });
 
