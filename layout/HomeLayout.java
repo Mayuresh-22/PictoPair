@@ -157,6 +157,9 @@ public class HomeLayout implements ScreenStructure{
         musicOptionPanel.add(musicOptionPanel);
         musicOptionPanel.add(musicOptionPanel);
 
+        optionsPanel.add(gridOptionPanel);
+        optionsPanel.add(gridOptionPanel);
+
         JButton yes = new JButton();
         yes = createButton(yes, "YES", 0, 0, 200, 100, 30);
         yes.addActionListener(new ActionListener(){
