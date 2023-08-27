@@ -38,6 +38,9 @@ public class Cards implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
+        if(selected.size()+1 > 2){
+            return;
+        }
         if (selected.size() < 2 && this.status.equals("hidden")) {
             button.setIcon(mainImg);
             selected.add(this);
@@ -80,7 +83,6 @@ public class Cards implements ActionListener {
                         }
                     }
                 });
-
                 timer.setRepeats(false);
                 timer.start();
             } else {
@@ -108,7 +110,6 @@ public class Cards implements ActionListener {
                         GameLayout.turnsLabel.setText("Turns left : "+GameLayout.turns);
                     }
                 });
-                
                 timer.setRepeats(false);
                 timer.start();
             }
