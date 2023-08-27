@@ -120,7 +120,7 @@ public class HomeLayout implements ScreenStructure{
         dialog.setModal(true);
         dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         dialog.setSize(600, 400);
-        dialog.setLocationRelativeTo();
+        dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
         dialog.setBackground(new Color(131,0,255,255));
