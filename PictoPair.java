@@ -55,7 +55,8 @@ class App {
 
 
 class PictoPair {
+    public App mainApp;
     public static void main(String[] args) {
-        new App();
+       mainApp = new App();
     }
 }
