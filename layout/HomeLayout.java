@@ -135,7 +135,7 @@ public class HomeLayout implements ScreenStructure{
         JPanel optionsPanel = new JPanel();
         optionsPanel.setLayout(new GridLayout(2,1,10,0));
         
-        JPanel gridOptionPanel = new JPanel(new GridLayout(1,2,0,10)) 
+        JPanel gridOptionPanel = new JPanel(new GridLayout(1,2,0,10)); 
 
         JButton yes = new JButton();
         yes = createButton(yes, "YES", 0, 0, 200, 100, 30);
