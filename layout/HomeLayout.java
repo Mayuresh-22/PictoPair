@@ -58,7 +58,7 @@ public class HomeLayout implements ScreenStructure{
         play.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 // Play GameLayout
-
+                
             }
         });
 
