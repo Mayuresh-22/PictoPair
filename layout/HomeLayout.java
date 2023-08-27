@@ -183,7 +183,7 @@ public class HomeLayout implements ScreenStructure{
         dialog.setBackground(new Color(131,0,255,255));
         dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131,0,255,255), 4, 20, 0));
         
-        JLabel message = new JLabel("Are you sure you want to quit?");
+        JLabel message = new JLabel("SETTINGS");
         message.setFont(new Font("Arial", Font.BOLD, 30));
         message.setForeground(Color.WHITE);
         message.setHorizontalAlignment(JLabel.CENTER);
