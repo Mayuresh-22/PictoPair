@@ -191,7 +191,6 @@ public class HomeLayout implements ScreenStructure{
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 0));
         buttonPanel.add(yes);
         buttonPanel.add(no);
-        buttonPanel.setBackground(Color.WHITE);
         buttonPanel.setOpaque(true);
 
         dialog.add(message, BorderLayout.NORTH);
