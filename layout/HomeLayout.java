@@ -171,7 +171,7 @@ public class HomeLayout implements ScreenStructure{
         layeredPane.remove(menuPanel);
         layeredPane.repaint();
 
-        // dialog box to ask confirmation to quit
+        // Settings Box
         JDialog dialog = new JDialog();
         dialog.setAlwaysOnTop(true);
         dialog.setModal(true);
