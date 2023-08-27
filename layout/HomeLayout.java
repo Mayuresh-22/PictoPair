@@ -142,7 +142,7 @@ public class HomeLayout implements ScreenStructure{
         gridOptionLabel.setHorizontalAlignment(JLabel.CENTER);
         gridOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
-        JLabel musicOptionLabel = new JLabel("Grid Size: ");
+        JLabel musicOptionLabel = new JLabel("Music: ");
         musicOptionLabel.setFont(new Font("Arial", Font.BOLD, 25));
         musicOptionLabel.setForeground(new Color(131,0,255,255));
         musicOptionLabel.setHorizontalAlignment(JLabel.CENTER);
