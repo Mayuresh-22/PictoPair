@@ -158,6 +158,7 @@ public class HomeLayout implements ScreenStructure{
         musicOptionButton.setFocusPainted(false);
         musicOptionButton.setBorderPainted(false);
         musicOptionButton.setFont(new Font("Arial", Font.BOLD, 20));
+        musicOptionLabel.setForeground(new Color(131,0,255,255));
 
         gridOptionPanel.add(gridOptionLabel);
         gridOptionPanel.add(gridOptionButton);
