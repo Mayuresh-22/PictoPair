@@ -149,7 +149,9 @@ public class HomeLayout implements ScreenStructure{
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
         JButton gridOptionButton = new JButton("4x4");
+
         JButton musicOptionButton = new JButton("OFF");
+        musicOptionButton.setSize(50,50);
 
         gridOptionPanel.add(gridOptionLabel);
         gridOptionPanel.add(gridOptionButton);
