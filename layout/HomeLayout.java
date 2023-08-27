@@ -13,7 +13,7 @@ public class HomeLayout implements ScreenStructure{
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no;
-
+    JFrame app;
     public HomeLayout(){
         createLayeredPane();
 
@@ -58,7 +58,7 @@ public class HomeLayout implements ScreenStructure{
         play.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 // Play GameLayout
-                
+
             }
         });
 
