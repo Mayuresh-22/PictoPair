@@ -6,8 +6,8 @@ import external.*;
 
 // Devang App Changed - 04
 
-class App {
-    JFrame app = new JFrame("PictoPair - Memory Game");
+public class App {
+    public JFrame app = new JFrame("PictoPair - Memory Game");
     LoadingLayout loadingLayout = new LoadingLayout();
     HomeLayout homeLayout = new HomeLayout();
     GameLayout gameLayout = new GameLayout();
