@@ -14,9 +14,8 @@ public class HomeLayout implements ScreenStructure{
     JButton play, settings, quite, yes, no;
     JFrame app;
     HomeLayout thisLayout;
-    public HomeLayout(JFrame app , HomeLayout thisLayout){
+    public HomeLayout(JFrame app){
         this.app = app;
-        this.thisLayout = thisLayout;
         createLayeredPane();
 
         createBgPanel("assets/images/Homescreen-bg.png");
@@ -32,7 +31,9 @@ public class HomeLayout implements ScreenStructure{
         HomePanel.add(layeredPane);
         HomePanel.setOpaque(true);
     }
-
+    public void getthisLayout(HomeLayout thisLayout){
+        
+    }
     public JPanel getHomePanel() {
         return HomePanel;
     }
