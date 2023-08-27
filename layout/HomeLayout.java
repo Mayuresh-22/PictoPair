@@ -131,6 +131,7 @@ public class HomeLayout implements ScreenStructure{
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
 
+        // Setting Options Panel
 
         JButton yes = new JButton();
         yes = createButton(yes, "YES", 0, 0, 200, 100, 30);
