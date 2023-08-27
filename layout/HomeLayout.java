@@ -119,7 +119,7 @@ public class HomeLayout implements ScreenStructure{
         dialog.setAlwaysOnTop(true);
         dialog.setModal(true);
         dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-        dialog.setSize(500, 900);
+        dialog.setSize(500, 800);
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
