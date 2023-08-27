@@ -167,6 +167,7 @@ public class HomeLayout implements ScreenStructure{
         dialog.add(buttonPanel, BorderLayout.SOUTH);
         dialog.setVisible(true);
     }
+    // Settings Box Function
     public void createSettingsBox(){
         layeredPane.remove(menuPanel);
         layeredPane.repaint();
