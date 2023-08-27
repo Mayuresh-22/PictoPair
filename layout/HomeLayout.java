@@ -166,7 +166,7 @@ public class HomeLayout implements ScreenStructure{
         buttonPanel.setBackground(Color.WHITE);
         buttonPanel.setOpaque(true);
 
-        dialog.add(message, BorderLayout.CENTER);
+        dialog.add(message, BorderLayout.NORTH);
         dialog.add(buttonPanel, BorderLayout.SOUTH);
         dialog.setVisible(true);
     }
