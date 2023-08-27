@@ -154,7 +154,6 @@ public class HomeLayout implements ScreenStructure{
         gridOptionButton.setBorderPainted(false);
 
         JButton musicOptionButton = new JButton("OFF");
-        musicOptionButton.setLayout(new GridBagLayout());
         musicOptionButton.setFocusPainted(false);
         musicOptionButton.setBorderPainted(false);
         musicOptionButton.setFont(new Font("Arial", Font.BOLD, 20));
