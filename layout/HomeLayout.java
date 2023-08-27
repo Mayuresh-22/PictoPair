@@ -136,6 +136,8 @@ public class HomeLayout implements ScreenStructure{
         JPanel gridOptionPanel = new JPanel(new GridLayout(1,2,0,10)); 
         JPanel musicOptionPanel = new JPanel(new GridLayout(1,2,0,10)); 
 
+        JLabel gridOptionLabel = new JLabel("Grid Size: ");
+
         JButton yes = new JButton();
         yes = createButton(yes, "YES", 0, 0, 200, 100, 30);
         yes.addActionListener(new ActionListener(){
