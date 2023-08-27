@@ -154,8 +154,8 @@ public class HomeLayout implements ScreenStructure{
         gridOptionPanel.add(gridOptionLabel);
         gridOptionPanel.add(gridOptionButton);
 
-        musicOptionPanel.add(musicOptionPanel);
-        musicOptionPanel.add(musicOptionPanel);
+        musicOptionPanel.add(musicOptionLabel);
+        musicOptionPanel.add(musicOptionButton);
 
         optionsPanel.add(gridOptionPanel);
         optionsPanel.add(musicOptionPanel);
