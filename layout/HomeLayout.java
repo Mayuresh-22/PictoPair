@@ -73,6 +73,7 @@ public class HomeLayout implements ScreenStructure{
         settings.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 // Settings DialogBox
+                createSettingsBox();
             }
         });
 
@@ -169,7 +170,7 @@ public class HomeLayout implements ScreenStructure{
         dialog.add(buttonPanel, BorderLayout.SOUTH);
         dialog.setVisible(true);
     }
-    
+
     // Dialog Box for Quit function
     public void createDialogBox(){
         layeredPane.remove(menuPanel);
