@@ -137,6 +137,10 @@ public class HomeLayout implements ScreenStructure{
         JPanel musicOptionPanel = new JPanel(new GridLayout(1,2,0,10)); 
 
         JLabel gridOptionLabel = new JLabel("Grid Size: ");
+        gridOptionLabel.setFont(new Font("Arial", Font.BOLD, 30));
+        gridOptionLabel.setForeground(new Color(131,0,255,255));
+        gridOptionLabel.setHorizontalAlignment(JLabel.CENTER);
+        gridOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
         JButton yes = new JButton();
         yes = createButton(yes, "YES", 0, 0, 200, 100, 30);
