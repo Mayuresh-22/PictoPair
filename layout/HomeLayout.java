@@ -59,6 +59,7 @@ public class HomeLayout implements ScreenStructure{
             public void actionPerformed(ActionEvent e){
                 // Play GameLayout
                 GameLayout gameLayout = new GameLayout();
+                
             }
         });
 
