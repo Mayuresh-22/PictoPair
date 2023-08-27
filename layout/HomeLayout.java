@@ -13,7 +13,8 @@ public class HomeLayout implements ScreenStructure{
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no;
     JFrame app;
-    public HomeLayout(){
+    public HomeLayout(JFrame app){
+        this.app = app;
         createLayeredPane();
 
         createBgPanel("assets/images/Homescreen-bg.png");
