@@ -16,6 +16,7 @@ public class HomeLayout implements ScreenStructure{
     HomeLayout thisLayout;
     public HomeLayout(JFrame app , HomeLayout thisLayout){
         this.app = app;
+        this.thisLayout = thisLayout;
         createLayeredPane();
 
         createBgPanel("assets/images/Homescreen-bg.png");
