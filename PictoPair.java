@@ -9,8 +9,7 @@ import external.*;
 class App {
     JFrame app = new JFrame("PictoPair - Memory Game");
     LoadingLayout loadingLayout = new LoadingLayout();
-    HomeLayout homeLayout = new HomeLayout();
-    GameLayout gameLayout = new GameLayout();
+    HomeLayout homeLayout = new HomeLayout(app);
     MusicPlayerThread soundEffect = new MusicPlayerThread();
     MusicPlayerThread musicPlayer = new MusicPlayerThread();
 
