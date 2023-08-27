@@ -57,7 +57,7 @@ public class HomeLayout implements ScreenStructure{
         play = createButton(play, "PLAY", 0, 0, 500, 100, 40);
         play.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-
+            
             }
         });
 
