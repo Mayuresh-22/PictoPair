@@ -19,7 +19,7 @@ public class HomeLayout implements ScreenStructure{
     public HomeLayout(JFrame app, MusicPlayerThread musicPlayer){
         this.app = app;
         this.musicPlayer = musicPlayer;
-        
+
         createLayeredPane();
 
         createBgPanel("assets/images/Homescreen-bg.png");
@@ -167,6 +167,17 @@ public class HomeLayout implements ScreenStructure{
         musicOptionButton.setBorderPainted(false);
         musicOptionButton.setFont(new Font("Arial", Font.BOLD, 20));
         musicOptionButton.setForeground(new Color(131,0,255,255));
+        musicOptionButton.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                if(musicOptionButton.getText().equals("OFF")){
+                    musicOptionButton.setText("ON");
+                    musicPlayer.stop();
+                }else{
+                    musicOptionButton.setText("OFF");
+                    musicPlayer.start();
+                }
+            }
+        }
 
         gridOptionPanel.add(gridOptionLabel);
         gridOptionPanel.add(gridOptionButton);
