@@ -103,6 +103,7 @@ public class HomeLayout implements ScreenStructure{
         button.setBounds(x, y, width, height);
         button.setBackground(new Color(77,0,206,255));
         button.setOpaque(true);
+        button.setCursor(new Cursor(Cursor.HAND_CURSOR));
         button.setBorderPainted(false);
         button.setFocusPainted(false);
         button.setForeground(Color.WHITE);
