@@ -15,7 +15,7 @@ public class HomeLayout implements ScreenStructure{
     JFrame app;
     HomeLayout thisLayout;
     MusicPlayerThread musicPlayer;
-    
+
     public HomeLayout(JFrame app){
         this.app = app;
         createLayeredPane();
@@ -35,7 +35,7 @@ public class HomeLayout implements ScreenStructure{
     }
 
     public void getthisLayout(HomeLayout thisLayout){
-        this.thisLayout = thisLayout;
+        this.thisLayout = this;
     }
     
     public JPanel getHomePanel() {
