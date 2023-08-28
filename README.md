@@ -2,7 +2,7 @@
 
 Exercise your memory and concentration with PictoPair, an engaging memory game designed to challenge your cognitive skills.
 
-![PictoPair Preview](/assets/logogif.gif)
+![PictoPair Preview](/assets/images/logogif.gif)
 
 ## Features
 
