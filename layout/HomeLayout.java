@@ -16,7 +16,7 @@ public class HomeLayout implements ScreenStructure{
     HomeLayout thisLayout;
     MusicPlayerThread musicPlayer;
     
-    public HomeLayout(JFrame app){
+    public HomeLayout(JFrame app, MusicPlayerThread musicPlayer){
         this.app = app;
         createLayeredPane();
 
