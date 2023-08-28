@@ -13,9 +13,9 @@ public class HomeLayout implements ScreenStructure{
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no;
     JFrame app;
-    HomeLayout thisLayout = this;
+    HomeLayout thisLayout;
     MusicPlayerThread musicPlayer;
-
+    
     public HomeLayout(JFrame app){
         this.app = app;
         createLayeredPane();
@@ -35,7 +35,7 @@ public class HomeLayout implements ScreenStructure{
     }
 
     public void getthisLayout(HomeLayout thisLayout){
-        this.thisLayout = this;
+        this.thisLayout = thisLayout;
     }
     
     public JPanel getHomePanel() {
