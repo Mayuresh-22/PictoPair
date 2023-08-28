@@ -31,9 +31,11 @@ public class HomeLayout implements ScreenStructure{
         HomePanel.add(layeredPane);
         HomePanel.setOpaque(true);
     }
+
     public void getthisLayout(HomeLayout thisLayout){
         this.thisLayout = thisLayout;
     }
+    
     public JPanel getHomePanel() {
         return HomePanel;
     }
