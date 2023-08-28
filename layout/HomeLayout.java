@@ -178,7 +178,7 @@ public class HomeLayout implements ScreenStructure{
                     musicPlayer.start();
                 }
             }
-        };
+        });
 
         gridOptionPanel.add(gridOptionLabel);
         gridOptionPanel.add(gridOptionButton);
