@@ -22,8 +22,8 @@ class App {
             @Override
             public void actionPerformed(ActionEvent e) {
                 app.remove(loadingLayout.getLoadingPanel());
-                app.add(endingLayout.getHomePanel(), BorderLayout.CENTER);
-                endingLayout.getthisLayout(endingLayout);
+                app.add(homeLayout.getHomePanel(), BorderLayout.CENTER);
+                homeLayout.getthisLayout(homeLayout);
                 app.revalidate();
                 app.repaint();
                 musicPlayer.filePath = "assets/sounds/bgm.wav";
