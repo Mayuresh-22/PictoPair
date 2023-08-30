@@ -8,7 +8,7 @@ class App {
     public JFrame app = new JFrame("PictoPair - Memory Game");
     LoadingLayout loadingLayout = new LoadingLayout();
     HomeLayout homeLayout = new HomeLayout(app);
-    EndingLayout endingLayout = new EndingLayoutLayout(app);
+    EndingLayout endingLayout = new EndingLayout(app);
     MusicPlayerThread soundEffect = new MusicPlayerThread();
     MusicPlayerThread musicPlayer = new MusicPlayerThread();
     App(){
