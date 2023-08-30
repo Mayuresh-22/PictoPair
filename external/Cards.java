@@ -34,7 +34,7 @@ public class Cards implements ActionListener {
         this.defaultImg = defaultImg;
         this.id = id;
     }
-    public void setFrame()
+    public void setFrame(JFrame app)
     public String getStatus() {
         return this.status;
     }
