@@ -7,14 +7,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import interfaces.*;
 
-public class HomeLayout implements ScreenStructure{
+public class EndingLayout implements ScreenStructure{
     JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER,50, 40));
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no;
     JFrame app;
-    HomeLayout thisLayout;
-    public HomeLayout(JFrame app){
+    EndingLayout thisLayout;
+    public EndingLayout(JFrame app){
         this.app = app;
         createLayeredPane();
 
@@ -32,7 +32,7 @@ public class HomeLayout implements ScreenStructure{
         HomePanel.setOpaque(true);
     }
 
-    public void getthisLayout(HomeLayout thisLayout){
+    public void getthisLayout(EndingLayout thisLayout){
         this.thisLayout = thisLayout;
     }
     
