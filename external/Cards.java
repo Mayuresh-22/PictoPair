@@ -123,6 +123,14 @@ public class Cards implements ActionListener {
                 timer.setRepeats(false);
                 timer.start();
             }
+            if (GameLayout.matches == 12 || GameLayout.turns == 0) {
+                            // Call Ending Screen Method
+                            EndingLayout endingLayout = new EndingLayout(app);
+                            app.remove(thisLayout.getGamePanel());
+                            app.add(endingLayout.getEndingPanel(),BorderLayout.CENTER);
+                            app.revalidate();
+                            app.repaint();
+                        }
         }
     }
 }
