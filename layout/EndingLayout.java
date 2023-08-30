@@ -18,7 +18,7 @@ public class EndingLayout implements ScreenStructure{
         this.app = app;
         createLayeredPane();
 
-        createBgPanel("assets/images/Homescreen-bg.png");
+        createBgPanel("assets/images/Endingscreen-bg.png");
 
         // menu panel
         createMenuPanel();
