@@ -32,7 +32,7 @@ public class EndingLayout implements ScreenStructure{
         EndingPanel.setOpaque(true);
     }
 
-    public void getthisLayout(EndingLayout tempthisLayout){
+    public static void getthisLayout(EndingLayout tempthisLayout){
         thisLayout = tempthisLayout;
     }
     
