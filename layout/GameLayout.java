@@ -69,7 +69,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
     public JPanel getGamePanel() {
         return GamePanel;
     }
-
+    
     @Override
     public void createLayeredPane() {
         // layered pane
