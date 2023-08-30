@@ -61,7 +61,7 @@ public class EndingLayout implements ScreenStructure{
     public void createMenuPanel(){
 
         JLabel tempJLabel = new JLabel("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-        tempJLabel.setFont(new Font("Arial",Font.BOLD,10));
+        tempJLabel.setFont(new Font("Arial",Font.BOLD,40));
         tempJLabel.setOpaque(false);
         tempJLabel.setVisible(false);;
 
