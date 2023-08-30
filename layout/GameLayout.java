@@ -30,6 +30,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
 
     public GameLayout(JFrame app) {
         this.app = app;
+        
         createLayeredPane();
 
         createBgPanel("assets/images/GameLayout-bg.png");
