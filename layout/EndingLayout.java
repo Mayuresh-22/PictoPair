@@ -36,7 +36,7 @@ public class EndingLayout implements ScreenStructure{
         this.thisLayout = thisLayout;
     }
     
-    public JPanel getHomePanel() {
+    public JPanel getEndingPanel() {
         return HomePanel;
     }
 
