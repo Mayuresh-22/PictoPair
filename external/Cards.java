@@ -5,6 +5,7 @@ import javax.swing.*;
 import layout.EndingLayout;
 import layout.GameLayout;
 
+import java.awt.BorderLayout;
 import java.awt.event.*;
 import java.util.Vector;
 
@@ -92,7 +93,7 @@ public class Cards implements ActionListener {
                             // Call Ending Screen Method
                             EndingLayout endingLayout = new EndingLayout(app);
                             app.remove(thisLayout.getGamePanel());
-                            app.add(endingLayout.getEndingPanel(),Bord);
+                            app.add(endingLayout.getEndingPanel(),BorderLayout.CENTER);
                             app.revalidate();
                             app.repaint();
                         }
