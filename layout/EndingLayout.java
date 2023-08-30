@@ -62,7 +62,7 @@ public class EndingLayout implements ScreenStructure{
 
         JLabel tempJLabel = new JLabel("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
         tempJLabel.setFont(new Font("Arial",Font.BOLD,50));
-        tempJLabel.set
+        tempJLabel.setq
 
 
         Font scoreFont = new Font("Arial",Font.BOLD,35);
