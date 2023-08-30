@@ -103,6 +103,7 @@ public class EndingLayout implements ScreenStructure{
 
         // Adding to menuPanel with flow layout
         menuPanel.add(scoreLabel,BorderLayout.CENTER);
+        menuPanel.add(scoreLabel,BorderLayout.CENTER);
         menuPanel.add(buttonsPanel,BorderLayout.SOUTH);
 
         menuPanel.setBounds((ScreenStructure.WIDTH/2)-350, (ScreenStructure.HEIGHT/2)-150, 700, 300);
