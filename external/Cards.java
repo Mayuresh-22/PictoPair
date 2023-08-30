@@ -2,6 +2,7 @@ package external;
 
 import javax.swing.*;
 
+import layout.EndingLayout;
 import layout.GameLayout;
 
 import java.awt.event.*;
@@ -80,7 +81,7 @@ public class Cards implements ActionListener {
                         GameLayout.turnsLabel.setText("Turns left : "+GameLayout.turns);
                         if(GameLayout.matches == 12 || GameLayout.turns == 0){
                             // Call Ending Screen Method
-                            
+                            EndingLayout endingLayout = new EndingLayout(app);
                         }
                     }
                 });
