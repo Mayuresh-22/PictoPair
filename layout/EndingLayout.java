@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import interfaces.*;
 
 public class EndingLayout implements ScreenStructure{
-    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new BorderLayout());
+    JPanel EndingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new BorderLayout());
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no;
@@ -27,9 +27,9 @@ public class EndingLayout implements ScreenStructure{
         layeredPane.add(menuPanel, BorderLayout.CENTER);
         layeredPane.add(bgPanel);
 
-        // Adding to HomePanel
-        HomePanel.add(layeredPane);
-        HomePanel.setOpaque(true);
+        // Adding to EndingPanel
+        EndingPanel.add(layeredPane);
+        EndingPanel.setOpaque(true);
     }
 
     public void getthisLayout(EndingLayout thisLayout){
@@ -37,7 +37,7 @@ public class EndingLayout implements ScreenStructure{
     }
     
     public JPanel getEndingPanel() {
-        return HomePanel;
+        return EndingPanel;
     }
 
     @Override
