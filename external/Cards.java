@@ -37,7 +37,7 @@ public class Cards implements ActionListener {
     public static void setFrame(JFrame tempapp){
         app = tempapp;
     }
-    public void getthisLayout(EndingLayout tempthisLayout){
+    public void getthisLayout(GameLayout tempthisLayout){
         thisLayout = tempthisLayout;
     }
     public String getStatus() {
