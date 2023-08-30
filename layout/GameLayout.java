@@ -69,7 +69,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
     public JPanel getGamePanel() {
         return GamePanel;
     }
-    
+
     @Override
     public void createLayeredPane() {
         // layered pane
@@ -88,7 +88,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
         bgPanel.setOpaque(true);
         bgPanel.add(bg);
     }
-
+    
     public void createCardsPanel() {
 
         Cards.setFrame(app);
