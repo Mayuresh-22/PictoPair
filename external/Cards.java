@@ -79,7 +79,8 @@ public class Cards implements ActionListener {
                         GameLayout.matchesLabel.setText("Matches : "+GameLayout.matches);
                         GameLayout.turnsLabel.setText("Turns left : "+GameLayout.turns);
                         if(GameLayout.matches == 12 || GameLayout.turns == 0){
-                            // Call Score Screen Method
+                            // Call Ending Screen Method
+
                         }
                     }
                 });
