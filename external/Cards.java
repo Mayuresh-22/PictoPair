@@ -35,7 +35,7 @@ public class Cards implements ActionListener {
         this.id = id;
     }
     public static void setFrame(JFrame app){
-        app = app;
+        app = tempapp;
     }
     public String getStatus() {
         return this.status;
