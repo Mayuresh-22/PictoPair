@@ -67,6 +67,7 @@ public class EndingLayout implements ScreenStructure{
 
         JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER,40, 40));
         buttonsPanel.setBackground(null);
+        buttonsPanel.set
 
         play = createButton(play, "PLAY", 0, 0, 200, 50, 20);
         play.addActionListener(new ActionListener(){
