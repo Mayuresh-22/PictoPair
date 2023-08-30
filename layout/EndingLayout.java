@@ -61,6 +61,7 @@ public class EndingLayout implements ScreenStructure{
     public void createMenuPanel(){
 
         JLabel scoreLabel = new JLabel("You Matched "+GameLayout.matches+" in "+GameLayout.turns+" turns !");
+        
 
         play = createButton(play, "PLAY", 0, 0, 200, 50, 20);
         play.addActionListener(new ActionListener(){
