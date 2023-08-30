@@ -86,7 +86,7 @@ public class EndingLayout implements ScreenStructure{
         menuPanel.add(play);
         menuPanel.add(quite);
 
-        menuPanel.setBounds((ScreenStructure.WIDTH/2)+100, (ScreenStructure.HEIGHT/2)-250, 500, 500);
+        menuPanel.setBounds((ScreenStructure.WIDTH/2)+100, (ScreenStructure.HEIGHT/3)-250, 500, 500);
         menuPanel.setBackground(new Color(131,0,255,255));
         menuPanel.setOpaque(true);
         menuPanel.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
