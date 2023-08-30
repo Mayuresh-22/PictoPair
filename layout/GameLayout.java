@@ -88,7 +88,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
 
     public void createCardsPanel() {
 
-        Card
+        Cards.setFrame();
 
         // Creating Cards Panel
         cardsPanel.setBounds((int) (ScreenStructure.WIDTH * 0.03), (int) (ScreenStructure.HEIGHT * 0.03),
