@@ -64,7 +64,7 @@ public class EndingLayout implements ScreenStructure{
         JLabel scoreLabel = new JLabel("You Matched "+GameLayout.matches+" in "+GameLayout.turns+" turns !");
         scoreLabel.setFont(scoreFont);
         scoreLabel.setForeground(Color.WHITE);
-        scoreLabel.setVerticalAlignment(Label.CENTER);
+        scoreLabel.setVerticalAlignment(JLabel.CENTER);
         scoreLabel.setHorizontalAlignment(Label.CENTER);
 
         JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER,40, 40));
