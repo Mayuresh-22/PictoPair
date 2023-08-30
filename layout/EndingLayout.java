@@ -73,7 +73,7 @@ public class EndingLayout implements ScreenStructure{
         scoreLabel.setVerticalAlignment(JLabel.CENTER);
         scoreLabel.setHorizontalAlignment(JLabel.CENTER);
 
-        JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER,40, 40));
+        JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER,40, 0));
         buttonsPanel.setBackground(null);
         buttonsPanel.setOpaque(false);
 
