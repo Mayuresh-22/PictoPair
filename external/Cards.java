@@ -92,7 +92,7 @@ public class Cards implements ActionListener {
                             // Call Ending Screen Method
                             EndingLayout endingLayout = new EndingLayout(app);
                             app.remove(thisLayout.getGamePanel());
-                            app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
+                            app.add(endingLayout.getEndingPanel(), .CENTER);
                             app.revalidate();
                             app.repaint();
                         }
