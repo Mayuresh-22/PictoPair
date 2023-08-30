@@ -63,6 +63,7 @@ public class EndingLayout implements ScreenStructure{
         Font scoreFont = new Font("Arial",Font.BOLD,40);
         JLabel scoreLabel = new JLabel("You Matched "+GameLayout.matches+" in "+GameLayout.turns+" turns !");
         scoreLabel.setFont(scoreFont);
+        scoreLabel.setForeground(Color.WHITE);
 
         play = createButton(play, "PLAY", 0, 0, 200, 50, 20);
         play.addActionListener(new ActionListener(){
