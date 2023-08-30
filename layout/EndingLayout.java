@@ -66,7 +66,7 @@ public class EndingLayout implements ScreenStructure{
 
 
 
-        Font scoreFont = new Font("Arial",Font.BOLD,35);
+        Font scoreFont = new Font("Arial",Font.BOLD,25);
         JLabel scoreLabel = new JLabel("You matched "+GameLayout.matches+" Cards in "+GameLayout.turns+" Turns !");
         scoreLabel.setFont(scoreFont);
         scoreLabel.setForeground(Color.WHITE);
