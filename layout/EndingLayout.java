@@ -60,7 +60,7 @@ public class EndingLayout implements ScreenStructure{
 
     public void createMenuPanel(){
 
-        JPanel tempPanel = new JPanel(null, false)
+        JPanel tempPanel = new JPanel();
 
 
 
