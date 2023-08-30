@@ -38,7 +38,7 @@ public class Cards implements ActionListener {
         app = tempapp;
     }
     public void getthisLayout(EndingLayout thisLayout){
-        this.thisLayout = thisLayout;
+        thisLayout = thisLayout;
     }
     public String getStatus() {
         return this.status;
