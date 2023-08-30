@@ -28,7 +28,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
     public static JLabel matchesLabel = new JLabel("Matches : "+matches);
     public static JLabel turnsLabel = new JLabel("Turns left : "+turns);
 
-    public GameLayout() {
+    public GameLayout(JFrame app) {
         createLayeredPane();
 
         createBgPanel("assets/images/GameLayout-bg.png");
