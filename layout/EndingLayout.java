@@ -13,7 +13,7 @@ public class EndingLayout implements ScreenStructure{
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no;
     JFrame app;
-    stEndingLayout thisLayout;
+    EndingLayout thisLayout;
     public EndingLayout(JFrame app){
         this.app = app;
         createLayeredPane();
