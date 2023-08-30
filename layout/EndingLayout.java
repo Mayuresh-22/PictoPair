@@ -65,6 +65,8 @@ public class EndingLayout implements ScreenStructure{
         scoreLabel.setFont(scoreFont);
         scoreLabel.setForeground(Color.WHITE);
 
+        JPanel buttonsPanel = new JPanel();
+
         play = createButton(play, "PLAY", 0, 0, 200, 50, 20);
         play.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
