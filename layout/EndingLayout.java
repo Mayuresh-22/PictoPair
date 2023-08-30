@@ -63,7 +63,7 @@ public class EndingLayout implements ScreenStructure{
         JLabel tempJLabel = new JLabel("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
         tempJLabel.setFont(new Font("Arial",Font.BOLD,10));
         tempJLabel.setOpaque(false);
-        tempJLabel.setOpaque(false);
+        tempJLabel.setVisible(false);;
 
 
 
