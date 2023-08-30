@@ -24,7 +24,7 @@ public class EndingLayout implements ScreenStructure{
         createMenuPanel();
 
         // Adding to layeredPane
-        layeredPane.add(menuPanel, BorderLayout.SOUTH);
+        layeredPane.add(menuPanel, BorderLayout.CENTER);
         layeredPane.add(bgPanel);
 
         // Adding to HomePanel
