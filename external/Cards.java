@@ -21,7 +21,7 @@ public class Cards implements ActionListener {
     JFrame app;
     GameLayout thisLayout;
 
-    public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path ,int id,) {
+    public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path ,int id) {
         
         button = new JButton(defaultImg);
         button.setBorderPainted(false);
