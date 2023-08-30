@@ -40,7 +40,7 @@ public class Cards implements ActionListener {
         app = tempapp;
     }
 
-    public void getthisLayout(GameLayout tempthisLayout) {
+    public static void getthisLayout(GameLayout tempthisLayout) {
         thisLayout = tempthisLayout;
     }
 
