@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import interfaces.*;
 
 public class EndingLayout implements ScreenStructure{
-    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER,40, 40));
+    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new BorderLayout());
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no;
