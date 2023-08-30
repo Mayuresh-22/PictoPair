@@ -71,13 +71,7 @@ public class EndingLayout implements ScreenStructure{
             }
         });
 
-        settings = createButton(settings, "SETTINGS", 0, 0, 500, 100, 40);
-        settings.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                // Settings DialogBox
-                createSettingsBox();
-            }
-        });
+        
 
         quite = createButton(quite, "QUIT", 0, 0, 500, 100, 40);
         quite.addActionListener(new ActionListener(){
@@ -89,7 +83,6 @@ public class EndingLayout implements ScreenStructure{
 
         // Adding to menuPanel with flow layout
         menuPanel.add(play);
-        menuPanel.add(settings);
         menuPanel.add(quite);
 
         menuPanel.setBounds((ScreenStructure.WIDTH/2)-250, (ScreenStructure.HEIGHT/2)-250, 500, 500);
