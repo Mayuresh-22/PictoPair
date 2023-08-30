@@ -81,7 +81,7 @@ public class EndingLayout implements ScreenStructure{
         play.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 GameLayout.matches = 0;
-                GameLayout.matches = 0;
+                GameLayout.turns = 0;
                 // Play GameLayout
                 GameLayout gameLayout = new GameLayout();
                 app.remove(thisLayout.getHomePanel());
