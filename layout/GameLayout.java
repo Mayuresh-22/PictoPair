@@ -147,7 +147,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
 
         // Creating Score Panel
         scorePanel.setBounds((int) (ScreenStructure.WIDTH * 0.8), (int) (ScreenStructure.HEIGHT * 0.35),
-                (int) (ScreenStructure.WIDTH * 0.12), (int) (ScreenStructure.HEIGHT * 0.2));
+                (int) (ScreenStructure.WIDTH * 0.18), (int) (ScreenStructure.HEIGHT * 0.2));
         scorePanel.setOpaque(false);
         scorePanel.setLayout(new GridLayout(2, 1, 0, 20));
 
