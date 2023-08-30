@@ -158,7 +158,8 @@ public class EndingLayout implements ScreenStructure{
         yes.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 message.setText("Thank you for playing! Exiting...");
-                yes.setVisible(false);
+                setVisible(false);
+                no.setVisible(false);
                 Timer t = new Timer(1500, new ActionListener(){
                     public void actionPerformed(ActionEvent e){
                         System.exit(0);
