@@ -62,7 +62,7 @@ public class EndingLayout implements ScreenStructure{
 
         JPanel tempPanel = new JPanel();
         tempPanel.setBackground(null);
-        tempPanel.set
+        tempPanel.setSize(200, HEIGHT);
 
 
 
