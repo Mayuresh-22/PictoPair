@@ -60,7 +60,7 @@ public class EndingLayout implements ScreenStructure{
 
     public void createMenuPanel(){
 
-        JPanel tempPanel = new tem
+        JPanel tempPanel = new Jp
 
         Font scoreFont = new Font("Arial",Font.BOLD,35);
         JLabel scoreLabel = new JLabel("You matched "+GameLayout.matches+" Cards in "+GameLayout.turns+" Turns !");
