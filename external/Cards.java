@@ -19,7 +19,7 @@ public class Cards implements ActionListener {
     public String status, path;
     public ImageIcon defaultImg, mainImg;
     static JFrame app;
-    GameLayout thisLayout;
+    static GameLayout thisLayout;
 
     public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path ,int id) {
         
