@@ -82,6 +82,7 @@ public class Cards implements ActionListener {
                         if(GameLayout.matches == 12 || GameLayout.turns == 0){
                             // Call Ending Screen Method
                             EndingLayout endingLayout = new EndingLayout(app);
+                            
                         }
                     }
                 });
