@@ -60,7 +60,7 @@ public class EndingLayout implements ScreenStructure{
 
     public void createMenuPanel(){
 
-        play = createButton(play, "PLAY", 0, 0, 500, 100, 20);
+        play = createButton(play, "PLAY", 0, 0, 200, 50, 20);
         play.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 // Play GameLayout
@@ -74,7 +74,7 @@ public class EndingLayout implements ScreenStructure{
 
         
 
-        quite = createButton(quite, "QUIT", 0, 0, 500, 100, 20);
+        quite = createButton(quite, "QUIT", 0, 0, 200, 50, 20);
         quite.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 // Quit DialogBox
