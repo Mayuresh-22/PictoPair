@@ -33,7 +33,7 @@ public class EndingLayout implements ScreenStructure{
     }
 
     public void getthisLayout(EndingLayout tempthisLayout){
-        this.thisLayout = thisLayout;
+        this.thisLayout = empthisLayout;
     }
     
     public JPanel getEndingPanel() {
