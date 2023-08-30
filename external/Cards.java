@@ -19,6 +19,7 @@ public class Cards implements ActionListener {
     public String status, path;
     public ImageIcon defaultImg, mainImg;
     JFrame app;
+    EndingLayout thisLayout;
 
     public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path ,int id) {
         
