@@ -23,7 +23,7 @@ class App {
             public void actionPerformed(ActionEvent e) {
                 app.remove(loadingLayout.getLoadingPanel());
                 app.add(endingLayout.getHomePanel(), BorderLayout.CENTER);
-                endingLayout.getthisLayout(endingLayoutLayout);
+                endingLayout.getthisLayout(endingLayout);
                 app.revalidate();
                 app.repaint();
                 musicPlayer.filePath = "assets/sounds/bgm.wav";
