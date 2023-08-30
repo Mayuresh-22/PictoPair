@@ -88,6 +88,7 @@ public class EndingLayout implements ScreenStructure{
         });
 
         // Adding to menuPanel with flow layout
+        menuPanel.add(scoreLabel);
         menuPanel.add(play);
         menuPanel.add(quite);
 
