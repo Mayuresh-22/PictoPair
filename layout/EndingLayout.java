@@ -83,7 +83,7 @@ public class EndingLayout implements ScreenStructure{
                 GameLayout.matches = 0;
                 GameLayout.turns = 0;
                 // Play GameLayout
-                GameLayout gameLayout = new GameLayout();
+                GameLayout gameLayout = new GameLayout(app);
                 app.remove(thisLayout.getHomePanel());
                 app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
                 app.revalidate();
