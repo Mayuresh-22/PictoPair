@@ -24,8 +24,9 @@ public class GameLayout implements ScreenStructure, ActionListener {
     public static int matches = 0,turns = 30;
 
     // Creating Score Labels
-    public  JLabel matchesLabel = new JLabel("Matches : "+matches);
+    public static JLabel matchesLabel = new JLabel("Matches : "+matches);
     public static JLabel turnsLabel = new JLabel("Turns left : "+turns);
+
     public GameLayout() {
         createLayeredPane();
 
