@@ -41,6 +41,9 @@ public class MusicPlayerThread extends Thread {
         } else {
             while (true) {
                 try {
+                    if (stop == true) {
+                        break;
+                    }
                     File audioFile = new File(filePath);
                     AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
