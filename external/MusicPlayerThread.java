@@ -62,8 +62,7 @@ public class MusicPlayerThread extends Thread {
                     while ((bytesRead = audioStream.read(buffer, 0, buffer.length)) != -1) {
                         line.write(buffer, 0, bytesRead);
                     }
-                    line.stop();
-                    
+
                     line.drain();
                     line.close();
                     audioStream.close();
