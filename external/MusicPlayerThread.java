@@ -69,9 +69,6 @@ public class MusicPlayerThread extends Thread {
 
                 } catch (UnsupportedAudioFileException | LineUnavailableException | IOException e) {
                     e.printStackTrace();
-                } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
                 }
             }
         }
