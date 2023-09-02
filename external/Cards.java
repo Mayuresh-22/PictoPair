@@ -1,10 +1,8 @@
 package external;
 
 import javax.swing.*;
-
 import layout.EndingLayout;
 import layout.GameLayout;
-
 import java.awt.BorderLayout;
 import java.awt.event.*;
 import java.util.Vector;
@@ -27,6 +25,7 @@ public class Cards implements ActionListener {
         button = new JButton(defaultImg);
         button.setBorderPainted(false);
         button.setFocusPainted(false);
+        button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         button.addActionListener(this);
 
         this.status = status;
