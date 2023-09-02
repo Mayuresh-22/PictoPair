@@ -63,11 +63,17 @@ public class MusicPlayerThread extends Thread {
                         line.write(buffer, 0, bytesRead);
                     }
 
+                    // pause for 5 seconds
+                    Thread.sleep(5000);
+
                     line.drain();
                     line.close();
                     audioStream.close();
 
                 } catch (UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
             }
