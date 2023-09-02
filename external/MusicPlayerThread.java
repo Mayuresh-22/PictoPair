@@ -75,6 +75,6 @@ public class MusicPlayerThread extends Thread {
     }
 
     public void stopMusic() throws InterruptedException {
-        System.out.println("Stopping Music");
+        stop = true;
     }
 }
