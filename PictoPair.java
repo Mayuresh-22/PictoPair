@@ -27,6 +27,7 @@ class App {
                 app.repaint();
                 musicPlayer.filePath = "assets/sounds/bgm.wav";
                 musicPlayer.loop = true;
+                musicPlayer.start();
                 Timer t = new Timer(1000, new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
