@@ -58,7 +58,6 @@ public class MusicPlayerThread extends Thread {
 
                     while ((bytesRead = audioStream.read(buffer, 0, buffer.length)) != -1) {
                         if (stop == true) {
-                            System.out.println("Stopping Music");
                             break;
                         }
                         line.write(buffer, 0, bytesRead);
@@ -80,7 +79,6 @@ public class MusicPlayerThread extends Thread {
     }
 
     public void startMusic() {
-        System.out.println("resuming music");
         stop = false;
     }
 }
