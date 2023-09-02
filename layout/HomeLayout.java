@@ -130,6 +130,7 @@ public class HomeLayout implements ScreenStructure{
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
+        dialog.setBackground(new Color(131,0,255,255));
         dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131,0,255,255), 4, 20, 0));
         
         JLabel message = new JLabel("SETTINGS");
