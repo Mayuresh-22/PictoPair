@@ -175,7 +175,6 @@ public class HomeLayout implements ScreenStructure{
                         try {
                             musicPlayer.stopMusic();
                         } catch (InterruptedException e1) {
-                            // TODO Auto-generated catch block
                             e1.printStackTrace();
                         }
                     }
