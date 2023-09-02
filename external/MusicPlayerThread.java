@@ -63,9 +63,6 @@ public class MusicPlayerThread extends Thread {
                         line.write(buffer, 0, bytesRead);
                     }
 
-                    // pause for 5 seconds
-                    Thread.sleep(5000);
-
                     line.drain();
                     line.close();
                     audioStream.close();
