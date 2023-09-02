@@ -34,6 +34,8 @@ class App {
                         musicPlayer.stopMusic();
                     }
                 });
+                t.setRepeats(false);
+                t.start();
             }
         });
         timer.setRepeats(false);
