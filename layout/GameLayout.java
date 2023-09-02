@@ -1,13 +1,11 @@
 package layout;
 
 import external.*;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Collections;
-
 import interfaces.*;
 
 
@@ -20,6 +18,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton quitButton = new JButton("QUIT");
+    JFrame app;
 
     public static int matches = 0,turns = 30;
 
@@ -27,7 +26,9 @@ public class GameLayout implements ScreenStructure, ActionListener {
     public static JLabel matchesLabel = new JLabel("Matches : "+matches);
     public static JLabel turnsLabel = new JLabel("Turns left : "+turns);
 
-    public GameLayout() {
+    public GameLayout(JFrame app) {
+        this.app = app;
+        
         createLayeredPane();
 
         createBgPanel("assets/images/GameLayout-bg.png");
@@ -85,9 +86,11 @@ public class GameLayout implements ScreenStructure, ActionListener {
         bgPanel.setOpaque(true);
         bgPanel.add(bg);
     }
-
+    
     public void createCardsPanel() {
 
+        Cards.setFrame(app);
+        Cards.getthisLayout(this);
         // Creating Cards Panel
         cardsPanel.setBounds((int) (ScreenStructure.WIDTH * 0.03), (int) (ScreenStructure.HEIGHT * 0.03),
                 (int) (ScreenStructure.WIDTH * 0.7), (int) (ScreenStructure.HEIGHT * 0.9));
@@ -147,12 +150,12 @@ public class GameLayout implements ScreenStructure, ActionListener {
 
         // Creating Score Panel
         scorePanel.setBounds((int) (ScreenStructure.WIDTH * 0.8), (int) (ScreenStructure.HEIGHT * 0.35),
-                (int) (ScreenStructure.WIDTH * 0.15), (int) (ScreenStructure.HEIGHT * 0.2));
+                (int) (ScreenStructure.WIDTH * 0.18), (int) (ScreenStructure.HEIGHT * 0.2));
         scorePanel.setOpaque(false);
         scorePanel.setLayout(new GridLayout(2, 1, 0, 20));
 
         // Creating Fonts for Labels
-        Font labelFont = new Font("SansSerif",Font.BOLD,25);
+        Font labelFont = new Font("SansSerif",Font.BOLD,20);
         
         // Styling Score Labels
         matchesLabel.setFont(labelFont);
