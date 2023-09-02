@@ -119,6 +119,7 @@ public class HomeLayout implements ScreenStructure{
      // Settings Box Function
     public void createSettingsBox(){
         layeredPane.remove(menuPanel);
+        layeredPane.revalidate();
         layeredPane.repaint();
 
         // Settings Box
