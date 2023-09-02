@@ -28,17 +28,6 @@ class App {
                 musicPlayer.filePath = "assets/sounds/bgm.wav";
                 musicPlayer.loop = true;
                 musicPlayer.start();
-                Timer t = new Timer(1000, new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        System.out.println("mute...");
-                        musicPlayer.stop = true;
-                        musicPlayer.start();
-
-                    }
-                });
-                t.setRepeats(false);
-                t.start();
             }
         });
         timer.setRepeats(false);
