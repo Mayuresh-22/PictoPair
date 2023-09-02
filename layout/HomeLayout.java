@@ -191,12 +191,15 @@ public class HomeLayout implements ScreenStructure{
 
         gridOptionPanel.add(gridOptionLabel);
         gridOptionPanel.add(gridOptionButton);
+        gridOptionPanel.setBackground(new Color(131,0,255,255));
 
         musicOptionPanel.add(musicOptionLabel);
         musicOptionPanel.add(musicOptionButton);
+        musicOptionPanel.setBackground(new Color(131,0,255,255));
 
         optionsPanel.add(gridOptionPanel);
         optionsPanel.add(musicOptionPanel);
+        optionsPanel.setBackground(new Color(131,0,255,255));
 
         JButton yes = new JButton();
         yes = createButton(yes, "YES", 0, 0, 200, 100, 30);
@@ -229,6 +232,7 @@ public class HomeLayout implements ScreenStructure{
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 0));
         buttonPanel.add(yes);
         buttonPanel.add(no);
+        buttonPanel.setBackground(new Color(131,0,255,255));
         buttonPanel.setOpaque(true);
 
         dialog.add(message, BorderLayout.NORTH);
