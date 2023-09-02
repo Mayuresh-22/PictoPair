@@ -80,4 +80,8 @@ public class MusicPlayerThread extends Thread {
     public void stopMusic() throws InterruptedException {
         stop = true;
     }
+
+    public void startMusic() {
+        stop = false;
+    }
 }
