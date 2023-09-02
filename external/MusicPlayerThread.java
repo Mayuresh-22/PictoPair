@@ -41,10 +41,6 @@ public class MusicPlayerThread extends Thread {
         } else {
             while (true) {
                 try {
-                    if (stop == true) {
-                        break;
-                    }
-
                     File audioFile = new File(filePath);
                     AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
@@ -60,9 +56,12 @@ public class MusicPlayerThread extends Thread {
                     int bytesRead = 0;
 
                     while ((bytesRead = audioStream.read(buffer, 0, buffer.length)) != -1) {
+                        if (stop == true) {
+                            break;
+                        }
                         line.write(buffer, 0, bytesRead);
                     }
-                    line.stop();
+
                     line.drain();
                     line.close();
                     audioStream.close();
