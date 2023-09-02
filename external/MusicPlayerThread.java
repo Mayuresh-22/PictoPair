@@ -82,6 +82,7 @@ public class MusicPlayerThread extends Thread {
     }
 
     public void startMusic() {
+        System.out.println("resuming music");
         stop = false;
     }
 }
