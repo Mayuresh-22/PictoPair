@@ -7,7 +7,7 @@ import java.io.*;
 public class MusicPlayerThread extends Thread {
 
     public String filePath;
-    public Boolean loop;
+    public Boolean loop, stop = false;
 
     @Override
     public void run() {
