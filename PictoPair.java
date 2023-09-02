@@ -32,7 +32,7 @@ class App {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         System.out.println("mute...");
-                        musicPlayer.stopMusic();
+                        musicPlayer.sleep(10000);
                     }
                 });
                 t.setRepeats(false);
