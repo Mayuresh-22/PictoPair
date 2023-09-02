@@ -76,6 +76,6 @@ public class MusicPlayerThread extends Thread {
 
     public void stopMusic() {
         System.out.println("Stopping Music");
-        Thread.currentThread().interrupt();
+        Thread.sleep(5000);
     }
 }
