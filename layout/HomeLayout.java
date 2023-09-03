@@ -161,12 +161,12 @@ public class HomeLayout implements ScreenStructure{
         gridOptionButton = createButton(gridOptionButton, "3x3", 0, 0, 200, 100, 30);
 
         // music on/off button
-        musicOptionButton = createButton(musicOptionButton, "ON", 0, 0, 200, 100, 30);
+        musicOptionButton = createButton(musicOptionButton, "", 0, 0, 200, 100, 30);
         musicOptionButton.setIcon(new ImageIcon(new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)));
         musicOptionButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 if(musicOptionButton.getIcon().equals(new ImageIcon(new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)))){
-                    musicOptionButton.setText("OFF");
+                    // musicOptionButton.setText("OFF");
                     musicOptionButton.setIcon(new ImageIcon(new ImageIcon("assets/images/sound-off.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)));
                     synchronized(musicPlayer){
                         try {
