@@ -83,7 +83,7 @@ public class HomeLayout implements ScreenStructure{
             }
         });
 
-        quite = createButton(quite, "QUIT", 0, 0, 500, 100, 40);
+        quite = createButton(quite, "QUIT", new Color(77,0,206,255), 0, 0, 500, 100, 40);
         quite.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 // Quit DialogBox
