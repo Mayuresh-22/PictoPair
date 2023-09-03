@@ -105,7 +105,7 @@ public class HomeLayout implements ScreenStructure{
     public JButton createButton(JButton button, String text, Color bg, int x, int y, int width, int height, int fontSize){
         button = new JButton(text);
         button.setBounds(x, y, width, height);
-        button.setBackground(new Color(77,0,206,255));
+        button.setBackground(bg);
         button.setOpaque(true);
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
         button.setBorderPainted(false);
