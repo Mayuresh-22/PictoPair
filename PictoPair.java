@@ -3,7 +3,8 @@ import java.awt.event.*;
 import javax.swing.*;
 import layout.*;
 import external.*;
-// Devang App Changed - 02
+
+
 class App {
     public JFrame app = new JFrame("PictoPair - Memory Game");
     LoadingLayout loadingLayout = new LoadingLayout();
