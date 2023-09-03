@@ -198,21 +198,6 @@ public class HomeLayout implements ScreenStructure{
         optionsPanel.add(musicOptionPanel);
         optionsPanel.setBackground(new Color(131,0,255,255));
 
-        JButton yes = new JButton();
-        yes = createButton(yes, "YES", new Color(77,0,206,255), 0, 0, 200, 100, 30);
-        yes.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                message.setText("Thank you for playing! Exiting...");
-                Timer t = new Timer(1500, new ActionListener(){
-                    public void actionPerformed(ActionEvent e){
-                        System.exit(0);
-                    }
-                });
-                t.setRepeats(false);
-                t.start();
-            }
-        });
-
         JButton back = new JButton();
         back = createButton(back, "BACK", new Color(77,0,206,255), 0, 0, 200, 100, 30);
         back.addActionListener(new ActionListener(){
