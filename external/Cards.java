@@ -124,6 +124,7 @@ public class Cards implements ActionListener {
                         c3.status = "hidden";
                         c4.status = "hidden";
 
+                        // Updating Turns
                         GameLayout.turns -= 1;
                         GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
 
