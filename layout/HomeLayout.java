@@ -283,6 +283,4 @@ public class HomeLayout implements ScreenStructure{
         dialog.add(buttonPanel, BorderLayout.SOUTH);
         dialog.setVisible(true);
     }
-
-   
 }
