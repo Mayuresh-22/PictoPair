@@ -164,11 +164,8 @@ public class HomeLayout implements ScreenStructure{
         gridOptionButton.setFont(new Font("Arial", Font.BOLD, 20));
         gridOptionButton.setForeground(Color.WHITE);
 
-        JButton musicOptionButton = new JButton("OFF");
-        musicOptionButton.setFocusPainted(false);
-        musicOptionButton.setBorderPainted(false);
-        musicOptionButton.setFont(new Font("Arial", Font.BOLD, 20));
-        musicOptionButton.setForeground(Color.WHITE);
+        JButton musicOptionButton = new JButton();
+        createButton(yes, "OFF", 0, 0, 200, 100, 30)
         musicOptionButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 if(musicOptionButton.getText().equals("OFF")){
