@@ -11,7 +11,7 @@ public class HomeLayout implements ScreenStructure{
     JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER,50, 40));
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
-    JButton play, settings, quite, yes, no, musicOptionButton;
+    JButton play, settings, quite, yes, no, musicOptionButton, gridOptionButton;
     JFrame app;
     HomeLayout thisLayout;
     MusicPlayerThread musicPlayer;
@@ -157,14 +157,13 @@ public class HomeLayout implements ScreenStructure{
         musicOptionLabel.setHorizontalAlignment(JLabel.CENTER);
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
-        JButton gridOptionButton = new JButton("4x4");
+        JButton  = new JButton("4x4");
         gridOptionButton.setSize(50,50);
         gridOptionButton.setFocusPainted(false);
         gridOptionButton.setBorderPainted(false);
         gridOptionButton.setFont(new Font("Arial", Font.BOLD, 20));
         gridOptionButton.setForeground(Color.WHITE);
 
-        
         musicOptionButton = createButton(musicOptionButton, "OFF", 0, 0, 200, 100, 30);
         musicOptionButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
