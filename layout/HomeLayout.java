@@ -136,7 +136,7 @@ public class HomeLayout implements ScreenStructure{
         
         JLabel message = new JLabel("SETTINGS");
         message.setFont(new Font("Arial", Font.BOLD, 30));
-        message.setForeground(Color.WHITE);
+        message.setForeground(new Color(131,0,255,255));
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
 
