@@ -114,8 +114,6 @@ public class Cards implements ActionListener {
                         c3.status = "hidden";
                         c4.status = "hidden";
 
-                        GameLayout.turns -= 1;
-
                         if(GameLayout.turns == 0) {
                             // Call Ending Screen Method
                             EndingLayout endingLayout = new EndingLayout(app);
@@ -123,8 +121,10 @@ public class Cards implements ActionListener {
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
                             app.revalidate();
                             app.repaint();
+                        }else{
+                            GameLayout.turns -= 1;
+                            GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
                         }
-                        // GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
                         // if (GameLayout.matches == 1 || GameLayout.turns == 0) {
                         //     // Call Ending Screen Method
                         //     EndingLayout endingLayout = new EndingLayout(app);
