@@ -26,6 +26,10 @@ public class HomeLayout implements ScreenStructure{
         createBgPanel("assets/images/Homescreen-bg.png");
 
         // menu panel
+        // music on/off button
+        musicOn = new ImageIcon(new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
+        musicOff = new ImageIcon(new ImageIcon("assets/images/sound-off.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
+        def = musicOn;
         createMenuPanel();
 
         // Adding to layeredPane
