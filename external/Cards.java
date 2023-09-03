@@ -135,6 +135,7 @@ public class Cards implements ActionListener {
                             app.revalidate();
                             app.repaint();
                         }
+                    }
                 });
                 timer.setRepeats(false);
                 timer.start();
