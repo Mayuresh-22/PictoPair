@@ -79,10 +79,6 @@ public class HomeLayout implements ScreenStructure{
         settings = createButton(settings, "SETTINGS", new Color(77,0,206,255), 0, 0, 500, 100, 40);
         settings.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                // music on/off button
-                musicOn = new ImageIcon(new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
-                musicOff = new ImageIcon(new ImageIcon("assets/images/sound-off.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
-                def = musicOn;
                 // Settings DialogBox
                 createSettingsBox();
             }
