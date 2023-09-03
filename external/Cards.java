@@ -122,7 +122,7 @@ public class Cards implements ActionListener {
                         c3.status = "hidden";
                         c4.status = "hidden";
 
-                        if (GameLayout.turns == 0) {
+                        if(GameLayout.turns == 0) {
                             // Call Ending Screen Method
                             EndingLayout endingLayout = new EndingLayout(app);
                             app.remove(thisLayout.getGamePanel());
