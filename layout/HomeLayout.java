@@ -214,7 +214,7 @@ public class HomeLayout implements ScreenStructure{
         });
 
         JButton back = new JButton();
-        back = createButton(back, "NO", new Color(77,0,206,255), 0, 0, 200, 100, 30);
+        back = createButton(back, "BACK", new Color(77,0,206,255), 0, 0, 200, 100, 30);
         back.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 dialog.dispose();
@@ -223,6 +223,7 @@ public class HomeLayout implements ScreenStructure{
                 layeredPane.add(menuPanel);
                 layeredPane.add(bgPanel);
                 layeredPane.repaint();
+                layeredPane.revalidate();
             }
         });
 
