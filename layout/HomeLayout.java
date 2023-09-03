@@ -158,7 +158,7 @@ public class HomeLayout implements ScreenStructure{
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
         // grid size button
-        gridOptionButton = createButton(gridOptionButton, "3x3", 0, 0, 200, 100, 30);
+        gridOptionButton = createButton(gridOptionButton, "3x3", new Color(77,0,206,255), 0, 0, 200, 100, 30);
 
         // music on/off button
         ImageIcon musicOn = new ImageIcon(new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
