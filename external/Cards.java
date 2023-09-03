@@ -83,6 +83,7 @@ public class Cards implements ActionListener {
                         c1.button.setEnabled(false);
                         c2.button.setEnabled(false);
 
+                        // Updating Matches and Turns
                         GameLayout.matches += 1;
                         GameLayout.turns -= 1;
                         GameLayout.matchesLabel.setText("Matches : " + GameLayout.matches);
