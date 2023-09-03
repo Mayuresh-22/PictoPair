@@ -9,7 +9,6 @@ import java.util.Collections;
 import interfaces.*;
 
 
-
 // Main Class
 public class GameLayout implements ScreenStructure, ActionListener {
 
