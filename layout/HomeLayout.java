@@ -158,13 +158,13 @@ public class HomeLayout implements ScreenStructure{
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
         // grid size button
-        gridOptionButton = createButton(gridOptionButton, "3x3", new Color(77,0,206,255), 0, 0, 200, 100, 30);
+        gridOptionButton = createButton(gridOptionButton, "3x3", new Color(77,0,206,255), 0, 0, 200, 100, 20);
 
         // music on/off button
         ImageIcon musicOn = new ImageIcon(new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
         ImageIcon musicOff = new ImageIcon(new ImageIcon("assets/images/sound-off.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
 
-        musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 30);
+        musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
         musicOptionButton.setIcon(musicOn);
         musicOptionButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -199,7 +199,7 @@ public class HomeLayout implements ScreenStructure{
         optionsPanel.setBackground(new Color(131,0,255,255));
 
         JButton back = new JButton();
-        back = createButton(back, "BACK", new Color(77,0,206,255), 0, 0, 200, 100, 30);
+        back = createButton(back, "BACK", new Color(77,0,206,255), 0, 0, 200, 100, 20);
         back.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 dialog.dispose();
