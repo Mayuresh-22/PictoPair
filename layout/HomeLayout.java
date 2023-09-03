@@ -166,7 +166,7 @@ public class HomeLayout implements ScreenStructure{
         musicOptionButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 if(musicOptionButton.getText().equals("ON")){
-                    musicOptionButton.setText("ON");
+                    musicOptionButton.setText("OF");
                     synchronized(musicPlayer){
                         try {
                             musicPlayer.stopMusic();
