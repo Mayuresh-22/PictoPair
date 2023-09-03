@@ -129,8 +129,9 @@ public class Cards implements ActionListener {
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
                             app.revalidate();
                             app.repaint();
+                        }else{
+                            GameLayout.turns -= 1;
                         }
-                        GameLayout.turns -= 1;
                         // GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
                         // if (GameLayout.matches == 1 || GameLayout.turns == 0) {
                         //     // Call Ending Screen Method
