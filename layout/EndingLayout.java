@@ -86,8 +86,7 @@ public class EndingLayout implements ScreenStructure{
                 app.remove(getEndingPanel());
                 app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
                 app.repaint();
-                                app.revalidate();
-
+                app.revalidate();
             }
         });
 
