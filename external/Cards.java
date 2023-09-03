@@ -1,11 +1,12 @@
 package external;
 
 import javax.swing.*;
-
+import layout.EndingLayout;
 import layout.GameLayout;
-
+import java.awt.BorderLayout;
 import java.awt.event.*;
 import java.util.Vector;
+
 
 // Card Class
 public class Cards implements ActionListener {
@@ -17,13 +18,15 @@ public class Cards implements ActionListener {
     public JButton button;
     public String status, path;
     public ImageIcon defaultImg, mainImg;
+    static JFrame app;
+    static GameLayout thisLayout;
 
+    public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path, int id) {
 
-    public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path ,int id) {
-        
         button = new JButton(defaultImg);
         button.setBorderPainted(false);
         button.setFocusPainted(false);
+        button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         button.addActionListener(this);
 
         this.status = status;
@@ -33,12 +36,20 @@ public class Cards implements ActionListener {
         this.id = id;
     }
 
+    public static void setFrame(JFrame tempapp) {
+        app = tempapp;
+    }
+
+    public static void getthisLayout(GameLayout tempthisLayout) {
+        thisLayout = tempthisLayout;
+    }
+
     public String getStatus() {
         return this.status;
     }
 
     public void actionPerformed(ActionEvent e) {
-        if(selected.size()+1 > 2){
+        if (selected.size() + 1 > 2) {
             return;
         }
         if (selected.size() < 2 && this.status.equals("hidden")) {
@@ -73,14 +84,23 @@ public class Cards implements ActionListener {
                         c1.button.setEnabled(false);
                         c2.button.setEnabled(false);
 
-                        GameLayout.matches+=1;
-                        GameLayout.turns-=1;
+                        // Updating Matches and Turns
+                        GameLayout.matches += 1;
+                        GameLayout.turns -= 1;
+                        GameLayout.matchesLabel.setText("Matches : " + GameLayout.matches);
+                        GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
 
-                        GameLayout.matchesLabel.setText("Matches : "+GameLayout.matches);
-                        GameLayout.turnsLabel.setText("Turns left : "+GameLayout.turns);
-                        if(GameLayout.matches == 12){
-                            // Call Score Screen Method
+                        // Checking if game is over
+                        if (GameLayout.matches == 12 || GameLayout.turns == 0) {
+                            // Call Ending Screen Method
+                            EndingLayout endingLayout = new EndingLayout(app);
+                            app.remove(thisLayout.getGamePanel());
+                            endingLayout.getthisLayout(endingLayout);
+                            app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
+                            app.revalidate();
+                            app.repaint();
                         }
+
                     }
                 });
                 timer.setRepeats(false);
@@ -106,13 +126,25 @@ public class Cards implements ActionListener {
                         c3.status = "hidden";
                         c4.status = "hidden";
 
-                        GameLayout.turns-=1;
-                        GameLayout.turnsLabel.setText("Turns left : "+GameLayout.turns);
+                        // Updating Turns
+                        GameLayout.turns -= 1;
+                        GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
+
+                        // Checking if game is over
+                        if (GameLayout.matches == 12 || GameLayout.turns == 0) {
+                            // Call Ending Screen Method
+                            EndingLayout endingLayout = new EndingLayout(app);
+                            app.remove(thisLayout.getGamePanel());
+                            app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
+                            app.revalidate();
+                            app.repaint();
+                        }
                     }
                 });
                 timer.setRepeats(false);
                 timer.start();
             }
+
         }
     }
 }

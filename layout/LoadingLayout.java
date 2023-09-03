@@ -4,6 +4,7 @@ import javax.swing.*;
 import interfaces.*;
 import java.awt.*;
 
+
 public class LoadingLayout implements ScreenStructure{
     JPanel LoadingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), logoPanel = new JPanel(new BorderLayout());
     JLabel bg, logo;

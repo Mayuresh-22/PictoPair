@@ -3,11 +3,12 @@ package external;
 import javax.sound.sampled.*;
 import java.io.*;
 
+
 // MusicPlayer Class for sound effects
 public class MusicPlayerThread extends Thread {
 
     public String filePath;
-    public Boolean loop;
+    public Boolean loop, stop = false;
 
     @Override
     public void run() {
@@ -41,6 +42,7 @@ public class MusicPlayerThread extends Thread {
         } else {
             while (true) {
                 try {
+
                     File audioFile = new File(filePath);
                     AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
 
@@ -56,6 +58,9 @@ public class MusicPlayerThread extends Thread {
                     int bytesRead = 0;
 
                     while ((bytesRead = audioStream.read(buffer, 0, buffer.length)) != -1) {
+                        if (stop == true) {
+                            break;
+                        }
                         line.write(buffer, 0, bytesRead);
                     }
 
@@ -68,5 +73,13 @@ public class MusicPlayerThread extends Thread {
                 }
             }
         }
+    }
+
+    public void stopMusic() throws InterruptedException {
+        stop = true;
+    }
+
+    public void startMusic() {
+        stop = false;
     }
 }
