@@ -32,7 +32,6 @@ public class GameLayout implements ScreenStructure, ActionListener {
         // reseting matches and turns
         matches = 0;
         turns = 30;
-
         matchesLabel = new JLabel("Matches : "+matches);
         turnsLabel = new JLabel("Turns left : "+turns);
         
