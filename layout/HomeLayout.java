@@ -102,7 +102,7 @@ public class HomeLayout implements ScreenStructure{
         menuPanel.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
     }
 
-    public JButton createButton(JButton button, String text, int x, int y, int width, int height, int fontSize){
+    public JButton createButton(JButton button, String text, Color bg int x, int y, int width, int height, int fontSize){
         button = new JButton(text);
         button.setBounds(x, y, width, height);
         button.setBackground(new Color(77,0,206,255));
@@ -169,7 +169,6 @@ public class HomeLayout implements ScreenStructure{
         musicOptionButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 if(musicOptionButton.getIcon().equals(musicOn)){
-                    // musicOptionButton.setText("OFF");
                     musicOptionButton.setIcon(musicOff);
                     synchronized(musicPlayer){
                         try {
@@ -179,7 +178,6 @@ public class HomeLayout implements ScreenStructure{
                         }
                     }
                 }else{
-                    // musicOptionButton.setText("ON");
                     musicOptionButton.setIcon(musicOn);
                     synchronized(musicPlayer){
                         musicPlayer.startMusic();
