@@ -88,7 +88,7 @@ public class Cards implements ActionListener {
                         GameLayout.matchesLabel.setText("Matches : " + GameLayout.matches);
                         GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
 
-                        if (GameLayout.matches == 12 || GameLayout.turns == 0) {
+                        if (GameLayout.matches+1 == 12 || GameLayout.turns-1 == 0) {
                             // Call Ending Screen Method
                             EndingLayout endingLayout = new EndingLayout(app);
                             app.remove(thisLayout.getGamePanel());
@@ -122,7 +122,7 @@ public class Cards implements ActionListener {
                         c3.status = "hidden";
                         c4.status = "hidden";
 
-                        if (GameLayout.matches == 12 || GameLayout.turns == 0) {
+                        if (GameLayout.matches+1 == 12 || GameLayout.turns-1 == 0) {
                             // Call Ending Screen Method
                             EndingLayout endingLayout = new EndingLayout(app);
                             app.remove(thisLayout.getGamePanel());
@@ -133,15 +133,6 @@ public class Cards implements ActionListener {
                             GameLayout.turns -= 1;
                             GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
                         }
-                        // if (GameLayout.matches == 1 || GameLayout.turns == 0) {
-                        //     // Call Ending Screen Method
-                        //     EndingLayout endingLayout = new EndingLayout(app);
-                        //     endingLayout.getthisLayout(endingLayout);
-                        //     app.remove(thisLayout.getGamePanel());
-                        //     app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
-                        //     app.revalidate();
-                        //     app.repaint();
-                        // }
                     }
                 });
                 timer.setRepeats(false);
