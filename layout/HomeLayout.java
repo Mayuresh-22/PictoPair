@@ -228,8 +228,7 @@ public class HomeLayout implements ScreenStructure{
         });
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 0));
-        buttonPanel.add(yes);
-        buttonPanel.add(no);
+        buttonPanel.add(back);
         buttonPanel.setBackground(new Color(131,0,255,255));
         buttonPanel.setOpaque(true);
 
