@@ -161,10 +161,6 @@ public class HomeLayout implements ScreenStructure{
         // grid size button
         gridOptionButton = createButton(gridOptionButton, "3x3", new Color(77,0,206,255), 0, 0, 200, 100, 20);
 
-        // music on/off button
-        musicOn = new ImageIcon(new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
-        musicOff = new ImageIcon(new ImageIcon("assets/images/sound-off.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
-
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
         musicOptionButton.setIcon(def);
         musicOptionButton.addActionListener(new ActionListener(){
