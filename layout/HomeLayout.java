@@ -213,9 +213,9 @@ public class HomeLayout implements ScreenStructure{
             }
         });
 
-        JButton no = new JButton();
-        no = createButton(no, "NO", new Color(77,0,206,255), 0, 0, 200, 100, 30);
-        no.addActionListener(new ActionListener(){
+        JButton back = new JButton();
+        back = createButton(back, "NO", new Color(77,0,206,255), 0, 0, 200, 100, 30);
+        back.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 dialog.dispose();
                 menuPanel.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
