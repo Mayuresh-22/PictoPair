@@ -214,7 +214,7 @@ public class HomeLayout implements ScreenStructure{
         });
 
         JButton no = new JButton();
-        no = createButton(no, "NO", 0, 0, 200, 100, 30);
+        no = createButton(no, "NO", new Color(77,0,206,255), 0, 0, 200, 100, 30);
         no.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 dialog.dispose();
