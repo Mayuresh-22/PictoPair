@@ -141,7 +141,7 @@ public class HomeLayout implements ScreenStructure{
         message.setVerticalAlignment(JLabel.CENTER);
 
         // Setting Options Panel
-        JPanel optionsPanel = new JPanel(new GridLayout(2,1,50,100));
+        JPanel optionsPanel = new JPanel(new GridLayout(2,1,50,10));
         JPanel gridOptionPanel = new JPanel(new FlowLayout()); 
         JPanel musicOptionPanel = new JPanel(new FlowLayout()); 
 
