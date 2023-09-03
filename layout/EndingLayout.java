@@ -82,7 +82,7 @@ public class EndingLayout implements ScreenStructure{
                 GameLayout.turns = 0;
                 // Play GameLayout
                 GameLayout gameLayout = new GameLayout(app);
-                app.remove(this.getEndingPanel());
+                app.remove(getEndingPanel());
                 app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
                 app.revalidate();
                 app.repaint();
