@@ -94,8 +94,9 @@ public class Cards implements ActionListener {
                             // Call Ending Screen Method
                             EndingLayout endingLayout = new EndingLayout(app);
                             app.remove(thisLayout.getGamePanel());
+                                                        endingLayout.getthisLayout(endingLayout);
+
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
-                            endingLayout.getthisLayout(endingLayout);
                             app.revalidate();
                             app.repaint();
                         }
