@@ -159,6 +159,7 @@ public class HomeLayout implements ScreenStructure{
 
         gridOptionButton = createButton(gridOptionButton, "3x3", 0, 0, 200, 100, 30);
 
+        // music on/off button
         musicOptionButton = createButton(musicOptionButton, "OFF", 0, 0, 200, 100, 30);
         musicOptionButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
