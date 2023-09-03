@@ -170,7 +170,7 @@ public class HomeLayout implements ScreenStructure{
             public void actionPerformed(ActionEvent e){
                 if(musicOptionButton.getIcon().equals(musicOn)){
                     // musicOptionButton.setText("OFF");
-                    musicOptionButton.setIcon(new ImageIcon(new ImageIcon("assets/images/sound-off.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)));
+                    musicOptionButton.setIcon(musicOff);
                     synchronized(musicPlayer){
                         try {
                             musicPlayer.stopMusic();
@@ -180,7 +180,7 @@ public class HomeLayout implements ScreenStructure{
                     }
                 }else{
                     musicOptionButton.setText("ON");
-                    musicOptionButton.setIcon(new ImageIcon(new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)));
+                    musicOptionButton.setIcon(musicOn);
                     synchronized(musicPlayer){
                         musicPlayer.startMusic();
                     }
