@@ -177,6 +177,7 @@ public class HomeLayout implements ScreenStructure{
                     }
                 }else{
                     musicOptionButton.setText("ON");
+                    musicOptionButton.setIcon(new ImageIcon(new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH)));
                     synchronized(musicPlayer){
                         musicPlayer.startMusic();
                     }
