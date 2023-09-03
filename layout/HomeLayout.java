@@ -179,7 +179,6 @@ public class HomeLayout implements ScreenStructure{
                     musicOptionButton.setText("OFF");
                     synchronized(musicPlayer){
                         musicPlayer.startMusic();
-                        
                     }
                 }
             }
