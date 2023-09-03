@@ -179,7 +179,7 @@ public class HomeLayout implements ScreenStructure{
                         }
                     }
                 }else{
-                    musicOptionButton.setText("ON");
+                    // musicOptionButton.setText("ON");
                     musicOptionButton.setIcon(musicOn);
                     synchronized(musicPlayer){
                         musicPlayer.startMusic();
