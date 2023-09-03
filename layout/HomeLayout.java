@@ -136,7 +136,7 @@ public class HomeLayout implements ScreenStructure{
         
         JLabel message = new JLabel("SETTINGS");
         message.setFont(new Font("Arial", Font.BOLD, 30));
-        message.setForeground(new Color(131,0,255,255));
+        message.setForeground(Color.WHITE);
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
 
@@ -147,13 +147,13 @@ public class HomeLayout implements ScreenStructure{
 
         JLabel gridOptionLabel = new JLabel("Grid Size: ");
         gridOptionLabel.setFont(new Font("Arial", Font.BOLD, 25));
-        gridOptionLabel.setForeground(new Color(131,0,255,255));
+        gridOptionLabel.setForeground(Color.WHITE);
         gridOptionLabel.setHorizontalAlignment(JLabel.CENTER);
         gridOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
         JLabel musicOptionLabel = new JLabel("Music: ");
         musicOptionLabel.setFont(new Font("Arial", Font.BOLD, 25));
-        musicOptionLabel.setForeground(new Color(131,0,255,255));
+        musicOptionLabel.setForeground(Color.WHITE);
         musicOptionLabel.setHorizontalAlignment(JLabel.CENTER);
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
@@ -162,13 +162,13 @@ public class HomeLayout implements ScreenStructure{
         gridOptionButton.setFocusPainted(false);
         gridOptionButton.setBorderPainted(false);
         gridOptionButton.setFont(new Font("Arial", Font.BOLD, 20));
-        gridOptionButton.setForeground(new Color(131,0,255,255));
+        gridOptionButton.setForeground(Color.WHITE);
 
         JButton musicOptionButton = new JButton("OFF");
         musicOptionButton.setFocusPainted(false);
         musicOptionButton.setBorderPainted(false);
         musicOptionButton.setFont(new Font("Arial", Font.BOLD, 20));
-        musicOptionButton.setForeground(new Color(131,0,255,255));
+        musicOptionButton.setForeground(Color.WHITE);
         musicOptionButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 if(musicOptionButton.getText().equals("OFF")){
