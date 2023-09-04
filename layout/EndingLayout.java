@@ -64,12 +64,12 @@ public class EndingLayout implements ScreenStructure{
 
     public void createMenuPanel(){
 
-        Font scoreFont = new Font("Arial",Font.BOLD,45);
-        JLabel scoreLabel = new JLabel("GAME OVER");
-        scoreLabel.setFont(scoreFont);
-        scoreLabel.setForeground(Color.WHITE);
-        scoreLabel.setVerticalAlignment(JLabel.CENTER);
-        scoreLabel.setHorizontalAlignment(JLabel.CENTER);
+        Font Font = new Font("Arial",Font.BOLD,45);
+        JLabel Label = new JLabel("GAME OVER");
+        Label.setFont(scoreFont);
+        Label.setForeground(Color.WHITE);
+        Label.setVerticalAlignment(JLabel.CENTER);
+        Label.setHorizontalAlignment(JLabel.CENTER);
 
         Font scoreFont = new Font("Arial",Font.BOLD,25);
         JLabel scoreLabel = new JLabel("You matched "+GameLayout.matches+" Cards in "+(30 - GameLayout.turns)+" Turns !");
