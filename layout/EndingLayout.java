@@ -91,7 +91,6 @@ public class EndingLayout implements ScreenStructure {
 
         play = createButton(play, "PLAY AGAIN", 0, 0, 200, 50, 20);
         play.addActionListener(new ActionListener() {
-            
             public void actionPerformed(ActionEvent e) {
 
                 // Play GameLayout
