@@ -58,7 +58,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
         // Adding to layeredPane
         layeredPane.add(cardsPanel, BorderLayout.CENTER);
         layeredPane.add(scorePanel, BorderLayout.CENTER);
-        // layeredPane.add(quitButton, BorderLayout.CENTER);
+        layeredPane.add(quitButton, BorderLayout.CENTER);
         layeredPane.add(bgPanel);
 
         // Adding to HomePanel
