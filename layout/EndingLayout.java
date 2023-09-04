@@ -99,10 +99,10 @@ public class EndingLayout implements ScreenStructure {
                 layeredPane.revalidate();
                 layeredPane.repaint();
 
-                // Remove LoadingPanel after 5 seconds
-                Timer timer = new Timer(5000, new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
+                // // Remove LoadingPanel after 5 seconds
+                // Timer timer = new Timer(5000, new ActionListener() {
+                //     @Override
+                //     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
                         GameLayout.matches = 0;
                         GameLayout.turns = 30;
