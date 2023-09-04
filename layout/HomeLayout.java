@@ -19,7 +19,8 @@ public class HomeLayout implements ScreenStructure {
     ImageIcon musicOn, musicOff, def;
     HomeLayout thisLayout;
     MusicPlayerThread musicPlayer;
-
+ GameLayout gameLayout = new GameLayout(app);
+ 
     public HomeLayout(JFrame app, MusicPlayerThread musicPlayer) {
         this.app = app;
         this.musicPlayer = musicPlayer;
