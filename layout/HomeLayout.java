@@ -77,7 +77,7 @@ public class HomeLayout implements ScreenStructure{
         play.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 // Loading animation
-                app.
+                app.remove(HomePanel);
                 // Play GameLayout
                 GameLayout gameLayout = new GameLayout(app);
                 app.remove(thisLayout.getHomePanel());
