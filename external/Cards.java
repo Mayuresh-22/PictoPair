@@ -137,7 +137,7 @@ public class Cards implements ActionListener {
                         GameLayout.matches += 0;
                         GameLayout.turns -= 1;
                         GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
-                        if (GameLayout.matches == 1 || GameLayout.turns <= 0) {
+                        if (GameLayout.matches == 12 || GameLayout.turns <= 0) {
                             // Call Ending Screen Method
                             
                             endingLayout.getthisLayout(endingLayout,GameLayout.matches,GameLayout.turns);
