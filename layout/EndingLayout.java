@@ -64,7 +64,7 @@ public class EndingLayout implements ScreenStructure{
 
     public void createMenuPanel(){
 
-        Font scoreFont = new Font("Arial",Font.BOLD,25);
+        Font scoreFont = new Font("Arial",Font.BOLD,45);
         JLabel scoreLabel = new JLabel("GAME OVER");
         scoreLabel.setFont(scoreFont);
         scoreLabel.setForeground(Color.WHITE);
