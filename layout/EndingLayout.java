@@ -35,6 +35,8 @@ public class EndingLayout implements ScreenStructure{
 
     public void getthisLayout(EndingLayout thisLayout,int matches , int turns){
         this.thisLayout = thisLayout;
+        this.matches = matches;
+        this.turns = turns;
     }
     
     public JPanel getEndingPanel() {
