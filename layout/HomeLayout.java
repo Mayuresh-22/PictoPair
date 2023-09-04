@@ -92,7 +92,7 @@ public class HomeLayout implements ScreenStructure {
                 Timer timer = new Timer(5000, new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        loadingPanel.remove()
+                        loadingPanel.remove(loadingAnim);
                         // Play GameLayout
                         app.remove(thisLayout.getHomePanel());
                         GameLayout gameLayout = new GameLayout(app);
