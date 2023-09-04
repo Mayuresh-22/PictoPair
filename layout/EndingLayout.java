@@ -17,8 +17,6 @@ public class EndingLayout implements ScreenStructure {
     EndingLayout thisLayout;
     int matches, turns;
 
-    GameLayout gameLayout = new GameLayout(app);
-
     public EndingLayout(JFrame app) {
         this.app = app;
         createLayeredPane();
@@ -94,6 +92,7 @@ public class EndingLayout implements ScreenStructure {
             public void actionPerformed(ActionEvent e) {
 
                 // Play GameLayout
+                GameLayout gameLayout = new GameLayout(app);
                 GameLayout.matches = 0;
                 GameLayout.turns = 30;
                 app.remove(EndingLayout.this.getEndingPanel());
@@ -125,13 +124,7 @@ public class EndingLayout implements ScreenStructure {
         menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
     }
 
-    public void createLoadingPanel() {
-        // logoPanel
-        JLabel loadingAnim = new JLabel(new ImageIcon("assets/images/loading.gif"));
-        loadingPanel.setBounds((ScreenStructure.WIDTH / 2) - 200, (ScreenStructure.HEIGHT / 2) - 200, 300, 300);
-        loadingPanel.setOpaque(true);
-        loadingPanel.add(loadingAnim);
-    }
+    
 
     public JButton createButton(JButton button, String text, int x, int y, int width, int height, int fontSize) {
         button = new JButton(text);
