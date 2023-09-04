@@ -54,7 +54,17 @@ public class GameLayout implements ScreenStructure, ActionListener {
         quitButton.setBorderPainted(false);
         quitButton.setFocusPainted(false);
         quitButton.setForeground(Color.WHITE);
-        quitButton.addActionListener(this);
+        quitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == quitButton) {
+                    int dialogButton = JOptionPane.YES_NO_OPTION;
+                    int dialogResult = JOptionPane.showConfirmDialog(null, "Are you sure you want to quit?", "Warning", dialogButton);
+                    if (dialogResult == JOptionPane.YES_OPTION) {
+                        System.exit(0);
+                    }
+                }
+            }
+        });
 
         // Adding to layeredPane
         layeredPane.add(cardsPanel, BorderLayout.CENTER);
