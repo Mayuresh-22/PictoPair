@@ -100,9 +100,10 @@ public class Cards implements ActionListener {
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
                             app.revalidate();
                             app.repaint();
+                            
                              // Playing Final Sound Effect
                              MusicPlayerThread congrats= new MusicPlayerThread();
-                            congrats.filePath = "assets/sounds/final";
+                             congrats.filePath = "assets/sounds/final";
                              congrats.loop = false;
                              congrats.start();
 
