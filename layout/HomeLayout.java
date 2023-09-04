@@ -110,7 +110,7 @@ public class HomeLayout implements ScreenStructure {
         settings.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Settings DialogBox
-                createSettingsBox();
+                DialogBox.createSettingsBox();
             }
         });
 
