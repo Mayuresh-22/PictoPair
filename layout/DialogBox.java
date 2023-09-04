@@ -115,7 +115,7 @@ public class DialogBox {
     }
 
     // Dialog Box for Quit function
-    public void static createQuitBox() {
+    public static void createQuitBox() {
         layeredPane.remove(menuPanel);
         layeredPane.repaint();
 
