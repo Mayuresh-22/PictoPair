@@ -114,6 +114,7 @@ public class EndingLayout implements ScreenStructure {
                 });
                 timer.setRepeats(false);
                 timer.start();
+                // Play GameLayout
 
             }
         });
