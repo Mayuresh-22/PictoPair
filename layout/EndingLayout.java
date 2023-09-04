@@ -17,8 +17,6 @@ public class EndingLayout implements ScreenStructure {
     EndingLayout thisLayout;
     int matches, turns;
 
-    GameLayout gameLayout = new GameLayout(app);
-
     public EndingLayout(JFrame app) {
         this.app = app;
         createLayeredPane();
@@ -93,28 +91,14 @@ public class EndingLayout implements ScreenStructure {
         play.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                // Loading animation
-                layeredPane.remove(menuPanel);
-                layeredPane.add(loadingPanel, BorderLayout.CENTER);
-                layeredPane.revalidate();
-                layeredPane.repaint();
-
-                // Remove LoadingPanel after 5 seconds
-                Timer timer = new Timer(5000, new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // Play GameLayout
-                        GameLayout.matches = 0;
-                        GameLayout.turns = 30;
-                        app.remove(EndingLayout.this.getEndingPanel());
-                        app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
-                        app.revalidate();
-                        app.repaint();
-                    }
-                });
-                timer.setRepeats(false);
-                timer.start();
-
+                // Play GameLayout
+                GameLayout gameLayout = new GameLayout(app);
+                GameLayout.matches = 0;
+                GameLayout.turns = 30;
+                app.remove(EndingLayout.this.getEndingPanel());
+                app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
+                app.revalidate();
+                app.repaint();
             }
         });
 
