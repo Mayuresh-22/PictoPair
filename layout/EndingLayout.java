@@ -17,7 +17,7 @@ public class EndingLayout implements ScreenStructure {
     EndingLayout thisLayout;
     int matches, turns;
 
-    GameLayout gameLayout = new GameLayout(app);
+    
 
     public EndingLayout(JFrame app) {
         this.app = app;
