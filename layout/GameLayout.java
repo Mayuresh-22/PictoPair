@@ -35,8 +35,10 @@ public class GameLayout implements ScreenStructure, ActionListener {
         matchesLabel = new JLabel("Matches : "+matches);
         turnsLabel = new JLabel("Turns left : "+turns);
         
+        // Creating Layered Pane
         createLayeredPane();
 
+        // Creating Background Panel
         createBgPanel("assets/images/GameLayout-bg.png");
 
         // Cards Panel
