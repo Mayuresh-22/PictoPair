@@ -66,7 +66,7 @@ public class EndingLayout implements ScreenStructure{
 
         Font headingFont = new Font("Arial",Font.BOLD,45);
         JLabel headingLabel = new JLabel("GAME OVER");
-        headingLabel.setFont(headingFontFont);
+        headingLabel.setFont(headingFont);
         headingLabel.setForeground(Color.WHITE);
         headingLabel.setVerticalAlignment(JLabel.CENTER);
         headingLabel.setHorizontalAlignment(JLabel.CENTER);
