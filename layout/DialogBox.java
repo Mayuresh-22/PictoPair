@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import external.TextBubbleBorder;
 
 public class DialogBox {
+    
     // Settings Box Function
     public static void createSettingsBox() {
         layeredPane.remove(menuPanel);
