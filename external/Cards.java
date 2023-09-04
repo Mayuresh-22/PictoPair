@@ -130,7 +130,7 @@ public class Cards implements ActionListener {
                         if (GameLayout.matches == 12 || GameLayout.turns <= 0) {
                             // Call Ending Screen Method
                             
-                            endingLayout.getthisLayout(endingLayout,GameLayout);
+                            endingLayout.getthisLayout(endingLayout,GameLayout.matches);
                             app.remove(thisLayout.getGamePanel());
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
                             app.revalidate();
