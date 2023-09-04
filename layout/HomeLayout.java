@@ -9,7 +9,7 @@ import interfaces.*;
 
 
 public class HomeLayout implements ScreenStructure{
-    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER,50, 40)), loadingPanel = new J;
+    JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER,50, 40)), loadingPanel = new Jpanel();
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no, musicOptionButton, gridOptionButton;
