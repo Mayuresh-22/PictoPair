@@ -101,7 +101,7 @@ public class Cards implements ActionListener {
                             app.revalidate();
                             app.repaint();
                              // Playing Correct Sound Effect
-                        MusicPlayerThread soundEffect3 = new MusicPlayerThread();
+                        MusicPlayerThread soundEffe = new MusicPlayerThread();
                         soundEffect3.filePath = "assets/sounds/correct.wav";
                         soundEffect1.loop = false;
                         soundEffect1.start();
