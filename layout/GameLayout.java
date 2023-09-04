@@ -58,7 +58,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == quitButton) {
                     int dialogButton = JOptionPane.YES_NO_OPTION;
-                    int dialogResult = JOptionPane.showConfirmDialog(null, "Are you sure you want to quit?", "Warning", dialogButton);
+                    int dialogResult = JOptionPane.showConfirmDialog(null, "Are you sure you want to quit? All game data will be lost", "Warning", dialogButton);
                     if (dialogResult == JOptionPane.YES_OPTION) {
                         System.exit(0);
                     }
