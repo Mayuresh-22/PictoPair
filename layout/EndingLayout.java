@@ -14,7 +14,7 @@ public class EndingLayout implements ScreenStructure{
     JButton play, settings, quite, yes, no;
     JFrame app;
     EndingLayout thisLayout;
-    int matches. int turns;
+    int matches, int turns;
     public EndingLayout(JFrame app){
         this.app = app;
         createLayeredPane();
