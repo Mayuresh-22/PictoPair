@@ -21,6 +21,7 @@ public class Cards implements ActionListener {
     public ImageIcon defaultImg, mainImg;
     static JFrame app;
     static GameLayout thisLayout;
+    EndingLayout endingLayout = new EndingLayout(app);
 
     public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path, int id) {
 
