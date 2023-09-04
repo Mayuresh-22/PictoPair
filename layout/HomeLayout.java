@@ -49,8 +49,8 @@ public class HomeLayout implements ScreenStructure {
         HomePanel.add(layeredPane);
         HomePanel.setOpaque(true);
     }
-    
-    GameLayout gameLayout = new GameLayout(app);
+
+   
 
     public void getthisLayout(HomeLayout thisLayout) {
         this.thisLayout = thisLayout;
