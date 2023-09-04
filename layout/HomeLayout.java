@@ -82,6 +82,7 @@ public class HomeLayout implements ScreenStructure{
                 layeredPane.revalidate();
                 layeredPane.repaint();
 
+                
                 // Play GameLayout
                 GameLayout gameLayout = new GameLayout(app);
                 app.remove(thisLayout.getHomePanel());
