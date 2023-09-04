@@ -161,7 +161,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
         scorePanel.setLayout(new GridLayout(2, 1, 0, 20));
 
         // Creating Fonts for Labels
-        Font labelFont = new Font("SansSerif",Font.BOLD,20);
+        // Font labelFont = new Font("SansSerif",Font.BOLD,20);
         
         // Styling Score Labels
         matchesLabel.setFont(labelFont);
