@@ -100,6 +100,7 @@ public class Cards implements ActionListener {
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
                             app.revalidate();
                             app.repaint();
+                            
                         }
 
                     }
