@@ -92,7 +92,7 @@ public class Cards implements ActionListener {
                         GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
 
                         // Checking if game is over
-                        if (GameLayout.matches == 1 || GameLayout.turns == 0) {
+                        if (GameLayout.matches == 12 || GameLayout.turns == 0) {
                             // Call Ending Screen Method
                             EndingLayout endingLayout = new EndingLayout(app);
                             app.remove(thisLayout.getGamePanel());
