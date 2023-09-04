@@ -15,6 +15,7 @@ public class HomeLayout implements ScreenStructure {
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no, musicOptionButton, gridOptionButton;
+     JLabel loadingAnim = new JLabel(new ImageIcon("assets/images/loading.gif"));
     JFrame app;
     ImageIcon musicOn, musicOff, def;
     HomeLayout thisLayout;
