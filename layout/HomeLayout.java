@@ -87,7 +87,7 @@ public class HomeLayout implements ScreenStructure {
                 layeredPane.repaint();
 
                 // 
-                Timer timer = new Timer(900, new ActionListener() {
+                Timer timer = new Timer(2900, new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
