@@ -148,7 +148,7 @@ public class Cards implements ActionListener {
 
                             // Playing Final Sound Effect
                              MusicPlayerThread congrats= new MusicPlayerThread();
-                             congrats.filePath = "assets/sounds/final.";
+                             congrats.filePath = "assets/sounds/final.wav";
                              congrats.loop = false;
                              congrats.start();
                         }
