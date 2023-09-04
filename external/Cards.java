@@ -1,13 +1,12 @@
 package external;
 
 import javax.swing.*;
-
 import layout.EndingLayout;
 import layout.GameLayout;
-
 import java.awt.BorderLayout;
 import java.awt.event.*;
 import java.util.Vector;
+
 
 // Card Class
 public class Cards implements ActionListener {
@@ -28,6 +27,7 @@ public class Cards implements ActionListener {
         button = new JButton(defaultImg);
         button.setBorderPainted(false);
         button.setFocusPainted(false);
+        button.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         button.addActionListener(this);
 
         this.status = status;
@@ -85,20 +85,27 @@ public class Cards implements ActionListener {
                         c1.button.setEnabled(false);
                         c2.button.setEnabled(false);
 
+                        // Updating Matches and Turns
                         GameLayout.matches += 1;
                         GameLayout.turns -= 1;
-
                         GameLayout.matchesLabel.setText("Matches : " + GameLayout.matches);
                         GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
 
+<<<<<<< HEAD
                         if (GameLayout.matches == 12 || GameLayout.turns <= 0) {
+=======
+                        // Checking if game is over
+                        if (GameLayout.matches == 12 || GameLayout.turns == 0) {
+>>>>>>> af61838afb84c30d949c7b6e2989e58c7255d863
                             // Call Ending Screen Method
                             EndingLayout endingLayout = new EndingLayout(app);
                             app.remove(thisLayout.getGamePanel());
+                            endingLayout.getthisLayout(endingLayout);
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
                             app.revalidate();
                             app.repaint();
                         }
+
                     }
                 });
                 timer.setRepeats(false);

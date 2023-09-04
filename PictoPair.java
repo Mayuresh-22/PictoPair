@@ -3,13 +3,14 @@ import java.awt.event.*;
 import javax.swing.*;
 import layout.*;
 import external.*;
-// Devang App Changed - 02
+
+
 class App {
     public JFrame app = new JFrame("PictoPair - Memory Game");
     LoadingLayout loadingLayout = new LoadingLayout();
-    HomeLayout homeLayout = new HomeLayout(app);
     MusicPlayerThread soundEffect = new MusicPlayerThread();
     MusicPlayerThread musicPlayer = new MusicPlayerThread();
+    HomeLayout homeLayout = new HomeLayout(app, musicPlayer);
     App(){
         appConfig();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
