@@ -15,7 +15,6 @@ public class HomeLayout implements ScreenStructure {
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no, musicOptionButton, gridOptionButton;
-     JLabel loadingAnim = new JLabel(new ImageIcon("assets/images/loading.gif"));
     JFrame app;
     ImageIcon musicOn, musicOff, def;
     HomeLayout thisLayout;
@@ -92,7 +91,7 @@ public class HomeLayout implements ScreenStructure {
                 Timer timer = new Timer(5000, new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        loadingPanel.remove(loadingAnim);
+                        loadingPanel.remove()
                         // Play GameLayout
                         app.remove(thisLayout.getHomePanel());
                         GameLayout gameLayout = new GameLayout(app);
