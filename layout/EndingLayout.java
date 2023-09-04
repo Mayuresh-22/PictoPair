@@ -9,7 +9,7 @@ import interfaces.*;
 
 
 public class EndingLayout implements ScreenStructure{
-    JPanel EndingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new BorderLayout()), loadingPanel = new JPanel(new GridBagLayout());
+    JPanel EndingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new BorderLayout());
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no;
