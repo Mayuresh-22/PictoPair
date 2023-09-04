@@ -86,6 +86,7 @@ public class HomeLayout implements ScreenStructure {
                 layeredPane.revalidate();
                 layeredPane.repaint();
 
+                // 
                 Timer timer = new Timer(4900, new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
