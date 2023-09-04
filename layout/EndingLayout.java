@@ -93,6 +93,25 @@ public class EndingLayout implements ScreenStructure {
         play.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
+                // Loading animation
+                layeredPane.remove(menuPanel);
+                layeredPane.add(loadingPanel, BorderLayout.CENTER);
+                layeredPane.revalidate();
+                layeredPane.repaint();
+
+                //Remove LoadingPanel after 5 seconds 
+                Timer timer = new Timer(5000, new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Play GameLayout
+                        app.remove(thisLayout.getHomePanel());
+                        app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
+                        app.revalidate();
+                        app.repaint();
+                    }
+                });
+                timer.setRepeats(false);
+                timer.start();
                 // Play GameLayout
                 GameLayout.matches = 0;
                 GameLayout.turns = 30;
