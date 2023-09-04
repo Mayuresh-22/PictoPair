@@ -91,12 +91,8 @@ public class Cards implements ActionListener {
                         GameLayout.matchesLabel.setText("Matches : " + GameLayout.matches);
                         GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
 
-<<<<<<< HEAD
-                        if (GameLayout.matches == 12 || GameLayout.turns <= 0) {
-=======
                         // Checking if game is over
                         if (GameLayout.matches == 12 || GameLayout.turns == 0) {
->>>>>>> af61838afb84c30d949c7b6e2989e58c7255d863
                             // Call Ending Screen Method
                             EndingLayout endingLayout = new EndingLayout(app);
                             app.remove(thisLayout.getGamePanel());
