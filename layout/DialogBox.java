@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import external.TextBubbleBorder;
 
 public class DialogBox {
-    
+
     // Settings Box Function
     public static void createSettingsBox() {
         layeredPane.remove(menuPanel);
@@ -110,6 +110,67 @@ public class DialogBox {
 
         dialog.add(message, BorderLayout.NORTH);
         dialog.add(optionsPanel, BorderLayout.CENTER);
+        dialog.add(buttonPanel, BorderLayout.SOUTH);
+        dialog.setVisible(true);
+    }
+
+    // Dialog Box for Quit function
+    public void createQuitBox() {
+        layeredPane.remove(menuPanel);
+        layeredPane.repaint();
+
+        // dialog box to ask confirmation to quit
+        JDialog dialog = new JDialog();
+        dialog.setAlwaysOnTop(true);
+        dialog.setModal(true);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialog.setSize(500, 200);
+        dialog.setLocationRelativeTo(null);
+        dialog.setLayout(new BorderLayout());
+        dialog.setUndecorated(true);
+        dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 4, 20, 0));
+
+        JLabel message = new JLabel("Are you sure you want to quit?");
+        message.setFont(new Font("Arial", Font.BOLD, 30));
+        message.setForeground(new Color(131, 0, 255, 255));
+        message.setHorizontalAlignment(JLabel.CENTER);
+        message.setVerticalAlignment(JLabel.CENTER);
+
+        JButton yes = new JButton();
+        yes = createButton(yes, "YES", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
+        yes.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                message.setText("Thank you for playing! Exiting...");
+                Timer t = new Timer(1500, new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        System.exit(0);
+                    }
+                });
+                t.setRepeats(false);
+                t.start();
+            }
+        });
+
+        JButton no = new JButton();
+        no = createButton(no, "NO", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
+        no.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose();
+                menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
+                layeredPane.remove(bgPanel);
+                layeredPane.add(menuPanel);
+                layeredPane.add(bgPanel);
+                layeredPane.repaint();
+            }
+        });
+
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 0));
+        buttonPanel.add(yes);
+        buttonPanel.add(no);
+        buttonPanel.setBackground(Color.WHITE);
+        buttonPanel.setOpaque(true);
+
+        dialog.add(message, BorderLayout.CENTER);
         dialog.add(buttonPanel, BorderLayout.SOUTH);
         dialog.setVisible(true);
     }
