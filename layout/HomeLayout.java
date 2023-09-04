@@ -32,7 +32,7 @@ public class HomeLayout implements ScreenStructure{
         musicOn = new ImageIcon(new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
         musicOff = new ImageIcon(new ImageIcon("assets/images/sound-off.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
         def = musicOn;
-        
+
         createMenuPanel();
 
         createLoadingPanel();
@@ -111,6 +111,7 @@ public class HomeLayout implements ScreenStructure{
         menuPanel.setOpaque(true);
         menuPanel.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
     }
+    
 
     public JButton createButton(JButton button, String text, Color bg, int x, int y, int width, int height, int fontSize){
         button = new JButton(text);
