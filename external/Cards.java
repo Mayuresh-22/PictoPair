@@ -100,7 +100,7 @@ public class Cards implements ActionListener {
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
                             app.revalidate();
                             app.repaint();
-                             // Playing Correct Sound Effect
+                             // Playing Final Sound Effect
                         MusicPlayerThread congrats= new MusicPlayerThread();
                         congrats.filePath = "assets/sounds/final";
                         congrats.loop = false;
