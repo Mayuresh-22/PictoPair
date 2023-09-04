@@ -32,8 +32,8 @@ public class EndingLayout implements ScreenStructure{
         EndingPanel.setOpaque(true);
     }
 
-    public void getthisLayout(EndingLayout tempthisLayout){
-        this.thisLayout = tempthisLayout;
+    public void getthisLayout(EndingLayout thisLayout){
+        this.thisLayout = thisLayout;
     }
     
     public JPanel getEndingPanel() {
