@@ -78,7 +78,7 @@ public class HomeLayout implements ScreenStructure{
             public void actionPerformed(ActionEvent e){
                 // Loading animation
                 layeredPane.remove(menuPanel);
-                layeredPane.add(loadingPanel,Borde)
+                layeredPane.add(loadingPanel,BorderLayout.CENTER)
 
                 // Play GameLayout
                 GameLayout gameLayout = new GameLayout(app);
