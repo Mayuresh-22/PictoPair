@@ -93,6 +93,10 @@ public class HomeLayout implements ScreenStructure{
                 app.repaint();
             }
         });
+        timer.setRepeats(false);
+        timer.start();
+            }
+        });
 
         settings = createButton(settings, "SETTINGS", new Color(77,0,206,255), 0, 0, 500, 100, 40);
         settings.addActionListener(new ActionListener(){
