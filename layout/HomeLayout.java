@@ -34,7 +34,7 @@ public class HomeLayout implements ScreenStructure{
         def = musicOn;
         createMenuPanel();
 
-        create
+        createLoadingPanel();
 
         // Adding to layeredPane
         layeredPane.add(menuPanel, BorderLayout.CENTER);
