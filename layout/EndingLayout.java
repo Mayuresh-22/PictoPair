@@ -104,10 +104,12 @@ public class EndingLayout implements ScreenStructure {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
-                        app.remove(thisLayout.getHomePanel());
-                        app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
-                        app.revalidate();
-                        app.repaint();
+                        GameLayout.matches = 0;
+                GameLayout.turns = 30;
+                app.remove(EndingLayout.this.getEndingPanel());
+                app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
+                app.revalidate();
+                app.repaint();
                     }
                 });
                 timer.setRepeats(false);
