@@ -118,7 +118,7 @@ public class HomeLayout implements ScreenStructure {
         quite.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Quit DialogBox
-                DialogBoxcreateQuitBox();
+                DialogBox.createQuitBox();
             }
         });
 
