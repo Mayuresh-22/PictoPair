@@ -117,7 +117,7 @@ public class HomeLayout implements ScreenStructure{
         JLabel loadingAnim = new JLabel(new ImageIcon("assets/images/logogifclear.gif"));
         loadingPanel.setBounds((ScreenStructure.WIDTH/2)-200, (ScreenStructure.HEIGHT/2)-200, 400, 400);
         loadingPanel.setOpaque(true);
-        loadingPanel.add(logo);
+        loadingPanel.add(loadingAnim);
     }
 
     public JButton createButton(JButton button, String text, Color bg, int x, int y, int width, int height, int fontSize){
