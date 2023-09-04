@@ -27,7 +27,7 @@ public class EndingLayout implements ScreenStructure {
         createMenuPanel();
 
         createLoadingPanel();
-        
+
         // Adding to layeredPane
         layeredPane.add(menuPanel, BorderLayout.CENTER);
         layeredPane.add(bgPanel);
@@ -123,6 +123,7 @@ public class EndingLayout implements ScreenStructure {
         menuPanel.setOpaque(true);
         menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
     }
+    
 
     public JButton createButton(JButton button, String text, int x, int y, int width, int height, int fontSize) {
         button = new JButton(text);
