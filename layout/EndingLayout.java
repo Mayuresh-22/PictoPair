@@ -70,7 +70,6 @@ public class EndingLayout implements ScreenStructure {
     }
 
     public void createMenuPanel() {
-
         Font headingFont = new Font(Constants.FONT_FAMILY, Font.BOLD, 45);
         JLabel headingLabel = new JLabel("GAME OVER");
         headingLabel.setFont(headingFont);
@@ -81,8 +80,6 @@ public class EndingLayout implements ScreenStructure {
                 "You matched " + GameLayout.matches + " Cards in " + (30 - GameLayout.turns) + " Turns !");
         scoreLabel.setFont(scoreFont);
         scoreLabel.setForeground(Color.WHITE);
-        scoreLabel.setVerticalAlignment(JLabel.CENTER);
-        scoreLabel.setHorizontalAlignment(JLabel.CENTER);
 
         JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 40, 0));
         buttonsPanel.setBackground(null);
