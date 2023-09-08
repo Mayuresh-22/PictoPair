@@ -33,6 +33,7 @@ public class LoadingLayout implements ScreenStructure{
 
         // Add to LoadingPanel
         layeredPane.add(logoPanel, BorderLayout.CENTER);
+        layeredPane.add(credits);
         layeredPane.add(bgPanel);
 
         // Add to LoadingPanel
