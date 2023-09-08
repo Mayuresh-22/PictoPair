@@ -23,6 +23,15 @@ public class LoadingLayout implements ScreenStructure{
         logoPanel.setOpaque(true);
         logoPanel.add(logo);
 
+        // credits
+        credits = new JLabel("Made by: Group 1");
+        credits.setBounds((ScreenStructure.WIDTH/2)-100, (ScreenStructure.HEIGHT/2)+200, 200, 50);
+        credits.setForeground(Color.WHITE);
+        credits.setFont(new Font("Arial", Font.BOLD, 20));
+        credits.setHorizontalAlignment(JLabel.CENTER);
+        credits.setVerticalAlignment(JLabel.CENTER);
+        logoPanel.add(credits);
+
         // Add to LoadingPanel
         layeredPane.add(logoPanel, BorderLayout.CENTER);
         layeredPane.add(bgPanel);
