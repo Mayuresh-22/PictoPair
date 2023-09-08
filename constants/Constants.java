@@ -1,4 +1,4 @@
-package constants;
+package interfaces;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
