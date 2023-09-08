@@ -36,7 +36,6 @@ public class HomeLayout implements ScreenStructure {
                 new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
         musicOff = new ImageIcon(
                 new ImageIcon("assets/images/sound-off.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
-        Constants.defaultMusicIcon = musicOn;
 
         createMenuPanel();
 
@@ -202,12 +201,12 @@ public class HomeLayout implements ScreenStructure {
         gridOptionButton = createButton(gridOptionButton, "3x3", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
 
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
-        musicOptionButton.setIcon(def);
+        musicOptionButton.setIcon(Constants.defaultMusicIcon);
         musicOptionButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (musicOptionButton.getIcon().equals(musicOn)) {
                     musicOptionButton.setIcon(musicOff);
-                    def = musicOff;
+                    Constants.defaultMusicIcon = musicOff;
                     synchronized (musicPlayer) {
                         try {
                             musicPlayer.stopMusic();
