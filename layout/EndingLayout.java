@@ -11,7 +11,7 @@ import interfaces.*;
 
 public class EndingLayout implements ScreenStructure {
     JPanel EndingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()),
-    menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 100, 20)),
+    menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 40)),
     loadingPanel = new JPanel(new GridBagLayout());
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
