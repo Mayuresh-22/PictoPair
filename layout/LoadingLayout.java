@@ -30,7 +30,6 @@ public class LoadingLayout implements ScreenStructure{
         credits.setFont(new Font("Arial", Font.BOLD, 20));
         credits.setHorizontalAlignment(JLabel.CENTER);
         credits.setVerticalAlignment(JLabel.CENTER);
-        logoPanel.add(credits);
 
         // Add to LoadingPanel
         layeredPane.add(logoPanel, BorderLayout.CENTER);
