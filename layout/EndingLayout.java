@@ -11,7 +11,7 @@ import interfaces.*;
 
 public class EndingLayout implements ScreenStructure {
     JPanel EndingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()),
-    menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 20)),
+    menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 30)),
     loadingPanel = new JPanel(new GridBagLayout());
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
@@ -158,7 +158,7 @@ public class EndingLayout implements ScreenStructure {
         menuPanel.add(scoreLabel);
         menuPanel.add(buttonsPanel);
 
-        menuPanel.setBounds((ScreenStructure.WIDTH / 2) - 350, (ScreenStructure.HEIGHT / 2) - 150, 700, 500);
+        menuPanel.setBounds((ScreenStructure.WIDTH / 2) - 350, (ScreenStructure.HEIGHT / 2) - 150, 700, 400);
         menuPanel.setBackground(Constants.COLOR_PRIMARY);
         menuPanel.setOpaque(true);
         menuPanel.setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 10, 70, 0));
