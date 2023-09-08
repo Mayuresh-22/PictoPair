@@ -18,7 +18,7 @@ public class HomeLayout implements ScreenStructure {
     JFrame app;
     ImageIcon musicOn, musicOff, def;
     HomeLayout thisLayout;
-    MusicPlayerThread musicPlayer;
+    public static MusicPlayerThread musicPlayer;
     
 
     public HomeLayout(JFrame app, MusicPlayerThread musicPlayer) {
