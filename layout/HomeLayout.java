@@ -251,6 +251,7 @@ public class HomeLayout implements ScreenStructure {
             }
         });
 
+        // Adding to dialog
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 0));
         buttonPanel.add(back);
         buttonPanel.setBackground(Constants.COLOR_PRIMARY);
