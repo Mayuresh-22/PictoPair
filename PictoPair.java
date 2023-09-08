@@ -16,7 +16,7 @@ class App {
     App(){
         appConfig();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
-        soundEffect.filePath = "assets/sounds/intro.wav";
+        soundEffect.filePath = Constants.SOUND_EFFECT_FILE_PATH;
         soundEffect.loop = false;
         soundEffect.start();
         // Remove LoadingPanel after 5 seconds
