@@ -8,11 +8,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import interfaces.*;
 
+
 public class HomeLayout implements ScreenStructure {
     JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()),
-            menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 40)),
-            loadingPanel = new JPanel(new GridBagLayout());
-
+    menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 40)),
+    loadingPanel = new JPanel(new GridBagLayout());
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no, musicOptionButton, gridOptionButton;
@@ -21,7 +21,6 @@ public class HomeLayout implements ScreenStructure {
     HomeLayout thisLayout;
     public static MusicPlayerThread musicPlayer;
     
-
     public HomeLayout(JFrame app, MusicPlayerThread musicPlayer) {
         this.app = app;
         HomeLayout.musicPlayer = musicPlayer;
@@ -50,8 +49,6 @@ public class HomeLayout implements ScreenStructure {
         HomePanel.setOpaque(true);
     }
 
-   
-
     public void getthisLayout(HomeLayout thisLayout) {
         this.thisLayout = thisLayout;
     }
@@ -71,9 +68,7 @@ public class HomeLayout implements ScreenStructure {
     @Override
     public void createBgPanel(String imagePath) {
         // bgPanel
-        bg = new JLabel(new ImageIcon(new ImageIcon(imagePath).getImage().getScaledInstance(ScreenStructure.WIDTH,
-                ScreenStructure.HEIGHT, Image.SCALE_SMOOTH)));
-
+        bg = new JLabel(new ImageIcon(new ImageIcon(imagePath).getImage().getScaledInstance(ScreenStructure.WIDTH, ScreenStructure.HEIGHT, Image.SCALE_SMOOTH)));
         bgPanel.setBounds(0, 0, ScreenStructure.WIDTH, ScreenStructure.HEIGHT);
         bgPanel.setOpaque(true);
         bgPanel.add(bg);
@@ -141,17 +136,16 @@ public class HomeLayout implements ScreenStructure {
         loadingPanel.add(loadingAnim);
     }
 
-    public JButton createButton(JButton button, String text, Color bg, int x, int y, int width, int height,
-            int fontSize) {
+    public JButton createButton(JButton button, String text, Color bg, int x, int y, int width, int height, int fontSize) {
         button = new JButton(text);
         button.setBounds(x, y, width, height);
         button.setBackground(bg);
+        button.setFont(new Font(Constants.FONT_FAMILY, Font.BOLD, fontSize));
         button.setOpaque(true);
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
         button.setBorderPainted(false);
         button.setFocusPainted(false);
         button.setForeground(Color.WHITE);
-        button.setFont(new Font("Arial", Font.BOLD, fontSize));
 
         return button;
     }
@@ -175,7 +169,7 @@ public class HomeLayout implements ScreenStructure {
         dialog.getRootPane().setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 4, 70, 0));
 
         JLabel message = new JLabel("SETTINGS");
-        message.setFont(new Font("Arial", Font.BOLD, 30));
+        message.setFont(new Font(Constants.FONT_FAMILY, Font.BOLD, 30));
         message.setForeground(Constants.COLOR_PRIMARY);
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
@@ -186,13 +180,13 @@ public class HomeLayout implements ScreenStructure {
         JPanel musicOptionPanel = new JPanel(new FlowLayout());
 
         JLabel gridOptionLabel = new JLabel("Grid Size: ");
-        gridOptionLabel.setFont(new Font("Arial", Font.BOLD, 25));
+        gridOptionLabel.setFont(new Font(Constants.FONT_FAMILY, Font.BOLD, 25));
         gridOptionLabel.setForeground(Color.WHITE);
         gridOptionLabel.setHorizontalAlignment(JLabel.CENTER);
         gridOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
         JLabel musicOptionLabel = new JLabel("Music: ");
-        musicOptionLabel.setFont(new Font("Arial", Font.BOLD, 25));
+        musicOptionLabel.setFont(new Font(Constants.FONT_FAMILY, Font.BOLD, 25));
         musicOptionLabel.setForeground(Color.WHITE);
         musicOptionLabel.setHorizontalAlignment(JLabel.CENTER);
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
@@ -200,6 +194,7 @@ public class HomeLayout implements ScreenStructure {
         // grid size button
         gridOptionButton = createButton(gridOptionButton, "3x3", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
 
+        // music on/off button
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
         musicOptionButton.setIcon(Constants.defaultMusicIcon);
         musicOptionButton.addActionListener(new ActionListener() {
@@ -224,18 +219,18 @@ public class HomeLayout implements ScreenStructure {
             }
         });
 
+        // Adding to optionsPanel
         gridOptionPanel.add(gridOptionLabel);
         gridOptionPanel.add(gridOptionButton);
         gridOptionPanel.setBackground(Constants.COLOR_PRIMARY);
-
         musicOptionPanel.add(musicOptionLabel);
         musicOptionPanel.add(musicOptionButton);
         musicOptionPanel.setBackground(Constants.COLOR_PRIMARY);
-
         optionsPanel.add(gridOptionPanel);
         optionsPanel.add(musicOptionPanel);
         optionsPanel.setBackground(Constants.COLOR_PRIMARY);
 
+        // Back Button
         JButton back = new JButton();
         back = createButton(back, "BACK", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
         back.addActionListener(new ActionListener() {
@@ -250,6 +245,7 @@ public class HomeLayout implements ScreenStructure {
             }
         });
 
+        // Adding to dialog
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 0));
         buttonPanel.add(back);
         buttonPanel.setBackground(Constants.COLOR_PRIMARY);
@@ -271,14 +267,14 @@ public class HomeLayout implements ScreenStructure {
         dialog.setAlwaysOnTop(true);
         dialog.setModal(true);
         dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-        dialog.setSize(500, 200);
+        dialog.setSize(700, 200);
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
         dialog.getRootPane().setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 4, 20, 0));
 
         JLabel message = new JLabel("Are you sure you want to quit?");
-        message.setFont(new Font("Arial", Font.BOLD, 30));
+        message.setFont(new Font(Constants.FONT_FAMILY, Font.BOLD, 30));
         message.setForeground(Constants.COLOR_PRIMARY);
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);

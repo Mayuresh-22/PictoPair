@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
+
 public class Constants {
     // create a constant for file path
     public static final String MUSIC_FILE_PATH = "assets/sounds/bgm.wav";
@@ -19,4 +20,9 @@ public class Constants {
     // create a constant for color
     public static final Color COLOR_PRIMARY = new Color(131, 0, 255, 255);
     public static final Color COLOR_BUTTON = new Color(77, 0, 206, 255);
+
+    // create a constant for font
+    public static final String FONT_FAMILY = "Comic Sans MS";
+    public static final int FONT_SIZE = 20;
+    public static final int FONT_STYLE = 1;
 }

@@ -57,6 +57,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
         quitButton.setBorderPainted(false);
         quitButton.setFocusPainted(false);
         quitButton.setForeground(Color.WHITE);
+        quitButton.setCursor(new Cursor(12));
         quitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == quitButton) {
@@ -99,9 +100,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
     @Override
     public void createBgPanel(String imagePath) {
         // bgPanel
-        bg = new JLabel(new ImageIcon(new ImageIcon(imagePath).getImage().getScaledInstance(ScreenStructure.WIDTH,
-                ScreenStructure.HEIGHT, Image.SCALE_SMOOTH)));
-
+        bg = new JLabel(new ImageIcon(new ImageIcon(imagePath).getImage().getScaledInstance(ScreenStructure.WIDTH,ScreenStructure.HEIGHT, Image.SCALE_SMOOTH)));
         bgPanel.setBounds(0, 0, ScreenStructure.WIDTH, ScreenStructure.HEIGHT);
         bgPanel.setOpaque(true);
         bgPanel.add(bg);
