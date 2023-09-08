@@ -10,6 +10,5 @@ public class Constants {
     public static final String ENDING_SCREEN_IMAGE_PATH = "assets/images/EndingScreen-bg.png";
     public static final String HOME_SCREEN_IMAGE_PATH = "assets/images/HomeScreen-bg.png";
     public static final String LOADING_SCREEN_IMAGE_PATH = "assets/images/LoadingScreen-bg.png";
-    ImageIcon def;
     public static final ImageIcon defaultMusicIcon = new ImageIcon("assets/images/music.png");
 }
