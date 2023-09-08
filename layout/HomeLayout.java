@@ -236,6 +236,7 @@ public class HomeLayout implements ScreenStructure {
         optionsPanel.add(musicOptionPanel);
         optionsPanel.setBackground(Constants.COLOR_PRIMARY);
 
+        // Back Button
         JButton back = new JButton();
         back = createButton(back, "BACK", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
         back.addActionListener(new ActionListener() {
