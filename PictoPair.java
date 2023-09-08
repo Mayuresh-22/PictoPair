@@ -28,7 +28,7 @@ class App {
                 homeLayout.getthisLayout(homeLayout);
                 app.revalidate();
                 app.repaint();
-                musicPlayer.filePath = "assets/sounds/bgm.wav";
+                musicPlayer.filePath = Constants.MUSIC_FILE_PATH;
                 musicPlayer.loop = true;
                 musicPlayer.start();
             }
