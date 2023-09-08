@@ -51,7 +51,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
         createScorePanel();
 
         // quit button
-        quitButton.setBounds((int) (ScreenStructure.WIDTH * 0.90), (int) (ScreenStructure.HEIGHT * 0.0),(int) (ScreenStructure.WIDTH * 0.09), (int) (ScreenStructure.HEIGHT * 0.07));
+        quitButton.setBounds((int) (ScreenStructure.WIDTH * 0.95), (int) (ScreenStructure.HEIGHT * 0.0),(int) (ScreenStructure.WIDTH * 0.05), (int) (ScreenStructure.HEIGHT * 0.03));
         quitButton.setBackground(Color.red);
         quitButton.setOpaque(true);
         quitButton.setBorderPainted(false);
