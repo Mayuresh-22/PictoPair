@@ -133,7 +133,7 @@ public class EndingLayout implements ScreenStructure {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
-                        HomeLayout homeLayout = new HomeLayout(app, null);
+                        HomeLayout homeLayout = new HomeLayout(app, HomeLayout.musicPlayer);
                         app.remove(EndingLayout.this.getEndingPanel());
                         app.add(homeLayout.getHomePanel(), BorderLayout.CENTER);
                         app.revalidate();
