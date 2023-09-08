@@ -200,6 +200,7 @@ public class HomeLayout implements ScreenStructure {
         // grid size button
         gridOptionButton = createButton(gridOptionButton, "3x3", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
 
+        // music on/off button
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
         musicOptionButton.setIcon(Constants.defaultMusicIcon);
         musicOptionButton.addActionListener(new ActionListener() {
