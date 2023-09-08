@@ -169,7 +169,7 @@ public class HomeLayout implements ScreenStructure {
         dialog.getRootPane().setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 4, 70, 0));
 
         JLabel message = new JLabel("SETTINGS");
-        message.setFont(new Font("Arial", Font.BOLD, 30));
+        message.setFont(new Font(Constants.FONT_FAMILY, Font.BOLD, 30));
         message.setForeground(Constants.COLOR_PRIMARY);
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
@@ -180,13 +180,13 @@ public class HomeLayout implements ScreenStructure {
         JPanel musicOptionPanel = new JPanel(new FlowLayout());
 
         JLabel gridOptionLabel = new JLabel("Grid Size: ");
-        gridOptionLabel.setFont(new Font("Arial", Font.BOLD, 25));
+        gridOptionLabel.setFont(new Font(Constants.FONT_FAMILY, Font.BOLD, 25));
         gridOptionLabel.setForeground(Color.WHITE);
         gridOptionLabel.setHorizontalAlignment(JLabel.CENTER);
         gridOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
         JLabel musicOptionLabel = new JLabel("Music: ");
-        musicOptionLabel.setFont(new Font("Arial", Font.BOLD, 25));
+        musicOptionLabel.setFont(new Font(Constants.FONT_FAMILY, Font.BOLD, 25));
         musicOptionLabel.setForeground(Color.WHITE);
         musicOptionLabel.setHorizontalAlignment(JLabel.CENTER);
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
@@ -274,7 +274,7 @@ public class HomeLayout implements ScreenStructure {
         dialog.getRootPane().setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 4, 20, 0));
 
         JLabel message = new JLabel("Are you sure you want to quit?");
-        message.setFont(new Font("Arial", Font.BOLD, 30));
+        message.setFont(new Font(Constants.FONT_FAMILY, Font.BOLD, 30));
         message.setForeground(Constants.COLOR_PRIMARY);
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
