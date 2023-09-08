@@ -25,7 +25,7 @@ public class LoadingLayout implements ScreenStructure{
 
         // credits at the bottom of the screen
         credits = new JLabel("Made by: Mayuresh Choudhary, Devang Gentyal, Om Gaikwad");
-        credits.setBounds((ScreenStructure.WIDTH/2)-100, (ScreenStructure.HEIGHT/2)+200, 700, 50);
+        credits.setBounds((ScreenStructure.WIDTH/2)-10, (ScreenStructure.HEIGHT/2)+200, 700, 50);
         credits.setForeground(Color.lightGray);
         credits.setFont(new Font("Arial", Font.BOLD, 20));
         credits.setHorizontalAlignment(JLabel.CENTER);
