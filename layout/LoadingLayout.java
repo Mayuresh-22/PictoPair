@@ -24,7 +24,7 @@ public class LoadingLayout implements ScreenStructure{
         logoPanel.add(logo);
 
         // credits at the bottom of the screen
-        credits = new JLabel("Made by: Group 1");
+        credits = new JLabel("Made by: Mayuresh Choudhary, Devang Gentyal, Om Gaikwad");
         credits.setBounds((ScreenStructure.WIDTH/2)-100, (ScreenStructure.HEIGHT/2)+200, 200, 50);
         credits.setForeground(Color.lightGray);
         credits.setFont(new Font("Arial", Font.BOLD, 20));
