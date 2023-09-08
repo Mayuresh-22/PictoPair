@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import interfaces.*;
 
+
 public class HomeLayout implements ScreenStructure {
     JPanel HomePanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()),
     menuPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 40)),
