@@ -1,5 +1,6 @@
 package constants;
 
+import java.awt.Color;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
@@ -16,5 +17,5 @@ public class Constants {
     public static ImageIcon defaultMusicIcon = new ImageIcon(new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
 
     // create a constant for color
-    public static final String COLOR_PRIMARY = "#F2F2F2";
+    public static final Color COLOR_PRIMARY = new Color(131, 0, 255, 255);
 }
