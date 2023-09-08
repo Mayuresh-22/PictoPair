@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class LoadingLayout implements ScreenStructure{
     JPanel LoadingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), logoPanel = new JPanel(new BorderLayout());
-    JLabel bg, logo. credits;
+    JLabel bg, logo, credits;
     JLayeredPane layeredPane = new JLayeredPane();
     
     public LoadingLayout(){
