@@ -80,7 +80,7 @@ public class HomeLayout implements ScreenStructure {
     }
 
     public void createMenuPanel() {
-        play = createButton(play, "PLAY", new Color(77, 0, 206, 255), 0, 0, 500, 100, 40);
+        play = createButton(play, "PLAY", Constants.COLOR_BUTTON, 0, 0, 500, 100, 40);
         play.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Loading animation
@@ -106,7 +106,7 @@ public class HomeLayout implements ScreenStructure {
             }
         });
 
-        settings = createButton(settings, "SETTINGS", new Color(77, 0, 206, 255), 0, 0, 500, 100, 40);
+        settings = createButton(settings, "SETTINGS", Constants.COLOR_BUTTON, 0, 0, 500, 100, 40);
         settings.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Settings DialogBox
@@ -114,7 +114,7 @@ public class HomeLayout implements ScreenStructure {
             }
         });
 
-        quite = createButton(quite, "QUIT", new Color(77, 0, 206, 255), 0, 0, 500, 100, 40);
+        quite = createButton(quite, "QUIT", Constants.COLOR_BUTTON, 0, 0, 500, 100, 40);
         quite.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Quit DialogBox
@@ -198,7 +198,7 @@ public class HomeLayout implements ScreenStructure {
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
         // grid size button
-        gridOptionButton = createButton(gridOptionButton, "3x3", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
+        gridOptionButton = createButton(gridOptionButton, "3x3", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
 
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
         musicOptionButton.setIcon(Constants.defaultMusicIcon);
@@ -237,7 +237,7 @@ public class HomeLayout implements ScreenStructure {
         optionsPanel.setBackground(Constants.COLOR_PRIMARY);
 
         JButton back = new JButton();
-        back = createButton(back, "BACK", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
+        back = createButton(back, "BACK", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
         back.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 dialog.dispose();
@@ -284,7 +284,7 @@ public class HomeLayout implements ScreenStructure {
         message.setVerticalAlignment(JLabel.CENTER);
 
         JButton yes = new JButton();
-        yes = createButton(yes, "YES", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
+        yes = createButton(yes, "YES", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
         yes.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 message.setText("Thank you for playing! Exiting...");
@@ -299,7 +299,7 @@ public class HomeLayout implements ScreenStructure {
         });
 
         JButton no = new JButton();
-        no = createButton(no, "NO", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
+        no = createButton(no, "NO", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
         no.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 dialog.dispose();

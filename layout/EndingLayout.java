@@ -179,7 +179,7 @@ public class EndingLayout implements ScreenStructure {
     public JButton createButton(JButton button, String text, int x, int y, int width, int height, int fontSize) {
         button = new JButton(text);
         button.setBounds(x, y, width, height);
-        button.setBackground(new Color(77, 0, 206, 255));
+        button.setBackground(Constants.COLOR_BUTTON);
         button.setOpaque(true);
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
         button.setBorderPainted(false);
