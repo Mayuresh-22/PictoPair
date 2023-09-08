@@ -119,6 +119,8 @@ public class EndingLayout implements ScreenStructure {
             }
         });
 
+        home = createButton(home, "HOME", 0, 0, 200, 50, 20);
+
         quite = createButton(quite, "QUIT", 0, 0, 200, 50, 20);
         quite.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
