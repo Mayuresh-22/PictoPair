@@ -57,7 +57,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
         quitButton.setBorderPainted(false);
         quitButton.setFocusPainted(false);
         quitButton.setForeground(Color.WHITE);
-        quitButton.setCursor(12);
+        quitButton.setCursor(new Cursor(12));
         quitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == quitButton) {
