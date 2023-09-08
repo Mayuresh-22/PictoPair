@@ -1,8 +1,10 @@
+import external.*;
+import constants.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import layout.*;
-import external.*;
+
 
 
 class App {
@@ -26,7 +28,7 @@ class App {
                 homeLayout.getthisLayout(homeLayout);
                 app.revalidate();
                 app.repaint();
-                musicPlayer.filePath = Constants.MUSIC_FILE_PATH;
+                musicPlayer.filePath = "assets/sounds/bgm.wav";
                 musicPlayer.loop = true;
                 musicPlayer.start();
             }
