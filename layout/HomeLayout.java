@@ -230,6 +230,7 @@ public class HomeLayout implements ScreenStructure {
         gridOptionPanel.add(gridOptionButton);
         gridOptionPanel.setBackground(Constants.COLOR_PRIMARY);
 
+        // Adding to optionsPanel
         musicOptionPanel.add(musicOptionLabel);
         musicOptionPanel.add(musicOptionButton);
         musicOptionPanel.setBackground(Constants.COLOR_PRIMARY);
