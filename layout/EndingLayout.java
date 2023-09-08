@@ -12,7 +12,7 @@ public class EndingLayout implements ScreenStructure {
             menuPanel = new JPanel(new BorderLayout()), loadingPanel = new JPanel(new GridBagLayout());
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
-    JButton play, settings, quite, yes, no;
+    JButton play, settings, quite, yes, no, home;
     JFrame app;
     EndingLayout thisLayout;
     int matches, turns;
