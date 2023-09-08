@@ -141,6 +141,7 @@ public class HomeLayout implements ScreenStructure {
         button = new JButton(text);
         button.setBounds(x, y, width, height);
         button.setBackground(bg);
+        button.setFont(new Font("Comic MS", y, fontSize));
         button.setOpaque(true);
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
         button.setBorderPainted(false);
