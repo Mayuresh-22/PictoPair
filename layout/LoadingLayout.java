@@ -1,6 +1,8 @@
 package layout;
 
 import javax.swing.*;
+
+import constants.Constants;
 import interfaces.*;
 import java.awt.*;
 
