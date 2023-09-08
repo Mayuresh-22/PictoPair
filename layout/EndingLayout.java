@@ -3,7 +3,6 @@ package layout;
 import external.*;
 import javax.swing.*;
 import constants.Constants;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
