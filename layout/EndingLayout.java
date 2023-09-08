@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import interfaces.*;
 
+
 public class EndingLayout implements ScreenStructure {
     JPanel EndingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()),
             menuPanel = new JPanel(new BorderLayout()), loadingPanel = new JPanel(new GridBagLayout());
