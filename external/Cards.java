@@ -20,6 +20,7 @@ public class Cards implements ActionListener {
     public ImageIcon defaultImg, mainImg;
     static JFrame app;
     static GameLayout thisLayout;
+    EndingLayout endingLayout = new EndingLayout(app);
 
     public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path, int id) {
 
@@ -95,10 +96,17 @@ public class Cards implements ActionListener {
                             // Call Ending Screen Method
                             EndingLayout endingLayout = new EndingLayout(app);
                             app.remove(thisLayout.getGamePanel());
-                            endingLayout.getthisLayout(endingLayout);
+                            endingLayout.getthisLayout(endingLayout,GameLayout.matches,GameLayout.turns);
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
                             app.revalidate();
                             app.repaint();
+
+                             // Playing Final Sound Effect
+                             MusicPlayerThread congrats= new MusicPlayerThread();
+                             congrats.filePath = "assets/sounds/final.wav";
+                             congrats.loop = false;
+                             congrats.start();
+
                         }
 
                     }
@@ -126,18 +134,22 @@ public class Cards implements ActionListener {
                         c3.status = "hidden";
                         c4.status = "hidden";
 
-                        // Updating Turns
+                        GameLayout.matches += 0;
                         GameLayout.turns -= 1;
                         GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
-
-                        // Checking if game is over
-                        if (GameLayout.matches == 12 || GameLayout.turns == 0) {
+                        if (GameLayout.matches == 12 || GameLayout.turns <= 0) {
                             // Call Ending Screen Method
-                            EndingLayout endingLayout = new EndingLayout(app);
+                            endingLayout.getthisLayout(endingLayout,GameLayout.matches,GameLayout.turns);
                             app.remove(thisLayout.getGamePanel());
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
                             app.revalidate();
                             app.repaint();
+
+                            // Playing Final Sound Effect
+                             MusicPlayerThread congrats= new MusicPlayerThread();
+                             congrats.filePath = "assets/sounds/final.wav";
+                             congrats.loop = false;
+                             congrats.start();
                         }
                     }
                 });

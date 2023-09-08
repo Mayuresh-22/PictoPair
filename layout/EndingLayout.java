@@ -7,15 +7,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import interfaces.*;
 
-
-public class EndingLayout implements ScreenStructure{
-    JPanel EndingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), menuPanel = new JPanel(new BorderLayout());
+public class EndingLayout implements ScreenStructure {
+    JPanel EndingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()),
+            menuPanel = new JPanel(new BorderLayout()), loadingPanel = new JPanel(new GridBagLayout());
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no;
     JFrame app;
     EndingLayout thisLayout;
-    public EndingLayout(JFrame app){
+    int matches, turns;
+
+    
+
+    public EndingLayout(JFrame app) {
         this.app = app;
         createLayeredPane();
 
@@ -23,6 +27,8 @@ public class EndingLayout implements ScreenStructure{
 
         // menu panel
         createMenuPanel();
+
+        createLoadingPanel();
 
         // Adding to layeredPane
         layeredPane.add(menuPanel, BorderLayout.CENTER);
@@ -33,16 +39,18 @@ public class EndingLayout implements ScreenStructure{
         EndingPanel.setOpaque(true);
     }
 
-    public void getthisLayout(EndingLayout tempthisLayout){
-        this.thisLayout = tempthisLayout;
+    public void getthisLayout(EndingLayout thisLayout, int matches, int turns) {
+        this.thisLayout = thisLayout;
+        this.matches = matches;
+        this.turns = turns;
     }
-    
+
     public JPanel getEndingPanel() {
         return EndingPanel;
     }
 
     @Override
-    public void createLayeredPane(){
+    public void createLayeredPane() {
         // layered pane
         layeredPane.setSize(ScreenStructure.WIDTH, ScreenStructure.HEIGHT);
         layeredPane.setBackground(Color.GRAY);
@@ -50,47 +58,70 @@ public class EndingLayout implements ScreenStructure{
     }
 
     @Override
-    public void createBgPanel(String imagePath){
+    public void createBgPanel(String imagePath) {
         // bgPanel
-        bg = new JLabel(new ImageIcon(new ImageIcon(imagePath).getImage().getScaledInstance(ScreenStructure.WIDTH, ScreenStructure.HEIGHT, Image.SCALE_SMOOTH)));
+        bg = new JLabel(new ImageIcon(new ImageIcon(imagePath).getImage().getScaledInstance(ScreenStructure.WIDTH,
+                ScreenStructure.HEIGHT, Image.SCALE_SMOOTH)));
 
         bgPanel.setBounds(0, 0, ScreenStructure.WIDTH, ScreenStructure.HEIGHT);
         bgPanel.setOpaque(true);
         bgPanel.add(bg);
     }
 
-    public void createMenuPanel(){
+    public void createMenuPanel() {
 
-        JPanel tempPanel = new JPanel();
-        tempPanel.setBackground(null);
-        tempPanel.setSize(200,50);
+        Font headingFont = new Font("Arial", Font.BOLD, 45);
+        JLabel headingLabel = new JLabel("GAME OVER");
+        headingLabel.setFont(headingFont);
+        headingLabel.setForeground(Color.WHITE);
+        headingLabel.setVerticalAlignment(JLabel.CENTER);
+        headingLabel.setHorizontalAlignment(JLabel.CENTER);
 
-        Font scoreFont = new Font("Arial",Font.BOLD,25);
-        JLabel scoreLabel = new JLabel("You matched "+GameLayout.matches+" Cards in "+(30 - GameLayout.turns)+" Turns !");
+        Font scoreFont = new Font("Arial", Font.BOLD, 25);
+        JLabel scoreLabel = new JLabel(
+                "You matched " + GameLayout.matches + " Cards in " + (30 - GameLayout.turns) + " Turns !");
         scoreLabel.setFont(scoreFont);
         scoreLabel.setForeground(Color.WHITE);
         scoreLabel.setVerticalAlignment(JLabel.CENTER);
         scoreLabel.setHorizontalAlignment(JLabel.CENTER);
 
-        JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER,40, 0));
+        JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 40, 0));
         buttonsPanel.setBackground(null);
         buttonsPanel.setOpaque(false);
 
         play = createButton(play, "PLAY AGAIN", 0, 0, 200, 50, 20);
-        play.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                // Play GameLayout
-                GameLayout gameLayout = new GameLayout(app);
-                app.remove(getEndingPanel());
-                app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
-                app.revalidate();
-                app.repaint();
+        play.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                // Loading animation
+                layeredPane.remove(menuPanel);
+                layeredPane.add(loadingPanel, BorderLayout.CENTER);
+                layeredPane.revalidate();
+                layeredPane.repaint();
+
+                // Remove LoadingPanel after 5 seconds
+                Timer timer = new Timer(5000, new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Play GameLayout
+                        GameLayout gameLayout = new GameLayout(app);
+                        GameLayout.matches = 0;
+                        GameLayout.turns = 30;
+                        app.remove(EndingLayout.this.getEndingPanel());
+                        app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
+                        app.revalidate();
+                        app.repaint();
+                    }
+                });
+                timer.setRepeats(false);
+                timer.start();
+
             }
         });
 
         quite = createButton(quite, "QUIT", 0, 0, 200, 50, 20);
-        quite.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
+        quite.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
                 // Quit DialogBox
                 createDialogBox();
             }
@@ -100,20 +131,28 @@ public class EndingLayout implements ScreenStructure{
         buttonsPanel.add(quite);
 
         // Adding to menuPanel with flow layout
-        menuPanel.add(tempPanel,BorderLayout.NORTH);
-        menuPanel.add(scoreLabel,BorderLayout.CENTER);
-        menuPanel.add(buttonsPanel,BorderLayout.SOUTH);
+        menuPanel.add(headingLabel, BorderLayout.NORTH);
+        menuPanel.add(scoreLabel, BorderLayout.CENTER);
+        menuPanel.add(buttonsPanel, BorderLayout.SOUTH);
 
-        menuPanel.setBounds((ScreenStructure.WIDTH/2)-350, (ScreenStructure.HEIGHT/2)-150, 700, 300);
-        menuPanel.setBackground(new Color(131,0,255,255));
+        menuPanel.setBounds((ScreenStructure.WIDTH / 2) - 350, (ScreenStructure.HEIGHT / 2) - 150, 700, 300);
+        menuPanel.setBackground(new Color(131, 0, 255, 255));
         menuPanel.setOpaque(true);
-        menuPanel.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
+        menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
     }
 
-    public JButton createButton(JButton button, String text, int x, int y, int width, int height, int fontSize){
+    public void createLoadingPanel() {
+        // logoPanel
+        JLabel loadingAnim = new JLabel(new ImageIcon("assets/images/loading.gif"));
+        loadingPanel.setBounds((ScreenStructure.WIDTH / 2) - 200, (ScreenStructure.HEIGHT / 2) - 200, 300, 300);
+        loadingPanel.setOpaque(true);
+        loadingPanel.add(loadingAnim);
+    }
+
+    public JButton createButton(JButton button, String text, int x, int y, int width, int height, int fontSize) {
         button = new JButton(text);
         button.setBounds(x, y, width, height);
-        button.setBackground(new Color(77,0,206,255));
+        button.setBackground(new Color(77, 0, 206, 255));
         button.setOpaque(true);
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
         button.setBorderPainted(false);
@@ -124,10 +163,8 @@ public class EndingLayout implements ScreenStructure{
         return button;
     }
 
-    
-
     // Dialog Box for Quit function
-    public void createDialogBox(){
+    public void createDialogBox() {
         layeredPane.remove(menuPanel);
         layeredPane.repaint();
 
@@ -140,21 +177,21 @@ public class EndingLayout implements ScreenStructure{
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
-        dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131,0,255,255), 4, 20, 0));
-        
+        dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 4, 20, 0));
+
         JLabel message = new JLabel("Are you sure you want to quit?");
         message.setFont(new Font("Arial", Font.BOLD, 30));
-        message.setForeground(new Color(131,0,255,255));
+        message.setForeground(new Color(131, 0, 255, 255));
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
 
         JButton yes = new JButton();
         yes = createButton(yes, "YES", 0, 0, 200, 100, 30);
-        yes.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
+        yes.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
                 message.setText("Thank you for playing! Exiting...");
-                Timer t = new Timer(1500, new ActionListener(){
-                    public void actionPerformed(ActionEvent e){
+                Timer t = new Timer(1500, new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
                         System.exit(0);
                     }
                 });
@@ -165,10 +202,10 @@ public class EndingLayout implements ScreenStructure{
 
         JButton no = new JButton();
         no = createButton(no, "NO", 0, 0, 200, 100, 30);
-        no.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
+        no.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
                 dialog.dispose();
-                menuPanel.setBorder(new TextBubbleBorder(new Color(131,0,255,255), 10, 70, 0));
+                menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
                 layeredPane.remove(bgPanel);
                 layeredPane.add(menuPanel);
                 layeredPane.add(bgPanel);
@@ -187,5 +224,4 @@ public class EndingLayout implements ScreenStructure{
         dialog.setVisible(true);
     }
 
-   
 }

@@ -19,11 +19,11 @@ public class GameLayout implements ScreenStructure, ActionListener {
     JButton quitButton = new JButton("QUIT");
     JFrame app;
 
-    public static int matches = 0,turns = 30;
+    public static int matches,turns ;
 
     // Creating Score Labels
-    public static JLabel matchesLabel = new JLabel("Matches : "+matches);
-    public static JLabel turnsLabel = new JLabel("Turns left : "+turns);
+    public static JLabel matchesLabel;
+    public static JLabel turnsLabel;
 
     public GameLayout(JFrame app) {
         // Initializing app
@@ -35,8 +35,10 @@ public class GameLayout implements ScreenStructure, ActionListener {
         matchesLabel = new JLabel("Matches : "+matches);
         turnsLabel = new JLabel("Turns left : "+turns);
         
+        // Creating Layered Pane
         createLayeredPane();
 
+        // Creating Background Panel
         createBgPanel("assets/images/GameLayout-bg.png");
 
         // Cards Panel
@@ -46,19 +48,28 @@ public class GameLayout implements ScreenStructure, ActionListener {
         createScorePanel();
 
         // quit button
-        quitButton.setBounds((int) (ScreenStructure.WIDTH * 0.95), (int) (ScreenStructure.HEIGHT * 0.0),
-                (int) (ScreenStructure.WIDTH * 0.05), (int) (ScreenStructure.HEIGHT * 0.03));
+        quitButton.setBounds((int) (ScreenStructure.WIDTH * 0.95), (int) (ScreenStructure.HEIGHT * 0.0),(int) (ScreenStructure.WIDTH * 0.05), (int) (ScreenStructure.HEIGHT * 0.03));
         quitButton.setBackground(Color.red);
         quitButton.setOpaque(true);
         quitButton.setBorderPainted(false);
         quitButton.setFocusPainted(false);
         quitButton.setForeground(Color.WHITE);
-        quitButton.addActionListener(this);
+        quitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == quitButton) {
+                    int dialogButton = JOptionPane.YES_NO_OPTION;
+                    int dialogResult = JOptionPane.showConfirmDialog(null, "Are you sure you want to quit? All game data will be lost", "Warning", dialogButton);
+                    if (dialogResult == JOptionPane.YES_OPTION) {
+                        System.exit(0);
+                    }
+                }
+            }
+        });
 
         // Adding to layeredPane
         layeredPane.add(cardsPanel, BorderLayout.CENTER);
         layeredPane.add(scorePanel, BorderLayout.CENTER);
-        // layeredPane.add(quitButton, BorderLayout.CENTER);
+        layeredPane.add(quitButton, BorderLayout.CENTER);
         layeredPane.add(bgPanel);
 
         // Adding to HomePanel
