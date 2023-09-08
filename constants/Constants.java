@@ -18,5 +18,5 @@ public class Constants {
 
     // create a constant for color
     public static final Color COLOR_PRIMARY = new Color(131, 0, 255, 255);
-    public static final Color COLOR_BUTTON = new Color(77, 0, 206, 255);
+    public static final Color  = new Color(77, 0, 206, 255);
 }
