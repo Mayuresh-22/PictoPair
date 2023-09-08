@@ -50,8 +50,6 @@ public class HomeLayout implements ScreenStructure {
         HomePanel.setOpaque(true);
     }
 
-   
-
     public void getthisLayout(HomeLayout thisLayout) {
         this.thisLayout = thisLayout;
     }
