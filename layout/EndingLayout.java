@@ -120,6 +120,30 @@ public class EndingLayout implements ScreenStructure {
         });
 
         home = createButton(home, "HOME", 0, 0, 200, 50, 20);
+        home.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Loading animation
+                layeredPane.remove(menuPanel);
+                layeredPane.add(loadingPanel, BorderLayout.CENTER);
+                layeredPane.revalidate();
+                layeredPane.repaint();
+
+                // Remove LoadingPanel after 5 seconds
+                Timer timer = new Timer(5000, new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Play GameLayout
+                        HomeLayout homeLayout = new HomeLayout(app);
+                        app.remove(EndingLayout.this.getEndingPanel());
+                        app.add(homeLayout.getHomePanel(), BorderLayout.CENTER);
+                        app.revalidate();
+                        app.repaint();
+                    }
+                });
+                timer.setRepeats(false);
+                timer.start();
+            }
+        });
 
         quite = createButton(quite, "QUIT", 0, 0, 200, 50, 20);
         quite.addActionListener(new ActionListener() {
