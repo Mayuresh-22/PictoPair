@@ -28,7 +28,7 @@ public class LoadingLayout implements ScreenStructure{
         credits.setBounds((ScreenStructure.WIDTH/2)-350, (ScreenStructure.HEIGHT/2)+200, 700, 50);
         credits.setForeground(Color.lightGray);
         // new font other than default, serif, sans-serif, monospaced
-        credits.setFont(new Font("Sans MS", Font.BOLD, 20));
+        credits.setFont(new Font("Comic MS", Font.BOLD, 20));
         credits.setHorizontalAlignment(JLabel.CENTER);
         credits.setVerticalAlignment(JLabel.CENTER);
 
