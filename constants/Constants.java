@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
+
 public class Constants {
     // create a constant for file path
     public static final String MUSIC_FILE_PATH = "assets/sounds/bgm.wav";
