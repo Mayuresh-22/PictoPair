@@ -216,7 +216,7 @@ public class HomeLayout implements ScreenStructure {
                     }
                 } else {
                     musicOptionButton.setIcon(musicOn);
-                    def = musicOn;
+                    Constants.defaultMusicIcon = musicOn;
                     synchronized (musicPlayer) {
                         musicPlayer.startMusic();
                     }
