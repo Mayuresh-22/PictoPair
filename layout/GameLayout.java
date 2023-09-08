@@ -2,6 +2,9 @@ package layout;
 
 import external.*;
 import javax.swing.*;
+
+import constants.Constants;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
