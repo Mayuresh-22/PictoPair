@@ -128,9 +128,9 @@ public class HomeLayout implements ScreenStructure {
         menuPanel.add(quite);
 
         menuPanel.setBounds((ScreenStructure.WIDTH / 2) - 250, (ScreenStructure.HEIGHT / 2) - 250, 500, 500);
-        menuPanel.setBackground(new Color(131, 0, 255, 255));
+        menuPanel.setBackground(Constants.COLOR_PRIMARY);
         menuPanel.setOpaque(true);
-        menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
+        menuPanel.setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 10, 70, 0));
     }
 
     public void createLoadingPanel() {
@@ -171,12 +171,12 @@ public class HomeLayout implements ScreenStructure {
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
-        dialog.setBackground(new Color(131, 0, 255, 255));
-        dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 4, 70, 0));
+        dialog.setBackground(Constants.COLOR_PRIMARY);
+        dialog.getRootPane().setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 4, 70, 0));
 
         JLabel message = new JLabel("SETTINGS");
         message.setFont(new Font("Arial", Font.BOLD, 30));
-        message.setForeground(new Color(131, 0, 255, 255));
+        message.setForeground(Constants.COLOR_PRIMARY);
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
 
@@ -226,22 +226,22 @@ public class HomeLayout implements ScreenStructure {
 
         gridOptionPanel.add(gridOptionLabel);
         gridOptionPanel.add(gridOptionButton);
-        gridOptionPanel.setBackground(new Color(131, 0, 255, 255));
+        gridOptionPanel.setBackground(Constants.COLOR_PRIMARY);
 
         musicOptionPanel.add(musicOptionLabel);
         musicOptionPanel.add(musicOptionButton);
-        musicOptionPanel.setBackground(new Color(131, 0, 255, 255));
+        musicOptionPanel.setBackground(Constants.COLOR_PRIMARY);
 
         optionsPanel.add(gridOptionPanel);
         optionsPanel.add(musicOptionPanel);
-        optionsPanel.setBackground(new Color(131, 0, 255, 255));
+        optionsPanel.setBackground(Constants.COLOR_PRIMARY);
 
         JButton back = new JButton();
         back = createButton(back, "BACK", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
         back.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 dialog.dispose();
-                menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
+                menuPanel.setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 10, 70, 0));
                 layeredPane.remove(bgPanel);
                 layeredPane.add(menuPanel);
                 layeredPane.add(bgPanel);
@@ -252,7 +252,7 @@ public class HomeLayout implements ScreenStructure {
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 0));
         buttonPanel.add(back);
-        buttonPanel.setBackground(new Color(131, 0, 255, 255));
+        buttonPanel.setBackground(Constants.COLOR_PRIMARY);
         buttonPanel.setOpaque(true);
 
         dialog.add(message, BorderLayout.NORTH);
@@ -275,11 +275,11 @@ public class HomeLayout implements ScreenStructure {
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
-        dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 4, 20, 0));
+        dialog.getRootPane().setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 4, 20, 0));
 
         JLabel message = new JLabel("Are you sure you want to quit?");
         message.setFont(new Font("Arial", Font.BOLD, 30));
-        message.setForeground(new Color(131, 0, 255, 255));
+        message.setForeground(Constants.COLOR_PRIMARY);
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
 
@@ -303,7 +303,7 @@ public class HomeLayout implements ScreenStructure {
         no.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 dialog.dispose();
-                menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
+                menuPanel.setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 10, 70, 0));
                 layeredPane.remove(bgPanel);
                 layeredPane.add(menuPanel);
                 layeredPane.add(bgPanel);

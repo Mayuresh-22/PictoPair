@@ -163,9 +163,9 @@ public class EndingLayout implements ScreenStructure {
         menuPanel.add(buttonsPanel, BorderLayout.SOUTH);
 
         menuPanel.setBounds((ScreenStructure.WIDTH / 2) - 350, (ScreenStructure.HEIGHT / 2) - 150, 700, 300);
-        menuPanel.setBackground(new Color(131, 0, 255, 255));
+        menuPanel.setBackground(Constants.COLOR_PRIMARY);
         menuPanel.setOpaque(true);
-        menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
+        menuPanel.setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 10, 70, 0));
     }
 
     public void createLoadingPanel() {
@@ -204,11 +204,11 @@ public class EndingLayout implements ScreenStructure {
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
-        dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 4, 20, 0));
+        dialog.getRootPane().setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 4, 20, 0));
 
         JLabel message = new JLabel("Are you sure you want to quit?");
         message.setFont(new Font("Arial", Font.BOLD, 30));
-        message.setForeground(new Color(131, 0, 255, 255));
+        message.setForeground(Constants.COLOR_PRIMARY);
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
 
@@ -232,7 +232,7 @@ public class EndingLayout implements ScreenStructure {
         no.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 dialog.dispose();
-                menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
+                menuPanel.setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 10, 70, 0));
                 layeredPane.remove(bgPanel);
                 layeredPane.add(menuPanel);
                 layeredPane.add(bgPanel);
