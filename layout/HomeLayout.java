@@ -146,7 +146,6 @@ public class HomeLayout implements ScreenStructure {
         button.setBorderPainted(false);
         button.setFocusPainted(false);
         button.setForeground(Color.WHITE);
-        button.setFont(new Font("Arial", Font.BOLD, fontSize));
 
         return button;
     }
