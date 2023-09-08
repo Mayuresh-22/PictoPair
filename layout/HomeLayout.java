@@ -1,5 +1,6 @@
 package layout;
 
+import constants.Constants;
 import external.*;
 import javax.swing.*;
 import java.awt.*;
@@ -16,14 +17,14 @@ public class HomeLayout implements ScreenStructure {
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no, musicOptionButton, gridOptionButton;
     JFrame app;
-    ImageIcon musicOn, musicOff, def;
+    ImageIcon musicOn, musicOff;
     HomeLayout thisLayout;
-    MusicPlayerThread musicPlayer;
+    public static MusicPlayerThread musicPlayer;
     
 
     public HomeLayout(JFrame app, MusicPlayerThread musicPlayer) {
         this.app = app;
-        this.musicPlayer = musicPlayer;
+        HomeLayout.musicPlayer = musicPlayer;
 
         createLayeredPane();
 
@@ -35,7 +36,6 @@ public class HomeLayout implements ScreenStructure {
                 new ImageIcon("assets/images/sound-on.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
         musicOff = new ImageIcon(
                 new ImageIcon("assets/images/sound-off.png").getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
-        def = musicOn;
 
         createMenuPanel();
 
@@ -80,7 +80,7 @@ public class HomeLayout implements ScreenStructure {
     }
 
     public void createMenuPanel() {
-        play = createButton(play, "PLAY", new Color(77, 0, 206, 255), 0, 0, 500, 100, 40);
+        play = createButton(play, "PLAY", Constants.COLOR_BUTTON, 0, 0, 500, 100, 40);
         play.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Loading animation
@@ -95,7 +95,7 @@ public class HomeLayout implements ScreenStructure {
                     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
                         GameLayout gameLayout = new GameLayout(app);
-                        app.remove(thisLayout.getHomePanel());
+                        app.remove(getHomePanel());
                         app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
                         app.revalidate();
                         app.repaint();
@@ -106,7 +106,7 @@ public class HomeLayout implements ScreenStructure {
             }
         });
 
-        settings = createButton(settings, "SETTINGS", new Color(77, 0, 206, 255), 0, 0, 500, 100, 40);
+        settings = createButton(settings, "SETTINGS", Constants.COLOR_BUTTON, 0, 0, 500, 100, 40);
         settings.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Settings DialogBox
@@ -114,7 +114,7 @@ public class HomeLayout implements ScreenStructure {
             }
         });
 
-        quite = createButton(quite, "QUIT", new Color(77, 0, 206, 255), 0, 0, 500, 100, 40);
+        quite = createButton(quite, "QUIT", Constants.COLOR_BUTTON, 0, 0, 500, 100, 40);
         quite.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Quit DialogBox
@@ -128,9 +128,9 @@ public class HomeLayout implements ScreenStructure {
         menuPanel.add(quite);
 
         menuPanel.setBounds((ScreenStructure.WIDTH / 2) - 250, (ScreenStructure.HEIGHT / 2) - 250, 500, 500);
-        menuPanel.setBackground(new Color(131, 0, 255, 255));
+        menuPanel.setBackground(Constants.COLOR_PRIMARY);
         menuPanel.setOpaque(true);
-        menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
+        menuPanel.setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 10, 70, 0));
     }
 
     public void createLoadingPanel() {
@@ -171,12 +171,12 @@ public class HomeLayout implements ScreenStructure {
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
-        dialog.setBackground(new Color(131, 0, 255, 255));
-        dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 4, 70, 0));
+        dialog.setBackground(Constants.COLOR_PRIMARY);
+        dialog.getRootPane().setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 4, 70, 0));
 
         JLabel message = new JLabel("SETTINGS");
         message.setFont(new Font("Arial", Font.BOLD, 30));
-        message.setForeground(new Color(131, 0, 255, 255));
+        message.setForeground(Constants.COLOR_PRIMARY);
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
 
@@ -198,15 +198,15 @@ public class HomeLayout implements ScreenStructure {
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
         // grid size button
-        gridOptionButton = createButton(gridOptionButton, "3x3", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
+        gridOptionButton = createButton(gridOptionButton, "3x3", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
 
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
-        musicOptionButton.setIcon(def);
+        musicOptionButton.setIcon(Constants.defaultMusicIcon);
         musicOptionButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (musicOptionButton.getIcon().equals(musicOn)) {
                     musicOptionButton.setIcon(musicOff);
-                    def = musicOff;
+                    Constants.defaultMusicIcon = musicOff;
                     synchronized (musicPlayer) {
                         try {
                             musicPlayer.stopMusic();
@@ -216,7 +216,7 @@ public class HomeLayout implements ScreenStructure {
                     }
                 } else {
                     musicOptionButton.setIcon(musicOn);
-                    def = musicOn;
+                    Constants.defaultMusicIcon = musicOn;
                     synchronized (musicPlayer) {
                         musicPlayer.startMusic();
                     }
@@ -226,22 +226,22 @@ public class HomeLayout implements ScreenStructure {
 
         gridOptionPanel.add(gridOptionLabel);
         gridOptionPanel.add(gridOptionButton);
-        gridOptionPanel.setBackground(new Color(131, 0, 255, 255));
+        gridOptionPanel.setBackground(Constants.COLOR_PRIMARY);
 
         musicOptionPanel.add(musicOptionLabel);
         musicOptionPanel.add(musicOptionButton);
-        musicOptionPanel.setBackground(new Color(131, 0, 255, 255));
+        musicOptionPanel.setBackground(Constants.COLOR_PRIMARY);
 
         optionsPanel.add(gridOptionPanel);
         optionsPanel.add(musicOptionPanel);
-        optionsPanel.setBackground(new Color(131, 0, 255, 255));
+        optionsPanel.setBackground(Constants.COLOR_PRIMARY);
 
         JButton back = new JButton();
-        back = createButton(back, "BACK", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
+        back = createButton(back, "BACK", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
         back.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 dialog.dispose();
-                menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
+                menuPanel.setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 10, 70, 0));
                 layeredPane.remove(bgPanel);
                 layeredPane.add(menuPanel);
                 layeredPane.add(bgPanel);
@@ -252,7 +252,7 @@ public class HomeLayout implements ScreenStructure {
 
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 50, 0));
         buttonPanel.add(back);
-        buttonPanel.setBackground(new Color(131, 0, 255, 255));
+        buttonPanel.setBackground(Constants.COLOR_PRIMARY);
         buttonPanel.setOpaque(true);
 
         dialog.add(message, BorderLayout.NORTH);
@@ -275,16 +275,16 @@ public class HomeLayout implements ScreenStructure {
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);
-        dialog.getRootPane().setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 4, 20, 0));
+        dialog.getRootPane().setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 4, 20, 0));
 
         JLabel message = new JLabel("Are you sure you want to quit?");
         message.setFont(new Font("Arial", Font.BOLD, 30));
-        message.setForeground(new Color(131, 0, 255, 255));
+        message.setForeground(Constants.COLOR_PRIMARY);
         message.setHorizontalAlignment(JLabel.CENTER);
         message.setVerticalAlignment(JLabel.CENTER);
 
         JButton yes = new JButton();
-        yes = createButton(yes, "YES", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
+        yes = createButton(yes, "YES", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
         yes.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 message.setText("Thank you for playing! Exiting...");
@@ -299,11 +299,11 @@ public class HomeLayout implements ScreenStructure {
         });
 
         JButton no = new JButton();
-        no = createButton(no, "NO", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
+        no = createButton(no, "NO", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
         no.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 dialog.dispose();
-                menuPanel.setBorder(new TextBubbleBorder(new Color(131, 0, 255, 255), 10, 70, 0));
+                menuPanel.setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 10, 70, 0));
                 layeredPane.remove(bgPanel);
                 layeredPane.add(menuPanel);
                 layeredPane.add(bgPanel);

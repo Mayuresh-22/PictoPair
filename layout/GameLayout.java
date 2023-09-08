@@ -2,6 +2,9 @@ package layout;
 
 import external.*;
 import javax.swing.*;
+
+import constants.Constants;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
@@ -121,7 +124,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
 
         // Creating defaultImgIcon Variable
         ImageIcon defaultImg = new ImageIcon(
-                "assets/images/card-back.png");
+                Constants.CARD_BACK_IMAGE_PATH);
         Image scaledImg = defaultImg.getImage().getScaledInstance((int) (ScreenStructure.WIDTH * 0.1),
                 (int) (ScreenStructure.HEIGHT * 0.25), Image.SCALE_SMOOTH);
         ImageIcon defaultImgIcon = new ImageIcon(scaledImg);
