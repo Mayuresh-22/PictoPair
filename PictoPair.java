@@ -8,8 +8,8 @@ import external.*;
 class App {
     public JFrame app = new JFrame("PictoPair - Memory Game");
     LoadingLayout loadingLayout = new LoadingLayout();
-    MusicPlayerThread soundEffect = new MusicPlayerThread();
-    MusicPlayerThread musicPlayer = new MusicPlayerThread();
+    public static MusicPlayerThread soundEffect = new MusicPlayerThread();
+    public static MusicPlayerThread musicPlayer = new MusicPlayerThread();
     HomeLayout homeLayout = new HomeLayout(app, musicPlayer);
     App(){
         appConfig();
