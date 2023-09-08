@@ -136,8 +136,7 @@ public class HomeLayout implements ScreenStructure {
         loadingPanel.add(loadingAnim);
     }
 
-    public JButton createButton(JButton button, String text, Color bg, int x, int y, int width, int height,
-            int fontSize) {
+    public JButton createButton(JButton button, String text, Color bg, int x, int y, int width, int height, int fontSize) {
         button = new JButton(text);
         button.setBounds(x, y, width, height);
         button.setBackground(bg);
