@@ -3,7 +3,7 @@ package interfaces;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
-public interface Constants {
+public class Constants {
     // create a constant
     public static final String MUSIC_FILE_PATH = "assets/sounds/bgm.wav";
     public static final String SOUND_EFFECT_FILE_PATH = "assets/sounds/intro.wav";
