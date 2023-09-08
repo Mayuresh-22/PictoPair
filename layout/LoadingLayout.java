@@ -27,8 +27,8 @@ public class LoadingLayout implements ScreenStructure{
         credits = new JLabel("Made by: Mayuresh Choudhary, Devang Gentyal, Om Gaikwad");
         credits.setBounds((ScreenStructure.WIDTH/2)-350, (ScreenStructure.HEIGHT/2)+200, 700, 50);
         credits.setForeground(Color.lightGray);
-        // new font other than default
-        credits.setFont(new Font("Sans", Font.BOLD, 20));
+        // new font other than default, serif, sans-serif, monospaced, dialog, or dialoginput
+        credits.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
         credits.setHorizontalAlignment(JLabel.CENTER);
         credits.setVerticalAlignment(JLabel.CENTER);
 
