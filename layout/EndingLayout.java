@@ -158,7 +158,7 @@ public class EndingLayout implements ScreenStructure {
         menuPanel.add(scoreLabel);
         menuPanel.add(buttonsPanel);
 
-        menuPanel.setBounds((ScreenStructure.WIDTH / 2) - 350, (ScreenStructure.HEIGHT / 2) - 150, 700, 300);
+        menuPanel.setBounds((ScreenStructure.WIDTH / 2) - 350, (ScreenStructure.HEIGHT / 2) - 150, 700, 500);
         menuPanel.setBackground(Constants.COLOR_PRIMARY);
         menuPanel.setOpaque(true);
         menuPanel.setBorder(new TextBubbleBorder(Constants.COLOR_PRIMARY, 10, 70, 0));
