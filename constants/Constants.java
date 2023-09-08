@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
 
 public class Constants {
     // create a constant
-    public static final String MUSIC_FILE_PATH = MUSIC_FILE_PATH;
+    public static final String Constants.MUSIC_FILE_PATH = Constants.MUSIC_FILE_PATH;
     public static final String SOUND_EFFECT_FILE_PATH = "assets/sounds/intro.wav";
     public static final String CARD_BACK_IMAGE_PATH = "assets/images/card-back.png";
     public static final String ENDING_SCREEN_IMAGE_PATH = "assets/images/EndingScreen-bg.png";
