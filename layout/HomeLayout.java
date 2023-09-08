@@ -225,6 +225,7 @@ public class HomeLayout implements ScreenStructure {
             }
         });
 
+        // Adding to optionsPanel
         gridOptionPanel.add(gridOptionLabel);
         gridOptionPanel.add(gridOptionButton);
         gridOptionPanel.setBackground(Constants.COLOR_PRIMARY);
