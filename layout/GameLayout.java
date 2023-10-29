@@ -32,6 +32,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
         // Setting gridRows and gridColumns
 
         
+
         // reseting matches and turns
         matches = 0;
         turns = 30;
