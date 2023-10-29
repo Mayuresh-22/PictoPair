@@ -31,7 +31,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
 
         // Setting gridRows and gridColumns
         gridRows = HomeLayout.rows;
-        gridColows = HomeLayout.columns;
+        gridCols = HomeLayout.columns;
 
         // reseting matches and turns
         matches = 0;
