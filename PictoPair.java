@@ -62,7 +62,7 @@ class App {
             }
         });
 
-        frame.requestFocusInWindow();
+        app.requestFocusInWindow();
     }
 }
 
