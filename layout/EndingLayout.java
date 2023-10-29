@@ -16,8 +16,7 @@ public class EndingLayout implements ScreenStructure {
     JFrame app;
     EndingLayout thisLayout;
     int matches, turns;
-   GameLayout gameLayout = new GameLayout();
-    
+    GameLayout gameLayout = new GameLayout();
 
     public EndingLayout(JFrame app) {
         this.app = app;
@@ -104,7 +103,7 @@ public class EndingLayout implements ScreenStructure {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
-                         
+
                         GameLayout.app = app;
                         Cards.app = app;
                         GameLayout.matches = 0;
