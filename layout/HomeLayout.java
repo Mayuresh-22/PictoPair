@@ -208,7 +208,7 @@ public class HomeLayout implements ScreenStructure {
         gridOptionComboBox.setFont(new Font("Arial", Font.BOLD, 20));
         // Assigning rows and columns based on selection
         gridOptionComboBox.addActionListener(new ActionListener() {
-            publuc void ac
+            publuc void actionPerformed
         });
 
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
