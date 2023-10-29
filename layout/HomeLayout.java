@@ -22,7 +22,7 @@ public class HomeLayout implements ScreenStructure {
     MusicPlayerThread musicPlayer;
     GameLayout gameLayout;
 
-    public static int 
+    public static int rows, columns
 
     public HomeLayout(JFrame app, MusicPlayerThread musicPlayer) {
         this.app = app;
