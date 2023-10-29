@@ -1,7 +1,8 @@
 package external;
 
 import javax.swing.*;
-import layout.EndingLayout;
+import layout.
+8;
 import layout.GameLayout;
 import java.awt.BorderLayout;
 import java.awt.event.*;
