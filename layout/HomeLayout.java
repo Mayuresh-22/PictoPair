@@ -232,7 +232,7 @@ public class HomeLayout implements ScreenStructure {
         });
 
         gridOptionPanel.add(gridOptionLabel);
-        gridOptionPanel.add(gridOptionButton);
+        gridOptionPanel.add(gridOptionComboBox);
         gridOptionPanel.setBackground(new Color(131, 0, 255, 255));
 
         musicOptionPanel.add(musicOptionLabel);
