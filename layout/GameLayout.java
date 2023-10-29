@@ -26,7 +26,6 @@ public class GameLayout implements ScreenStructure, ActionListener {
     public static JLabel turnsLabel;
 
     public GameLayout(JFrame app) {
-        // Initializing app
 
 
         // reseting matches and turns
