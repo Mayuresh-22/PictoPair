@@ -150,7 +150,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
             }
             // Creating mainImgIcon Variable
             ImageIcon mainImg = new ImageIcon(
-                    "assets/images/"+deckNo+"/card" + j + ".jpg");
+                    "assets/images/deck"+deckNo+"/card" + j + ".jpg");
             Image mainscaledImg = mainImg.getImage().getScaledInstance((int) (ScreenStructure.WIDTH * 0.1),
                     (int) (ScreenStructure.HEIGHT * 0.25), Image.SCALE_SMOOTH);
             ImageIcon mainImgIcon = new ImageIcon(mainscaledImg);
