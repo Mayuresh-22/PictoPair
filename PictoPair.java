@@ -46,7 +46,7 @@ class App {
         app.setLayout(new BorderLayout(100, 100));
         app.setIconImage(new ImageIcon("assets/images/card-back.png").getImage());
 
-        // Restore Down size if pressed Esc
+        // Restore Down size of Game if pressed Esc
         app.addKeyListener(new KeyAdapter() {
             private boolean fullScreen = true;
 
