@@ -90,6 +90,7 @@ public class HomeLayout implements ScreenStructure {
                 layeredPane.repaint();
 
                 gameLayout = new GameLayout(app);
+                
                 //Remove LoadingPanel after 5 seconds 
                 Timer timer = new Timer(5000, new ActionListener() {
                     @Override
