@@ -220,7 +220,7 @@ public class HomeLayout implements ScreenStructure {
                     rows = 6;columns = 4;
                 }
                 else{
-                    rows =
+                    rows = 
                 }
             }
         });
