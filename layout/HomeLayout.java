@@ -210,7 +210,7 @@ public class HomeLayout implements ScreenStructure {
         gridOptionComboBox.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
                 String selection = (String)gridOptionComboBox.getSelectedItem();
-                
+                swi
             }
         });
 
