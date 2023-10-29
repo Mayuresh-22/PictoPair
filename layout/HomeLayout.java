@@ -198,7 +198,6 @@ public class HomeLayout implements ScreenStructure {
         musicOptionLabel.setHorizontalAlignment(JLabel.CENTER);
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
-        
       
 
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
