@@ -19,7 +19,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
     JButton quitButton = new JButton("QUIT");
     JFrame app;
 
-    public static int matches,turns, g;
+    public static int matches,turns, gridRows, ;
 
     // Creating Score Labels
     public static JLabel matchesLabel;
