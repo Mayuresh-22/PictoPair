@@ -27,9 +27,7 @@ public class HomeLayout implements ScreenStructure {
     public HomeLayout(JFrame app, MusicPlayerThread musicPlayer) {
         this.app = app;
         this.musicPlayer = musicPlayer;
-        rows = 4;
-        columns = 6;
-        
+
         createLayeredPane();
 
         createBgPanel("assets/images/Homescreen-bg.png");
