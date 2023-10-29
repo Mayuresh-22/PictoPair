@@ -212,7 +212,7 @@ public class HomeLayout implements ScreenStructure {
                 String selection = (String)gridOptionComboBox.getSelectedItem();
                 if(selection == "4 x 6"){
                     rows = 4;
-                    
+                    columns = 6;
                 }
             }
         });
