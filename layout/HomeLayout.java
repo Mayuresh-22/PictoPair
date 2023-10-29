@@ -203,7 +203,7 @@ public class HomeLayout implements ScreenStructure {
          String[] items = {"Item 1", "Item 2", "Item 3", "Item 4"};
 
          // Create a JComboBox with the list of items
-         JComboBox<String> comboBox = new JComboBox<>(items);
+          comboBox = new JComboBox<>(items);
  
 
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
