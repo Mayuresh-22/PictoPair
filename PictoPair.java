@@ -58,7 +58,7 @@ class App {
                 // Check if the "Escape" key was pressed (key code 27)
                 if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
                     // Minimize the JFrame
-                    frame.setState(Frame.ICONIFIED);
+                    app.setState(Frame.ICONIFIED);
                 }
             }
 
