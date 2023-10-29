@@ -209,7 +209,7 @@ public class HomeLayout implements ScreenStructure {
         // Assigning rows and columns based on selection
         gridOptionComboBox.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                String selection = gridOptionComboBox.getSelectedItem();
+                String selection = StringgridOptionComboBox.getSelectedItem();
             }
         });
 
