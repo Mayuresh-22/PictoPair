@@ -218,10 +218,6 @@ public class HomeLayout implements ScreenStructure {
             }
         });
 
-        gridOptionPanel.add(gridOptionLabel);
-        gridOptionPanel.add(gridOptionComboBox);
-        gridOptionPanel.setBackground(new Color(131, 0, 255, 255));
-
         musicOptionPanel.add(musicOptionLabel);
         musicOptionPanel.add(musicOptionButton);
         musicOptionPanel.setBackground(new Color(131, 0, 255, 255));
