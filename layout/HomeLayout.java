@@ -51,8 +51,6 @@ public class HomeLayout implements ScreenStructure {
         HomePanel.setOpaque(true);
     }
 
-   
-
     public void getthisLayout(HomeLayout thisLayout) {
         this.thisLayout = thisLayout;
     }
@@ -90,8 +88,7 @@ public class HomeLayout implements ScreenStructure {
                 layeredPane.revalidate();
                 layeredPane.repaint();
 
-                
-                //Remove LoadingPanel after 5 seconds 
+                // Remove LoadingPanel after 5 seconds
                 Timer timer = new Timer(5000, new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -200,11 +197,10 @@ public class HomeLayout implements ScreenStructure {
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
         // grid size ComboBox
-         // Create a list of items for the dropdown
-         String[] items = {"4 x 6", "5 x 5", "6 x 4", "6 x 6"};
-         // Create a JComboBox with the list of items
+        // Create a list of items for the dropdown
+        String[] items = { "4 x 6", "5 x 5", "6 x 4", "6 x 6" };
+        // Create a JComboBox with the list of items
         gridOptionComboBox = new JComboBox<>(items);
- 
 
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
         musicOptionButton.setIcon(def);
