@@ -156,7 +156,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
             ImageIcon mainImgIcon = new ImageIcon(mainscaledImg);
 
             card[i] = new Cards("hidden", mainImgIcon, defaultImgIcon,
-                     "assets/images/"+deckNo+"/card" + j + ".jpg" ,rand_arr.get(i));
+                     "assets/images/deck"+deckNo+"/card" + j + ".jpg" ,rand_arr.get(i));
             j++;
         }
         // Storing objects into array
