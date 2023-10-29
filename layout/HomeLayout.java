@@ -211,8 +211,7 @@ public class HomeLayout implements ScreenStructure {
             public void actionPerformed(ActionEvent e){
                 String selection = (String)gridOptionComboBox.getSelectedItem();
                 if(selection == "4 x 6"){
-                    rows = 4;
-                    columns = 6;
+                    rows = 4;columns = 6;
                 }
             }
         });
