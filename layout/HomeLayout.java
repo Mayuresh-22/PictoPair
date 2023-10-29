@@ -208,19 +208,20 @@ public class HomeLayout implements ScreenStructure {
         gridOptionComboBox.setFont(new Font("Arial", Font.BOLD, 20));
         // Assigning rows and columns based on selection
         gridOptionComboBox.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
-                String selection = (String)gridOptionComboBox.getSelectedItem();
-                if(selection == "4 x 6"){
-                    rows = 4;columns = 6;
-                }
-                else if(selection == "5 x 5"){
-                    rows = 5;columns = 5;
-                }
-                else if(selection == "6 x 4"){
-                    rows = 6;columns = 4;
-                }
-                else{
-                    rows = 6; columns = 6;
+            public void actionPerformed(ActionEvent e) {
+                String selection = (String) gridOptionComboBox.getSelectedItem();
+                if (selection == "4 x 6") {
+                    rows = 4;
+                    columns = 6;
+                } else if (selection == "5 x 5") {
+                    rows = 5;
+                    columns = 5;
+                } else if (selection == "6 x 4") {
+                    rows = 6;
+                    columns = 4;
+                } else {
+                    rows = 6;
+                    columns = 6;
                 }
             }
         });
