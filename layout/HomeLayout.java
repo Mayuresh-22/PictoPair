@@ -137,7 +137,7 @@ public class HomeLayout implements ScreenStructure {
         // logoPanel
         JLabel loadingAnim = new JLabel(new ImageIcon("assets/images/loading.gif"));
         JLabel loadingText = new JLabel("Loading...");
-        loadingText.set
+        loadingText.setFont
         loadingPanel.setBounds((ScreenStructure.WIDTH / 2) - 200, (ScreenStructure.HEIGHT / 2) - 200, 300, 300);
         loadingPanel.setOpaque(true);
         loadingPanel.add(loadingAnim);
