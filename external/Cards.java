@@ -37,9 +37,6 @@ public class Cards implements ActionListener {
         this.id = id;
     }
 
-    public static void setFrame(JFrame tempapp) {
-        app = tempapp;
-    }
 
     public static void getthisLayout(GameLayout tempthisLayout) {
         thisLayout = tempthisLayout;
