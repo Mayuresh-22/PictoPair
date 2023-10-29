@@ -53,7 +53,7 @@ class App {
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
                     if (fullScreen) {
-                        frame.setExtendedState(JFrame.NORMAL); // Restore down
+                        app.setExtendedState(JFrame.NORMAL); // Restore down
                     } else {
                         frame.setExtendedState(JFrame.MAXIMIZED_BOTH); // Full-screen
                     }
