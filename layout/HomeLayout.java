@@ -95,8 +95,7 @@ public class HomeLayout implements ScreenStructure {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
-                        rows = 4;
-                        columns = 6;
+                        
                         gameLayout = new GameLayout(app);
                         app.remove(thisLayout.getHomePanel());
                         app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
