@@ -46,6 +46,7 @@ class App {
         app.setLayout(new BorderLayout(100, 100));
         app.setIconImage(new ImageIcon("assets/images/card-back.png").getImage());
 
+        // M
         app.addKeyListener(new KeyAdapter() {
             private boolean fullScreen = true;
 
