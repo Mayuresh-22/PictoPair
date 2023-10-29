@@ -140,8 +140,8 @@ public class HomeLayout implements ScreenStructure {
         loadingText.setForeground(Color.black);
         loadingPanel.setBounds((ScreenStructure.WIDTH / 2) - 200, (ScreenStructure.HEIGHT / 2) - 200, 300, 300);
         loadingPanel.setOpaque(true);
-        loadingPanel.add(loadingAnim);
         loadingPanel.add(loadingText);
+        loadingPanel.add(loadingAnim);
     }
 
     public JButton createButton(JButton button, String text, Color bg, int x, int y, int width, int height,
