@@ -17,7 +17,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton quitButton = new JButton("QUIT");
-    public static JFrame app;
+  
 
     public static int matches,turns;
 
