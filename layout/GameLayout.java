@@ -105,7 +105,8 @@ public class GameLayout implements ScreenStructure, ActionListener {
     
     public void createCardsPanel() {
 
-        // Generating Deck Number 
+        // Generating Deck Number
+         
 
         Cards.getthisLayout(this);
         // Creating Cards Panel
