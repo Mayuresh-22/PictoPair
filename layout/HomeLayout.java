@@ -183,6 +183,7 @@ public class HomeLayout implements ScreenStructure {
 
         // Setting Options Panel
         JPanel optionsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 70, 15));
+        JPanel gridOptionPanel = new JPanel(new FlowLayout());
         JPanel musicOptionPanel = new JPanel(new FlowLayout());
 
 
