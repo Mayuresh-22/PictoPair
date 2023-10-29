@@ -27,7 +27,6 @@ public class GameLayout implements ScreenStructure, ActionListener {
 
     public GameLayout(JFrame app) {
         // Initializing app
-        app = app;
 
 
         // reseting matches and turns
