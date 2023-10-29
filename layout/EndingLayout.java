@@ -104,6 +104,7 @@ public class EndingLayout implements ScreenStructure {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
+                         GameLayout gameLayout = new GameLayout();
                         GameLayout.app = app;
                         Cards.app = app;
                         GameLayout.matches = 0;
