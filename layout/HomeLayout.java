@@ -202,6 +202,7 @@ public class HomeLayout implements ScreenStructure {
         // Create a JComboBox with the list of items
         gridOptionComboBox = new JComboBox<>(items);
         gridOptionComboBox.setBackground(new Color(77, 0, 206, 255));
+        gr
 
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
         musicOptionButton.setIcon(def);
