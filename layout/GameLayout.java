@@ -30,7 +30,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
         this.app = app;
 
         // Setting gridRows and gridColumns
-        gridRows = 
+        gridRows = Game
 
         // reseting matches and turns
         matches = 0;
