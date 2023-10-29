@@ -213,6 +213,9 @@ public class HomeLayout implements ScreenStructure {
                 if(selection == "4 x 6"){
                     rows = 4;columns = 6;
                 }
+                if(selection == "4 x 6"){
+                    rows = 4;columns = 6;
+                }
             }
         });
 
