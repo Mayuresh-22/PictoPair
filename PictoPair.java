@@ -55,7 +55,7 @@ class App {
                     if (fullScreen) {
                         app.setExtendedState(JFrame.NORMAL); // Restore down
                     } else {
-                        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); // Full-screen
+                        app.setExtendedState(JFrame.MAXIMIZED_BOTH); // Full-screen
                     }
                     fullScreen = !fullScreen;
                 }
