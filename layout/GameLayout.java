@@ -29,6 +29,8 @@ public class GameLayout implements ScreenStructure, ActionListener {
         // Initializing app
         this.app = app;
 
+        // Default gri
+
         // reseting matches and turns
         matches = 0;
         turns = 30;
