@@ -28,7 +28,8 @@ public class HomeLayout implements ScreenStructure {
         this.app = app;
         this.musicPlayer = musicPlayer;
 
-        rows = 
+        rows = 4;
+        columns = 6;
 
         createLayeredPane();
 
