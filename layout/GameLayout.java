@@ -30,7 +30,6 @@ public class GameLayout implements ScreenStructure, ActionListener {
         this.app = app;
 
 
-
         // reseting matches and turns
         matches = 0;
         turns = 30;
