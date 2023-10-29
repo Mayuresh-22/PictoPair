@@ -139,7 +139,7 @@ public class HomeLayout implements ScreenStructure {
         JLabel loadingText = new JLabel("Loading...");
         loadingText.setForeground(Color.black);
         loadingPanel.setBounds((ScreenStructure.WIDTH / 2) - 200, (ScreenStructure.HEIGHT / 2) - 200, 300, 300);
-        loadingPanel.setOpaque(true);
+        // loadingPanel.setOpaque(true);
         loadingPanel.add(loadingText);
         loadingPanel.add(loadingAnim);
     }
