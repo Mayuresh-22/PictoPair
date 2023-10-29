@@ -117,7 +117,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
         cardsPanel.setBackground(Color.WHITE);
         cardsPanel.setOpaque(true);
         cardsPanel.setBorder(new TextBubbleBorder(new Color(200, 200, 200), 10, 70, 0));
-        cardsPanel.setLayout(new GridLayout(gridRows, gridColumns, 20, 20));
+        cardsPanel.setLayout(new GridLayout(4, gridColumns, 20, 20));
 
         // Creating Cards
         Cards[] card = new Cards[24];
