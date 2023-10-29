@@ -6,6 +6,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
+
 import interfaces.*;
 
 
@@ -106,7 +108,11 @@ public class GameLayout implements ScreenStructure, ActionListener {
     public void createCardsPanel() {
 
         // Generating Deck Number
-         
+        // Create a Random object
+        Random random = new Random();
+
+        // Generate a random integer between 1 and 5 (inclusive)
+        int randomNumber = random.nextInt(5) + 1; 
 
         Cards.getthisLayout(this);
         // Creating Cards Panel
