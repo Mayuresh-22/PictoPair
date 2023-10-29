@@ -1,4 +1,4 @@
-# PictoPair Memory Game 🧠🎮
+# PictoPair - Memory Game 🧠🎮
 
 Exercise your memory and concentration with PictoPair, an engaging memory game designed to challenge your cognitive skills.
 
