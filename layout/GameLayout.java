@@ -196,8 +196,6 @@ public class GameLayout implements ScreenStructure, ActionListener {
         turnsLabel.setOpaque(true);
 
         scorePanel.add(matchesLabel);
-        scorePanel.add(turnsLabel);
-
-        cardsPanel.setLayout(new GridLayout(4,6,20,20));
+        scorePanel.add(turnsLabel
     }
 }
