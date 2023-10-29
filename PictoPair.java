@@ -69,7 +69,7 @@ class App {
         });
         
         // Ensure the JFrame can receive key events by requesting focus
-        frame.requestFocusInWindow();
+        app.requestFocusInWindow();
     }
 }
 
