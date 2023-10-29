@@ -28,7 +28,6 @@ public class HomeLayout implements ScreenStructure {
         this.app = app;
         this.musicPlayer = musicPlayer;
 
-
         createLayeredPane();
 
         createBgPanel("assets/images/Homescreen-bg.png");
@@ -97,7 +96,7 @@ public class HomeLayout implements ScreenStructure {
                     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
                         rows = 4;
-        columns = 6;
+                        columns = 6;
                         gameLayout = new GameLayout(app);
                         app.remove(thisLayout.getHomePanel());
                         app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
