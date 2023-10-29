@@ -186,11 +186,6 @@ public class HomeLayout implements ScreenStructure {
         JPanel gridOptionPanel = new JPanel(new FlowLayout());
         JPanel musicOptionPanel = new JPanel(new FlowLayout());
 
-        JLabel gridOptionLabel = new JLabel("Grid Size: ");
-        gridOptionLabel.setFont(new Font("Arial", Font.BOLD, 25));
-        gridOptionLabel.setForeground(Color.WHITE);
-        gridOptionLabel.setHorizontalAlignment(JLabel.CENTER);
-        gridOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
         JLabel musicOptionLabel = new JLabel("Music: ");
         musicOptionLabel.setFont(new Font("Arial", Font.BOLD, 25));
