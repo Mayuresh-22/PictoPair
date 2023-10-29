@@ -199,7 +199,7 @@ public class HomeLayout implements ScreenStructure {
         musicOptionLabel.setHorizontalAlignment(JLabel.CENTER);
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
-        // grid size button
+        // grid size ComboBox
          // Create a list of items for the dropdown
          String[] items = {"4 x 6", "5 x 5", "6 x 4", "6 x 6"};
          // Create a JComboBox with the list of items
