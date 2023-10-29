@@ -15,7 +15,6 @@ public class HomeLayout implements ScreenStructure {
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton play, settings, quite, yes, no, musicOptionButton;
-    JComboBox<String> gridOptionComboBox;
     JFrame app;
     ImageIcon musicOn, musicOff, def;
     HomeLayout thisLayout;
