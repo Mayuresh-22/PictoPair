@@ -46,7 +46,30 @@ class App {
         app.setLayout(new BorderLayout(100, 100));
         app.setIconImage(new ImageIcon("assets/images/card-back.png").getImage());
 
+         // Add a key listener to the JFrame
+        frame.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                // Not needed, but required by the KeyListener interface
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                // Check if the "Escape" key was pressed (key code 27)
+                if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+                    // Minimize the JFrame
+                    frame.setState(Frame.ICONIFIED);
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                // Not needed, but required by the KeyListener interface
+            }
+        });
         
+        // Ensure the JFrame can receive key events by requesting focus
+        frame.requestFocusInWindow();
     }
 }
 
