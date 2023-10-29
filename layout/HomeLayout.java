@@ -29,6 +29,7 @@ public class HomeLayout implements ScreenStructure {
         this.musicPlayer = musicPlayer;
         rows = 4;
         columns = 6;
+        
         createLayeredPane();
 
         createBgPanel("assets/images/Homescreen-bg.png");
