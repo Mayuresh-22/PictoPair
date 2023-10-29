@@ -198,15 +198,7 @@ public class HomeLayout implements ScreenStructure {
         musicOptionLabel.setHorizontalAlignment(JLabel.CENTER);
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
-        // grid size ComboBox
-        // Create a list of items for the dropdown
-        String[] items = { "4 x 6", "5 x 5", "6 x 4", "6 x 6" };
-        // Create a JComboBox with the list of items
-        gridOptionComboBox = new JComboBox<>(items);
-        gridOptionComboBox.setBackground(new Color(77, 0, 206, 255));
-        gridOptionComboBox.setForeground(Color.white);
-        gridOptionComboBox.setFont(new Font("Arial", Font.BOLD, 20));
-        // Assigning rows and columns based on selection
+        
       
 
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
