@@ -201,7 +201,7 @@ public class HomeLayout implements ScreenStructure {
 
         // grid size button
          // Create a list of items for the dropdown
-         String[] items = {"4 x 6", "5 x 5", "Item 3", "Item 4"};
+         String[] items = {"4 x 6", "5 x 5", "", "Item 4"};
 
          // Create a JComboBox with the list of items
         gridOptionComboBox = new JComboBox<>(items);
