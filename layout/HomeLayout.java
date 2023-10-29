@@ -199,7 +199,12 @@ public class HomeLayout implements ScreenStructure {
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
 
         // grid size button
-        gridOptionButton = createButton(gridOptionButton, "3x3", new Color(77, 0, 206, 255), 0, 0, 200, 100, 20);
+         // Create a list of items for the dropdown
+         String[] items = {"Item 1", "Item 2", "Item 3", "Item 4"};
+
+         // Create a JComboBox with the list of items
+         JComboBox<String> comboBox = new JComboBox<>(items);
+ 
 
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
         musicOptionButton.setIcon(def);
