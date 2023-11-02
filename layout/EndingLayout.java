@@ -100,9 +100,7 @@ public class EndingLayout implements ScreenStructure {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
-                         GameLayout gameLayout = new GameLayout();
-                        GameLayout.app = app;
-                        Cards.app = app;
+                        GameLayout gameLayout = new GameLayout(app);
                         GameLayout.matches = 0;
                         GameLayout.turns = 30;
                         app.remove(EndingLayout.this.getEndingPanel());
