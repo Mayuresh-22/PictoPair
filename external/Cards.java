@@ -18,7 +18,7 @@ public class Cards implements ActionListener {
     public JButton button;
     public String status, path;
     public ImageIcon defaultImg, mainImg;
-    static JFrame app;
+    public static JFrame app;
     static GameLayout thisLayout;
     EndingLayout endingLayout = new EndingLayout(app);
 
@@ -37,9 +37,6 @@ public class Cards implements ActionListener {
         this.id = id;
     }
 
-    public static void setFrame(JFrame tempapp) {
-        app = tempapp;
-    }
 
     public static void getthisLayout(GameLayout tempthisLayout) {
         thisLayout = tempthisLayout;

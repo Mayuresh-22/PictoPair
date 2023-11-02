@@ -45,7 +45,26 @@ class App {
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         app.setResizable(false);
         app.setLayout(new BorderLayout(100, 100));
-        app.setIconImage(new ImageIcon(Constants.CARD_BACK_IMAGE_PATH).getImage());
+        app.setIconImage(new ImageIcon("assets/images/card-back.png").getImage());
+
+        // Restore Down size of Game if pressed Esc
+        app.addKeyListener(new KeyAdapter() {
+            private boolean fullScreen = true;
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+                    if (fullScreen) {
+                        app.setExtendedState(JFrame.NORMAL); // Restore down
+                    } else {
+                        app.setExtendedState(JFrame.MAXIMIZED_BOTH); // Full-screen
+                    }
+                    fullScreen = !fullScreen;
+                }
+            }
+        });
+
+        app.requestFocusInWindow();
     }
 }
 
