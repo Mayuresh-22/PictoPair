@@ -1,20 +1,21 @@
+import external.*;
+import constants.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import layout.*;
-import external.*;
 
 
 class App {
     public JFrame app = new JFrame("PictoPair - Memory Game");
     LoadingLayout loadingLayout = new LoadingLayout();
-    MusicPlayerThread soundEffect = new MusicPlayerThread();
-    MusicPlayerThread musicPlayer = new MusicPlayerThread();
+    public static MusicPlayerThread soundEffect = new MusicPlayerThread();
+    public static MusicPlayerThread musicPlayer = new MusicPlayerThread();
     HomeLayout homeLayout = new HomeLayout(app, musicPlayer);
     App(){
         appConfig();
         app.add(loadingLayout.getLoadingPanel(), BorderLayout.CENTER);
-        soundEffect.filePath = "assets/sounds/intro.wav";
+        soundEffect.filePath = Constants.SOUND_EFFECT_FILE_PATH;
         soundEffect.loop = false;
         soundEffect.start();
         // Remove LoadingPanel after 5 seconds
@@ -26,7 +27,7 @@ class App {
                 homeLayout.getthisLayout(homeLayout);
                 app.revalidate();
                 app.repaint();
-                musicPlayer.filePath = "assets/sounds/bgm.wav";
+                musicPlayer.filePath = Constants.MUSIC_FILE_PATH;
                 musicPlayer.loop = true;
                 musicPlayer.start();
             }
