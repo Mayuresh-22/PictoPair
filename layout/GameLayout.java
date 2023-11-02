@@ -113,7 +113,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
         Random random = new Random();
 
         // Generate a random integer between 1 and 5 (inclusive)
-        int deckNo = random.nextInt(3) + 1; 
+        int deckNo = random.nextInt(2) + 1; 
 
         Cards.getthisLayout(this);
         // Creating Cards Panel
