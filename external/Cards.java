@@ -18,7 +18,7 @@ public class Cards implements ActionListener {
     public JButton button;
     public String status, path;
     public ImageIcon defaultImg, mainImg;
-    static JFrame app;
+    public static JFrame app;
     static GameLayout thisLayout;
     EndingLayout endingLayout = new EndingLayout(app);
 
@@ -37,9 +37,6 @@ public class Cards implements ActionListener {
         this.id = id;
     }
 
-    public static void setFrame(JFrame tempapp) {
-        app = tempapp;
-    }
 
     public static void getthisLayout(GameLayout tempthisLayout) {
         thisLayout = tempthisLayout;
@@ -137,9 +134,12 @@ public class Cards implements ActionListener {
                         GameLayout.matches += 0;
                         GameLayout.turns -= 1;
                         GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
+<<<<<<< HEAD
                         if (GameLayout.matches == 12 || GameLayout.turns <= 0) {
+=======
+                        if (GameLayout.matches == 12 || GameLayout.turns == 0) {
+>>>>>>> caa0137fec9309ff442c694c5cfcf84be538dfce
                             // Call Ending Screen Method
-                            
                             endingLayout.getthisLayout(endingLayout,GameLayout.matches,GameLayout.turns);
                             app.remove(thisLayout.getGamePanel());
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);

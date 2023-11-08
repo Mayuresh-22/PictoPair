@@ -1,13 +1,14 @@
 package layout;
 
 import javax.swing.*;
+import constants.Constants;
 import interfaces.*;
 import java.awt.*;
 
 
 public class LoadingLayout implements ScreenStructure{
     JPanel LoadingPanel = new JPanel(null), bgPanel = new JPanel(new BorderLayout()), logoPanel = new JPanel(new BorderLayout());
-    JLabel bg, logo;
+    JLabel bg, logo, credits;
     JLayeredPane layeredPane = new JLayeredPane();
     
     public LoadingLayout(){
@@ -23,8 +24,18 @@ public class LoadingLayout implements ScreenStructure{
         logoPanel.setOpaque(true);
         logoPanel.add(logo);
 
+        // credits at the bottom of the screen
+        credits = new JLabel("Made by: Mayuresh Choudhary, Devang Gentyal, Om Gaikwad");
+        credits.setBounds((ScreenStructure.WIDTH/2)-350, (ScreenStructure.HEIGHT/2)+200, 700, 50);
+        credits.setForeground(Color.lightGray);
+        // new font other than default, serif, sans-serif, monospaced
+        credits.setFont(new Font(Constants.FONT_FAMILY, Font.BOLD, 20));
+        credits.setHorizontalAlignment(JLabel.CENTER);
+        credits.setVerticalAlignment(JLabel.CENTER);
+
         // Add to LoadingPanel
         layeredPane.add(logoPanel, BorderLayout.CENTER);
+        layeredPane.add(credits);
         layeredPane.add(bgPanel);
 
         // Add to LoadingPanel
