@@ -18,7 +18,7 @@ public class EndingLayout implements ScreenStructure {
     JButton play, settings, quite, yes, no, home;
     JFrame app;
     EndingLayout thisLayout;
-    int matches, turns;
+    int matchesVar, turnsVar;
 
     public EndingLayout(JFrame app) {
         this.app = app;
@@ -42,8 +42,8 @@ public class EndingLayout implements ScreenStructure {
 
     public void getthisLayout(EndingLayout thisLayout, int matches, int turns) {
         this.thisLayout = thisLayout;
-        this.matches = matches;
-        this.turns = turns;
+        matchesVar = matches;
+        turnsVar = turns;
     }
 
     public JPanel getEndingPanel() {
@@ -77,7 +77,7 @@ public class EndingLayout implements ScreenStructure {
 
         Font scoreFont = new Font(Constants.FONT_FAMILY, Font.BOLD, 25);
         JLabel scoreLabel = new JLabel(
-                "You matched " + GameLayout.matches + " Cards in " + (30 - GameLayout.turns) + " Turns !");
+                "You matched " + matchesVar + " Cards in " + (30 - turnsVar) + " Turns !");
         scoreLabel.setFont(scoreFont);
         scoreLabel.setForeground(Color.WHITE);
 
