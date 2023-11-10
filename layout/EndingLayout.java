@@ -18,16 +18,18 @@ public class EndingLayout implements ScreenStructure {
     JButton play, settings, quite, yes, no, home;
     JFrame app;
     EndingLayout thisLayout;
-    int matches, turns;
+    int matchesVar, turnsVar;
 
-    public EndingLayout(JFrame app) {
+    public EndingLayout(JFrame app, int matches, int turns) {
         this.app = app;
+        this.matchesVar = matches;
+        this.turnsVar = turns;
+
         createLayeredPane();
 
         createBgPanel("assets/images/EndingScreen-bg.png");
 
-        // menu panel
-        createMenuPanel();
+        createScorePanel();
 
         createLoadingPanel();
 
@@ -40,10 +42,8 @@ public class EndingLayout implements ScreenStructure {
         EndingPanel.setOpaque(true);
     }
 
-    public void getthisLayout(EndingLayout thisLayout, int matches, int turns) {
+    public void setThisLayout(EndingLayout thisLayout) {
         this.thisLayout = thisLayout;
-        this.matches = matches;
-        this.turns = turns;
     }
 
     public JPanel getEndingPanel() {
@@ -69,7 +69,7 @@ public class EndingLayout implements ScreenStructure {
         bgPanel.add(bg);
     }
 
-    public void createMenuPanel() {
+    public void createScorePanel() {
         Font headingFont = new Font(Constants.FONT_FAMILY, Font.BOLD, 45);
         JLabel headingLabel = new JLabel("GAME OVER");
         headingLabel.setFont(headingFont);
@@ -77,7 +77,7 @@ public class EndingLayout implements ScreenStructure {
 
         Font scoreFont = new Font(Constants.FONT_FAMILY, Font.BOLD, 25);
         JLabel scoreLabel = new JLabel(
-                "You matched " + GameLayout.matches + " Cards in " + (30 - GameLayout.turns) + " Turns !");
+                "You matched " + matchesVar + " Cards in " + (30 - turnsVar) + " Turns !");
         scoreLabel.setFont(scoreFont);
         scoreLabel.setForeground(Color.WHITE);
 
@@ -100,7 +100,9 @@ public class EndingLayout implements ScreenStructure {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
-                        GameLayout gameLayout = new GameLayout(app);
+                        GameLayout gameLayout = new GameLayout();
+                        GameLayout.app = app;
+                        Cards.app = app;
                         GameLayout.matches = 0;
                         GameLayout.turns = 30;
                         app.remove(EndingLayout.this.getEndingPanel());
@@ -196,7 +198,7 @@ public class EndingLayout implements ScreenStructure {
         dialog.setAlwaysOnTop(true);
         dialog.setModal(true);
         dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-        dialog.setSize(500, 200);
+        dialog.setSize(700, 200);
         dialog.setLocationRelativeTo(null);
         dialog.setLayout(new BorderLayout());
         dialog.setUndecorated(true);

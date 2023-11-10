@@ -108,7 +108,13 @@ public class GameLayout implements ScreenStructure, ActionListener {
     
     public void createCardsPanel() {
 
-        Cards.setFrame(app);
+        // Generating Deck Number
+        // Create a Random object
+        Random random = new Random();
+
+        // Generate a random integer between 1 and 5 (inclusive)
+        int deckNo = random.nextInt(2) + 1; 
+
         Cards.getthisLayout(this);
         // Creating Cards Panel
         cardsPanel.setBounds((int) (ScreenStructure.WIDTH * 0.03), (int) (ScreenStructure.HEIGHT * 0.03),

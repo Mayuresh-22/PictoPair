@@ -19,8 +19,9 @@ public class HomeLayout implements ScreenStructure {
     JFrame app;
     ImageIcon musicOn, musicOff;
     HomeLayout thisLayout;
-    public static MusicPlayerThread musicPlayer;
-    
+    static MusicPlayerThread musicPlayer;
+    GameLayout gameLayout = new GameLayout();
+
     public HomeLayout(JFrame app, MusicPlayerThread musicPlayer) {
         this.app = app;
         HomeLayout.musicPlayer = musicPlayer;
@@ -89,7 +90,8 @@ public class HomeLayout implements ScreenStructure {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
-                        GameLayout gameLayout = new GameLayout(app);
+                        GameLayout.app = app;
+                        Cards.app = app;
                         app.remove(getHomePanel());
                         app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
                         app.revalidate();
