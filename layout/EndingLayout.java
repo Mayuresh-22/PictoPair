@@ -20,14 +20,16 @@ public class EndingLayout implements ScreenStructure {
     EndingLayout thisLayout;
     int matchesVar, turnsVar;
 
-    public EndingLayout(JFrame app) {
+    public EndingLayout(JFrame app, int matches, int turns) {
         this.app = app;
+        this.matchesVar = matches;
+        this.turnsVar = turns;
+
         createLayeredPane();
 
         createBgPanel("assets/images/EndingScreen-bg.png");
 
-        // menu panel
-        createMenuPanel();
+        createScorePanel();
 
         createLoadingPanel();
 
@@ -40,10 +42,8 @@ public class EndingLayout implements ScreenStructure {
         EndingPanel.setOpaque(true);
     }
 
-    public void getthisLayout(EndingLayout thisLayout, int matches, int turns) {
+    public void setThisLayout(EndingLayout thisLayout) {
         this.thisLayout = thisLayout;
-        matchesVar = matches;
-        turnsVar = turns;
     }
 
     public JPanel getEndingPanel() {
@@ -69,7 +69,7 @@ public class EndingLayout implements ScreenStructure {
         bgPanel.add(bg);
     }
 
-    public void createMenuPanel() {
+    public void createScorePanel() {
         Font headingFont = new Font(Constants.FONT_FAMILY, Font.BOLD, 45);
         JLabel headingLabel = new JLabel("GAME OVER");
         headingLabel.setFont(headingFont);
@@ -100,7 +100,7 @@ public class EndingLayout implements ScreenStructure {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         // Play GameLayout
-                         GameLayout gameLayout = new GameLayout();
+                        GameLayout gameLayout = new GameLayout();
                         GameLayout.app = app;
                         Cards.app = app;
                         GameLayout.matches = 0;
