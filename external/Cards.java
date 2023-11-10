@@ -20,7 +20,6 @@ public class Cards implements ActionListener {
     public ImageIcon defaultImg, mainImg;
     public static JFrame app;
     static GameLayout thisLayout;
-    EndingLayout endingLayout = new EndingLayout(app);
 
     public Cards(String status, ImageIcon mainImg, ImageIcon defaultImg, String path, int id) {
 
@@ -89,11 +88,14 @@ public class Cards implements ActionListener {
                         GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
 
                         // Checking if game is over
-                        if (GameLayout.matches == 12 || GameLayout.turns == 0) {
+                        if (GameLayout.matches == 1 || GameLayout.turns == 0) {
+                            int matches = GameLayout.matches;
+                            int turns = GameLayout.turns;
+
                             // Call Ending Screen Method
-                            EndingLayout endingLayout = new EndingLayout(app);
+                            EndingLayout endingLayout = new EndingLayout(app,matches,turns);
+                            endingLayout.setThisLayout(endingLayout);
                             app.remove(thisLayout.getGamePanel());
-                            endingLayout.getthisLayout(endingLayout,GameLayout.matches,GameLayout.turns);
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
                             app.revalidate();
                             app.repaint();
@@ -131,12 +133,16 @@ public class Cards implements ActionListener {
                         c3.status = "hidden";
                         c4.status = "hidden";
 
-                        GameLayout.matches += 0;
                         GameLayout.turns -= 1;
                         GameLayout.turnsLabel.setText("Turns left : " + GameLayout.turns);
-                        if (GameLayout.matches == 12 || GameLayout.turns == 0) {
+                        if (GameLayout.matches == 1 || GameLayout.turns == 0) {
                             // Call Ending Screen Method
-                            endingLayout.getthisLayout(endingLayout,GameLayout.matches,GameLayout.turns);
+                            int matches = GameLayout.matches;
+                            int turns = GameLayout.turns;
+
+                            // Call Ending Screen Method
+                            EndingLayout endingLayout = new EndingLayout(app,matches,turns);
+                            endingLayout.setThisLayout(endingLayout);
                             app.remove(thisLayout.getGamePanel());
                             app.add(endingLayout.getEndingPanel(), BorderLayout.CENTER);
                             app.revalidate();
