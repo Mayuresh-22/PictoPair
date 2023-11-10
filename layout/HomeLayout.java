@@ -92,7 +92,7 @@ public class HomeLayout implements ScreenStructure {
                         // Play GameLayout
                         GameLayout.app = app;
                         Cards.app = app;
-                        app.remove(thisLayout.getHomePanel());
+                        app.remove(getHomePanel());
                         app.add(gameLayout.getGamePanel(), BorderLayout.CENTER);
                         app.revalidate();
                         app.repaint();
