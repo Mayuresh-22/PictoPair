@@ -1,0 +1,30 @@
+PictoPair - Memory Game
+Exercise your memory and concentration with PictoPair, an engaging memory game designed to challenge your cognitive skills.
+
+Features:-
+> Stimulating Gameplay: Match pairs of beautifully designed pictographic cards.
+> Multiple Difficulty Levels: Suitable for players of all ages and skill levels.
+> Diverse Card Themes: Choose from various themed card sets for added variety.
+> Time Trial Mode: Test your speed and aim for the best score.
+> Global Leaderboard: Compete with players worldwide and climb to the top.
+> Responsive Design: Play on desktop and mobile for gaming on the go.
+
+Usage:-
+> Choose a difficulty level and card theme.
+> Click on cards to reveal their symbols.
+> Match pairs to score points.
+> Complete the game as quickly as you can!
+
+Contributing:-
+Contributions are welcome! To contribute:
+GitHub Repo: https://github.com/Mayuresh-22/PictoPair/ 
+
+Credits:-
+Mayuresh Choudhary
+Om Gaikwad
+Devang Gentyal
+
+License:-
+This project is licensed under the MIT License.
+
+Let's match and remember together! #MemoryGame #CognitiveChallenge

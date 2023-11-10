@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>E:\Java Project 2\PictoPair-Memory-Game\PictoPair-Memory-Game.jar</jar>
+  <outfile>E:\Java Project 2\PictoPair-Memory-Game\PictoPair.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>true</restartOnCrash>
+  <manifest></manifest>
+  <icon>E:\Java Project 2\PictoPair-Memory-Game\assets\images\Logo.ico</icon>
+  <jre>
+    <path>jre</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion></minVersion>
+    <maxVersion></maxVersion>
+  </jre>
+  <messages>
+    <startupErr>An error occurred while starting the application.
+Contact: https://github.com/Mayuresh-22/PictoPair/</startupErr>
+    <jreNotFoundErr>This application requires a Java Runtime Environment.
+Contact: https://github.com/Mayuresh-22/PictoPair/</jreNotFoundErr>
+    <jreVersionErr>This application requires a Java Runtime Environment
+Contact: https://github.com/Mayuresh-22/PictoPair/</jreVersionErr>
+    <launcherErr>The registry refers to a nonexistent Java Runtime Environment installation or the runtime is corrupted.
+Contact: https://github.com/Mayuresh-22/PictoPair/</launcherErr>
+    <instanceAlreadyExistsMsg>An application instance is already running.
+Contact: https://github.com/Mayuresh-22/PictoPair/</instanceAlreadyExistsMsg>
+  </messages>
+</launch4jConfig>
