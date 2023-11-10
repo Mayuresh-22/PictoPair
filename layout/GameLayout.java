@@ -9,6 +9,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
+
 import interfaces.*;
 
 
@@ -20,17 +22,15 @@ public class GameLayout implements ScreenStructure, ActionListener {
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
     JButton quitButton = new JButton("QUIT");
-    JFrame app;
+    public static JFrame app;
 
-    public static int matches,turns ;
+    public static int matches,turns;
 
     // Creating Score Labels
     public static JLabel matchesLabel;
     public static JLabel turnsLabel;
 
-    public GameLayout(JFrame app) {
-        // Initializing app
-        this.app = app;
+    public GameLayout() {
 
         // reseting matches and turns
         matches = 0;
@@ -57,7 +57,7 @@ public class GameLayout implements ScreenStructure, ActionListener {
         quitButton.setBorderPainted(false);
         quitButton.setFocusPainted(false);
         quitButton.setForeground(Color.WHITE);
-        quitButton.setCursor(new Cursor(12));
+        quitButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         quitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == quitButton) {
@@ -151,13 +151,13 @@ public class GameLayout implements ScreenStructure, ActionListener {
             }
             // Creating mainImgIcon Variable
             ImageIcon mainImg = new ImageIcon(
-                    "assets/images/card" + j + ".jpg");
+                    "assets/images/deck"+deckNo+"/card" + j + ".jpg");
             Image mainscaledImg = mainImg.getImage().getScaledInstance((int) (ScreenStructure.WIDTH * 0.1),
                     (int) (ScreenStructure.HEIGHT * 0.25), Image.SCALE_SMOOTH);
             ImageIcon mainImgIcon = new ImageIcon(mainscaledImg);
 
             card[i] = new Cards("hidden", mainImgIcon, defaultImgIcon,
-                    "assets/images/card" + j + ".jpg" ,rand_arr.get(i));
+                     "assets/images/deck"+deckNo+"/card" + j + ".jpg" ,rand_arr.get(i));
             j++;
         }
         // Storing objects into array
@@ -200,7 +200,5 @@ public class GameLayout implements ScreenStructure, ActionListener {
 
         scorePanel.add(matchesLabel);
         scorePanel.add(turnsLabel);
-
-        cardsPanel.setLayout(new GridLayout(4,6,20,20));
     }
 }
