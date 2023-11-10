@@ -15,7 +15,7 @@ public class HomeLayout implements ScreenStructure {
     loadingPanel = new JPanel(new GridBagLayout());
     JLabel bg;
     JLayeredPane layeredPane = new JLayeredPane();
-    JButton play, settings, quite, yes, no, musicOptionButton;
+    JButton play, settings, quite, yes, no, musicOptionButton, gridOptionButton;
     JFrame app;
     ImageIcon musicOn, musicOff;
     HomeLayout thisLayout;
@@ -85,7 +85,7 @@ public class HomeLayout implements ScreenStructure {
                 layeredPane.revalidate();
                 layeredPane.repaint();
 
-                // Remove LoadingPanel after 5 seconds
+                //Remove LoadingPanel after 5 seconds 
                 Timer timer = new Timer(5000, new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -178,12 +178,23 @@ public class HomeLayout implements ScreenStructure {
 
         // Setting Options Panel
         JPanel optionsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 70, 15));
+        JPanel gridOptionPanel = new JPanel(new FlowLayout());
         JPanel musicOptionPanel = new JPanel(new FlowLayout());
+
+        JLabel gridOptionLabel = new JLabel("Grid Size: ");
+        gridOptionLabel.setFont(new Font(Constants.FONT_FAMILY, Font.BOLD, 25));
+        gridOptionLabel.setForeground(Color.WHITE);
+        gridOptionLabel.setHorizontalAlignment(JLabel.CENTER);
+        gridOptionLabel.setVerticalAlignment(JLabel.CENTER);
+
         JLabel musicOptionLabel = new JLabel("Music: ");
         musicOptionLabel.setFont(new Font(Constants.FONT_FAMILY, Font.BOLD, 25));
         musicOptionLabel.setForeground(Color.WHITE);
         musicOptionLabel.setHorizontalAlignment(JLabel.CENTER);
         musicOptionLabel.setVerticalAlignment(JLabel.CENTER);
+
+        // grid size button
+        gridOptionButton = createButton(gridOptionButton, "3x3", Constants.COLOR_BUTTON, 0, 0, 200, 100, 20);
 
         // music on/off button
         musicOptionButton = createButton(musicOptionButton, "", null, 0, 0, 200, 100, 20);
@@ -210,9 +221,14 @@ public class HomeLayout implements ScreenStructure {
             }
         });
 
+        // Adding to optionsPanel
+        gridOptionPanel.add(gridOptionLabel);
+        gridOptionPanel.add(gridOptionButton);
+        gridOptionPanel.setBackground(Constants.COLOR_PRIMARY);
         musicOptionPanel.add(musicOptionLabel);
         musicOptionPanel.add(musicOptionButton);
-        musicOptionPanel.setBackground(new Color(131, 0, 255, 255));
+        musicOptionPanel.setBackground(Constants.COLOR_PRIMARY);
+        optionsPanel.add(gridOptionPanel);
         optionsPanel.add(musicOptionPanel);
         optionsPanel.setBackground(Constants.COLOR_PRIMARY);
 
