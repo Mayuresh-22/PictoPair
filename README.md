@@ -1,52 +1,26 @@
-# PictoPair - Memory Game 🧠🎮
+# PictoPair Memory Game
 
-Exercise your memory and concentration with PictoPair, an engaging memory game designed to challenge your cognitive skills.
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
-![PictoPair Preview](/assets/images/logogif.gif)
+## Overview
 
-## Features
+PictoPair Memory Game is an interactive memory game developed in Java using the Swing graphical user interface framework. It challenges players to match pairs of pictographic cards, enhancing memory, concentration, and problem-solving skills.
 
-- 🌟 Stimulating Gameplay: Match pairs of beautifully designed pictographic cards.
-- 🎯 Multiple Difficulty Levels: Suitable for players of all ages and skill levels.
-- 🎨 Diverse Card Themes: Choose from various themed card sets for added variety.
-- ⏱️ Time Trial Mode: Test your speed and aim for the best score.
-- 🌐 Global Leaderboard: Compete with players worldwide and climb to the top.
-- 📱 Responsive Design: Play on desktop and mobile for gaming on the go.
+## Quick Start
 
+1. Download the [PictoPair-Window-Setup.exe](https://github.com/Mayuresh-22/PictoPair/raw/Executable/PictoPair-Window-Setup.exe).
 
-## Installation
+2. **Run Setup (Recommended):**
+   - Execute `PictoPair-Window-Setup.exe` to install the game on your system, We have got you covered even if your system does not have Java Runtime Environment (JRE).
+   - Follow the on-screen instructions for a hassle-free installation.
+   - After installation, you can easily launch the game from the start menu or desktop icon.
 
-1. Clone the repository.
-   ```sh
-   git clone https://github.com/Mayuresh-22/PictoPair-Memory-Game.git
-   ```
-2. Open `index.html` in your preferred web browser.
+3. **Run .exe Directly (Advanced):**
+   - If you prefer not to run the setup file, you can directly run the game executable (`PictoPair.exe`).
+   - Fork this branch and download the executable to play the game without installation.
 
-## Usage
-
-1. Choose a difficulty level and card theme.
-2. Click on cards to reveal their symbols.
-3. Match pairs to score points.
-4. Complete the game as quickly as you can!
-
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a new branch.
-3. Make your enhancements.
-4. Submit a pull request.
-
-## Credits
-
-- Mayuresh Choudhary
-- Om Gaikwad
-- Devang Gentyal
+4. Enjoy playing the PictoPair Memory Game!
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
-
-Let's match and remember together! 🧩🧠 #MemoryGame #CognitiveChallenge
-
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
