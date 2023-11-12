@@ -25,7 +25,7 @@ InfoBeforeFile=E:\Java Project 2\PictoPair-Memory-Game\BEFORE.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=E:\Java Project 2\PictoPair-Memory-Game
-OutputBaseFilename=PictoPair-Window-Setup-v1.5
+OutputBaseFilename=PictoPair-Window-Setup
 SetupIconFile=C:\Users\ABC\Downloads\7039_exe_hardware_hospital_install_installer_icon.ico
 Compression=lzma
 SolidCompression=yes
