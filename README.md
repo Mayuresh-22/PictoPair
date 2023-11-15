@@ -20,7 +20,6 @@ Exercise your memory and concentration with PictoPair, an engaging memory game d
    ```sh
    git clone https://github.com/Mayuresh-22/PictoPair-Memory-Game.git
    ```
-2. Open `index.html` in your preferred web browser.
 
 ## Usage
 
